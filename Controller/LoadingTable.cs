@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using System.Data;
 using YTeDB;
 using System.Windows.Forms;
+using Controller;
 
-namespace Controller
+namespace Controller.InitDataGridView
 {
     public class LoadingTable 
     {
@@ -45,7 +46,7 @@ namespace Controller
             {
                 List<NhanVienYTe> NhanViens = context.NhanVienYTes.ToList();
                 DataTable dt = new DataTable();
-                foreach (var name in Name.nhanVien())
+                foreach (var name in Name.nhanvien())
                     dt.Columns.Add(name);
                 int i = 0;
                 foreach (var nhanvien in NhanViens)

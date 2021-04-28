@@ -1,50 +1,46 @@
 ﻿using System;
-using YTeModel;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controller
+namespace Controller.InitDataGridView
 {
-    public class ColumnName
+    class  ColumnName
     {
         #region Ten cot 
         public List<String> connguoi()
         {
             List<String> ls = new List<string>()
             {
-                "STT",
-                "Họ và tên",
-                "Số CMND",
-                "Ngày sinh",
-                "Giới tính",
-                "Nghề nghiệp",
-                "Địa chỉ",
-                "Số điện thoại",
-                "Email",
+                "stt",
+                "hovanten",
+                "socmnd",
+                "ngaysinh",
+                "gioitinh",
+                "nghenghiep",
+                "diachi",
+                "sodienthoai",
+                "email",
             };
             return ls;
         }
 
-        public List<String> nhanVien()
+        public List<String> nhanvien()
         {
             List<String> ls = new List<string>()
             {
-                "STT",
-                "Họ và tên",
-                "Số CMND",
-                "Ngày sinh",
-                "Giới tính",
-                "Nghề nghiệp",
-                "Địa chỉ",
-                "Số điện thoại",
-                "Email",
-                "Username",
-                "Password",
+                "stt",
+                "hovanten",
+                "socmnd",
+                "ngaysinh",
+                "gioitinh",
+                "nghenghiep",
+                "diachi",
+                "sodienthoai",
+                "email",
+                "username",
+                "password",
             };
             return ls;
         }
@@ -53,18 +49,18 @@ namespace Controller
         {
             List<String> ls = new List<string>()
             {
-                "STT",
-                "Họ và tên",
-                "Số CMND",
-                "Ngày sinh",
-                "Giới tính",
-                "Nghề nghiệp",
-                "Địa chỉ",
-                "Số điện thoại",
-                "Email",
-                "Thời gian thăm khám",
-                "Chiều cao",
-                "Cân nặng",
+                "stt",
+                "hovanten",
+                "socmnd",
+                "ngaysinh",
+                "gioitinh",
+                "nghenghiep",
+                "diachi",
+                "sodienthoai",
+                "email",
+                "thoigianthamkham",
+                "chieucao",
+                "cannang",
             };
             return ls;
         }
@@ -73,22 +69,21 @@ namespace Controller
         {
             List<String> ls = new List<string>()
             {
-                "STT",
-                "Họ và tên",
-                "Số CMND",
-                "Ngày sinh",
-                "Giới tính",
-                "Nghề nghiệp",
-                "Địa chỉ",
-                "Số điện thoại",
-                "Email",
+                "stt",
+                "hovanten",
+                "socmnd",
+                "ngaysinh",
+                "gioitinh",
+                "nghenghiep",
+                "diachi",
+                "sodienthoai",
+                "email",
                 "Thời gian thăm khám",
                 "Cân nặng",
                 "Thời gian sinh dự kiến"
             };
             return ls;
         }
-
         #endregion
     }
 }
