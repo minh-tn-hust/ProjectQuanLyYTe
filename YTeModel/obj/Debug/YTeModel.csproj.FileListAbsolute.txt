@@ -12,3 +12,15 @@ C:\Users\Hung\source\repos\KiemTra\YTeModel\obj\Debug\YTeModel.dll
 C:\Users\Hung\source\repos\KiemTra\YTeModel\obj\Debug\YTeModel.pdb
 C:\Users\Hung\source\repos\KiemTra\YTeModel\obj\Debug\YTeModel.Migrations.InitDatabase.resources
 C:\Users\Hung\source\repos\KiemTra\YTeModel\obj\Debug\YTeModel.csproj.GenerateResource.cache
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\bin\Debug\YTeModel.dll.config
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\bin\Debug\YTeModel.dll
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\bin\Debug\YTeModel.pdb
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\bin\Debug\EntityFramework.xml
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.csprojAssemblyReference.cache
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.Migrations.InitDatabase.resources
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.csproj.GenerateResource.cache
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.csproj.CoreCompileInputs.cache
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.csproj.CopyComplete
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.dll
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.pdb
