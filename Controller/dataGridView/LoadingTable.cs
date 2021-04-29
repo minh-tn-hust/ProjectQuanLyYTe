@@ -8,7 +8,7 @@ using YTeDB;
 using System.Windows.Forms;
 using Controller;
 
-namespace Controller.InitDataGridView
+namespace Controller.dataGridView
 {
     public class LoadingTable 
     {

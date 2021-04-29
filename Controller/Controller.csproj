@@ -52,10 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InitDataGridView\InitColumn.cs" />
-    <Compile Include="LoadingTable.cs" />
-    <Compile Include="InitDataGridView\ColumnName.cs" />
-    <Compile Include="InitDataGridView\HeaderText.cs" />
+    <Compile Include="dataGridView\DTGFilter.cs" />
+    <Compile Include="dataGridView\LoadingTable.cs" />
+    <Compile Include="dataGridView\ColumnName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

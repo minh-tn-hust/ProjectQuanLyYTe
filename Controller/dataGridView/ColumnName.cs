@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controller.InitDataGridView
+namespace Controller.dataGridView
 {
-    public class HeaderText
+    public class ColumnName
     {
         #region Ten cot 
         public List<String> connguoi()
