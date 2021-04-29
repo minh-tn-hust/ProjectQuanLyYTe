@@ -21,6 +21,8 @@ namespace YTeDB
         [StringLength(50)]
         public string GiaThanh { get; set; }
 
+        public int? SoMuiCanTiem{get;set;}
+
         public DateTime? NgaySanXuat { get; set; }
 
         public DateTime? HanSuDung { get; set; }

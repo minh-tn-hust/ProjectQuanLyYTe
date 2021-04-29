@@ -1,0 +1,9 @@
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\bin\Debug\YTeModel.dll.config
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\bin\Debug\YTeModel.dll
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\bin\Debug\YTeModel.pdb
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.Migrations.InitDatabase.resources
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeDB.csproj.GenerateResource.cache
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeDB.csproj.CoreCompileInputs.cache
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeDB.csproj.CopyComplete
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.dll
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.pdb
