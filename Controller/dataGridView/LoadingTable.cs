@@ -152,6 +152,46 @@ namespace Controller.dataGridView
                 return dt;
             }
         }
+        public DataTable vacxin()
+        {
+            using (var context = new YTeDbContext())
+            {
+                List<VacXin> Vacxins = context.VacXins.ToList();
+                DataTable dt = new DataTable();
+                foreach (var name in Name.vacxin())
+                    dt.Columns.Add(name);
+                int i = 0;
+                //foreach (var phunu in Vacxins)
+                //{
+                //    int id_Nguoi = (int)phunu.ID_Nguoi;
+                //    var record = context.ConNguois.Find(id_Nguoi);
+                //    DataRow dr;
+                //    dr = dt.NewRow();
+                //    dr[0] = ++i;
+                //    dr[1] = record.HoTen;
+                //    dr[2] = record.SoCMND;
+                //    dr[3] = record.NgaySinh;
+                //    dr[4] = record.GioiTinh;
+                //    dr[5] = record.NgheNghiep;
+                //    dr[6] = record.DiaChi;
+                //    dr[7] = record.SoDienThoai;
+                //    dr[8] = record.Email;
+                //    var thongtin = context.ThongTinThaiKis
+                //                    .Where(b => b.ID_NguoiMangThai == phunu.ID_NguoiMangThai)
+                //                    .FirstOrDefault();
+                //    if (thongtin != null)
+                //    {
+                //        dr[9] = thongtin.ThoiGianKham;
+                //        dr[10] = thongtin.CanNangThaiNhi;
+                //        dr[11] = thongtin.ThoiGianSinhDuKien.GetValueOrDefault();
+                //    }
+
+                //    dt.Rows.Add(dr);
+
+                //}
+                return dt;
+            }
+        }
 
     }
 }

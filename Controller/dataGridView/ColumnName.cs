@@ -89,6 +89,26 @@ namespace Controller.dataGridView
             return ls;
         }
 
+         public List<String> vacxin()
+                {
+                    List<String> ls = new List<string>()
+                    {
+                        "Tên vắc-xin",
+                        "Tên lo vắc-xin",
+                        "Giá thành",
+                        "Ngày sản xuất",
+                        "Hạn sử dụng",
+                        "Ngày nhập kho",
+                        "Thời gian sử dụng lại",
+                        "Số mũi cần tiêm",
+                        "Số lượng còn lại",
+                        "Chống chỉ định",
+                        "Thông tin khác",
+                    };
+                    return ls;
+                }
+
+
         #endregion
     }
 }
