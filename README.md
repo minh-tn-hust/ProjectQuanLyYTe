@@ -1,4 +1,4 @@
-# ProjectQuanLyYTe
+
 
 # Cài đặt
   Muốn giao tiếp được với Database thông qua Controller, đầu tiên clone về, sau đó vào Project đang làm thêm 2 Project Controller và YTeDb vào, rồi liên kết chúng với Project đang làm
