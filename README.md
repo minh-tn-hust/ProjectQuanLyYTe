@@ -8,7 +8,7 @@
   ![image](https://user-images.githubusercontent.com/58616490/116721207-40960a80-aa07-11eb-84f0-f042f213b98a.png)\
  Tích chọn Controller (mình sẽ sử dụng các hàm trong controller để có thể load và chỉnh sửa được cơ sở dữ liệu)
   ![image](https://user-images.githubusercontent.com/58616490/116721362-6a4f3180-aa07-11eb-936a-120d76b02d1d.png)\
- **Nhớ cài framework EF6 cho project hiện tại và controller**
+ **Nhớ cài framework EF6 cho project hiện tại và controller**\
  **Copy file App.config trong YTeDb vào trong Project hiện tại**
 
 # Giải thích một các class có trong Controller
