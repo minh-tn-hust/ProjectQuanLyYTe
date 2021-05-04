@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dataGridView\ConvertToObject.cs" />
     <Compile Include="dataGridView\DTGFilter.cs" />
     <Compile Include="dataGridView\LoadingTable.cs" />
     <Compile Include="dataGridView\ColumnName.cs" />
