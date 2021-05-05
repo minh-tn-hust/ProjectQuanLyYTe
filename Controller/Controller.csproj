@@ -56,6 +56,9 @@
     <Compile Include="dataGridView\DTGFilter.cs" />
     <Compile Include="dataGridView\LoadingTable.cs" />
     <Compile Include="dataGridView\ColumnName.cs" />
+    <Compile Include="Object\BangNhanVien.cs" />
+    <Compile Include="Object\BangTreEm.cs" />
+    <Compile Include="Object\BangPhuNuMangThai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

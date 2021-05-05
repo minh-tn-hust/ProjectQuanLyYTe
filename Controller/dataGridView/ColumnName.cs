@@ -53,18 +53,20 @@ namespace Controller.dataGridView
         {
             List<String> ls = new List<string>()
             {
-                "STT",
-                "Họ và tên",
-                "Số CMND",
-                "Ngày sinh",
-                "Giới tính",
-                "Nghề nghiệp",
-                "Địa chỉ",
-                "Số điện thoại",
-                "Email",
-                "Thời gian thăm khám",
-                "Chiều cao",
-                "Cân nặng",
+                "STT", //0
+                "Họ và tên", //1
+                "Họ và tên bố", //2
+                "Họ và tên mẹ", //3
+                "Số CMND", //4
+                "Ngày sinh", //5
+                "Giới tính", //6
+                "Nghề nghiệp", //7
+                "Địa chỉ", //8
+                "Số điện thoại", //9
+                "Email", //10
+                "Thời gian thăm khám", //11
+                "Chiều cao", //12
+                "Cân nặng", //13
             };
             return ls;
         }
@@ -94,13 +96,12 @@ namespace Controller.dataGridView
                     List<String> ls = new List<string>()
                     {
                         "Tên vắc-xin",
-                        "Tên lo vắc-xin",
+                        "Tên lô vắc-xin",
                         "Giá thành",
                         "Ngày sản xuất",
                         "Hạn sử dụng",
                         "Ngày nhập kho",
                         "Thời gian sử dụng lại",
-                        "Số mũi cần tiêm",
                         "Số lượng còn lại",
                         "Chống chỉ định",
                         "Thông tin khác",

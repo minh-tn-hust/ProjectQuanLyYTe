@@ -7,3 +7,4 @@ C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\Y
 C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeDB.csproj.CopyComplete
 C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.dll
 C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeModel.pdb
+C:\Users\minht\OneDrive\Máy tính\Project\ProjectQuanLyYTe\YTeModel\obj\Debug\YTeDB.csprojAssemblyReference.cache

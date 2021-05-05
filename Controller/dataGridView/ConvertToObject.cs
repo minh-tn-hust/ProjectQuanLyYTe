@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using YTeDB;
 using System.Windows.Forms;
+using Controller.Object;
+
 
 namespace Controller.dataGridView
 {
@@ -23,40 +22,11 @@ namespace Controller.dataGridView
                 return des;
             }
         }
-        public ConNguoi connguoiNew(DataGridView source, DataGridViewCellEventArgs e)
-        {
-            int i = 1;
-            ConNguoi des = new ConNguoi();
-            des.HoTen = source.Rows[e.RowIndex].Cells[i++].Value.ToString();
-            des.SoCMND = source.Rows[e.RowIndex].Cells[i++].Value.ToString();
-            des.NgaySinh = DateTime.Parse(source.Rows[e.RowIndex].Cells[i++].Value.ToString());
-            des.GioiTinh = int.Parse(source.Rows[e.RowIndex].Cells[i++].Value.ToString());
-            des.NgheNghiep = source.Rows[e.RowIndex].Cells[i++].Value.ToString();
-            des.DiaChi = source.Rows[e.RowIndex].Cells[i++].Value.ToString();
-            des.SoDienThoai = source.Rows[e.RowIndex].Cells[i++].Value.ToString();
-            des.Email = source.Rows[e.RowIndex].Cells[i++].Value.ToString();
-            return des;
-        }
 
         #endregion
-        #region Convert NhanVienYTe
-        public NhanVienYTe nhanvienNew(DataGridView source, DataGridViewCellEventArgs e)
-        {
-            int i = 1;
-            NhanVienYTe des = new NhanVienYTe();
-            String SoCMND = source.Rows[e.RowIndex].Cells[1].Value.ToString();
-            using (var context = new YTeDbContext())
-            {
-                var connguoi = context.ConNguois
-                                .Where(b => b.SoCMND == SoCMND)
-                                .FirstOrDefault();
-                des.ID_Nguoi = connguoi.ID_Nguoi;
-                des.UserName = source.Rows[e.RowIndex].Cells[9].Value.ToString();
-                des.Password = source.Rows[e.RowIndex].Cells[10].Value.ToString();
-                return des;
-            }
-        }
-        public NhanVienYTe nhanvien(DataGridView source, DataGridViewCellEventArgs e)
+
+        #region Convert NhanVienYTe // Can 2 doi tuong la Nhan vien + Con nguoi
+        public BangNhanVien nhanvien(DataGridView source, DataGridViewCellEventArgs e)
         {
             int i = 1;
             NhanVienYTe des;
@@ -69,62 +39,73 @@ namespace Controller.dataGridView
                 des = context.NhanVienYTes
                         .Where(b => b.ID_Nguoi == connguoi.ID_Nguoi)
                         .FirstOrDefault();
-                return des;
+                return new BangNhanVien(connguoi, des);
             }
         }
         #endregion
-        #region Convert Tre Em
-        public TreEm treem(DataGridView source, DataGridViewCellEventArgs e)
+
+        #region Convert Tre Em o bang tre em
+        public BangTreEm bangtreem(DataGridView source, DataGridViewCellEventArgs e)
         {
-            TreEm des = new TreEm();
-            int ID_Bo = int.Parse(source.Rows[e.RowIndex].Cells[1].Value.ToString());
-            int ID_Me = int.Parse(source.Rows[e.RowIndex].Cells[2].Value.ToString());
+            String name = source.Rows[e.RowIndex].Cells[1].Value.ToString();
+            DateTime birth = DateTime.Parse(source.Rows[e.RowIndex].Cells[5].Value.ToString());
+            MessageBox.Show(name);
             using (var context = new YTeDbContext())
             {
-                var connguoi = context.TreEms
-                                .Where(b => b.ID_Bo == ID_Bo && b.ID_Me == ID_Me)
+                var connguoi = context.ConNguois
+                                .Where(b => b.HoTen == name && b.NgaySinh == birth)
                                 .FirstOrDefault();
-                return des;
+                var treem = context.TreEms
+                                .Where(b => b.ID_Nguoi == connguoi.ID_Nguoi)
+                                .FirstOrDefault();
+                MessageBox.Show(treem.ID_TreEm.ToString());
+                var chiso = context.ChiSoTreCons
+                                .Where(b => b.ID_TreEm == treem.ID_TreEm)
+                                .FirstOrDefault();
+                return new BangTreEm(treem, chiso, connguoi);
             }
-        }
-        public TreEm treemNew(DataGridView source, DataGridViewCellEventArgs e)
-        {
-            int i = 1;
-            TreEm des = new TreEm();
-            int ID_Bo = int.Parse(source.Rows[e.RowIndex].Cells[1].Value.ToString());
-            int ID_Me = int.Parse(source.Rows[e.RowIndex].Cells[2].Value.ToString());
-            int ID_Nguoi = int.Parse(source.Rows[e.RowIndex].Cells[3].Value.ToString());
-            des.ID_Nguoi = ID_Nguoi;
-            des.ID_Bo = ID_Bo;
-            des.ID_Me = ID_Me;
-            return des;
         }
 
-        public ChiSoTreCon chisotrecon(DataGridView source, DataGridViewCellEventArgs e)
+
+        #endregion
+
+
+        #region Convert bang vacxin
+        public VacXin bangvacxin(DataGridView source, DataGridViewCellEventArgs e)
         {
-            ChiSoTreCon des = new ChiSoTreCon();
-            int ID_Bo = int.Parse(source.Rows[e.RowIndex].Cells[1].Value.ToString());
-            int ID_Me = int.Parse(source.Rows[e.RowIndex].Cells[2].Value.ToString());
+            String tenvacxin = source.Rows[e.RowIndex].Cells[0].Value.ToString();
+            DateTime ngaysanxuat = DateTime.Parse(source.Rows[e.RowIndex].Cells[2].Value.ToString());
+            String solo = source.Rows[e.RowIndex].Cells[1].Value.ToString();
             using (var context = new YTeDbContext())
             {
-                var connguoi = context.TreEms
-                                .Where(b => b.ID_Bo == ID_Bo && b.ID_Me == ID_Me)
+                var vacxin = context.VacXins
+                                .Where(b => b.TenVacXin == tenvacxin && b.NgaySanXuat == ngaysanxuat && b.TenLoVacXin == solo)
                                 .FirstOrDefault();
-                return des;
+                return vacxin;
             }
         }
-        //public ChiSoTreCon chisotreconNew(DataGridView source, DataGridViewCellEventArgs e)
-        //{
-        //    int i = 1;
-        //    ChiSoTreCon des = new ChiSoTreCon();
-        //    int ID_Bo = int.Parse(source.Rows[e.RowIndex].Cells[1].Value.ToString());
-        //    int ID_Me = int.Parse(source.Rows[e.RowIndex].Cells[2].Value.ToString());
-        //    int ID_Nguoi = int.Parse(source.Rows[e.RowIndex].Cells[3].Value.ToString());
-        //    des.ID_Nguoi = ID_Nguoi;
-        //    des.ID_Bo = ID_Bo;
-        //    des.ID_Me = ID_Me;
-        //    return des;
-        //}
+
+        #endregion
+
+        #region Convert Thong Tin Thai Ki
+        public BangPhuNuMangThai bangphunumangthai(DataGridView source, DataGridViewCellEventArgs e)
+        {
+            String SoCMND = source.Rows[e.RowIndex].Cells[2].Value.ToString();
+            using (var context = new YTeDbContext())
+            {
+                var connguoi = context.ConNguois
+                                .Where(b => b.SoCMND == SoCMND)
+                                .FirstOrDefault();
+                var phunumangthai = context.PhuNuMangThais
+                                .Where(b => b.ID_Nguoi == connguoi.ID_Nguoi)
+                                .FirstOrDefault();
+                var thongtinthaiki = context.ThongTinThaiKis
+                                .Where(b => b.ID_NguoiMangThai == phunumangthai.ID_NguoiMangThai)
+                                .FirstOrDefault();
+                return new BangPhuNuMangThai(connguoi, thongtinthaiki, phunumangthai);
+            }
+        }
+
         #endregion
 
     }
