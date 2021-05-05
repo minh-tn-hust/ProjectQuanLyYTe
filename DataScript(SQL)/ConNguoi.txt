@@ -136,7 +136,7 @@ INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('9','adiamenta','eH
 INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('58','mjappb','ZXuHS8p');
 
 -- Them bang tre em
-INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (23,76,65);
+
 INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (67,114,55);
 INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (56,43,2);
 INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (95,10,66);
@@ -148,7 +148,6 @@ INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (38,25,118);
 INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (102,83,43);
 INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (59,4,105);
 INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (98,21,6);
-INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (84,104,65);
 INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (92,104,51);
 INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (110,87,100);
 INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (56,44,86);
