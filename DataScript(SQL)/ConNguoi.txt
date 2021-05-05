@@ -118,3 +118,19 @@ INSERT INTO ConNguoi (HoTen,SoCMND,NgaySinh,GioiTinh,NgheNghiep,DiaChi,SoDienTho
 INSERT INTO ConNguoi (HoTen,SoCMND,NgaySinh,GioiTinh,NgheNghiep,DiaChi,SoDienThoai,Email) VALUES ('Bryan Peatman','3669671315',convert(date,'11/28/1990'),1,N'Chief Design Engineer','7307 Veith Alley','352 222 7034','bpeatman39@yale.edu');
 INSERT INTO ConNguoi (HoTen,SoCMND,NgaySinh,GioiTinh,NgheNghiep,DiaChi,SoDienThoai,Email) VALUES ('Kakalina Assante','7021723717',convert(date,'12/21/2004'),1,N'Help Desk Operator','487 Katie Circle','891 570 6811','kassante3a@aol.com');
 INSERT INTO ConNguoi (HoTen,SoCMND,NgaySinh,GioiTinh,NgheNghiep,DiaChi,SoDienThoai,Email) VALUES ('Amalea Sagerson','924028726',convert(date,'9/18/1990'),0,N'Research Associate','1432 West Point','925 876 2386','asagerson3b@senate.gov');
+
+
+-- Them Bang nhan vien y te
+
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('22','bnewell0','6YM1rEN');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('52','emcgawn1','Gfjn0wA');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('115','clebarr2','HjU6WOgah');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('118','mjellicorse3','fVjli3QQgXhR');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('55','mfollos4','8uacSUwN1Kjg');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('98','aducastel5','oEmJvWt');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('43','ppenhearow6','HL3O8Je5DbmZ');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('70','edawtry7','7SUZAbvCx9Z7');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('9','oespinet8','ByJG3jFUqOb');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('10','spimblott9','Ob041RiHZbk');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('9','adiamenta','eH1iI9pO');
+INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('58','mjappb','ZXuHS8p');
