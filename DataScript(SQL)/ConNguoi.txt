@@ -134,3 +134,29 @@ INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('9','oespinet8','By
 INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('10','spimblott9','Ob041RiHZbk');
 INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('9','adiamenta','eH1iI9pO');
 INSERT INTO NhanVienYTe (ID_Nguoi,UserName,PassWord) VALUES ('58','mjappb','ZXuHS8p');
+
+-- Them bang tre em
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (23,76,65);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (67,114,55);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (56,43,2);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (95,10,66);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (17,68,40);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (33,26,56);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (1,36,91);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (99,90,77);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (38,25,118);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (102,83,43);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (59,4,105);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (98,21,6);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (84,104,65);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (92,104,51);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (110,87,100);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (56,44,86);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (59,32,56);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (26,66,86);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (57,27,103);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (47,25,11);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (74,84,4);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (61,91,61);
+INSERT INTO treem (ID_Bo,ID_Me,ID_Nguoi) VALUES (72,18,8);
+
