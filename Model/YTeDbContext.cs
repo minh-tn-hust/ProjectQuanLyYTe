@@ -9,7 +9,7 @@ namespace Model
     public partial class YTeDbContext : DbContext
     {
         public YTeDbContext()
-            : base("MyModelYte")
+            : base("Model")
         {
             Database.SetInitializer<YTeDbContext>(new CreateDatabaseIfNotExists<YTeDbContext>());
         }

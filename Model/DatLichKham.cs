@@ -23,7 +23,7 @@ namespace Model
         public int ID_NhanVienYTe { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID_LichKham { get; set; }
-
+        public int ID_PhongKham { get; set; }
 
     }
 }
