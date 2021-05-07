@@ -29,7 +29,6 @@ namespace Model
         public virtual DbSet<TreEm> TreEms { get; set; }
         public virtual DbSet<VacXin> VacXins { get; set; }
         public virtual DbSet<DatLichKham> DatLichKhams { get; set; }
-        public virtual DbSet<LichBiHuy> LichBiHuys { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }
