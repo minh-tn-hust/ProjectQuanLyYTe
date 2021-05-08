@@ -66,12 +66,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YTeModel\YTeDB.csproj">
-      <Project>{7ba85ebe-1237-4907-bd75-418fcbe147df}</Project>
-      <Name>YTeDB</Name>
+    <ProjectReference Include="..\..\..\..\..\source\repos\modelController\Model\Model.csproj">
+      <Project>{e4015a96-22c0-492c-950a-d67bc00a0201}</Project>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

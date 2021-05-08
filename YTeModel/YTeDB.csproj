@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="ChiSoTreCon.cs" />
     <Compile Include="ChiSoTrungBinh.cs" />
+    <Compile Include="DatLichKham.cs" />
     <Compile Include="ConNguoi.cs" />
     <Compile Include="HoGiaDinh.cs" />
     <Compile Include="Migrations\202104281324081_InitDatabase.cs" />
