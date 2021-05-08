@@ -11,6 +11,7 @@ namespace Model
     public class DatLichKham
     {
 
+
         [Key]
         [Column(Order = 1)]
         public int ID_Nguoi { get; set; }

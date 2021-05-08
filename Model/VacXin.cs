@@ -9,16 +9,15 @@ namespace Model
     [Table("VacXin")]
     public partial class VacXin
     {
-        [Key]
-        [Column(Order = 1 )]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID_VacXin { get; set; }
 
         [StringLength(50)]
         public string TenVacXin { get; set; }
-
-        [StringLength(50)]
-        public string TenLoVacXin { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        [StringLength(10)]
+        public string SoLoVacXin { get; set; }
 
         [StringLength(50)]
         public string GiaThanh { get; set; }

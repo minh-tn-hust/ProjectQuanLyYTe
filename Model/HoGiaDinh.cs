@@ -10,14 +10,12 @@ namespace Model
     public partial class HoGiaDinh
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID_HoGiaDinh { get; set; }
 
         [Required]
         [StringLength(50)]
         public string SoHoKhau { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string TenChuHo { get; set; }
+        public int Id_Nguoi { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace Model
 
         [StringLength(50)]
         public string Password { get; set; }
-
+        [Required]
         public int ID_CoSoYTe { get; set; }
     }
 }

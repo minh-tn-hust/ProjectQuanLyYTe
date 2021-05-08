@@ -14,8 +14,7 @@ namespace Model
 
         [StringLength(50)]
         public string TenPhongKham { get; set; }
-        [StringLength(50)]
-        public string TenNguoiQuanLy { get; set; }
+        public int ID_NhanVienQuanLy { get; set; }
 
         [StringLength(50)]
         public string DiaChi { get; set; }

@@ -9,23 +9,14 @@ namespace Model
     [Table("TreEm")]
     public partial class TreEm
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TreEm()
-        {
-            ChiSoTreCons = new HashSet<ChiSoTreCon>();
-        }
-
-        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID_TreEm { get; set; }
-        [StringLength(50)]
+        [Key]
+        [StringLength(15)]
         public string MaTheBHYTe { get; set; }
         public int ID_Bo { get; set; }
         public int ID_Me { get; set; }
+        public string ThongTinNguoiBaoTin { get; set; }
         public int ID_Nguoi { get; set; }
-
-
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiSoTreCon> ChiSoTreCons { get; set; }
     }
 }

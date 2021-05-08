@@ -17,6 +17,7 @@ namespace Model
         [Key]
         [Column(Order = 1)]
         public DateTime ThoiGianKham { get; set; }
+        public DateTime LanKhamTiepTheo { get; set; }
 
         public int? Tuoi { get; set; }
 
@@ -25,7 +26,5 @@ namespace Model
         public int? ChieuCao { get; set; }
 
         public int ID_PhongKham { get; set; }
-
-        public virtual TreEm TreEm { get; set; }
     }
 }

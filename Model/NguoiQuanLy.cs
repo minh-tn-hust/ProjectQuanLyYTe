@@ -10,6 +10,7 @@ namespace Model
     public partial class NguoiQuanLy
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID_NguoiQuanLy { get; set; }
 
         [StringLength(50)]

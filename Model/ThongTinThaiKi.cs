@@ -17,13 +17,10 @@ namespace Model
         [Key]
         [Column(Order = 1)]
         public DateTime ThoiGianKham { get; set; }
-        public int GioiTinhTreEm { get; set; }
-        public int? CanNangThaiNhi { get; set; }
+        public DateTime LanKhamTiepTheo { get; set; }
 
         public DateTime? ThoiGianSinhDuKien { get; set; }
         public int ID_PhongKham { get; set; }
         public int ID_NhanVien { get; set; }
-
-        public virtual PhuNuMangThai PhuNuMangThai { get; set; }
     }
 }

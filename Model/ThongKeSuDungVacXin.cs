@@ -11,13 +11,14 @@ namespace Model
     [Table("ThongKeSuDungVacXin")]
     public partial class ThongKeSuDungVacXin
     {
-        [Key]
         public int ID_VacXin { get; set; }
-        [StringLength(50)]
+        [Key]
+        [Column(Order = 1)]
+        [StringLength(10)]
         public string SoLoVacXin { get; set; }
-        [StringLength(50)]
-        public string TenVacXin { get; set; }
-        public DateTime? NgaySuDung { get; set; }
+        [Key]
+        [Column(Order = 2)]
+        public DateTime NgaySuDung { get; set; }
         public int? SoLuongSuDung { get; set; }
 
     }
