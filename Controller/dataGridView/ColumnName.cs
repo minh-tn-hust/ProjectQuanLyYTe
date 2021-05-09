@@ -111,5 +111,28 @@ namespace Controller.dataGridView
 
 
         #endregion
+
+        public List<String> datlichkham()
+        {
+            List<String> ls = new List<string>()
+            {
+                "STT",
+                "Họ và tên",
+                "Số CMND",
+                "Ngày sinh",
+                "Giới tính",
+                "Nghề nghiệp",
+                "Địa chỉ",
+                "Số điện thoại",
+                "Email",
+                "Thời gian hẹn khám",
+                "Lý do khám",
+                "Ghi chú",
+                "Phòng khám",
+                "Người Làm Đơn"
+
+            };
+            return ls;
+        }
     }
 }
