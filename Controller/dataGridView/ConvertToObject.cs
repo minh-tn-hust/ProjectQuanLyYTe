@@ -108,6 +108,22 @@ namespace Controller.dataGridView
 
         #endregion
 
+        #region
+
+        public PhongKham bangphongkham(DataGridView source, DataGridViewCellEventArgs e)
+        {
+            String diachi = source.Rows[e.RowIndex].Cells[3].Value.ToString();
+            using (var context = new YTeDbContext())
+            {
+                var phongkham = context.PhongKhams
+                                    .Where(b => b.DiaChi == diachi)
+                                    .FirstOrDefault();
+                return phongkham;
+            }
+        }
+
+        #endregion
+
     }
 }
 

@@ -234,6 +234,37 @@ namespace Controller.dataGridView
                     dr[13] = connguoi1.HoTen;
                     dt.Rows.Add(dr);
                 }
+                return dt;
+            }
+        }
+
+        public DataTable phongkham()
+        {
+            using (var context = new YTeDbContext())
+            {
+                DataTable dt = new DataTable();
+                foreach (var name in Name.phongkham())
+                {
+                    dt.Columns.Add(name);
+                }
+                var PhongKhams = context.PhongKhams.ToList();
+                foreach (var phongkham in PhongKhams)
+                {
+                    DataRow dr = dt.NewRow();
+                    int i = 0;
+                    dr[0] = ++i;
+                    dr[1] = phongkham.TenPhongKham;
+                    dr[2] = phongkham.TenNguoiQuanLy;
+                    dr[3] = phongkham.DiaChi;
+                    dr[4] = phongkham.NgayBatDauTrongTuan;
+                    dr[5] = phongkham.NgayKetThucTrongTuan;
+                    dr[6] = phongkham.GioBatDau;
+                    dr[7] = phongkham.GioketThuc;
+                    dr[8] = phongkham.SoDienThoaiLienHe;
+                    dr[9] = phongkham.ThongTinKhac;
+                    dt.Rows.Add(dr);
+                }
+                return dt;
             }
         }
 

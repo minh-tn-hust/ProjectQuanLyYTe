@@ -95,6 +95,7 @@ namespace Controller.dataGridView
                 {
                     List<String> ls = new List<string>()
                     {
+                        "STT",
                         "Tên vắc-xin",
                         "Tên lô vắc-xin",
                         "Giá thành",
@@ -131,6 +132,25 @@ namespace Controller.dataGridView
                 "Phòng khám",
                 "Người Làm Đơn"
 
+            };
+            return ls;
+        }
+
+
+        public List<String> phongkham()
+        {
+            List<String> ls = new List<String>()
+            {
+                "STT",
+                "Tên phòng khám",
+                "Tên người quản lý",
+                "Địa chỉ",
+                "Ngày bắt đầu trong tuần",
+                "Ngày kết thúc trong tuần",
+                "Giờ bắt đầu",
+                "Giờ kết thúc",
+                "Số điện thoại liên hệ",
+                "Thông tin khác",
             };
             return ls;
         }
