@@ -14,6 +14,7 @@ namespace Model
         public int ID_HoGiaDinh { get; set; }
 
         [Required]
+        [Index(IsUnique = true)]
         [StringLength(50)]
         public string SoHoKhau { get; set; }
         public int Id_Nguoi { get; set; }

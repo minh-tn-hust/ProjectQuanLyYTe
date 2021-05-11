@@ -11,6 +11,7 @@ namespace Model
     [Table("ThongKeSuDungVacXin")]
     public partial class ThongKeSuDungVacXin
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_VacXin { get; set; }
         [Key]
         [Column(Order = 1)]

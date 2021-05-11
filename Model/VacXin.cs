@@ -9,13 +9,13 @@ namespace Model
     [Table("VacXin")]
     public partial class VacXin
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID_VacXin { get; set; }
 
         [StringLength(50)]
         public string TenVacXin { get; set; }
-        [Key]
-        [Column(Order = 1)]
+        [Index(IsUnique = true)]
         [StringLength(10)]
         public string SoLoVacXin { get; set; }
 
@@ -26,12 +26,11 @@ namespace Model
         public DateTime? NgaySanXuat { get; set; }
 
         public DateTime? HanSuDung { get; set; }
-        [Key]
-        [Column(Order = 2)]
-        public DateTime NgayNhapKho { get; set; }
+        public DateTime? NgayNhapKho { get; set; }
 
         public int? ThoiGianSuDungLai { get; set; }
         public int? SoMuiCanTiem { get; set; }
+        public int? SoLuongNhapKho { get; set; }
         public int? SoLuongConLai { get; set; }
 
         [StringLength(200)]

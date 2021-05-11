@@ -14,8 +14,9 @@
 
         [StringLength(50)]
         public string HoTen { get; set; }
+        [Index(IsUnique = true)]
 
-        [MaxLength(13,ErrorMessage ="Chứng minh nhân dân có tối đa 13 chữ số!")]
+        [MaxLength(13, ErrorMessage = "Chứng minh nhân dân có tối đa 13 chữ số!")]
         public string SoCMND { get; set; }
 
         public DateTime? NgaySinh { get; set; }
@@ -35,7 +36,6 @@
         public string Email { get; set; }
 
         public int? QuanHeVoiChuHo { get; set; }
-
         public int? ID_HoGiaDinh { get; set; }
     }
 }

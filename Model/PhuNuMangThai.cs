@@ -10,11 +10,12 @@
     public partial class PhuNuMangThai
     {
 
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID_NguoiMangThai { get; set; }
 
         public int ID_Nguoi { get; set; }
-        [Key]
+        [Index(IsUnique = true)]
         [MaxLength(15, ErrorMessage = "Bảo hiểm y tế có 15 kí tự!")]
         public string SoBHYTe { get; set; }
         public int ChieuCao { get; set; }

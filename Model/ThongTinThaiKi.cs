@@ -22,5 +22,6 @@ namespace Model
         public DateTime? ThoiGianSinhDuKien { get; set; }
         public int ID_PhongKham { get; set; }
         public int ID_NhanVien { get; set; }
+
     }
 }

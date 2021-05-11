@@ -9,9 +9,10 @@ namespace Model
     [Table("TreEm")]
     public partial class TreEm
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID_TreEm { get; set; }
-        [Key]
+        [Index(IsUnique = true)]
         [StringLength(15)]
         public string MaTheBHYTe { get; set; }
         public int ID_Bo { get; set; }
