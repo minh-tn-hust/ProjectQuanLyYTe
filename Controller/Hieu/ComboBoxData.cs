@@ -52,7 +52,11 @@ namespace Controller.Hieu
                 List<String> tenVacXin = new List<String>();
                 foreach( var record in thongkes)
                 {
-                    tenVacXin.Add(record.TenVacXin);
+                    MessageBox.Show(record.ID_VacXin.ToString());
+                    var vacxin = context.VacXins
+                                    .Where(b => b.ID_VacXin == record.ID_VacXin)
+                                    .FirstOrDefault();
+                    tenVacXin.Add(vacxin.TenVacXin);
                 }
                 return tenVacXin.Distinct().ToList();
             }
