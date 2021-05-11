@@ -56,7 +56,8 @@
     <Compile Include="dataGridView\DTGFilter.cs" />
     <Compile Include="dataGridView\LoadingTable.cs" />
     <Compile Include="dataGridView\ColumnName.cs" />
-    <Compile Include="Hieu\loadDataToComboBox.cs" />
+    <Compile Include="Hieu\GraphData.cs" />
+    <Compile Include="Hieu\ComboBoxData.cs" />
     <Compile Include="Object\BangNhanVien.cs" />
     <Compile Include="Object\BangTreEm.cs" />
     <Compile Include="Object\BangPhuNuMangThai.cs" />
