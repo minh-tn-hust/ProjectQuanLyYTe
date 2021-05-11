@@ -1,0 +1,14 @@
+D:\OOP_project\MyModelYTe\bin\Debug\ClassLibrary1.dll.config
+D:\OOP_project\MyModelYTe\bin\Debug\ClassLibrary1.dll
+D:\OOP_project\MyModelYTe\bin\Debug\ClassLibrary1.pdb
+D:\OOP_project\MyModelYTe\bin\Debug\EntityFramework.dll
+D:\OOP_project\MyModelYTe\bin\Debug\EntityFramework.SqlServer.dll
+D:\OOP_project\MyModelYTe\bin\Debug\EntityFramework.xml
+D:\OOP_project\MyModelYTe\bin\Debug\EntityFramework.SqlServer.xml
+D:\OOP_project\MyModelYTe\obj\Debug\MyModelYTe.csprojAssemblyReference.cache
+D:\OOP_project\MyModelYTe\obj\Debug\ClassLibrary1.Migrations.New.resources
+D:\OOP_project\MyModelYTe\obj\Debug\MyModelYTe.csproj.GenerateResource.cache
+D:\OOP_project\MyModelYTe\obj\Debug\MyModelYTe.csproj.CoreCompileInputs.cache
+D:\OOP_project\MyModelYTe\obj\Debug\MyModelYTe.csproj.CopyComplete
+D:\OOP_project\MyModelYTe\obj\Debug\ClassLibrary1.dll
+D:\OOP_project\MyModelYTe\obj\Debug\ClassLibrary1.pdb

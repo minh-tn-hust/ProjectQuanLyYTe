@@ -1,0 +1,14 @@
+D:\OOP_project\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+D:\OOP_project\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+D:\OOP_project\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+D:\OOP_project\ClassLibrary1\bin\Debug\EntityFramework.dll
+D:\OOP_project\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.dll
+D:\OOP_project\ClassLibrary1\bin\Debug\EntityFramework.xml
+D:\OOP_project\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml
+D:\OOP_project\ClassLibrary1\obj\Debug\ClassLibrary1.csprojAssemblyReference.cache
+D:\OOP_project\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+D:\OOP_project\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CopyComplete
+D:\OOP_project\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+D:\OOP_project\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+D:\OOP_project\ClassLibrary1\obj\Debug\ClassLibrary1.Migrations.New.resources
+D:\OOP_project\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.GenerateResource.cache
