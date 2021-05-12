@@ -1,0 +1,251 @@
+USE [test_dab]
+GO
+/****** Object:  Table [dbo].[admin]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[admin](
+	[aid] [varchar](10) NOT NULL,
+	[username] [varchar](45) NOT NULL,
+	[password] [varchar](45) NOT NULL,
+ CONSTRAINT [pk_admin] PRIMARY KEY CLUSTERED 
+(
+	[aid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[chisocoban]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[chisocoban](
+	[thoigiankham] [date] NOT NULL,
+	[cannang] [float] NOT NULL,
+	[chieucao] [float] NULL,
+	[id_nguoi] [varchar](10) NOT NULL,
+ CONSTRAINT [pk_chisocoban] PRIMARY KEY CLUSTERED 
+(
+	[id_nguoi] ASC,
+	[thoigiankham] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[connguoi]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[connguoi](
+	[id_nguoi] [varchar](10) NOT NULL,
+	[chungminhnhandan] [varchar](13) NULL,
+	[ngaysinh] [date] NULL,
+	[diachi] [nvarchar](100) NULL,
+	[nghenghiep] [nvarchar](50) NULL,
+	[sdt] [varchar](12) NULL,
+	[gioitinh] [int] NULL,
+	[email] [varchar](50) NULL,
+	[hovaten] [nvarchar](50) NULL,
+ CONSTRAINT [pk_connguoi] PRIMARY KEY CLUSTERED 
+(
+	[id_nguoi] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[hogiadinh]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[hogiadinh](
+	[id_giadinh] [varchar](10) NOT NULL,
+	[sohokhau] [varchar](20) NULL,
+	[tenchuho] [nvarchar](50) NULL,
+ CONSTRAINT [pk_hogiadinh] PRIMARY KEY CLUSTERED 
+(
+	[id_giadinh] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[nhanvienyte]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[nhanvienyte](
+	[id_nhanvien] [varchar](10) NULL,
+	[username] [varchar](45) NOT NULL,
+	[password] [varchar](45) NOT NULL,
+	[id_nguoi] [varchar](10) NOT NULL,
+ CONSTRAINT [pk_nhanvienyte] PRIMARY KEY CLUSTERED 
+(
+	[id_nguoi] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[phongkham]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[phongkham](
+	[id_phongkham] [varchar](10) NOT NULL,
+	[id_nguoi] [varchar](10) NOT NULL,
+	[diachi] [nvarchar](100) NULL,
+	[giolamviec] [time](7) NULL,
+	[tenphongkham] [nvarchar](100) NULL,
+ CONSTRAINT [pk_phongkham] PRIMARY KEY CLUSTERED 
+(
+	[id_phongkham] ASC,
+	[id_nguoi] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[phunumangthai]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[phunumangthai](
+	[id_nguoi] [varchar](10) NOT NULL,
+ CONSTRAINT [pk_phunumangthai] PRIMARY KEY CLUSTERED 
+(
+	[id_nguoi] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[sudung]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[sudung](
+	[somuitiem] [int] NULL,
+	[diadiemtiem] [nvarchar](100) NULL,
+	[ngaytiem] [date] NULL,
+	[id_nguoi] [varchar](10) NOT NULL,
+	[vohop] [varchar](50) NULL,
+	[hoadon] [varchar](50) NULL,
+	[sotiem] [varchar](50) NULL,
+	[id_vacxin] [varchar](10) NOT NULL,
+ CONSTRAINT [pk_sudung] PRIMARY KEY CLUSTERED 
+(
+	[id_nguoi] ASC,
+	[id_vacxin] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[thanhvientronggiadinh]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[thanhvientronggiadinh](
+	[id_nguoi] [varchar](10) NOT NULL,
+	[quanhechuho] [int] NULL,
+	[id_giadinh] [varchar](10) NOT NULL,
+ CONSTRAINT [pk_thanhvientronggiadinh] PRIMARY KEY CLUSTERED 
+(
+	[id_nguoi] ASC,
+	[id_giadinh] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[thongtinthaiki]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[thongtinthaiki](
+	[cannang] [float] NULL,
+	[thoigiankham] [date] NOT NULL,
+	[thoigiansinhdukien] [date] NULL,
+	[id_nguoi] [varchar](10) NOT NULL,
+ CONSTRAINT [pk_thongtinthaiki] PRIMARY KEY CLUSTERED 
+(
+	[id_nguoi] ASC,
+	[thoigiankham] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[trecon]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[trecon](
+	[id_nguoi] [varchar](10) NOT NULL,
+ CONSTRAINT [pk_trecon] PRIMARY KEY CLUSTERED 
+(
+	[id_nguoi] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[vacxin]    Script Date: 4/5/2021 5:08:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[vacxin](
+	[tenvacxin] [nvarchar](100) NULL,
+	[thongtincoban] [nvarchar](400) NULL,
+	[giathanh] [int] NULL,
+	[hansudung] [date] NULL,
+	[solo] [varchar](20) NULL,
+	[thoigiantiemlai] [int] NULL,
+	[chongchidinh] [varchar](100) NULL,
+	[ngaynhapkho] [date] NULL,
+	[id_vacxin] [varchar](10) NOT NULL,
+	[soluong] [int] NOT NULL,
+ CONSTRAINT [pk_vacxin] PRIMARY KEY CLUSTERED 
+(
+	[id_vacxin] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[chisocoban]  WITH CHECK ADD  CONSTRAINT [fk_chisocoban_trecon1] FOREIGN KEY([id_nguoi])
+REFERENCES [dbo].[trecon] ([id_nguoi])
+GO
+ALTER TABLE [dbo].[chisocoban] CHECK CONSTRAINT [fk_chisocoban_trecon1]
+GO
+ALTER TABLE [dbo].[nhanvienyte]  WITH CHECK ADD  CONSTRAINT [fk_nhanvienyte_connguoi1] FOREIGN KEY([id_nguoi])
+REFERENCES [dbo].[connguoi] ([id_nguoi])
+GO
+ALTER TABLE [dbo].[nhanvienyte] CHECK CONSTRAINT [fk_nhanvienyte_connguoi1]
+GO
+ALTER TABLE [dbo].[phunumangthai]  WITH CHECK ADD  CONSTRAINT [fk_phunumangtahi_connguoi1] FOREIGN KEY([id_nguoi])
+REFERENCES [dbo].[connguoi] ([id_nguoi])
+GO
+ALTER TABLE [dbo].[phunumangthai] CHECK CONSTRAINT [fk_phunumangtahi_connguoi1]
+GO
+ALTER TABLE [dbo].[sudung]  WITH CHECK ADD  CONSTRAINT [fk_sudung_connguoi1] FOREIGN KEY([id_nguoi])
+REFERENCES [dbo].[connguoi] ([id_nguoi])
+GO
+ALTER TABLE [dbo].[sudung] CHECK CONSTRAINT [fk_sudung_connguoi1]
+GO
+ALTER TABLE [dbo].[sudung]  WITH CHECK ADD  CONSTRAINT [fk_sudung_vacxin1] FOREIGN KEY([id_vacxin])
+REFERENCES [dbo].[vacxin] ([id_vacxin])
+GO
+ALTER TABLE [dbo].[sudung] CHECK CONSTRAINT [fk_sudung_vacxin1]
+GO
+ALTER TABLE [dbo].[thanhvientronggiadinh]  WITH CHECK ADD  CONSTRAINT [fk_thanhvientronggiadinh_connguoi1] FOREIGN KEY([id_nguoi])
+REFERENCES [dbo].[connguoi] ([id_nguoi])
+GO
+ALTER TABLE [dbo].[thanhvientronggiadinh] CHECK CONSTRAINT [fk_thanhvientronggiadinh_connguoi1]
+GO
+ALTER TABLE [dbo].[thanhvientronggiadinh]  WITH CHECK ADD  CONSTRAINT [fk_thanhvientronggiadinh_hogiadinh1] FOREIGN KEY([id_giadinh])
+REFERENCES [dbo].[hogiadinh] ([id_giadinh])
+GO
+ALTER TABLE [dbo].[thanhvientronggiadinh] CHECK CONSTRAINT [fk_thanhvientronggiadinh_hogiadinh1]
+GO
+ALTER TABLE [dbo].[thongtinthaiki]  WITH CHECK ADD  CONSTRAINT [fk_thongtinthaiki_phunumangtahi1] FOREIGN KEY([id_nguoi])
+REFERENCES [dbo].[phunumangthai] ([id_nguoi])
+GO
+ALTER TABLE [dbo].[thongtinthaiki] CHECK CONSTRAINT [fk_thongtinthaiki_phunumangtahi1]
+GO
+ALTER TABLE [dbo].[trecon]  WITH CHECK ADD  CONSTRAINT [fk_trecon_connguoi1] FOREIGN KEY([id_nguoi])
+REFERENCES [dbo].[connguoi] ([id_nguoi])
+GO
+ALTER TABLE [dbo].[trecon] CHECK CONSTRAINT [fk_trecon_connguoi1]
+GO

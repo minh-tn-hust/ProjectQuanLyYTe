@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13886203-DC29-469C-BF09-FDC4C0961555}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyYTe</RootNamespace>
+    <AssemblyName>QuanLyYTe</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QL_NVien\HienThiToanBoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_NVien\HienThiToanBoNhanVien.Designer.cs">
+      <DependentUpon>HienThiToanBoNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QL_PKham\ChinhSuaThongTinHoacXoaCoSoYTe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_PKham\ChinhSuaThongTinHoacXoaCoSoYTe.Designer.cs">
+      <DependentUpon>ChinhSuaThongTinHoacXoaCoSoYTe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QL_PKham\HienThiToanBoCoSoYTe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_PKham\HienThiToanBoCoSoYTe.Designer.cs">
+      <DependentUpon>HienThiToanBoCoSoYTe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QL_VacXin\ChinhSuaThongTinVacXin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_VacXin\ChinhSuaThongTinVacXin.Designer.cs">
+      <DependentUpon>ChinhSuaThongTinVacXin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GD_Chung\MenuUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GD_Chung\MenuUI.Designer.cs">
+      <DependentUpon>MenuUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QL_NVien\SuaChiTietHoacXoaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_NVien\SuaChiTietHoacXoaNhanVien.Designer.cs">
+      <DependentUpon>SuaChiTietHoacXoaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QL_PKham\ThemMoiCoSoYTe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_PKham\ThemMoiCoSoYTe.Designer.cs">
+      <DependentUpon>ThemMoiCoSoYTe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QL_VacXin\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_VacXin\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QL_VacXin\HienThiToanBoVacXin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_VacXin\HienThiToanBoVacXin.Designer.cs">
+      <DependentUpon>HienThiToanBoVacXin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QL_VacXin\ThemMoiVacXin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_VacXin\ThemMoiVacXin.Designer.cs">
+      <DependentUpon>ThemMoiVacXin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QL_NVien\ThemMoiNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QL_NVien\ThemMoiNhanVien.Designer.cs">
+      <DependentUpon>ThemMoiNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GD_Chung\SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GD_Chung\SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_NVien\HienThiToanBoNhanVien.resx">
+      <DependentUpon>HienThiToanBoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_PKham\ChinhSuaThongTinHoacXoaCoSoYTe.resx">
+      <DependentUpon>ChinhSuaThongTinHoacXoaCoSoYTe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_PKham\HienThiToanBoCoSoYTe.resx">
+      <DependentUpon>HienThiToanBoCoSoYTe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_VacXin\ChinhSuaThongTinVacXin.resx">
+      <DependentUpon>ChinhSuaThongTinVacXin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GD_Chung\MenuUI.resx">
+      <DependentUpon>MenuUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_NVien\SuaChiTietHoacXoaNhanVien.resx">
+      <DependentUpon>SuaChiTietHoacXoaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_PKham\ThemMoiCoSoYTe.resx">
+      <DependentUpon>ThemMoiCoSoYTe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_VacXin\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_VacXin\HienThiToanBoVacXin.resx">
+      <DependentUpon>HienThiToanBoVacXin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_VacXin\ThemMoiVacXin.resx">
+      <DependentUpon>ThemMoiVacXin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QL_NVien\ThemMoiNhanVien.resx">
+      <DependentUpon>ThemMoiNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GD_Chung\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Model2DataSet.xsc">
+      <DependentUpon>Model2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Model2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Model2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Model2DataSet.xss">
+      <DependentUpon>Model2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Model.PhongKham.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\QuanLyYTeDB.bak" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\menu_50px.png" />
+    <None Include="Images\undo_40px.png" />
+    <None Include="Images\lock.png" />
+    <None Include="Images\lock_40px.png" />
+    <None Include="Images\password_48px.png" />
+    <None Include="Images\show.png" />
+    <None Include="Images\newVacXin.png" />
+    <None Include="Images\logOut.png" />
+    <None Include="Images\addBuilding.png" />
+    <None Include="Images\addNewMember.jpg" />
+    <None Include="Images\changePassword.png" />
+    <None Include="Images\delete.png" />
+    <None Include="Images\deleteMember.png" />
+    <None Include="Images\editInformation.jpg" />
+    <None Include="Images\Change_Password.png" />
+    <None Include="Images\changePassword1.png" />
+    <None Include="Images\delete_64px.png" />
+    <None Include="Images\export_40px.png" />
+    <Content Include="Images\eye_close.png" />
+    <Content Include="Images\eye_open.png" />
+    <None Include="Resources\eye_open.png" />
+    <None Include="Resources\eye_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TestFilter\ProjectQuanLyYTe\Controller\Controller.csproj">
+      <Project>{b680fd58-2e26-4dcb-ad13-e3bc7e5ef0ba}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LastModel\LastModel.csproj">
+      <Project>{1a61898a-ef30-47f1-a70c-1c51ba9899a0}</Project>
+      <Name>LastModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelIO\ModelIO.csproj">
+      <Project>{7d4cf3c2-1b5f-46cf-bd4e-b96ed66bfdfd}</Project>
+      <Name>ModelIO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
