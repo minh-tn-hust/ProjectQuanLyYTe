@@ -244,7 +244,7 @@
     <None Include="Resources\eye_close.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TestFilter\ProjectQuanLyYTe\Controller\Controller.csproj">
+    <ProjectReference Include="..\Controller\Controller.csproj">
       <Project>{b680fd58-2e26-4dcb-ad13-e3bc7e5ef0ba}</Project>
       <Name>Controller</Name>
     </ProjectReference>

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelIO", "ModelIO\ModelIO.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LastModel", "LastModel\LastModel.csproj", "{1A61898A-EF30-47F1-A70C-1C51BA9899A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "..\TestFilter\ProjectQuanLyYTe\Controller\Controller.csproj", "{B680FD58-2E26-4DCB-AD13-E3BC7E5EF0BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{B680FD58-2E26-4DCB-AD13-E3BC7E5EF0BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
