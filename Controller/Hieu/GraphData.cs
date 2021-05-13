@@ -14,9 +14,14 @@ namespace Controller.Hieu
         {
             using (var context = new YTeDbContext())
             {
+                var vacxin = context.VacXins
+                                .Where(b => b.TenVacXin == name)
+                                .FirstOrDefault();
+
                 var thongkes = context.ThongKeSuDungVacXins
-                                .Where(b => b.TenVacXin == name && b.NgaySuDung >= begin && b.NgaySuDung <= end)
+                                .Where(b => b.ID_VacXin == vacxin.ID_VacXin && b.NgaySuDung >= begin && b.NgaySuDung <= end)
                                 .ToList();
+
                 thongkes = thongkes.OrderBy(o => o.NgaySuDung).ToList();
                 List<int?> data = new List<int?>();
                 int sum = 0;

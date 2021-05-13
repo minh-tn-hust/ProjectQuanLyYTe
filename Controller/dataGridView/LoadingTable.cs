@@ -191,52 +191,52 @@ namespace Controller.dataGridView
                 return dt;
             }
         }
-        
-        //public DataTable datlichkham()
-        //{
-        //    using (var context = new YTeDbContext())
-        //    {
-        //        List<DatLichKham> LichKhams = context.DatLichKhams.ToList();
-        //        DataTable dt = new DataTable();
-        //        foreach (var name in Name.datlichkham())
-        //            dt.Columns.Add(name);
-        //        int i = 0;
-        //        foreach (var lichkham in LichKhams)
-        //        {
-        //            var record = context.ConNguois
-        //                            .Where(b => b.ID_Nguoi == lichkham.ID_Nguoi)
-        //                            .FirstOrDefault();
-        //            DataRow dr;
-        //            dr = dt.NewRow();
-        //            dr[0] = ++i;
-        //            dr[1] = record.HoTen;
-        //            dr[2] = record.SoCMND;
-        //            dr[3] = record.NgaySinh;
-        //            dr[4] = record.GioiTinh;
-        //            dr[5] = record.NgheNghiep;
-        //            dr[6] = record.DiaChi;
-        //            dr[7] = record.SoDienThoai;
-        //            dr[8] = record.Email;
-        //            dr[9] = lichkham.ThoiGianHenKham;
-        //            dr[10] = lichkham.LyDoKham;
-        //            dr[11] = lichkham.GhiChu;
 
-        //            var phongkham = context.PhongKhams
-        //                                .Where(b => b.ID_PhongKham == lichkham.ID_PhongKham)
-        //                                .FirstOrDefault();
-        //            dr[12] = phongkham.TenPhongKham;
-        //            var nhanvien = context.NhanVienYTes
-        //                                .Where(b => b.ID_NhanVien == lichkham.ID_NhanVien)
-        //                                .FirstOrDefault();
-        //            var connguoi1 = context.ConNguois
-        //                                .Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi)
-        //                                .FirstOrDefault();
-        //            dr[13] = connguoi1.HoTen;
-        //            dt.Rows.Add(dr);
-        //        }
-        //        return dt;
-        //    }
-        //}
+        public DataTable datlichkham()
+        {
+            using (var context = new YTeDbContext())
+            {
+                List<DatLichKham> LichKhams = context.DatLichKhams.ToList();
+                DataTable dt = new DataTable();
+                foreach (var name in Name.datlichkham())
+                    dt.Columns.Add(name);
+                int i = 0;
+                foreach (var lichkham in LichKhams)
+                {
+                    var record = context.ConNguois
+                                    .Where(b => b.ID_Nguoi == lichkham.ID_Nguoi)
+                                    .FirstOrDefault();
+                    DataRow dr;
+                    dr = dt.NewRow();
+                    dr[0] = ++i;
+                    dr[1] = record.HoTen;
+                    dr[2] = record.SoCMND;
+                    dr[3] = record.NgaySinh;
+                    dr[4] = record.GioiTinh;
+                    dr[5] = record.NgheNghiep;
+                    dr[6] = record.DiaChi;
+                    dr[7] = record.SoDienThoai;
+                    dr[8] = record.Email;
+                    dr[9] = lichkham.ThoiGianHenKham;
+                    dr[10] = lichkham.LyDoKham;
+                    dr[11] = lichkham.GhiChu;
+
+                    var phongkham = context.PhongKhams
+                                        .Where(b => b.ID_PhongKham == lichkham.ID_PhongKham)
+                                        .FirstOrDefault();
+                    dr[12] = phongkham.TenPhongKham;
+                    var nhanvien = context.NhanVienYTes
+                                        .Where(b => b.ID_NhanVien == lichkham.ID_NhanVien)
+                                        .FirstOrDefault();
+                    var connguoi1 = context.ConNguois
+                                        .Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi)
+                                        .FirstOrDefault();
+                    dr[13] = connguoi1.HoTen;
+                    dt.Rows.Add(dr);
+                }
+                return dt;
+            }
+        }
 
         public DataTable phongkham()
         {
@@ -262,6 +262,39 @@ namespace Controller.dataGridView
                     dr[7] = phongkham.GioketThuc;
                     dr[8] = phongkham.SoDienThoaiLienHe;
                     dr[9] = phongkham.ThongTinKhac;
+                    dt.Rows.Add(dr);
+                }
+                return dt;
+            }
+        }
+
+        public DataTable sudung()
+        {
+            using (var context = new YTeDbContext())
+            {
+                DataTable dt = new DataTable();
+                foreach (var name in Name.sudung())
+                    dt.Columns.Add(name);
+                var sudungs = context.SuDungVacXins.ToList();
+                int i  = 0;
+                foreach (var record in sudungs)
+                {
+                    DataRow dr = dt.NewRow();
+                    var connguoi = context.ConNguois
+                                    .Where(b => b.ID_Nguoi == record.ID_Nguoi)
+                                    .FirstOrDefault();
+                    var vacxin = context.VacXins
+                                    .Where(b => b.ID_VacXin == record.ID_VacXin)
+                                    .FirstOrDefault();
+                    var phongkham = context.PhongKhams
+                                        .Where(b => b.ID_PhongKham == record.ID_PhongKham)
+                                        .FirstOrDefault();
+                    dr[0] = ++i;
+                    dr[1] = connguoi.HoTen;
+                    dr[2] = vacxin.TenVacXin;
+                    dr[3] = record.ThoiDiemTiem;
+                    dr[4] = record.SoMuiTiem;
+                    dr[5] = phongkham.TenPhongKham;
                     dt.Rows.Add(dr);
                 }
                 return dt;

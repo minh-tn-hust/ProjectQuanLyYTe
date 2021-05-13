@@ -52,6 +52,7 @@ namespace Controller.Hieu
                 List<String> tenVacXin = new List<String>();
                 foreach( var record in thongkes)
                 {
+                    MessageBox.Show(record.ID_VacXin.ToString());
                     var vacxin = context.VacXins
                                     .Where(b => b.ID_VacXin == record.ID_VacXin)
                                     .FirstOrDefault();
