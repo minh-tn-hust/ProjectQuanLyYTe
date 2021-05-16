@@ -68,9 +68,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\source\repos\modelController\ModelDB\ModelDB.csproj">
-      <Project>{b2fb6bc6-e017-4a7b-9821-525bb238089c}</Project>
-      <Name>ModelDB</Name>
+    <ProjectReference Include="..\..\..\..\..\source\repos\modelController\Model\Model.csproj">
+      <Project>{b78647c8-801b-42ac-8342-326ab58fd833}</Project>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

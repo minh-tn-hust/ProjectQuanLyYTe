@@ -79,7 +79,7 @@ namespace Controller.dataGridView
             using (var context = new YTeDbContext())
             {
                 var vacxin = context.VacXins
-                                .Where(b => b.TenVacXin == tenvacxin && b.NgaySanXuat == ngaysanxuat && b.TenLoVacXin == solo)
+                                .Where(b => b.TenVacXin == tenvacxin && b.NgaySanXuat == ngaysanxuat && b.SoLoVacXin == solo)
                                 .FirstOrDefault();
                 return vacxin;
             }
