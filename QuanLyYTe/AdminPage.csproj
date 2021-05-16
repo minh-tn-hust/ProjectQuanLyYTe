@@ -244,17 +244,13 @@
     <None Include="Resources\eye_close.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TestFilter\ProjectQuanLyYTe\Controller\Controller.csproj">
+    <ProjectReference Include="..\Controller\Controller.csproj">
       <Project>{b680fd58-2e26-4dcb-ad13-e3bc7e5ef0ba}</Project>
       <Name>Controller</Name>
     </ProjectReference>
     <ProjectReference Include="..\LastModel\LastModel.csproj">
       <Project>{1a61898a-ef30-47f1-a70c-1c51ba9899a0}</Project>
       <Name>LastModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ModelIO\ModelIO.csproj">
-      <Project>{7d4cf3c2-1b5f-46cf-bd4e-b96ed66bfdfd}</Project>
-      <Name>ModelIO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

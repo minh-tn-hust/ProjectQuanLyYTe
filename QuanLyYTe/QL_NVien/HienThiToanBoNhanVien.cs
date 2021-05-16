@@ -1,6 +1,6 @@
 ﻿
 using Model;
-using ModelIO;
+using Controller.Ef6Operator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +22,7 @@ namespace QuanLyYTe.QL_NVien
             InitializeComponent();
         }
         
-        sqlMethod sql = new sqlMethod();
+        ef6Method sql = new ef6Method();
         LoadingTable loadingTable = new LoadingTable();
         DataTable dataTable=null;
         ConvertToObject convertToObject = new ConvertToObject();

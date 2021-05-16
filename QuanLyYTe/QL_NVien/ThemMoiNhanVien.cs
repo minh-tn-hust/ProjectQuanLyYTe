@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Model;
-using ModelIO;
 using Controller.dataGridView;
 using Controller.Object;
+using Controller.Ef6Operator;
 
 namespace QuanLyYTe
 {
@@ -22,7 +22,7 @@ namespace QuanLyYTe
             InitializeComponent();
         }
 
-        sqlMethod sql = new sqlMethod();
+        ef6Method sql = new ef6Method();
         DataTable dataTable = new DataTable();
         ConvertToObject convertToObject = new ConvertToObject();
         PhongKham phongKham = new PhongKham();

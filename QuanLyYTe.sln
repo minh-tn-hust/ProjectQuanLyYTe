@@ -5,11 +5,9 @@ VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPage", "QuanLyYTe\AdminPage.csproj", "{13886203-DC29-469C-BF09-FDC4C0961555}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelIO", "ModelIO\ModelIO.csproj", "{7D4CF3C2-1B5F-46CF-BD4E-B96ED66BFDFD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LastModel", "LastModel\LastModel.csproj", "{1A61898A-EF30-47F1-A70C-1C51BA9899A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "..\TestFilter\ProjectQuanLyYTe\Controller\Controller.csproj", "{B680FD58-2E26-4DCB-AD13-E3BC7E5EF0BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{B680FD58-2E26-4DCB-AD13-E3BC7E5EF0BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{13886203-DC29-469C-BF09-FDC4C0961555}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13886203-DC29-469C-BF09-FDC4C0961555}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13886203-DC29-469C-BF09-FDC4C0961555}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D4CF3C2-1B5F-46CF-BD4E-B96ED66BFDFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D4CF3C2-1B5F-46CF-BD4E-B96ED66BFDFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D4CF3C2-1B5F-46CF-BD4E-B96ED66BFDFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D4CF3C2-1B5F-46CF-BD4E-B96ED66BFDFD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A61898A-EF30-47F1-A70C-1C51BA9899A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1A61898A-EF30-47F1-A70C-1C51BA9899A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A61898A-EF30-47F1-A70C-1C51BA9899A0}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Controller.dataGridView;
-using ModelIO;
+using Controller.Ef6Operator;
 using Model;
 
 namespace QuanLyYTe.QL_VacXin
@@ -20,7 +20,7 @@ namespace QuanLyYTe.QL_VacXin
         {
             InitializeComponent();
         }
-        sqlMethod sql = new sqlMethod();
+        ef6Method sql = new ef6Method();
         DataTable dataTable = null;
         LoadingTable loadingTable = new LoadingTable();
         ConvertToObject convertToObject = new ConvertToObject();

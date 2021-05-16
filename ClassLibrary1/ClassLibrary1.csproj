@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7D4CF3C2-1B5F-46CF-BD4E-B96ED66BFDFD}</ProjectGuid>
+    <ProjectGuid>{C969F36B-8367-4668-B859-4385F790814C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ModelIO</RootNamespace>
-    <AssemblyName>ModelIO</AssemblyName>
+    <RootNamespace>ClassLibrary1</RootNamespace>
+    <AssemblyName>ClassLibrary1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,22 +51,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiSoTreCon.cs" />
+    <Compile Include="ChiSoTrungBinh.cs" />
+    <Compile Include="ConNguoi.cs" />
+    <Compile Include="DatLichKham.cs" />
+    <Compile Include="HoGiaDinh.cs" />
+    <Compile Include="Migrations\202105160555157_init.cs" />
+    <Compile Include="Migrations\202105160555157_init.designer.cs">
+      <DependentUpon>202105160555157_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="NguoiQuanLy.cs" />
+    <Compile Include="NhanVienYTe.cs" />
+    <Compile Include="PhongKham.cs" />
+    <Compile Include="PhuNuMangThai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sqlMethod.cs" />
+    <Compile Include="SuDungVacXin.cs" />
+    <Compile Include="ThongKeSuDungVacXin.cs" />
+    <Compile Include="ThongTinThaiKi.cs" />
+    <Compile Include="TreEm.cs" />
+    <Compile Include="VacXin.cs" />
+    <Compile Include="YTeDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controller\Controller.csproj">
-      <Project>{b680fd58-2e26-4dcb-ad13-e3bc7e5ef0ba}</Project>
-      <Name>Controller</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LastModel\LastModel.csproj">
-      <Project>{1a61898a-ef30-47f1-a70c-1c51ba9899a0}</Project>
-      <Name>LastModel</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Migrations\202105160555157_init.resx">
+      <DependentUpon>202105160555157_init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

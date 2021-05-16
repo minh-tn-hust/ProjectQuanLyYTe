@@ -42,7 +42,9 @@
             this.txtThongTinKhac = new Guna.UI2.WinForms.Guna2TextBox();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtGioMoCua = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dtGioDongCua = new System.Windows.Forms.DateTimePicker();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -75,8 +77,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.dtGioMoCua = new System.Windows.Forms.DateTimePicker();
-            this.dtGioDongCua = new System.Windows.Forms.DateTimePicker();
             this.guna2Panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongTinCoSoYTe)).BeginInit();
@@ -207,7 +207,7 @@
             this.btnHienThiDanhSach.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHienThiDanhSach.ForeColor = System.Drawing.Color.White;
             this.btnHienThiDanhSach.HoverState.Parent = this.btnHienThiDanhSach;
-            this.btnHienThiDanhSach.Location = new System.Drawing.Point(131, 0);
+            this.btnHienThiDanhSach.Location = new System.Drawing.Point(133, 0);
             this.btnHienThiDanhSach.Name = "btnHienThiDanhSach";
             this.btnHienThiDanhSach.ShadowDecoration.Parent = this.btnHienThiDanhSach;
             this.btnHienThiDanhSach.Size = new System.Drawing.Size(115, 43);
@@ -313,6 +313,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Giờ mở cửa";
             // 
+            // dtGioMoCua
+            // 
+            this.dtGioMoCua.CustomFormat = "HH:mm:ss";
+            this.dtGioMoCua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtGioMoCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGioMoCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtGioMoCua.Location = new System.Drawing.Point(3, 16);
+            this.dtGioMoCua.Name = "dtGioMoCua";
+            this.dtGioMoCua.ShowUpDown = true;
+            this.dtGioMoCua.Size = new System.Drawing.Size(294, 49);
+            this.dtGioMoCua.TabIndex = 0;
+            this.dtGioMoCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dtGioDongCua);
@@ -323,6 +336,19 @@
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Giờ đóng cửa";
+            // 
+            // dtGioDongCua
+            // 
+            this.dtGioDongCua.CustomFormat = "HH:mm:ss";
+            this.dtGioDongCua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtGioDongCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGioDongCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtGioDongCua.Location = new System.Drawing.Point(3, 16);
+            this.dtGioDongCua.Name = "dtGioDongCua";
+            this.dtGioDongCua.ShowUpDown = true;
+            this.dtGioDongCua.Size = new System.Drawing.Size(295, 49);
+            this.dtGioDongCua.TabIndex = 1;
+            this.dtGioDongCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
             // 
             // splitContainer2
             // 
@@ -754,7 +780,7 @@
             this.cbTenBacSiQuanLy.MaxDropDownItems = 4;
             this.cbTenBacSiQuanLy.Name = "cbTenBacSiQuanLy";
             this.cbTenBacSiQuanLy.ShadowDecoration.Parent = this.cbTenBacSiQuanLy;
-            this.cbTenBacSiQuanLy.Size = new System.Drawing.Size(269, 36);
+            this.cbTenBacSiQuanLy.Size = new System.Drawing.Size(272, 36);
             this.cbTenBacSiQuanLy.StartIndex = 0;
             this.cbTenBacSiQuanLy.TabIndex = 15;
             // 
@@ -796,32 +822,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(602, 336);
             this.panel3.TabIndex = 7;
-            // 
-            // dtGioMoCua
-            // 
-            this.dtGioMoCua.CustomFormat = "HH:mm:ss";
-            this.dtGioMoCua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtGioMoCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGioMoCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtGioMoCua.Location = new System.Drawing.Point(3, 16);
-            this.dtGioMoCua.Name = "dtGioMoCua";
-            this.dtGioMoCua.ShowUpDown = true;
-            this.dtGioMoCua.Size = new System.Drawing.Size(294, 49);
-            this.dtGioMoCua.TabIndex = 0;
-            this.dtGioMoCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
-            // 
-            // dtGioDongCua
-            // 
-            this.dtGioDongCua.CustomFormat = "HH:mm:ss";
-            this.dtGioDongCua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtGioDongCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGioDongCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtGioDongCua.Location = new System.Drawing.Point(3, 16);
-            this.dtGioDongCua.Name = "dtGioDongCua";
-            this.dtGioDongCua.ShowUpDown = true;
-            this.dtGioDongCua.Size = new System.Drawing.Size(295, 49);
-            this.dtGioDongCua.TabIndex = 1;
-            this.dtGioDongCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
             // 
             // ThemMoiCoSoYTe
             // 

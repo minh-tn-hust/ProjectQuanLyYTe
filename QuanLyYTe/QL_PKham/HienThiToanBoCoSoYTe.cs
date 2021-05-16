@@ -1,7 +1,7 @@
 ﻿
 using Controller.dataGridView;
 using Model;
-using ModelIO;
+using Controller.Ef6Operator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +20,7 @@ namespace QuanLyYTe.QL_PKham
         DataTable dataTable = new DataTable();
         ConvertToObject convertToObject = new ConvertToObject();
         PhongKham phongKhamCanXoa = null;
-        sqlMethod sql=new sqlMethod();
+        ef6Method sql=new ef6Method();
         DTGFilter filter = new DTGFilter();
 
         public HienThiToanBoCoSoYTe()

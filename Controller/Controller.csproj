@@ -60,13 +60,14 @@
     <Compile Include="Object\BangTreEm.cs" />
     <Compile Include="Object\BangPhuNuMangThai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EF6Operator\EF6Operator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\BTL\LastModel\LastModel.csproj">
+    <ProjectReference Include="..\LastModel\LastModel.csproj">
       <Project>{1a61898a-ef30-47f1-a70c-1c51ba9899a0}</Project>
       <Name>LastModel</Name>
     </ProjectReference>

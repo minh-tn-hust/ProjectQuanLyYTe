@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using ModelIO;
 using Model;
 using System.Globalization;
 using System.Collections;
 using Controller.dataGridView;
+using Controller.Ef6Operator;
 
 namespace QuanLyYTe
 {
@@ -22,7 +22,7 @@ namespace QuanLyYTe
         {
             InitializeComponent();
         }
-        sqlMethod sql = new sqlMethod();
+        ef6Method sql = new ef6Method();
         LoadingTable loadingTable = new LoadingTable();
         ConvertToObject convertToObject = new ConvertToObject();
         DataTable dataTable = null;

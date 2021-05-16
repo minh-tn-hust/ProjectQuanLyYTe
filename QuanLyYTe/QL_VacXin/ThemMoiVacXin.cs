@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using ModelIO;
+using Controller.Ef6Operator;
 using Model;
 using Controller.dataGridView;
 
@@ -20,7 +20,7 @@ namespace QuanLyYTe
         {
             InitializeComponent();
         }
-        sqlMethod sql = new sqlMethod();
+        ef6Method sql = new ef6Method();
         DataTable dataTable = null;
         LoadingTable loadingTable = new LoadingTable();
         ConvertToObject convertToObject = new ConvertToObject();
