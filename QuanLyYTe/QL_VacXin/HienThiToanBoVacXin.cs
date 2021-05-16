@@ -80,9 +80,26 @@ namespace QuanLyYTe.QL_VacXin
             {
                 sql.xoaKhoiCSDL(vacXinChonDeXoa);
                 MessageBox.Show("Xóa thành công!");
+                vacXinChonDeXoa = null;
                 dataTable = loadingTable.vacxin();
+                deleteAllText();
                 btnHienThi.PerformClick();
             }
+        }
+        public void deleteAllText()
+        {
+            txtTenVacXin.Text = "";
+            txtTenLoSanPham.Text = "";
+            txtGiaThanh.Text = "";
+            dtNgaySanXuat.Value = Convert.ToDateTime("1/1/2001");
+            dtNgayNhapKho.Value = Convert.ToDateTime("1/1/2001");
+            dtHanSuDung.Value = Convert.ToDateTime("1/1/2001");
+            txtThoiGianTaiSuDung.Text = "";
+            txtSoMuiCanTiem.Text = "";
+            txtSoLuongConLai.Text = "";
+            txtChongChiDinh.Text = "";
+            txtThongTinKhac.Text = "";
+
         }
     }
 }

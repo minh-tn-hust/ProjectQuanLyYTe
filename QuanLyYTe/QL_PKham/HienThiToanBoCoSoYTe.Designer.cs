@@ -45,7 +45,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtGioDongCua = new System.Windows.Forms.DateTimePicker();
             this.cbTenBacSiQuanLy = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtGioMoCua = new System.Windows.Forms.DateTimePicker();
             this.btnHienThi = new Guna.UI2.WinForms.Guna2Button();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenPhongKham = new Guna.UI2.WinForms.Guna2TextBox();
@@ -58,8 +60,6 @@
             this.btnXoaCoSo = new Guna.UI2.WinForms.Guna2Button();
             this.txtThongTinKhac = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSoDienThoai = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dtGioMoCua = new System.Windows.Forms.DateTimePicker();
-            this.dtGioDongCua = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -106,6 +106,7 @@
             this.dtgvHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvHienThi.Location = new System.Drawing.Point(0, 37);
             this.dtgvHienThi.Name = "dtgvHienThi";
+            this.dtgvHienThi.ReadOnly = true;
             this.dtgvHienThi.Size = new System.Drawing.Size(475, 365);
             this.dtgvHienThi.TabIndex = 1;
             this.dtgvHienThi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHienThi_CellClick);
@@ -302,9 +303,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên phòng khám";
             // 
+            // dtGioDongCua
+            // 
+            this.dtGioDongCua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtGioDongCua.CustomFormat = "HH:mm:ss";
+            this.dtGioDongCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGioDongCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtGioDongCua.Location = new System.Drawing.Point(2, 228);
+            this.dtGioDongCua.Name = "dtGioDongCua";
+            this.dtGioDongCua.ShowUpDown = true;
+            this.dtGioDongCua.Size = new System.Drawing.Size(226, 30);
+            this.dtGioDongCua.TabIndex = 27;
+            this.dtGioDongCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
+            // 
             // cbTenBacSiQuanLy
             // 
-            this.cbTenBacSiQuanLy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbTenBacSiQuanLy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbTenBacSiQuanLy.BackColor = System.Drawing.Color.Transparent;
             this.cbTenBacSiQuanLy.BorderRadius = 6;
             this.cbTenBacSiQuanLy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -319,11 +335,26 @@
             this.cbTenBacSiQuanLy.Items.AddRange(new object[] {
             "Không có thông tin!"});
             this.cbTenBacSiQuanLy.ItemsAppearance.Parent = this.cbTenBacSiQuanLy;
-            this.cbTenBacSiQuanLy.Location = new System.Drawing.Point(2, 46);
+            this.cbTenBacSiQuanLy.Location = new System.Drawing.Point(1, 46);
             this.cbTenBacSiQuanLy.Name = "cbTenBacSiQuanLy";
             this.cbTenBacSiQuanLy.ShadowDecoration.Parent = this.cbTenBacSiQuanLy;
-            this.cbTenBacSiQuanLy.Size = new System.Drawing.Size(223, 33);
+            this.cbTenBacSiQuanLy.Size = new System.Drawing.Size(226, 33);
             this.cbTenBacSiQuanLy.TabIndex = 25;
+            // 
+            // dtGioMoCua
+            // 
+            this.dtGioMoCua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtGioMoCua.CustomFormat = "HH:mm:ss";
+            this.dtGioMoCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGioMoCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtGioMoCua.Location = new System.Drawing.Point(2, 192);
+            this.dtGioMoCua.Name = "dtGioMoCua";
+            this.dtGioMoCua.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtGioMoCua.ShowUpDown = true;
+            this.dtGioMoCua.Size = new System.Drawing.Size(226, 30);
+            this.dtGioMoCua.TabIndex = 26;
+            this.dtGioMoCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
             // 
             // btnHienThi
             // 
@@ -334,7 +365,7 @@
             this.btnHienThi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnHienThi.ForeColor = System.Drawing.Color.White;
             this.btnHienThi.HoverState.Parent = this.btnHienThi;
-            this.btnHienThi.Location = new System.Drawing.Point(122, 356);
+            this.btnHienThi.Location = new System.Drawing.Point(124, 356);
             this.btnHienThi.Name = "btnHienThi";
             this.btnHienThi.ShadowDecoration.Parent = this.btnHienThi;
             this.btnHienThi.Size = new System.Drawing.Size(101, 34);
@@ -344,7 +375,8 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDiaChi.BorderRadius = 6;
             this.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDiaChi.DefaultText = "";
@@ -364,12 +396,13 @@
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.ShadowDecoration.Parent = this.txtDiaChi;
-            this.txtDiaChi.Size = new System.Drawing.Size(223, 32);
+            this.txtDiaChi.Size = new System.Drawing.Size(226, 32);
             this.txtDiaChi.TabIndex = 3;
             // 
             // txtTenPhongKham
             // 
-            this.txtTenPhongKham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTenPhongKham.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenPhongKham.BorderRadius = 6;
             this.txtTenPhongKham.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenPhongKham.DefaultText = "";
@@ -389,12 +422,13 @@
             this.txtTenPhongKham.PlaceholderText = "";
             this.txtTenPhongKham.SelectedText = "";
             this.txtTenPhongKham.ShadowDecoration.Parent = this.txtTenPhongKham;
-            this.txtTenPhongKham.Size = new System.Drawing.Size(223, 32);
+            this.txtTenPhongKham.Size = new System.Drawing.Size(226, 32);
             this.txtTenPhongKham.TabIndex = 1;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(2, 268);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -405,8 +439,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer5);
-            this.splitContainer1.Size = new System.Drawing.Size(223, 34);
-            this.splitContainer1.SplitterDistance = 85;
+            this.splitContainer1.Size = new System.Drawing.Size(226, 34);
+            this.splitContainer1.SplitterDistance = 86;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 21;
             // 
@@ -436,7 +470,7 @@
             this.cbThuBatDau.Location = new System.Drawing.Point(0, 0);
             this.cbThuBatDau.Name = "cbThuBatDau";
             this.cbThuBatDau.ShadowDecoration.Parent = this.cbThuBatDau;
-            this.cbThuBatDau.Size = new System.Drawing.Size(85, 34);
+            this.cbThuBatDau.Size = new System.Drawing.Size(86, 34);
             this.cbThuBatDau.StartIndex = 0;
             this.cbThuBatDau.TabIndex = 0;
             this.cbThuBatDau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -454,7 +488,7 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.cbThuKetThuc);
-            this.splitContainer5.Size = new System.Drawing.Size(137, 34);
+            this.splitContainer5.Size = new System.Drawing.Size(139, 34);
             this.splitContainer5.SplitterDistance = 59;
             this.splitContainer5.SplitterWidth = 1;
             this.splitContainer5.TabIndex = 0;
@@ -496,7 +530,7 @@
             this.cbThuKetThuc.Location = new System.Drawing.Point(0, 0);
             this.cbThuKetThuc.Name = "cbThuKetThuc";
             this.cbThuKetThuc.ShadowDecoration.Parent = this.cbThuKetThuc;
-            this.cbThuKetThuc.Size = new System.Drawing.Size(77, 34);
+            this.cbThuKetThuc.Size = new System.Drawing.Size(79, 34);
             this.cbThuKetThuc.StartIndex = 4;
             this.cbThuKetThuc.TabIndex = 0;
             this.cbThuKetThuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -520,7 +554,7 @@
             this.btnXoaCoSo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXoaCoSo.ForeColor = System.Drawing.Color.White;
             this.btnXoaCoSo.HoverState.Parent = this.btnXoaCoSo;
-            this.btnXoaCoSo.Location = new System.Drawing.Point(2, 356);
+            this.btnXoaCoSo.Location = new System.Drawing.Point(4, 356);
             this.btnXoaCoSo.Name = "btnXoaCoSo";
             this.btnXoaCoSo.ShadowDecoration.Parent = this.btnXoaCoSo;
             this.btnXoaCoSo.Size = new System.Drawing.Size(101, 34);
@@ -530,7 +564,8 @@
             // 
             // txtThongTinKhac
             // 
-            this.txtThongTinKhac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtThongTinKhac.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtThongTinKhac.BorderRadius = 6;
             this.txtThongTinKhac.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtThongTinKhac.DefaultText = "";
@@ -550,12 +585,13 @@
             this.txtThongTinKhac.PlaceholderText = "";
             this.txtThongTinKhac.SelectedText = "";
             this.txtThongTinKhac.ShadowDecoration.Parent = this.txtThongTinKhac;
-            this.txtThongTinKhac.Size = new System.Drawing.Size(223, 32);
+            this.txtThongTinKhac.Size = new System.Drawing.Size(226, 32);
             this.txtThongTinKhac.TabIndex = 5;
             // 
             // txtSoDienThoai
             // 
-            this.txtSoDienThoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSoDienThoai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSoDienThoai.BorderRadius = 6;
             this.txtSoDienThoai.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSoDienThoai.DefaultText = "";
@@ -575,35 +611,8 @@
             this.txtSoDienThoai.PlaceholderText = "";
             this.txtSoDienThoai.SelectedText = "";
             this.txtSoDienThoai.ShadowDecoration.Parent = this.txtSoDienThoai;
-            this.txtSoDienThoai.Size = new System.Drawing.Size(223, 32);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(226, 32);
             this.txtSoDienThoai.TabIndex = 4;
-            // 
-            // dtGioMoCua
-            // 
-            this.dtGioMoCua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtGioMoCua.CustomFormat = "HH:mm:ss";
-            this.dtGioMoCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGioMoCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtGioMoCua.Location = new System.Drawing.Point(2, 192);
-            this.dtGioMoCua.Name = "dtGioMoCua";
-            this.dtGioMoCua.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtGioMoCua.ShowUpDown = true;
-            this.dtGioMoCua.Size = new System.Drawing.Size(223, 30);
-            this.dtGioMoCua.TabIndex = 26;
-            this.dtGioMoCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
-            // 
-            // dtGioDongCua
-            // 
-            this.dtGioDongCua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtGioDongCua.CustomFormat = "HH:mm:ss";
-            this.dtGioDongCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGioDongCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtGioDongCua.Location = new System.Drawing.Point(2, 228);
-            this.dtGioDongCua.Name = "dtGioDongCua";
-            this.dtGioDongCua.ShowUpDown = true;
-            this.dtGioDongCua.Size = new System.Drawing.Size(223, 30);
-            this.dtGioDongCua.TabIndex = 27;
-            this.dtGioDongCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
             // 
             // HienThiToanBoCoSoYTe
             // 

@@ -143,6 +143,7 @@
             this.dtgvThongTinCoSoYTe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvThongTinCoSoYTe.Location = new System.Drawing.Point(3, 16);
             this.dtgvThongTinCoSoYTe.Name = "dtgvThongTinCoSoYTe";
+            this.dtgvThongTinCoSoYTe.ReadOnly = true;
             this.dtgvThongTinCoSoYTe.ShowCellToolTips = false;
             this.dtgvThongTinCoSoYTe.Size = new System.Drawing.Size(596, 317);
             this.dtgvThongTinCoSoYTe.TabIndex = 0;
@@ -207,7 +208,7 @@
             this.btnHienThiDanhSach.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHienThiDanhSach.ForeColor = System.Drawing.Color.White;
             this.btnHienThiDanhSach.HoverState.Parent = this.btnHienThiDanhSach;
-            this.btnHienThiDanhSach.Location = new System.Drawing.Point(133, 0);
+            this.btnHienThiDanhSach.Location = new System.Drawing.Point(139, 0);
             this.btnHienThiDanhSach.Name = "btnHienThiDanhSach";
             this.btnHienThiDanhSach.ShadowDecoration.Parent = this.btnHienThiDanhSach;
             this.btnHienThiDanhSach.Size = new System.Drawing.Size(115, 43);
@@ -546,7 +547,7 @@
             this.cbThuKetThuc.Name = "cbThuKetThuc";
             this.cbThuKetThuc.ShadowDecoration.Parent = this.cbThuKetThuc;
             this.cbThuKetThuc.Size = new System.Drawing.Size(111, 42);
-            this.cbThuKetThuc.StartIndex = 4;
+            this.cbThuKetThuc.StartIndex = 0;
             this.cbThuKetThuc.TabIndex = 0;
             this.cbThuKetThuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -780,7 +781,7 @@
             this.cbTenBacSiQuanLy.MaxDropDownItems = 4;
             this.cbTenBacSiQuanLy.Name = "cbTenBacSiQuanLy";
             this.cbTenBacSiQuanLy.ShadowDecoration.Parent = this.cbTenBacSiQuanLy;
-            this.cbTenBacSiQuanLy.Size = new System.Drawing.Size(272, 36);
+            this.cbTenBacSiQuanLy.Size = new System.Drawing.Size(281, 36);
             this.cbTenBacSiQuanLy.StartIndex = 0;
             this.cbTenBacSiQuanLy.TabIndex = 15;
             // 

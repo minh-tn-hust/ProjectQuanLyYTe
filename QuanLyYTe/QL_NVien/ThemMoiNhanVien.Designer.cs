@@ -423,7 +423,7 @@
             this.txtSoDienThoai.PlaceholderText = "Số điện thoại liên hệ";
             this.txtSoDienThoai.SelectedText = "";
             this.txtSoDienThoai.ShadowDecoration.Parent = this.txtSoDienThoai;
-            this.txtSoDienThoai.Size = new System.Drawing.Size(302, 36);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(305, 36);
             this.txtSoDienThoai.TabIndex = 0;
             // 
             // splitContainer2
@@ -543,7 +543,7 @@
             this.groupBox2.Controls.Add(this.dtNgaySinh);
             this.groupBox2.Location = new System.Drawing.Point(49, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(304, 58);
+            this.groupBox2.Size = new System.Drawing.Size(307, 58);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ngày tháng năm sinh";
@@ -564,7 +564,7 @@
             this.dtNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.ShadowDecoration.Parent = this.dtNgaySinh;
-            this.dtNgaySinh.Size = new System.Drawing.Size(298, 39);
+            this.dtNgaySinh.Size = new System.Drawing.Size(301, 39);
             this.dtNgaySinh.TabIndex = 0;
             this.dtNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtNgaySinh.Value = new System.DateTime(2021, 4, 14, 0, 0, 0, 0);
@@ -798,7 +798,7 @@
             this.txtMatKhau.PlaceholderText = "Mật khẩu";
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.ShadowDecoration.Parent = this.txtMatKhau;
-            this.txtMatKhau.Size = new System.Drawing.Size(305, 34);
+            this.txtMatKhau.Size = new System.Drawing.Size(308, 34);
             this.txtMatKhau.TabIndex = 0;
             // 
             // label2
@@ -836,6 +836,7 @@
             this.dtgvDanhSachNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvDanhSachNhanVien.Location = new System.Drawing.Point(3, 16);
             this.dtgvDanhSachNhanVien.Name = "dtgvDanhSachNhanVien";
+            this.dtgvDanhSachNhanVien.ReadOnly = true;
             this.dtgvDanhSachNhanVien.Size = new System.Drawing.Size(731, 130);
             this.dtgvDanhSachNhanVien.TabIndex = 0;
             this.dtgvDanhSachNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachNhanVien_CellClick);

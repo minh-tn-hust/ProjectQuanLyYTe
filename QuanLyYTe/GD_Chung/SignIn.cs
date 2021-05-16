@@ -16,7 +16,7 @@ namespace QuanLyYTe
         {
             InitializeComponent();
         }
-
+        
 
     }
 }

@@ -56,9 +56,9 @@
     <Compile Include="ConNguoi.cs" />
     <Compile Include="DatLichKham.cs" />
     <Compile Include="HoGiaDinh.cs" />
-    <Compile Include="Migrations\202105160606568_init.cs" />
-    <Compile Include="Migrations\202105160606568_init.designer.cs">
-      <DependentUpon>202105160606568_init.cs</DependentUpon>
+    <Compile Include="Migrations\202105160847028_Init.cs" />
+    <Compile Include="Migrations\202105160847028_Init.designer.cs">
+      <DependentUpon>202105160847028_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NguoiQuanLy.cs" />
@@ -78,8 +78,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105160606568_init.resx">
-      <DependentUpon>202105160606568_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105160847028_Init.resx">
+      <DependentUpon>202105160847028_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

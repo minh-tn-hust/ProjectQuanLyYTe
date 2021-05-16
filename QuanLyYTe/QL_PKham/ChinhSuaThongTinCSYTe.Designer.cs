@@ -57,9 +57,11 @@
             this.label50 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtGioDongCua = new System.Windows.Forms.DateTimePicker();
             this.label49 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtGioMoCua = new System.Windows.Forms.DateTimePicker();
             this.label48 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
@@ -134,8 +136,6 @@
             this.label59 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgvHienThiChiTiet = new System.Windows.Forms.DataGridView();
-            this.dtGioMoCua = new System.Windows.Forms.DateTimePicker();
-            this.dtGioDongCua = new System.Windows.Forms.DateTimePicker();
             this.guna2Panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -623,6 +623,19 @@
             this.guna2Panel17.Size = new System.Drawing.Size(419, 44);
             this.guna2Panel17.TabIndex = 8;
             // 
+            // dtGioDongCua
+            // 
+            this.dtGioDongCua.CustomFormat = "HH:mm:ss";
+            this.dtGioDongCua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtGioDongCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGioDongCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtGioDongCua.Location = new System.Drawing.Point(0, 0);
+            this.dtGioDongCua.Name = "dtGioDongCua";
+            this.dtGioDongCua.ShowUpDown = true;
+            this.dtGioDongCua.Size = new System.Drawing.Size(418, 44);
+            this.dtGioDongCua.TabIndex = 7;
+            this.dtGioDongCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
+            // 
             // label49
             // 
             this.label49.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -655,6 +668,19 @@
             this.guna2Panel16.ShadowDecoration.Parent = this.guna2Panel16;
             this.guna2Panel16.Size = new System.Drawing.Size(419, 44);
             this.guna2Panel16.TabIndex = 7;
+            // 
+            // dtGioMoCua
+            // 
+            this.dtGioMoCua.CustomFormat = "HH:mm:ss";
+            this.dtGioMoCua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtGioMoCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtGioMoCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtGioMoCua.Location = new System.Drawing.Point(0, 0);
+            this.dtGioMoCua.Name = "dtGioMoCua";
+            this.dtGioMoCua.ShowUpDown = true;
+            this.dtGioMoCua.Size = new System.Drawing.Size(418, 44);
+            this.dtGioMoCua.TabIndex = 6;
+            this.dtGioMoCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
             // 
             // label48
             // 
@@ -1564,35 +1590,10 @@
             this.dtgvHienThiChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvHienThiChiTiet.Location = new System.Drawing.Point(3, 16);
             this.dtgvHienThiChiTiet.Name = "dtgvHienThiChiTiet";
+            this.dtgvHienThiChiTiet.ReadOnly = true;
             this.dtgvHienThiChiTiet.Size = new System.Drawing.Size(596, 209);
             this.dtgvHienThiChiTiet.TabIndex = 0;
             this.dtgvHienThiChiTiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHienThiChiTiet_CellClick);
-            // 
-            // dtGioMoCua
-            // 
-            this.dtGioMoCua.CustomFormat = "HH:mm:ss";
-            this.dtGioMoCua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtGioMoCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGioMoCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtGioMoCua.Location = new System.Drawing.Point(0, 0);
-            this.dtGioMoCua.Name = "dtGioMoCua";
-            this.dtGioMoCua.ShowUpDown = true;
-            this.dtGioMoCua.Size = new System.Drawing.Size(418, 44);
-            this.dtGioMoCua.TabIndex = 6;
-            this.dtGioMoCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
-            // 
-            // dtGioDongCua
-            // 
-            this.dtGioDongCua.CustomFormat = "HH:mm:ss";
-            this.dtGioDongCua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtGioDongCua.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtGioDongCua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtGioDongCua.Location = new System.Drawing.Point(0, 0);
-            this.dtGioDongCua.Name = "dtGioDongCua";
-            this.dtGioDongCua.ShowUpDown = true;
-            this.dtGioDongCua.Size = new System.Drawing.Size(418, 44);
-            this.dtGioDongCua.TabIndex = 7;
-            this.dtGioDongCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
             // 
             // ChinhSuaThongTinCoSoYTe
             // 

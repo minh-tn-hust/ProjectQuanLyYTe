@@ -118,6 +118,7 @@
             this.dtgvDanhSachVacXin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvDanhSachVacXin.Location = new System.Drawing.Point(3, 16);
             this.dtgvDanhSachVacXin.Name = "dtgvDanhSachVacXin";
+            this.dtgvDanhSachVacXin.ReadOnly = true;
             this.dtgvDanhSachVacXin.Size = new System.Drawing.Size(596, 167);
             this.dtgvDanhSachVacXin.TabIndex = 1;
             this.dtgvDanhSachVacXin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachVacXin_CellClick);
@@ -138,6 +139,7 @@
             this.txtTenVacXin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenVacXin.FocusedState.Parent = this.txtTenVacXin;
             this.txtTenVacXin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenVacXin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTenVacXin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenVacXin.HoverState.Parent = this.txtTenVacXin;
             this.txtTenVacXin.Location = new System.Drawing.Point(22, 12);
@@ -198,7 +200,7 @@
             this.txtGiaThanhVacXin.PlaceholderText = "Giá thành vắc xin (VND)";
             this.txtGiaThanhVacXin.SelectedText = "";
             this.txtGiaThanhVacXin.ShadowDecoration.Parent = this.txtGiaThanhVacXin;
-            this.txtGiaThanhVacXin.Size = new System.Drawing.Size(272, 34);
+            this.txtGiaThanhVacXin.Size = new System.Drawing.Size(278, 34);
             this.txtGiaThanhVacXin.TabIndex = 0;
             // 
             // txtChongChiDinh
@@ -358,7 +360,7 @@
             this.btnHienThi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHienThi.ForeColor = System.Drawing.Color.White;
             this.btnHienThi.HoverState.Parent = this.btnHienThi;
-            this.btnHienThi.Location = new System.Drawing.Point(87, 5);
+            this.btnHienThi.Location = new System.Drawing.Point(89, 5);
             this.btnHienThi.Name = "btnHienThi";
             this.btnHienThi.ShadowDecoration.Parent = this.btnHienThi;
             this.btnHienThi.Size = new System.Drawing.Size(132, 45);
@@ -594,7 +596,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Location = new System.Drawing.Point(0, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(347, 2);
+            this.label2.Size = new System.Drawing.Size(353, 2);
             this.label2.TabIndex = 21;
             this.label2.Text = "label2";
             // 

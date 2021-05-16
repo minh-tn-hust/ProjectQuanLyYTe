@@ -1856,7 +1856,7 @@
             this.btnHienThi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHienThi.ForeColor = System.Drawing.Color.White;
             this.btnHienThi.HoverState.Parent = this.btnHienThi;
-            this.btnHienThi.Location = new System.Drawing.Point(89, 4);
+            this.btnHienThi.Location = new System.Drawing.Point(92, 4);
             this.btnHienThi.Name = "btnHienThi";
             this.btnHienThi.ShadowDecoration.Parent = this.btnHienThi;
             this.btnHienThi.Size = new System.Drawing.Size(132, 45);
@@ -1911,6 +1911,7 @@
             this.dtgvHienThiThongTin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvHienThiThongTin.Location = new System.Drawing.Point(3, 16);
             this.dtgvHienThiThongTin.Name = "dtgvHienThiThongTin";
+            this.dtgvHienThiThongTin.ReadOnly = true;
             this.dtgvHienThiThongTin.Size = new System.Drawing.Size(592, 60);
             this.dtgvHienThiThongTin.TabIndex = 0;
             this.dtgvHienThiThongTin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHienThiThongTin_CellClick);

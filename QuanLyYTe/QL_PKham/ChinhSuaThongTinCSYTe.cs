@@ -32,6 +32,8 @@ namespace QuanLyYTe
         {
     ConNguoi conNguoi = new ConNguoi();
             PhongKham phongKham = convertToObject.bangphongkham(dtgvHienThiChiTiet,e);
+            if (phongKham == null) return;
+
            txtTenCoSoYTe.Text = phongKham.TenPhongKham;
             using(var context= new YTeDbContext())
             {
@@ -51,6 +53,7 @@ namespace QuanLyYTe
                            
             }
             txtDiaChi.Text = phongKham.DiaChi;
+            txtSoDienThoai.Text = phongKham.SoDienThoaiLienHe;
             cbThuBatDau.SelectedIndex = (int)phongKham.NgayBatDauTrongTuan;
             cbThuKetThuc.SelectedIndex = (int)phongKham.NgayKetThucTrongTuan;
             dtGioMoCua.Text = phongKham.GioBatDau.ToString();
@@ -67,20 +70,13 @@ namespace QuanLyYTe
             {
                               List<NhanVienYTe> listNhanVienYTe = yteDbContext.NhanVienYTes.ToList();
                                List<ConNguoi> listNguoiQuanLy = new List<ConNguoi>();
-                ConNguoi hienThiTieuDe = new ConNguoi
-                {
-                    ID_Nguoi = -1,
-                    HoTen = "Tên người quản lý"
-
-                };
-                ConNguoi unknownMember = new ConNguoi
+                          ConNguoi unknownMember = new ConNguoi
                 {
                     ID_Nguoi = 0,
                     HoTen = "Chưa có thông tin!"
 
                 };
-                listNguoiQuanLy.Add(hienThiTieuDe);
-                listNguoiQuanLy.Add(unknownMember);
+                           listNguoiQuanLy.Add(unknownMember);
                for (int i = 0; i < listNhanVienYTe.Count; i++)
                 {
                     ConNguoi conNguoi = yteDbContext.ConNguois.Find(listNhanVienYTe[i].ID_Nguoi);
@@ -109,21 +105,33 @@ dtgvHienThiChiTiet.DataSource = dataTable;
 
         private void btnLuuChinhSua_Click(object sender, EventArgs e)
         {
-            PhongKham phongKhamMoi = new PhongKham();
+            if (txtTenCoSoYTe.Text == "" ||
+          txtDiaChi.Text == "" ||
+          cbNguoiQuanLy.SelectedIndex == -1 ||
+          txtSoDienThoai.Text == "" ||
+          txtThongTinKhac.Text == ""
+          )
             {
-                phongKhamMoi.TenPhongKham = txtTenCoSoYTe.Text;
-                phongKhamMoi.ID_NhanVienQuanLy =Convert.ToInt32(cbNguoiQuanLy.SelectedValue.ToString());
-                phongKhamMoi.DiaChi = txtDiaChi.Text;
-                phongKhamMoi.SoDienThoaiLienHe = txtSoDienThoai.Text;
-                phongKhamMoi.NgayBatDauTrongTuan = cbThuBatDau.SelectedIndex;
-                phongKhamMoi.NgayKetThucTrongTuan = cbThuKetThuc.SelectedIndex;
-                phongKhamMoi.GioBatDau = dtGioMoCua.Value.TimeOfDay;
-                phongKhamMoi.GioketThuc = dtGioDongCua.Value.TimeOfDay;
-                phongKhamMoi.ThongTinKhac = txtThongTinKhac.Text;
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin vào!");
             }
-            sql.ChinhSua(phongKhamMoi, phongKhamChinhSua);
-            MessageBox.Show("Lưu thành công!");
-            btnHienThiToanBo.PerformClick();
+            else
+            {
+                PhongKham phongKhamMoi = new PhongKham();
+                {
+                    phongKhamMoi.TenPhongKham = txtTenCoSoYTe.Text;
+                    phongKhamMoi.ID_NhanVienQuanLy = Convert.ToInt32(cbNguoiQuanLy.SelectedValue.ToString());
+                    phongKhamMoi.DiaChi = txtDiaChi.Text;
+                    phongKhamMoi.SoDienThoaiLienHe = txtSoDienThoai.Text;
+                    phongKhamMoi.NgayBatDauTrongTuan = cbThuBatDau.SelectedIndex;
+                    phongKhamMoi.NgayKetThucTrongTuan = cbThuKetThuc.SelectedIndex;
+                    phongKhamMoi.GioBatDau = dtGioMoCua.Value.TimeOfDay;
+                    phongKhamMoi.GioketThuc = dtGioDongCua.Value.TimeOfDay;
+                    phongKhamMoi.ThongTinKhac = txtThongTinKhac.Text;
+                }
+                sql.ChinhSua(phongKhamMoi, phongKhamChinhSua);
+                MessageBox.Show("Lưu thành công!");
+                btnHienThiToanBo.PerformClick();
+            }
         }
     }
 }

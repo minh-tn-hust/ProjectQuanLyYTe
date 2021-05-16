@@ -70,7 +70,19 @@ namespace QuanLyYTe
 
         private void btnLuuChinhSua_Click(object sender, EventArgs e)
         {
-         
+            if (vacXinChonSuaDoi == null) return;
+            if (txtTenVacXin.Text == "" ||
+              txtSoLoSanPham.Text == "" ||
+              txtGiaThanhVacXin.Text == "" ||
+              txtThoiGianTaiSuDung.Text == "" ||
+              txtSoMuiTiemCanThiet.Text == "" ||
+              txtSoLuongConLai.Text == "" ||
+              txtChongChiDinh.Text == "" ||
+              txtThongTinKhac.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+                return;
+            }
             VacXin vacXinMoi = new VacXin();
             {
                 vacXinMoi.TenVacXin = txtTenVacXin.Text;
@@ -82,6 +94,7 @@ namespace QuanLyYTe
                 else
                 {
                     MessageBox.Show("Giá thành phải là số!");
+                    txtGiaThanhVacXin.Text = "";
                     return;
                 }
                 vacXinMoi.NgaySanXuat = dtNgaySanXuat.Value;
@@ -94,6 +107,7 @@ namespace QuanLyYTe
                 else
                 {
                     MessageBox.Show("Thời gian sử dụng lại phải là số!");
+                    txtThoiGianTaiSuDung.Text = "";
                     return;
                 }
                 if (int.TryParse(txtSoMuiTiemCanThiet.Text,out int result2))
@@ -103,6 +117,7 @@ namespace QuanLyYTe
                 else
                 {
                     MessageBox.Show("Số mũi cần tiêm phải là số!");
+                    txtSoMuiTiemCanThiet.Text = "";
                     return;
                 }
 
@@ -112,7 +127,8 @@ namespace QuanLyYTe
                 }
                 else
                 {
-                    MessageBox.Show(" Số lượng mua mới phải là số!");
+                    MessageBox.Show("Số lượng mua mới phải là số!");
+                    txtSoLuongConLai.Text = "";
                     return;
                 }
                 
@@ -126,7 +142,7 @@ namespace QuanLyYTe
             }
             catch
             {
-                MessageBox.Show("Vui lòng kiểm tra lại thông tin đã nhập( có thể là sai số lô sản phẩm)!");
+                MessageBox.Show("Vui lòng kiểm tra lại thông tin đã nhập(Có thể là sai số lô sản phẩm)!");
                 return;
             }
 

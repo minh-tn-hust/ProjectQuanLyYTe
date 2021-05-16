@@ -75,11 +75,11 @@
     <Compile Include="QL_NVien\HienThiToanBoNhanVien.Designer.cs">
       <DependentUpon>HienThiToanBoNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="QL_PKham\ChinhSuaThongTinHoacXoaCoSoYTe.cs">
+    <Compile Include="QL_PKham\ChinhSuaThongTinCSYTe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QL_PKham\ChinhSuaThongTinHoacXoaCoSoYTe.Designer.cs">
-      <DependentUpon>ChinhSuaThongTinHoacXoaCoSoYTe.cs</DependentUpon>
+    <Compile Include="QL_PKham\ChinhSuaThongTinCSYTe.Designer.cs">
+      <DependentUpon>ChinhSuaThongTinCSYTe.cs</DependentUpon>
     </Compile>
     <Compile Include="QL_PKham\HienThiToanBoCoSoYTe.cs">
       <SubType>Form</SubType>
@@ -99,23 +99,17 @@
     <Compile Include="GD_Chung\MenuUI.Designer.cs">
       <DependentUpon>MenuUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="QL_NVien\SuaChiTietHoacXoaNhanVien.cs">
+    <Compile Include="QL_NVien\SuaChiTietNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QL_NVien\SuaChiTietHoacXoaNhanVien.Designer.cs">
-      <DependentUpon>SuaChiTietHoacXoaNhanVien.cs</DependentUpon>
+    <Compile Include="QL_NVien\SuaChiTietNhanVien.Designer.cs">
+      <DependentUpon>SuaChiTietNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="QL_PKham\ThemMoiCoSoYTe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QL_PKham\ThemMoiCoSoYTe.Designer.cs">
       <DependentUpon>ThemMoiCoSoYTe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QL_VacXin\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QL_VacXin\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="QL_VacXin\HienThiToanBoVacXin.cs">
       <SubType>Form</SubType>
@@ -149,8 +143,8 @@
     <EmbeddedResource Include="QL_NVien\HienThiToanBoNhanVien.resx">
       <DependentUpon>HienThiToanBoNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QL_PKham\ChinhSuaThongTinHoacXoaCoSoYTe.resx">
-      <DependentUpon>ChinhSuaThongTinHoacXoaCoSoYTe.cs</DependentUpon>
+    <EmbeddedResource Include="QL_PKham\ChinhSuaThongTinCSYTe.resx">
+      <DependentUpon>ChinhSuaThongTinCSYTe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QL_PKham\HienThiToanBoCoSoYTe.resx">
       <DependentUpon>HienThiToanBoCoSoYTe.cs</DependentUpon>
@@ -161,14 +155,11 @@
     <EmbeddedResource Include="GD_Chung\MenuUI.resx">
       <DependentUpon>MenuUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QL_NVien\SuaChiTietHoacXoaNhanVien.resx">
-      <DependentUpon>SuaChiTietHoacXoaNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="QL_NVien\SuaChiTietNhanVien.resx">
+      <DependentUpon>SuaChiTietNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QL_PKham\ThemMoiCoSoYTe.resx">
       <DependentUpon>ThemMoiCoSoYTe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QL_VacXin\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QL_VacXin\HienThiToanBoVacXin.resx">
       <DependentUpon>HienThiToanBoVacXin.cs</DependentUpon>

@@ -10,7 +10,7 @@ namespace Controller.Ef6Operator
     public class ef6Method
     {
         #region Them moi
-        public void themMoiVaoCSDL(NhanVienYTe nhanVien, ConNguoi conNguoi)
+        public int  themMoiVaoCSDL(NhanVienYTe nhanVien, ConNguoi conNguoi)
         {
             try
             {
@@ -24,10 +24,11 @@ namespace Controller.Ef6Operator
 
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show(ex.Message.ToString());
+              return -1;
             }
+            return 0;
         }
 
         public void themMoiVaoCSDL(PhuNuMangThai phuNuMangThai, ConNguoi conNguoi)
@@ -139,6 +140,7 @@ namespace Controller.Ef6Operator
             using (var yteDbContext = new YTeDbContext())
             {
                 var nhanVien = yteDbContext.NhanVienYTes.Find(x.ID_NhanVien);
+                if (nhanVien == null) return;
                 int id_ConNguoi = (int)nhanVien.ID_Nguoi;
                 var conNguoi = (from s in yteDbContext.ConNguois
                                 where s.ID_Nguoi == id_ConNguoi
@@ -162,7 +164,7 @@ namespace Controller.Ef6Operator
                 yteDbContext.ConNguois.Remove(conNguoi);
                 yteDbContext.NhanVienYTes.Remove(nhanVien);
                 yteDbContext.SaveChanges();
-
+                
 
             }
         }

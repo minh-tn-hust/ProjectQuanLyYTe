@@ -58,20 +58,13 @@ namespace QuanLyYTe.QL_PKham
                 List<NhanVienYTe> listNhanVienYTe = yteDbContext.NhanVienYTes.ToList();
                 //Những người quản lý sẽ được lấy thông tin từ bảng con người, vì vậy nên ta tạo ra một danh con người
                 List<ConNguoi> listNguoiQuanLy = new List<ConNguoi>();
-                ConNguoi hienThiTieuDe = new ConNguoi
-                {
-                    ID_Nguoi = -1,
-                    HoTen = "Tên người quản lý"
-
-                };
-                ConNguoi unknownMember = new ConNguoi
+               ConNguoi unknownMember = new ConNguoi
                 {
                     ID_Nguoi = 0,
                     HoTen = "Chưa có thông tin!"
 
                 };
-                listNguoiQuanLy.Add(hienThiTieuDe);
-                listNguoiQuanLy.Add(unknownMember);
+               listNguoiQuanLy.Add(unknownMember);
                 //Ta sẽ duyệt qua hết tất cả các nhân viên y tế có trong bảng nhân viên y tế, xong lấy ra thông tin 
                 //từ bảng con người sao cho id_người trùng nhau.
                 for (int i = 0; i < listNhanVienYTe.Count; i++)
@@ -97,6 +90,12 @@ namespace QuanLyYTe.QL_PKham
         { 
             ConNguoi conNguoi = new ConNguoi();
             PhongKham phongKham = convertToObject.bangphongkham(dtgvHienThi,e);
+            if (phongKham == null)
+            {
+                phongKhamCanXoa = null;
+                return;
+            }
+
             txtTenPhongKham.Text = phongKham.TenPhongKham;
             using(var context= new YTeDbContext())
             {
@@ -113,6 +112,7 @@ namespace QuanLyYTe.QL_PKham
                 }
                            
             }
+            txtSoDienThoai.Text = phongKham.SoDienThoaiLienHe;
             txtDiaChi.Text = phongKham.DiaChi;
             cbThuBatDau.SelectedIndex = (int)phongKham.NgayBatDauTrongTuan;
             cbThuKetThuc.SelectedIndex = (int)phongKham.NgayKetThucTrongTuan;
@@ -123,9 +123,16 @@ namespace QuanLyYTe.QL_PKham
         }
 
         private void btnXoaCoSo_Click(object sender, EventArgs e)
-        {
+        { 
+            if (phongKhamCanXoa == null)
+            {
+                MessageBox.Show("Vui lòng lựa chọn phòng khám để xóa!");
+                return;
+            }
             sql.xoaKhoiCSDL(phongKhamCanXoa);
+            phongKhamCanXoa = null;
             MessageBox.Show("Xóa dữ liệu thành công!");
+            deleteAllText();
             btnHienThi.PerformClick();
         }
 
@@ -133,6 +140,19 @@ namespace QuanLyYTe.QL_PKham
         {
             dtgvHienThi.DataSource = dataTable;
             dtgvHienThi.DataSource = filter.searchRow(dtgvHienThi, "Tên phòng khám", txtTimKiem.Text);
+            phongKhamCanXoa = null;
+        }
+        public void deleteAllText()
+        {
+            txtTenPhongKham.Text = "";
+            txtDiaChi.Text = "";
+            txtSoDienThoai.Text = "";
+            cbThuBatDau.SelectedIndex = 0;
+            cbThuKetThuc.SelectedIndex = 4;
+            dtGioMoCua.Value = Convert.ToDateTime("12:00:00");
+            dtGioDongCua.Value = Convert.ToDateTime("12:00:00");
+            txtThongTinKhac.Text = "";
+            cbTenBacSiQuanLy.SelectedIndex = -1;
         }
     }
 }

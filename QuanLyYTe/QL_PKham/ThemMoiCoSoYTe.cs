@@ -28,28 +28,42 @@ namespace QuanLyYTe
         DataTable dataTable = null;
         private void btnThem_Click(object sender, EventArgs e)
         {
-            PhongKham phongKham = new PhongKham();
+            if (txtTenPhongKham.Text == "" ||
+                txtDiaChiPhongKham.Text == "" ||
+                cbTenBacSiQuanLy.SelectedIndex == -1 ||
+                txtSoDienThoaiLienHe.Text == "" ||
+                txtThongTinKhac.Text == ""
+                )
             {
-                phongKham.TenPhongKham = txtTenPhongKham.Text;
-                phongKham.ID_NhanVienQuanLy = Convert.ToInt32(cbTenBacSiQuanLy.SelectedValue.ToString());
-                phongKham.DiaChi = txtDiaChiPhongKham.Text;
-                phongKham.NgayBatDauTrongTuan = cbThuBatDau.SelectedIndex;
-                phongKham.NgayKetThucTrongTuan = cbThuKetThuc.SelectedIndex;
-                phongKham.GioBatDau = dtGioMoCua.Value.TimeOfDay;
-                phongKham.GioketThuc = dtGioDongCua.Value.TimeOfDay;
-                phongKham.ThongTinKhac = txtThongTinKhac.Text;
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin vào!");
             }
-            try
+            else
             {
-                sql.themMoiVaoCSDL(phongKham);
+                PhongKham phongKham = new PhongKham();
+                {
+                    phongKham.TenPhongKham = txtTenPhongKham.Text;
+                    phongKham.ID_NhanVienQuanLy = Convert.ToInt32(cbTenBacSiQuanLy.SelectedValue.ToString());
+                    phongKham.DiaChi = txtDiaChiPhongKham.Text;
+                    phongKham.SoDienThoaiLienHe = txtSoDienThoaiLienHe.Text;
+                    phongKham.NgayBatDauTrongTuan = cbThuBatDau.SelectedIndex;
+                    phongKham.NgayKetThucTrongTuan = cbThuKetThuc.SelectedIndex;
+                    phongKham.GioBatDau = dtGioMoCua.Value.TimeOfDay;
+                    phongKham.GioketThuc = dtGioDongCua.Value.TimeOfDay;
+                    phongKham.ThongTinKhac = txtThongTinKhac.Text;
+                }
+                try
+                {
+                    sql.themMoiVaoCSDL(phongKham);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Thêm mới thất bại. Kiểm tra lại thông tin đã nhập!");
+                    return;
+                }
+                MessageBox.Show("Thêm mới thành công!");
+                deleteAllText();
+                btnHienThiDanhSach.PerformClick();
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Thêm mới thất bại!");
-                return;
-            }
-            MessageBox.Show("Thêm mới thành công!");
-            btnHienThiDanhSach.PerformClick();
         }
 
 
@@ -97,8 +111,10 @@ namespace QuanLyYTe
 
         private void dtgvThongTinCoSoYTe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-                        ConNguoi conNguoi = new ConNguoi();
+             ConNguoi conNguoi = new ConNguoi();
+            
             PhongKham phongKham = convertToObject.bangphongkham(dtgvThongTinCoSoYTe,e);
+            if (phongKham == null) return;
             txtTenPhongKham.Text = phongKham.TenPhongKham;
             using(var context= new YTeDbContext())
             {
@@ -116,6 +132,7 @@ namespace QuanLyYTe
                            
             }
           txtDiaChiPhongKham.Text = phongKham.DiaChi;
+            txtSoDienThoaiLienHe.Text = phongKham.SoDienThoaiLienHe;
             cbThuBatDau.SelectedIndex = (int)phongKham.NgayBatDauTrongTuan;
             cbThuKetThuc.SelectedIndex = (int)phongKham.NgayKetThucTrongTuan;
     dtGioMoCua.Text = phongKham.GioBatDau.ToString();
@@ -124,6 +141,17 @@ namespace QuanLyYTe
             txtThongTinKhac.Text = phongKham.ThongTinKhac;
  
         }
-
+public void deleteAllText()
+        {
+            txtTenPhongKham.Text = "";
+            txtDiaChiPhongKham.Text = "";
+            txtSoDienThoaiLienHe.Text = "";
+            cbThuBatDau.SelectedIndex = 0;
+            cbThuKetThuc.SelectedIndex = 4;
+            dtGioMoCua.Value = Convert.ToDateTime("12:00:00");
+            dtGioDongCua.Value = Convert.ToDateTime("12:00:00");
+            txtThongTinKhac.Text = "";
+            cbTenBacSiQuanLy.SelectedIndex = -1;
+        }
            }
 }

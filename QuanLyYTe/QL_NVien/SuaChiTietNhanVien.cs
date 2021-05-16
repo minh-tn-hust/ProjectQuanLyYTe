@@ -29,37 +29,54 @@ namespace QuanLyYTe
         ef6Method sql = new ef6Method();
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            NhanVienYTe nhanVienYTeMoi = new NhanVienYTe();
+            if (txtTenDangNhap.Text == "" ||
+             txtMatKhau.Text == "" ||
+             txtHoVaTen.Text == "" ||
+             txtSoCMND.Text == "" ||
+             cbGioiTinh.SelectedIndex == -1 ||
+             txtNgheNghiep.Text == "" ||
+             txtSoDienThoai.Text == "" ||
+             txtDiaChi.Text == "" ||
+             txtEmailLienHe.Text == "" ||
+             cbPhongKhamDangLamViec.SelectedIndex == -1)
             {
-                nhanVienYTeMoi.UserName = txtTenDangNhap.Text;
-                nhanVienYTeMoi.Password = txtMatKhau.Text;
-                nhanVienYTeMoi.ID_CoSoYTe =Convert.ToInt32(cbPhongKhamDangLamViec.SelectedValue.ToString());
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin vào!");
             }
-            ConNguoi conNguoiMoi = new ConNguoi();
+            else
             {
-                conNguoiMoi.HoTen = txtHoVaTen.Text;
-                conNguoiMoi.SoCMND = txtSoCMND.Text;
-                conNguoiMoi.NgaySinh = dtNgaySinh.Value;
-                conNguoiMoi.GioiTinh = cbGioiTinh.SelectedIndex;
-                conNguoiMoi.NgheNghiep = txtNgheNghiep.Text;
-                conNguoiMoi.DiaChi = txtDiaChi.Text;
-                conNguoiMoi.SoDienThoai = txtSoDienThoai.Text;
-                conNguoiMoi.Email = txtEmailLienHe.Text;
 
+                NhanVienYTe nhanVienYTeMoi = new NhanVienYTe();
+                {
+                    nhanVienYTeMoi.UserName = txtTenDangNhap.Text;
+                    nhanVienYTeMoi.Password = txtMatKhau.Text;
+                    nhanVienYTeMoi.ID_CoSoYTe = Convert.ToInt32(cbPhongKhamDangLamViec.SelectedValue.ToString());
+                }
+                ConNguoi conNguoiMoi = new ConNguoi();
+                {
+                    conNguoiMoi.HoTen = txtHoVaTen.Text;
+                    conNguoiMoi.SoCMND = txtSoCMND.Text;
+                    conNguoiMoi.NgaySinh = dtNgaySinh.Value;
+                    conNguoiMoi.GioiTinh = cbGioiTinh.SelectedIndex;
+                    conNguoiMoi.NgheNghiep = txtNgheNghiep.Text;
+                    conNguoiMoi.DiaChi = txtDiaChi.Text;
+                    conNguoiMoi.SoDienThoai = txtSoDienThoai.Text;
+                    conNguoiMoi.Email = txtEmailLienHe.Text;
+
+                }
+                try
+                {
+                    sql.ChinhSua(nhanVienYTeMoi, conNguoiMoi, nhanVienSuaDoi);
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại thông tin đã nhập(có thể là sai số CMND)!");
+                    return;
+                }
+
+                MessageBox.Show("Chỉnh sửa thành công!");
+                dataTable = loadingTable.nhanvien();
+                btnHienThi.PerformClick();
             }
-            try
-            {
-                sql.ChinhSua(nhanVienYTeMoi, conNguoiMoi, nhanVienSuaDoi);
-            }
-            catch
-            {
-                MessageBox.Show("Vui lòng kiểm tra lại thông tin đã nhập( có thể là sai số CMND)!");
-                return;
-            }
-            
-            MessageBox.Show("Chỉnh sửa thành công!");
-            dataTable = loadingTable.nhanvien();
-            btnHienThi.PerformClick();
         }
 
         private void cbPhongKhamDangLamViec_Click(object sender, EventArgs e)
@@ -75,6 +92,7 @@ namespace QuanLyYTe
         private void dtgvHienThiThongTin_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             BangNhanVien nhanVien = convertToObject.nhanvien(dtgvHienThiThongTin, e);
+            if (nhanVien == null) return;
             txtHoVaTen.Text = nhanVien.connguoi.HoTen;
             txtMatKhau.Text = nhanVien.nhanvienyte.Password;
             txtTenDangNhap.Text = nhanVien.nhanvienyte.UserName;

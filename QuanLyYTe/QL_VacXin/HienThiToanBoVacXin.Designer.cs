@@ -100,6 +100,7 @@
             this.dtgvHienThiChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvHienThiChiTiet.Location = new System.Drawing.Point(0, 50);
             this.dtgvHienThiChiTiet.Name = "dtgvHienThiChiTiet";
+            this.dtgvHienThiChiTiet.ReadOnly = true;
             this.dtgvHienThiChiTiet.Size = new System.Drawing.Size(478, 412);
             this.dtgvHienThiChiTiet.TabIndex = 1;
             this.dtgvHienThiChiTiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHienThiChiTiet_CellClick);
@@ -338,7 +339,7 @@
             this.btnHienThi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnHienThi.ForeColor = System.Drawing.Color.White;
             this.btnHienThi.HoverState.Parent = this.btnHienThi;
-            this.btnHienThi.Location = new System.Drawing.Point(123, 413);
+            this.btnHienThi.Location = new System.Drawing.Point(125, 413);
             this.btnHienThi.Name = "btnHienThi";
             this.btnHienThi.ShadowDecoration.Parent = this.btnHienThi;
             this.btnHienThi.Size = new System.Drawing.Size(99, 37);
@@ -355,7 +356,7 @@
             this.btnXoaKhoiDanhSach.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXoaKhoiDanhSach.ForeColor = System.Drawing.Color.White;
             this.btnXoaKhoiDanhSach.HoverState.Parent = this.btnXoaKhoiDanhSach;
-            this.btnXoaKhoiDanhSach.Location = new System.Drawing.Point(10, 413);
+            this.btnXoaKhoiDanhSach.Location = new System.Drawing.Point(12, 413);
             this.btnXoaKhoiDanhSach.Name = "btnXoaKhoiDanhSach";
             this.btnXoaKhoiDanhSach.ShadowDecoration.Parent = this.btnXoaKhoiDanhSach;
             this.btnXoaKhoiDanhSach.Size = new System.Drawing.Size(99, 37);
@@ -378,6 +379,7 @@
             this.txtSoMuiCanTiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoMuiCanTiem.FocusedState.Parent = this.txtSoMuiCanTiem;
             this.txtSoMuiCanTiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoMuiCanTiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSoMuiCanTiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoMuiCanTiem.HoverState.Parent = this.txtSoMuiCanTiem;
             this.txtSoMuiCanTiem.Location = new System.Drawing.Point(9, 271);
@@ -387,7 +389,7 @@
             this.txtSoMuiCanTiem.ReadOnly = true;
             this.txtSoMuiCanTiem.SelectedText = "";
             this.txtSoMuiCanTiem.ShadowDecoration.Parent = this.txtSoMuiCanTiem;
-            this.txtSoMuiCanTiem.Size = new System.Drawing.Size(224, 24);
+            this.txtSoMuiCanTiem.Size = new System.Drawing.Size(230, 24);
             this.txtSoMuiCanTiem.TabIndex = 25;
             // 
             // dtHanSuDung
@@ -407,7 +409,7 @@
             this.dtHanSuDung.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtHanSuDung.Name = "dtHanSuDung";
             this.dtHanSuDung.ShadowDecoration.Parent = this.dtHanSuDung;
-            this.dtHanSuDung.Size = new System.Drawing.Size(224, 24);
+            this.dtHanSuDung.Size = new System.Drawing.Size(230, 24);
             this.dtHanSuDung.TabIndex = 24;
             this.dtHanSuDung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtHanSuDung.Value = new System.DateTime(2021, 4, 7, 23, 35, 5, 39);
@@ -429,7 +431,7 @@
             this.dtNgaySanXuat.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNgaySanXuat.Name = "dtNgaySanXuat";
             this.dtNgaySanXuat.ShadowDecoration.Parent = this.dtNgaySanXuat;
-            this.dtNgaySanXuat.Size = new System.Drawing.Size(224, 24);
+            this.dtNgaySanXuat.Size = new System.Drawing.Size(230, 24);
             this.dtNgaySanXuat.TabIndex = 23;
             this.dtNgaySanXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtNgaySanXuat.Value = new System.DateTime(2021, 4, 7, 23, 35, 5, 39);
@@ -449,6 +451,7 @@
             this.txtChongChiDinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChongChiDinh.FocusedState.Parent = this.txtChongChiDinh;
             this.txtChongChiDinh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtChongChiDinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtChongChiDinh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChongChiDinh.HoverState.Parent = this.txtChongChiDinh;
             this.txtChongChiDinh.Location = new System.Drawing.Point(9, 350);
@@ -458,7 +461,7 @@
             this.txtChongChiDinh.ReadOnly = true;
             this.txtChongChiDinh.SelectedText = "";
             this.txtChongChiDinh.ShadowDecoration.Parent = this.txtChongChiDinh;
-            this.txtChongChiDinh.Size = new System.Drawing.Size(224, 24);
+            this.txtChongChiDinh.Size = new System.Drawing.Size(230, 24);
             this.txtChongChiDinh.TabIndex = 22;
             // 
             // label13
@@ -488,7 +491,7 @@
             this.dtNgayNhapKho.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNgayNhapKho.Name = "dtNgayNhapKho";
             this.dtNgayNhapKho.ShadowDecoration.Parent = this.dtNgayNhapKho;
-            this.dtNgayNhapKho.Size = new System.Drawing.Size(224, 24);
+            this.dtNgayNhapKho.Size = new System.Drawing.Size(230, 24);
             this.dtNgayNhapKho.TabIndex = 5;
             this.dtNgayNhapKho.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtNgayNhapKho.Value = new System.DateTime(2021, 4, 7, 23, 35, 5, 39);
@@ -508,6 +511,7 @@
             this.txtThongTinKhac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThongTinKhac.FocusedState.Parent = this.txtThongTinKhac;
             this.txtThongTinKhac.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtThongTinKhac.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtThongTinKhac.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThongTinKhac.HoverState.Parent = this.txtThongTinKhac;
             this.txtThongTinKhac.Location = new System.Drawing.Point(9, 383);
@@ -517,7 +521,7 @@
             this.txtThongTinKhac.ReadOnly = true;
             this.txtThongTinKhac.SelectedText = "";
             this.txtThongTinKhac.ShadowDecoration.Parent = this.txtThongTinKhac;
-            this.txtThongTinKhac.Size = new System.Drawing.Size(224, 24);
+            this.txtThongTinKhac.Size = new System.Drawing.Size(230, 24);
             this.txtThongTinKhac.TabIndex = 8;
             // 
             // txtThoiGianTaiSuDung
@@ -535,6 +539,7 @@
             this.txtThoiGianTaiSuDung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThoiGianTaiSuDung.FocusedState.Parent = this.txtThoiGianTaiSuDung;
             this.txtThoiGianTaiSuDung.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtThoiGianTaiSuDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtThoiGianTaiSuDung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThoiGianTaiSuDung.HoverState.Parent = this.txtThoiGianTaiSuDung;
             this.txtThoiGianTaiSuDung.Location = new System.Drawing.Point(9, 230);
@@ -544,7 +549,7 @@
             this.txtThoiGianTaiSuDung.ReadOnly = true;
             this.txtThoiGianTaiSuDung.SelectedText = "";
             this.txtThoiGianTaiSuDung.ShadowDecoration.Parent = this.txtThoiGianTaiSuDung;
-            this.txtThoiGianTaiSuDung.Size = new System.Drawing.Size(224, 24);
+            this.txtThoiGianTaiSuDung.Size = new System.Drawing.Size(230, 24);
             this.txtThoiGianTaiSuDung.TabIndex = 7;
             // 
             // txtSoLuongConLai
@@ -562,6 +567,7 @@
             this.txtSoLuongConLai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoLuongConLai.FocusedState.Parent = this.txtSoLuongConLai;
             this.txtSoLuongConLai.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoLuongConLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSoLuongConLai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoLuongConLai.HoverState.Parent = this.txtSoLuongConLai;
             this.txtSoLuongConLai.Location = new System.Drawing.Point(9, 312);
@@ -571,7 +577,7 @@
             this.txtSoLuongConLai.ReadOnly = true;
             this.txtSoLuongConLai.SelectedText = "";
             this.txtSoLuongConLai.ShadowDecoration.Parent = this.txtSoLuongConLai;
-            this.txtSoLuongConLai.Size = new System.Drawing.Size(224, 24);
+            this.txtSoLuongConLai.Size = new System.Drawing.Size(230, 24);
             this.txtSoLuongConLai.TabIndex = 4;
             // 
             // txtGiaThanh
@@ -589,6 +595,7 @@
             this.txtGiaThanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiaThanh.FocusedState.Parent = this.txtGiaThanh;
             this.txtGiaThanh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtGiaThanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGiaThanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGiaThanh.HoverState.Parent = this.txtGiaThanh;
             this.txtGiaThanh.Location = new System.Drawing.Point(9, 73);
@@ -598,7 +605,7 @@
             this.txtGiaThanh.ReadOnly = true;
             this.txtGiaThanh.SelectedText = "";
             this.txtGiaThanh.ShadowDecoration.Parent = this.txtGiaThanh;
-            this.txtGiaThanh.Size = new System.Drawing.Size(224, 24);
+            this.txtGiaThanh.Size = new System.Drawing.Size(230, 24);
             this.txtGiaThanh.TabIndex = 2;
             // 
             // txtTenVacXin
@@ -616,6 +623,7 @@
             this.txtTenVacXin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenVacXin.FocusedState.Parent = this.txtTenVacXin;
             this.txtTenVacXin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenVacXin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTenVacXin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenVacXin.HoverState.Parent = this.txtTenVacXin;
             this.txtTenVacXin.Location = new System.Drawing.Point(9, 37);
@@ -625,7 +633,7 @@
             this.txtTenVacXin.ReadOnly = true;
             this.txtTenVacXin.SelectedText = "";
             this.txtTenVacXin.ShadowDecoration.Parent = this.txtTenVacXin;
-            this.txtTenVacXin.Size = new System.Drawing.Size(224, 24);
+            this.txtTenVacXin.Size = new System.Drawing.Size(230, 24);
             this.txtTenVacXin.TabIndex = 1;
             // 
             // txtTenLoSanPham
@@ -643,6 +651,7 @@
             this.txtTenLoSanPham.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenLoSanPham.FocusedState.Parent = this.txtTenLoSanPham;
             this.txtTenLoSanPham.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenLoSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTenLoSanPham.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenLoSanPham.HoverState.Parent = this.txtTenLoSanPham;
             this.txtTenLoSanPham.Location = new System.Drawing.Point(9, 3);
@@ -652,7 +661,7 @@
             this.txtTenLoSanPham.ReadOnly = true;
             this.txtTenLoSanPham.SelectedText = "";
             this.txtTenLoSanPham.ShadowDecoration.Parent = this.txtTenLoSanPham;
-            this.txtTenLoSanPham.Size = new System.Drawing.Size(224, 24);
+            this.txtTenLoSanPham.Size = new System.Drawing.Size(230, 24);
             this.txtTenLoSanPham.TabIndex = 0;
             // 
             // HienThiToanBoVacXin

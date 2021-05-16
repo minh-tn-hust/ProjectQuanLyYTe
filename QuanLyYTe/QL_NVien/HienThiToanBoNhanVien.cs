@@ -64,6 +64,11 @@ namespace QuanLyYTe.QL_NVien
         private void dtgvHienThiToanBo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             BangNhanVien nhanVien = convertToObject.nhanvien(dtgvHienThiToanBo, e);
+            if (nhanVien == null)
+            {
+                nhanVienDuocXoa = null;
+                return;
+            }
             txtHoVaTen.Text = nhanVien.connguoi.HoTen;
             txtMatKhau.Text = nhanVien.nhanvienyte.Password;
             txtTenDangNhap.Text = nhanVien.nhanvienyte.UserName;
@@ -119,14 +124,34 @@ namespace QuanLyYTe.QL_NVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (nhanVienDuocXoa == null) MessageBox.Show("Xóa thất bại do chưa chọn nhân viên để xóa!");
+            if (nhanVienDuocXoa == null)
+            {
+                MessageBox.Show("Xóa thất bại do chưa chọn nhân viên để xóa!");
+            }
             else
             {
                 sql.xoaKhoiCSDL(nhanVienDuocXoa);
                 MessageBox.Show("Xóa thành công!");
+                nhanVienDuocXoa = null;
                 dataTable = loadingTable.nhanvien();
                 btnHienThi.PerformClick();
+                deleteAllText();
             }
+        }
+        public void deleteAllText()
+        {
+            txtHoVaTen.Text = "";
+            txtTenDangNhap.Text = "";
+            txtMatKhau.Text = "";
+            txtSoCMND.Text = "";
+            cbGioiTinh.SelectedIndex = -1;
+            dtNgaySinh.Value = DateTime.Today;
+            txtNgheNghiep.Text = "";
+            txtSoDienThoai.Text = "";
+            txtDiaChi.Text = "";
+            txtEmailLienHe.Text = "";
+            cbNoiDangLamViec.SelectedIndex = -1;
+
         }
     }
 }

@@ -26,6 +26,18 @@ namespace QuanLyYTe
         ConvertToObject convertToObject = new ConvertToObject();
         private void btnThemVaoDanhSach_Click(object sender, EventArgs e)
         {
+            if(txtTenVacXin.Text==""||
+                txtTenLoVacXin.Text==""||
+                txtGiaThanhVacXin.Text==""||
+                txtThoiGianTaiSuDung.Text==""||
+                txtSoMuiTiem.Text==""||
+                txtSoLuongVacXinMuaMoi.Text==""||
+                txtChongChiDinh.Text==""||
+                txtThongTinVacXin.Text=="")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+                return;
+            }
             VacXin vacXin = new VacXin();
             {
                 vacXin.TenVacXin = txtTenVacXin.Text;
@@ -37,6 +49,7 @@ namespace QuanLyYTe
                 else
                 {
                     MessageBox.Show("Giá thành phải là số!");
+                    txtGiaThanhVacXin.Text = "";
                     return;
                 }
                 vacXin.NgaySanXuat = dtNgaySanXuat.Value;
@@ -49,6 +62,7 @@ namespace QuanLyYTe
                 else
                 {
                     MessageBox.Show("Thời gian sử dụng lại phải là số!");
+                    txtThoiGianTaiSuDung.Text = "";
                     return;
                 }
                 if (int.TryParse(txtSoMuiTiem.Text,out int result2))
@@ -58,16 +72,19 @@ namespace QuanLyYTe
                 else
                 {
                     MessageBox.Show("Số mũi cần tiêm phải là số!");
+                    txtSoMuiTiem.Text = "";
                     return;
                 }
 
                 if (int.TryParse(txtSoLuongVacXinMuaMoi.Text,out int result3))
                 {
                     vacXin.SoLuongNhapKho =Convert.ToInt32(txtSoLuongVacXinMuaMoi.Text);
+                    
                 }
                 else
                 {
                     MessageBox.Show(" Số lượng mua mới phải là số!");
+                    txtSoLuongVacXinMuaMoi.Text = "";
                     return;
                 }
                vacXin.SoLuongConLai = Convert.ToInt32(txtSoLuongVacXinMuaMoi.Text); 
@@ -84,8 +101,11 @@ namespace QuanLyYTe
                 return;
             }
             MessageBox.Show("Thêm mới thành công!");
+            deleteAllText();
             dataTable = loadingTable.vacxinThemMoi();
+            
             btnHienThi.PerformClick();
+            
         }
 
         private void btnHienThi_Click(object sender, EventArgs e)
@@ -104,6 +124,7 @@ namespace QuanLyYTe
         {
             
             VacXin vacXin = convertToObject.bangvacxin(dtgvDanhSachVacXin,e);
+            if (vacXin == null) return;
             txtTenVacXin.Text = vacXin.TenVacXin;
             txtTenLoVacXin.Text = vacXin.SoLoVacXin;
             txtGiaThanhVacXin.Text = vacXin.GiaThanh;
@@ -115,6 +136,21 @@ namespace QuanLyYTe
             txtSoLuongVacXinMuaMoi.Text = vacXin.SoLuongNhapKho.ToString();
             txtChongChiDinh.Text = vacXin.ChongChiDinh;
             txtThongTinVacXin.Text = vacXin.ThongTinKhac;
+
+        }
+        public void deleteAllText()
+        {
+            txtTenVacXin.Text = "";
+            txtTenLoVacXin.Text = "";
+            txtGiaThanhVacXin.Text = "";
+            dtNgaySanXuat.Value = Convert.ToDateTime("1/1/2001");
+            dtNgayNhapKho.Value = Convert.ToDateTime("1/1/2001");
+            dtHanSuDung.Value = Convert.ToDateTime("1/1/2001");
+            txtThoiGianTaiSuDung.Text = "";
+            txtSoMuiTiem.Text = "";
+            txtSoLuongVacXinMuaMoi.Text = "";
+            txtChongChiDinh.Text = "";
+            txtThongTinVacXin.Text = "";
 
         }
     }

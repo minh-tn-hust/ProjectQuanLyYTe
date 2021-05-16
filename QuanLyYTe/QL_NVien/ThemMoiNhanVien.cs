@@ -28,31 +28,54 @@ namespace QuanLyYTe
         PhongKham phongKham = new PhongKham();
         private void btnThem_Click(object sender, EventArgs e)
         {
-            // Tạo ra đối tượng con người
-            ConNguoi conNguoi = new ConNguoi();
+            if (txtTenDangNhap.Text == "" ||
+                txtMatKhau.Text == "" ||
+                txtHovaTen.Text == "" ||
+                txtSoCMND.Text == "" ||
+                cbGioiTinh.SelectedIndex == -1 ||
+                txtNgheNghiep.Text == "" ||
+                txtSoDienThoai.Text == "" ||
+                txtDiaChiThuongTru.Text == "" ||
+                txtEmailLienHe.Text == "" ||
+                cbTenCoSoYTe.SelectedIndex == -1)
             {
-                conNguoi.HoTen = txtHovaTen.Text;
-                conNguoi.SoCMND = txtSoCMND.Text;
-                conNguoi.NgaySinh = dtNgaySinh.Value;
-                conNguoi.GioiTinh = cbGioiTinh.SelectedIndex;
-                conNguoi.NgheNghiep = txtNgheNghiep.Text;
-                conNguoi.DiaChi = txtDiaChiThuongTru.Text;
-                conNguoi.SoDienThoai = txtSoDienThoai.Text;
-                conNguoi.Email = txtEmailLienHe.Text;
-
-
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin vào!");
             }
-            // Tạo ra đối tượng nhân viên y tế
-            NhanVienYTe nhanVien = new NhanVienYTe();
+            else
             {
-                nhanVien.UserName = txtTenDangNhap.Text;
-                nhanVien.Password = txtMatKhau.Text;
-                nhanVien.ID_CoSoYTe = Convert.ToInt32(cbTenCoSoYTe.SelectedValue.ToString());
-            }
-            sql.themMoiVaoCSDL(nhanVien, conNguoi);
-            MessageBox.Show("Thêm mới thành công!");
+                // Tạo ra đối tượng con người
+                ConNguoi conNguoi = new ConNguoi();
+                {
+                    conNguoi.HoTen = txtHovaTen.Text;
+                    conNguoi.SoCMND = txtSoCMND.Text;
+                    conNguoi.NgaySinh = dtNgaySinh.Value;
+                    conNguoi.GioiTinh = cbGioiTinh.SelectedIndex;
+                    conNguoi.NgheNghiep = txtNgheNghiep.Text;
+                    conNguoi.DiaChi = txtDiaChiThuongTru.Text;
+                    conNguoi.SoDienThoai = txtSoDienThoai.Text;
+                    conNguoi.Email = txtEmailLienHe.Text;
 
-            btnHienThi.PerformClick();
+
+                }
+                // Tạo ra đối tượng nhân viên y tế
+                NhanVienYTe nhanVien = new NhanVienYTe();
+                {
+                    nhanVien.UserName = txtTenDangNhap.Text;
+                    nhanVien.Password = txtMatKhau.Text;
+                    nhanVien.ID_CoSoYTe = Convert.ToInt32(cbTenCoSoYTe.SelectedValue.ToString());
+                }
+
+                int flag =  sql.themMoiVaoCSDL(nhanVien, conNguoi);
+                if (flag == -1)
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại số CMND!");
+                    txtSoCMND.Text = null;
+                    return;
+                }
+                 MessageBox.Show("Thêm mới thành công!");
+                deleteAllText();
+                btnHienThi.PerformClick();
+            }
         }
 
 
@@ -106,6 +129,7 @@ namespace QuanLyYTe
         private void dtgvDanhSachNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             BangNhanVien nhanVien = convertToObject.nhanvien(dtgvDanhSachNhanVien, e);
+            if (nhanVien == null) return;
             txtHovaTen.Text = nhanVien.connguoi.HoTen;
             txtMatKhau.Text = nhanVien.nhanvienyte.Password;
             txtTenDangNhap.Text = nhanVien.nhanvienyte.UserName;
@@ -129,8 +153,23 @@ namespace QuanLyYTe
                 }
             }
 
+        
 
 
+        }
+        public void deleteAllText()
+        {
+            txtHovaTen.Text = "";
+            txtTenDangNhap.Text = "";
+            txtMatKhau.Text = "";
+            txtSoCMND.Text = "";
+            cbGioiTinh.SelectedIndex = -1;
+            dtNgaySinh.Value = DateTime.Today;
+            txtNgheNghiep.Text = "";
+            txtSoDienThoai.Text = "";
+            txtDiaChiThuongTru.Text = "";
+            txtEmailLienHe.Text = "";
+            cbTenCoSoYTe.SelectedIndex = -1;
 
         }
     }
