@@ -112,7 +112,7 @@ namespace QuanLyYTe.QL_NVien
                 cbNoiDangLamViec.ValueMember = "ID_PhongKham";
             }
             dataTable = loadingTable.nhanvien();
-            btnHienThi.PerformClick();
+                       btnHienThi.PerformClick();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

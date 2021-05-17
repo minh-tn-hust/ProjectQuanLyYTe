@@ -60,7 +60,7 @@ namespace Controller.dataGridView
                     dr[0] = ++i;
                     dr[1] = record.HoTen;
                     dr[2] = record.SoCMND;
-                    dr[3] = record.NgaySinh;
+                    dr[3] = record.NgaySinh.Value.ToShortDateString();
                     if (record.GioiTinh == 0)
                     {
                         dr[4]="Nam";
@@ -110,7 +110,7 @@ namespace Controller.dataGridView
                     dr[0] = ++i;
                     dr[1] = record.HoTen;
                     dr[4] = record.SoCMND;
-                    dr[5] = record.NgaySinh;
+                    dr[5] = record.NgaySinh.Value.ToShortDateString();
                     dr[6] = record.GioiTinh;
                     dr[7] = record.NgheNghiep;
                     dr[8] = record.DiaChi;
@@ -160,7 +160,7 @@ namespace Controller.dataGridView
                     dr[0] = ++i;
                     dr[1] = record.HoTen;
                     dr[2] = record.SoCMND;
-                    dr[3] = record.NgaySinh;
+                    dr[3] = record.NgaySinh.Value.ToShortDateString();
                     dr[4] = record.GioiTinh;
                     dr[5] = record.NgheNghiep;
                     dr[6] = record.DiaChi;
@@ -169,8 +169,8 @@ namespace Controller.dataGridView
                     var thongtin = context.ThongTinThaiKis.Where(b => b.ID_NguoiMangThai == phunu.ID_NguoiMangThai).FirstOrDefault();
                     if (thongtin != null)
                     {
-                        dr[9] = thongtin.ThoiGianKham;
-                        dr[10] = thongtin.ThoiGianSinhDuKien.GetValueOrDefault();
+                        dr[9] = thongtin.ThoiGianKham.ToShortDateString();
+                        dr[10] = thongtin.ThoiGianSinhDuKien.GetValueOrDefault().ToShortDateString();
                     }
 
                     dt.Rows.Add(dr);
@@ -197,9 +197,9 @@ namespace Controller.dataGridView
                     dr[1] = vacxin.TenVacXin;
                     dr[2] = vacxin.SoLoVacXin;
                     dr[3] = vacxin.GiaThanh;
-                    dr[4] = vacxin.NgaySanXuat;
-                    dr[5] = vacxin.HanSuDung;
-                    dr[6] = vacxin.NgayNhapKho;
+                    dr[4] = vacxin.NgaySanXuat.Value.ToShortDateString();
+                    dr[5] = vacxin.HanSuDung.Value.ToShortDateString();
+                    dr[6] = vacxin.NgayNhapKho.Value.ToShortDateString();
                     dr[7] = vacxin.ThoiGianSuDungLai;
                     dr[8] = vacxin.SoMuiCanTiem;
                     dr[9] = vacxin.SoLuongNhapKho;
@@ -229,9 +229,9 @@ namespace Controller.dataGridView
                     dr[1] = vacxin.TenVacXin;
                     dr[2] = vacxin.SoLoVacXin;
                     dr[3] = vacxin.GiaThanh;
-                    dr[4] = vacxin.NgaySanXuat;
-                    dr[5] = vacxin.HanSuDung;
-                    dr[6] = vacxin.NgayNhapKho;
+                    dr[4] = vacxin.NgaySanXuat.Value.ToShortDateString();
+                    dr[5] = vacxin.HanSuDung.Value.ToShortDateString();
+                    dr[6] = vacxin.NgayNhapKho.Value.ToShortDateString();
                     dr[7] = vacxin.ThoiGianSuDungLai;
                     dr[8] = vacxin.SoMuiCanTiem;
                     dr[9] = vacxin.SoLuongConLai;

@@ -63,6 +63,16 @@ namespace QuanLyYTe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4433982 {
+            get {
+                object obj = ResourceManager.GetObject("4433982", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _lock {
             get {
                 object obj = ResourceManager.GetObject("lock", resourceCulture);
@@ -93,6 +103,16 @@ namespace QuanLyYTe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backGround {
+            get {
+                object obj = ResourceManager.GetObject("backGround", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Change_Password {
             get {
                 object obj = ResourceManager.GetObject("Change_Password", resourceCulture);
@@ -116,6 +136,16 @@ namespace QuanLyYTe.Properties {
         internal static System.Drawing.Bitmap changePassword1 {
             get {
                 object obj = ResourceManager.GetObject("changePassword1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap changPass {
+            get {
+                object obj = ResourceManager.GetObject("changPass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +306,16 @@ namespace QuanLyYTe.Properties {
         internal static System.Drawing.Bitmap show {
             get {
                 object obj = ResourceManager.GetObject("show", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signout {
+            get {
+                object obj = ResourceManager.GetObject("signout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

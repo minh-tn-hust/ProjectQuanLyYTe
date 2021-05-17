@@ -190,14 +190,16 @@ namespace QuanLyYTe
             {
                 splitContainer2.SplitterDistance = 0;
                 PnSideMenu.Visible = false;
+                panel4.Width = 60;
             }
             else
             {
                 splitContainer2.SplitterDistance = 200;
                 PnSideMenu.Visible = true;
+                panel4.Width = splitContainer2.Panel1.Width;
             }
 
-
+            
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -216,17 +218,34 @@ namespace QuanLyYTe
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            
-            SignIn signIn = new SignIn();
             this.Hide();
-            signIn.ShowDialog();
+            SignIn signIn = new SignIn();
             this.Close();
+            signIn.ShowDialog();
+
         }
 
         private void guna2CircleButton2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             DoiMatKhau doiMatKhau = new DoiMatKhau();
-            doiMatKhau.Show();
+            doiMatKhau.ShowDialog();
+            this.Close();
+                }
+
+        private void MenuUI_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //this.Hide();
+            //SignIn signIn = new SignIn();
+            //signIn.ShowDialog();
+            //this.Close();
         }
+
+        private void MenuUI_Load(object sender, EventArgs e)
+        {
+            panel4.Width = splitContainer2.Panel1.Width;
+            //panel1.Width = 60;
+            //panel2.Width = 60;
+                   }
     }
 }

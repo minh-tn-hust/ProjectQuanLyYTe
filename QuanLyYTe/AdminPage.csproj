@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -63,6 +64,18 @@
     </Compile>
     <Compile Include="Admin\DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LayLaiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\LayLaiMatKhau.Designer.cs">
+      <DependentUpon>LayLaiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GD_Chung\CuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GD_Chung\CuaNhanVien.Designer.cs">
+      <DependentUpon>CuaNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Model2DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -140,6 +153,9 @@
     <EmbeddedResource Include="Admin\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\LayLaiMatKhau.resx">
+      <DependentUpon>LayLaiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QL_NVien\HienThiToanBoNhanVien.resx">
       <DependentUpon>HienThiToanBoNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +227,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\signout.jpg" />
     <None Include="Images\menu_50px.png" />
     <None Include="Images\undo_40px.png" />
     <None Include="Images\lock.png" />
@@ -229,6 +246,9 @@
     <None Include="Images\changePassword1.png" />
     <None Include="Images\delete_64px.png" />
     <None Include="Images\export_40px.png" />
+    <None Include="Images\changPass.png" />
+    <None Include="Images\backGround.jpg" />
+    <None Include="Images\4433982.jpg" />
     <Content Include="Images\eye_close.png" />
     <Content Include="Images\eye_open.png" />
     <None Include="Resources\eye_open.png" />

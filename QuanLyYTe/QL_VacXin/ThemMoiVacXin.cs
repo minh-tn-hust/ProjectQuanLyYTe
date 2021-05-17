@@ -111,11 +111,13 @@ namespace QuanLyYTe
         private void btnHienThi_Click(object sender, EventArgs e)
         {
             dtgvDanhSachVacXin.DataSource = dataTable;
+            
         }
 
         private void ThemMoiVacXin_Load(object sender, EventArgs e)
         {
             dataTable = loadingTable.vacxinThemMoi();
+            
             btnHienThi.PerformClick();
             
         }

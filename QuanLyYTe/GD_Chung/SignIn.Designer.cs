@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblQuenMatKhau = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnDangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -45,7 +45,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2Panel1.BorderRadius = 8;
-            this.guna2Panel1.Controls.Add(this.lblQuenMatKhau);
+            this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.txtMatKhau);
             this.guna2Panel1.Controls.Add(this.btnDangNhap);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
@@ -57,17 +57,22 @@
             this.guna2Panel1.Size = new System.Drawing.Size(250, 281);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // lblQuenMatKhau
+            // guna2Button1
             // 
-            this.lblQuenMatKhau.AutoSize = false;
-            this.lblQuenMatKhau.BackColor = System.Drawing.Color.Transparent;
-            this.lblQuenMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(119)))), ((int)(((byte)(242)))));
-            this.lblQuenMatKhau.Location = new System.Drawing.Point(79, 241);
-            this.lblQuenMatKhau.Name = "lblQuenMatKhau";
-            this.lblQuenMatKhau.Size = new System.Drawing.Size(86, 28);
-            this.lblQuenMatKhau.TabIndex = 4;
-            this.lblQuenMatKhau.Text = "Quên mật khẩu?";
-            this.lblQuenMatKhau.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Blue;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(57, 246);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(135, 23);
+            this.guna2Button1.TabIndex = 4;
+            this.guna2Button1.Text = "Quên mật khẩu";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // txtMatKhau
             // 
@@ -108,6 +113,7 @@
             this.btnDangNhap.Size = new System.Drawing.Size(208, 45);
             this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -162,9 +168,13 @@
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(250, 281);
             this.Controls.Add(this.guna2Panel1);
+            this.MaximumSize = new System.Drawing.Size(266, 320);
+            this.MinimumSize = new System.Drawing.Size(266, 320);
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Đăng nhập";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignIn_FormClosed);
+            this.Load += new System.EventHandler(this.SignIn_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -173,13 +183,13 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblQuenMatKhau;
         private Guna.UI2.WinForms.Guna2Button btnDangNhap;
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtTenDangNhap;
         private System.Windows.Forms.ImageList imageList1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
 

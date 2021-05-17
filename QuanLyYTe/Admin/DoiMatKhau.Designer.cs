@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMatKhauXacNhan = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMatKhauMoi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMatKhauHienTai = new Guna.UI2.WinForms.Guna2TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label5 = new System.Windows.Forms.Label();
             this.btnLuuThayDoi = new Guna.UI2.WinForms.Guna2Button();
@@ -46,10 +42,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtMatKhauXacNhan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMatKhauMoi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMatKhauHienTai = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -60,19 +56,17 @@
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.guna2Panel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(338, 412);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(409, 369);
+            this.panel1.TabIndex = 1;
             // 
             // panel3
             // 
@@ -80,9 +74,9 @@
             this.panel3.Controls.Add(this.splitContainer1);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 141);
+            this.panel3.Location = new System.Drawing.Point(0, 106);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(338, 271);
+            this.panel3.Size = new System.Drawing.Size(409, 263);
             this.panel3.TabIndex = 3;
             // 
             // panel4
@@ -95,18 +89,145 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 23);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(338, 181);
+            this.panel4.Size = new System.Drawing.Size(409, 165);
             this.panel4.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label3.Location = new System.Drawing.Point(0, 179);
+            this.label3.Location = new System.Drawing.Point(0, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(338, 2);
+            this.label3.Size = new System.Drawing.Size(409, 2);
             this.label3.TabIndex = 10;
             this.label3.Text = "Chỉnh sửa thông tin nhân viên";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 23);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
+            this.splitContainer1.Panel1.Controls.Add(this.btnLuuThayDoi);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel2.Controls.Add(this.label6);
+            this.splitContainer1.Panel2.Controls.Add(this.btnHuyBo);
+            this.splitContainer1.Size = new System.Drawing.Size(409, 240);
+            this.splitContainer1.SplitterDistance = 193;
+            this.splitContainer1.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label5.Location = new System.Drawing.Point(0, 238);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(193, 2);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Chỉnh sửa thông tin nhân viên";
+            // 
+            // btnLuuThayDoi
+            // 
+            this.btnLuuThayDoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLuuThayDoi.BorderRadius = 6;
+            this.btnLuuThayDoi.CheckedState.Parent = this.btnLuuThayDoi;
+            this.btnLuuThayDoi.CustomImages.Parent = this.btnLuuThayDoi;
+            this.btnLuuThayDoi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLuuThayDoi.ForeColor = System.Drawing.Color.White;
+            this.btnLuuThayDoi.HoverState.Parent = this.btnLuuThayDoi;
+            this.btnLuuThayDoi.Location = new System.Drawing.Point(41, 171);
+            this.btnLuuThayDoi.Name = "btnLuuThayDoi";
+            this.btnLuuThayDoi.ShadowDecoration.Parent = this.btnLuuThayDoi;
+            this.btnLuuThayDoi.Size = new System.Drawing.Size(112, 38);
+            this.btnLuuThayDoi.TabIndex = 6;
+            this.btnLuuThayDoi.Text = "Lưu thay đổi";
+            this.btnLuuThayDoi.Click += new System.EventHandler(this.btnLuuThayDoi_Click);
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label6.Location = new System.Drawing.Point(0, 238);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(212, 2);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Chỉnh sửa thông tin nhân viên";
+            // 
+            // btnHuyBo
+            // 
+            this.btnHuyBo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnHuyBo.BorderRadius = 6;
+            this.btnHuyBo.CheckedState.Parent = this.btnHuyBo;
+            this.btnHuyBo.CustomImages.Parent = this.btnHuyBo;
+            this.btnHuyBo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHuyBo.ForeColor = System.Drawing.Color.White;
+            this.btnHuyBo.HoverState.Parent = this.btnHuyBo;
+            this.btnHuyBo.Location = new System.Drawing.Point(56, 171);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.ShadowDecoration.Parent = this.btnHuyBo;
+            this.btnHuyBo.Size = new System.Drawing.Size(114, 38);
+            this.btnHuyBo.TabIndex = 8;
+            this.btnHuyBo.Text = "Hủy bỏ";
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(409, 23);
+            this.panel5.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label2.Location = new System.Drawing.Point(0, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(409, 2);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Chỉnh sửa thông tin nhân viên";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(409, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hãy chắc chắn rằng bạn nhớ mật khẩu";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(409, 106);
+            this.panel2.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label4.Location = new System.Drawing.Point(0, 104);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(409, 2);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Chỉnh sửa thông tin nhân viên";
             // 
             // txtMatKhauXacNhan
             // 
@@ -133,7 +254,7 @@
             this.txtMatKhauXacNhan.PlaceholderText = "Xác nhận mật khẩu mới";
             this.txtMatKhauXacNhan.SelectedText = "";
             this.txtMatKhauXacNhan.ShadowDecoration.Parent = this.txtMatKhauXacNhan;
-            this.txtMatKhauXacNhan.Size = new System.Drawing.Size(262, 36);
+            this.txtMatKhauXacNhan.Size = new System.Drawing.Size(333, 36);
             this.txtMatKhauXacNhan.TabIndex = 9;
             // 
             // txtMatKhauMoi
@@ -161,7 +282,7 @@
             this.txtMatKhauMoi.PlaceholderText = "Nhập mật khẩu mới";
             this.txtMatKhauMoi.SelectedText = "";
             this.txtMatKhauMoi.ShadowDecoration.Parent = this.txtMatKhauMoi;
-            this.txtMatKhauMoi.Size = new System.Drawing.Size(262, 36);
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(333, 36);
             this.txtMatKhauMoi.TabIndex = 8;
             // 
             // txtMatKhauHienTai
@@ -189,133 +310,8 @@
             this.txtMatKhauHienTai.PlaceholderText = "Nhập mật khẩu hiện tại";
             this.txtMatKhauHienTai.SelectedText = "";
             this.txtMatKhauHienTai.ShadowDecoration.Parent = this.txtMatKhauHienTai;
-            this.txtMatKhauHienTai.Size = new System.Drawing.Size(262, 36);
+            this.txtMatKhauHienTai.Size = new System.Drawing.Size(333, 36);
             this.txtMatKhauHienTai.TabIndex = 7;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 23);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel1.Controls.Add(this.label5);
-            this.splitContainer1.Panel1.Controls.Add(this.btnLuuThayDoi);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel2.Controls.Add(this.label6);
-            this.splitContainer1.Panel2.Controls.Add(this.btnHuyBo);
-            this.splitContainer1.Size = new System.Drawing.Size(338, 248);
-            this.splitContainer1.SplitterDistance = 160;
-            this.splitContainer1.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label5.Location = new System.Drawing.Point(0, 246);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 2);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Chỉnh sửa thông tin nhân viên";
-            // 
-            // btnLuuThayDoi
-            // 
-            this.btnLuuThayDoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLuuThayDoi.BorderRadius = 6;
-            this.btnLuuThayDoi.CheckedState.Parent = this.btnLuuThayDoi;
-            this.btnLuuThayDoi.CustomImages.Parent = this.btnLuuThayDoi;
-            this.btnLuuThayDoi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLuuThayDoi.ForeColor = System.Drawing.Color.White;
-            this.btnLuuThayDoi.HoverState.Parent = this.btnLuuThayDoi;
-            this.btnLuuThayDoi.Location = new System.Drawing.Point(36, 187);
-            this.btnLuuThayDoi.Name = "btnLuuThayDoi";
-            this.btnLuuThayDoi.ShadowDecoration.Parent = this.btnLuuThayDoi;
-            this.btnLuuThayDoi.Size = new System.Drawing.Size(112, 38);
-            this.btnLuuThayDoi.TabIndex = 6;
-            this.btnLuuThayDoi.Text = "Lưu thay đổi";
-            // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label6.Location = new System.Drawing.Point(0, 246);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 2);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Chỉnh sửa thông tin nhân viên";
-            // 
-            // btnHuyBo
-            // 
-            this.btnHuyBo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnHuyBo.BorderRadius = 6;
-            this.btnHuyBo.CheckedState.Parent = this.btnHuyBo;
-            this.btnHuyBo.CustomImages.Parent = this.btnHuyBo;
-            this.btnHuyBo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnHuyBo.ForeColor = System.Drawing.Color.White;
-            this.btnHuyBo.HoverState.Parent = this.btnHuyBo;
-            this.btnHuyBo.Location = new System.Drawing.Point(20, 187);
-            this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.ShadowDecoration.Parent = this.btnHuyBo;
-            this.btnHuyBo.Size = new System.Drawing.Size(114, 38);
-            this.btnHuyBo.TabIndex = 8;
-            this.btnHuyBo.Text = "Hủy bỏ";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(338, 23);
-            this.panel5.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Location = new System.Drawing.Point(0, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(338, 2);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Chỉnh sửa thông tin nhân viên";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(338, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hãy chắc chắn rằng bạn nhớ mật khẩu";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 35);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(338, 106);
-            this.panel2.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Location = new System.Drawing.Point(0, 104);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(338, 2);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Chỉnh sửa thông tin nhân viên";
             // 
             // pictureBox1
             // 
@@ -323,47 +319,22 @@
             this.pictureBox1.Image = global::QuanLyYTe.Properties.Resources.Change_Password;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(338, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(409, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.btnThoat);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(338, 35);
-            this.guna2Panel1.TabIndex = 1;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.SystemColors.Control;
-            this.btnThoat.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnThoat.Location = new System.Drawing.Point(0, 0);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(48, 35);
-            this.btnThoat.TabIndex = 0;
-            this.btnThoat.Text = "Exit";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
             // 
             // DoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 412);
+            this.ClientSize = new System.Drawing.Size(409, 369);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(425, 408);
+            this.MinimumSize = new System.Drawing.Size(425, 408);
             this.Name = "DoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DoiMatKhau";
+            this.Text = "Đổi mật khẩu";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -374,7 +345,6 @@
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -382,25 +352,22 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button btnLuuThayDoi;
-        private System.Windows.Forms.Button btnThoat;
-        private Guna.UI2.WinForms.Guna2TextBox txtMatKhauHienTai;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhauXacNhan;
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhauMoi;
+        private Guna.UI2.WinForms.Guna2TextBox txtMatKhauHienTai;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private Guna.UI2.WinForms.Guna2Button btnHuyBo;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Button btnLuuThayDoi;
         private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2Button btnHuyBo;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
