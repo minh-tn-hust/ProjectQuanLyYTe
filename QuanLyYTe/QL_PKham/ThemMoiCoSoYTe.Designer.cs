@@ -208,7 +208,7 @@
             this.btnHienThiDanhSach.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHienThiDanhSach.ForeColor = System.Drawing.Color.White;
             this.btnHienThiDanhSach.HoverState.Parent = this.btnHienThiDanhSach;
-            this.btnHienThiDanhSach.Location = new System.Drawing.Point(139, 0);
+            this.btnHienThiDanhSach.Location = new System.Drawing.Point(141, 0);
             this.btnHienThiDanhSach.Name = "btnHienThiDanhSach";
             this.btnHienThiDanhSach.ShadowDecoration.Parent = this.btnHienThiDanhSach;
             this.btnHienThiDanhSach.Size = new System.Drawing.Size(115, 43);
@@ -435,6 +435,8 @@
             this.cbThuBatDau.HoverState.Parent = this.cbThuBatDau;
             this.cbThuBatDau.ItemHeight = 36;
             this.cbThuBatDau.Items.AddRange(new object[] {
+            "",
+            "",
             "Hai",
             "Ba",
             "Tư",
@@ -535,6 +537,8 @@
             this.cbThuKetThuc.HoverState.Parent = this.cbThuKetThuc;
             this.cbThuKetThuc.ItemHeight = 36;
             this.cbThuKetThuc.Items.AddRange(new object[] {
+            "",
+            "",
             "Hai",
             "Ba",
             "Tư",
@@ -781,7 +785,7 @@
             this.cbTenBacSiQuanLy.MaxDropDownItems = 4;
             this.cbTenBacSiQuanLy.Name = "cbTenBacSiQuanLy";
             this.cbTenBacSiQuanLy.ShadowDecoration.Parent = this.cbTenBacSiQuanLy;
-            this.cbTenBacSiQuanLy.Size = new System.Drawing.Size(281, 36);
+            this.cbTenBacSiQuanLy.Size = new System.Drawing.Size(284, 36);
             this.cbTenBacSiQuanLy.StartIndex = 0;
             this.cbTenBacSiQuanLy.TabIndex = 15;
             // 

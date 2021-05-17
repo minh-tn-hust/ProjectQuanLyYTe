@@ -475,6 +475,8 @@
             this.cbThuBatDau.IntegralHeight = false;
             this.cbThuBatDau.ItemHeight = 36;
             this.cbThuBatDau.Items.AddRange(new object[] {
+            "",
+            "",
             "Hai",
             "Ba",
             "Tư",
@@ -553,6 +555,8 @@
             this.cbThuKetThuc.IntegralHeight = false;
             this.cbThuKetThuc.ItemHeight = 36;
             this.cbThuKetThuc.Items.AddRange(new object[] {
+            "",
+            "",
             "Hai",
             "Ba",
             "Tư",

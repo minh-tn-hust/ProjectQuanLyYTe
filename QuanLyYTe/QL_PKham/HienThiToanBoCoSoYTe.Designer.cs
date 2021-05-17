@@ -313,7 +313,7 @@
             this.dtGioDongCua.Location = new System.Drawing.Point(2, 228);
             this.dtGioDongCua.Name = "dtGioDongCua";
             this.dtGioDongCua.ShowUpDown = true;
-            this.dtGioDongCua.Size = new System.Drawing.Size(226, 30);
+            this.dtGioDongCua.Size = new System.Drawing.Size(229, 30);
             this.dtGioDongCua.TabIndex = 27;
             this.dtGioDongCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
             // 
@@ -338,7 +338,7 @@
             this.cbTenBacSiQuanLy.Location = new System.Drawing.Point(1, 46);
             this.cbTenBacSiQuanLy.Name = "cbTenBacSiQuanLy";
             this.cbTenBacSiQuanLy.ShadowDecoration.Parent = this.cbTenBacSiQuanLy;
-            this.cbTenBacSiQuanLy.Size = new System.Drawing.Size(226, 33);
+            this.cbTenBacSiQuanLy.Size = new System.Drawing.Size(229, 33);
             this.cbTenBacSiQuanLy.TabIndex = 25;
             // 
             // dtGioMoCua
@@ -352,7 +352,7 @@
             this.dtGioMoCua.Name = "dtGioMoCua";
             this.dtGioMoCua.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtGioMoCua.ShowUpDown = true;
-            this.dtGioMoCua.Size = new System.Drawing.Size(226, 30);
+            this.dtGioMoCua.Size = new System.Drawing.Size(229, 30);
             this.dtGioMoCua.TabIndex = 26;
             this.dtGioMoCua.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
             // 
@@ -365,7 +365,7 @@
             this.btnHienThi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnHienThi.ForeColor = System.Drawing.Color.White;
             this.btnHienThi.HoverState.Parent = this.btnHienThi;
-            this.btnHienThi.Location = new System.Drawing.Point(124, 356);
+            this.btnHienThi.Location = new System.Drawing.Point(126, 356);
             this.btnHienThi.Name = "btnHienThi";
             this.btnHienThi.ShadowDecoration.Parent = this.btnHienThi;
             this.btnHienThi.Size = new System.Drawing.Size(101, 34);
@@ -396,7 +396,7 @@
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.ShadowDecoration.Parent = this.txtDiaChi;
-            this.txtDiaChi.Size = new System.Drawing.Size(226, 32);
+            this.txtDiaChi.Size = new System.Drawing.Size(229, 32);
             this.txtDiaChi.TabIndex = 3;
             // 
             // txtTenPhongKham
@@ -422,7 +422,7 @@
             this.txtTenPhongKham.PlaceholderText = "";
             this.txtTenPhongKham.SelectedText = "";
             this.txtTenPhongKham.ShadowDecoration.Parent = this.txtTenPhongKham;
-            this.txtTenPhongKham.Size = new System.Drawing.Size(226, 32);
+            this.txtTenPhongKham.Size = new System.Drawing.Size(229, 32);
             this.txtTenPhongKham.TabIndex = 1;
             // 
             // splitContainer1
@@ -439,8 +439,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer5);
-            this.splitContainer1.Size = new System.Drawing.Size(226, 34);
-            this.splitContainer1.SplitterDistance = 86;
+            this.splitContainer1.Size = new System.Drawing.Size(229, 34);
+            this.splitContainer1.SplitterDistance = 87;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 21;
             // 
@@ -459,6 +459,8 @@
             this.cbThuBatDau.HoverState.Parent = this.cbThuBatDau;
             this.cbThuBatDau.ItemHeight = 28;
             this.cbThuBatDau.Items.AddRange(new object[] {
+            "",
+            "",
             "Hai",
             "Ba",
             "Tư",
@@ -470,7 +472,7 @@
             this.cbThuBatDau.Location = new System.Drawing.Point(0, 0);
             this.cbThuBatDau.Name = "cbThuBatDau";
             this.cbThuBatDau.ShadowDecoration.Parent = this.cbThuBatDau;
-            this.cbThuBatDau.Size = new System.Drawing.Size(86, 34);
+            this.cbThuBatDau.Size = new System.Drawing.Size(87, 34);
             this.cbThuBatDau.StartIndex = 0;
             this.cbThuBatDau.TabIndex = 0;
             this.cbThuBatDau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -488,7 +490,7 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.cbThuKetThuc);
-            this.splitContainer5.Size = new System.Drawing.Size(139, 34);
+            this.splitContainer5.Size = new System.Drawing.Size(141, 34);
             this.splitContainer5.SplitterDistance = 59;
             this.splitContainer5.SplitterWidth = 1;
             this.splitContainer5.TabIndex = 0;
@@ -519,6 +521,8 @@
             this.cbThuKetThuc.HoverState.Parent = this.cbThuKetThuc;
             this.cbThuKetThuc.ItemHeight = 28;
             this.cbThuKetThuc.Items.AddRange(new object[] {
+            "",
+            "",
             "Hai",
             "Ba",
             "Tư",
@@ -530,7 +534,7 @@
             this.cbThuKetThuc.Location = new System.Drawing.Point(0, 0);
             this.cbThuKetThuc.Name = "cbThuKetThuc";
             this.cbThuKetThuc.ShadowDecoration.Parent = this.cbThuKetThuc;
-            this.cbThuKetThuc.Size = new System.Drawing.Size(79, 34);
+            this.cbThuKetThuc.Size = new System.Drawing.Size(81, 34);
             this.cbThuKetThuc.StartIndex = 4;
             this.cbThuKetThuc.TabIndex = 0;
             this.cbThuKetThuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -554,7 +558,7 @@
             this.btnXoaCoSo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXoaCoSo.ForeColor = System.Drawing.Color.White;
             this.btnXoaCoSo.HoverState.Parent = this.btnXoaCoSo;
-            this.btnXoaCoSo.Location = new System.Drawing.Point(4, 356);
+            this.btnXoaCoSo.Location = new System.Drawing.Point(6, 356);
             this.btnXoaCoSo.Name = "btnXoaCoSo";
             this.btnXoaCoSo.ShadowDecoration.Parent = this.btnXoaCoSo;
             this.btnXoaCoSo.Size = new System.Drawing.Size(101, 34);
@@ -585,7 +589,7 @@
             this.txtThongTinKhac.PlaceholderText = "";
             this.txtThongTinKhac.SelectedText = "";
             this.txtThongTinKhac.ShadowDecoration.Parent = this.txtThongTinKhac;
-            this.txtThongTinKhac.Size = new System.Drawing.Size(226, 32);
+            this.txtThongTinKhac.Size = new System.Drawing.Size(229, 32);
             this.txtThongTinKhac.TabIndex = 5;
             // 
             // txtSoDienThoai
@@ -611,7 +615,7 @@
             this.txtSoDienThoai.PlaceholderText = "";
             this.txtSoDienThoai.SelectedText = "";
             this.txtSoDienThoai.ShadowDecoration.Parent = this.txtSoDienThoai;
-            this.txtSoDienThoai.Size = new System.Drawing.Size(226, 32);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(229, 32);
             this.txtSoDienThoai.TabIndex = 4;
             // 
             // HienThiToanBoCoSoYTe
