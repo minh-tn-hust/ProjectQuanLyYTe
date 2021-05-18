@@ -1,0 +1,15 @@
+D:\OOP_project\QuanLyVaxin\bin\Debug\QuanLyVaxin.exe.config
+D:\OOP_project\QuanLyVaxin\bin\Debug\QuanLyVaxin.exe
+D:\OOP_project\QuanLyVaxin\bin\Debug\QuanLyVaxin.pdb
+D:\OOP_project\QuanLyVaxin\bin\Debug\Guna.UI2.dll
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.csprojAssemblyReference.cache
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.Properties.Resources.resources
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.csproj.GenerateResource.cache
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.csproj.CoreCompileInputs.cache
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.csproj.CopyComplete
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.exe
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.pdb
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.Menu.resources
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.Thông_tin_vacxin.resources
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.Nhập_liệu.resources
+D:\OOP_project\QuanLyVaxin\obj\Debug\QuanLyVaxin.Thống_kê_vacxin.resources
