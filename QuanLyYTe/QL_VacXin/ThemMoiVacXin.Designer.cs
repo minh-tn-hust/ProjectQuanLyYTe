@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dtgvDanhSachVacXin = new System.Windows.Forms.DataGridView();
             this.txtTenVacXin = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenLoVacXin = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGiaThanhVacXin = new Guna.UI2.WinForms.Guna2TextBox();
@@ -61,9 +63,9 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.dtgvDanhSachVacXin = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachVacXin)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -90,6 +92,7 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachVacXin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,17 +114,6 @@
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách các vắc xin thêm mới";
-            // 
-            // dtgvDanhSachVacXin
-            // 
-            this.dtgvDanhSachVacXin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvDanhSachVacXin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvDanhSachVacXin.Location = new System.Drawing.Point(3, 16);
-            this.dtgvDanhSachVacXin.Name = "dtgvDanhSachVacXin";
-            this.dtgvDanhSachVacXin.ReadOnly = true;
-            this.dtgvDanhSachVacXin.Size = new System.Drawing.Size(596, 167);
-            this.dtgvDanhSachVacXin.TabIndex = 1;
-            this.dtgvDanhSachVacXin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachVacXin_CellClick);
             // 
             // txtTenVacXin
             // 
@@ -200,7 +192,7 @@
             this.txtGiaThanhVacXin.PlaceholderText = "Giá thành vắc xin (VND)";
             this.txtGiaThanhVacXin.SelectedText = "";
             this.txtGiaThanhVacXin.ShadowDecoration.Parent = this.txtGiaThanhVacXin;
-            this.txtGiaThanhVacXin.Size = new System.Drawing.Size(278, 34);
+            this.txtGiaThanhVacXin.Size = new System.Drawing.Size(281, 34);
             this.txtGiaThanhVacXin.TabIndex = 0;
             // 
             // txtChongChiDinh
@@ -360,7 +352,7 @@
             this.btnHienThi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHienThi.ForeColor = System.Drawing.Color.White;
             this.btnHienThi.HoverState.Parent = this.btnHienThi;
-            this.btnHienThi.Location = new System.Drawing.Point(89, 5);
+            this.btnHienThi.Location = new System.Drawing.Point(90, 5);
             this.btnHienThi.Name = "btnHienThi";
             this.btnHienThi.ShadowDecoration.Parent = this.btnHienThi;
             this.btnHienThi.Size = new System.Drawing.Size(132, 45);
@@ -596,7 +588,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Location = new System.Drawing.Point(0, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(353, 2);
+            this.label2.Size = new System.Drawing.Size(356, 2);
             this.label2.TabIndex = 21;
             this.label2.Text = "label2";
             // 
@@ -659,6 +651,67 @@
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
             // 
+            // dtgvDanhSachVacXin
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgvDanhSachVacXin.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvDanhSachVacXin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dtgvDanhSachVacXin.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvDanhSachVacXin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvDanhSachVacXin.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvDanhSachVacXin.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDanhSachVacXin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvDanhSachVacXin.ColumnHeadersHeight = 28;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvDanhSachVacXin.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvDanhSachVacXin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvDanhSachVacXin.EnableHeadersVisualStyles = false;
+            this.dtgvDanhSachVacXin.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgvDanhSachVacXin.Location = new System.Drawing.Point(3, 16);
+            this.dtgvDanhSachVacXin.Name = "dtgvDanhSachVacXin";
+            this.dtgvDanhSachVacXin.RowHeadersVisible = false;
+            this.dtgvDanhSachVacXin.RowTemplate.Height = 30;
+            this.dtgvDanhSachVacXin.RowTemplate.ReadOnly = true;
+            this.dtgvDanhSachVacXin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvDanhSachVacXin.Size = new System.Drawing.Size(596, 167);
+            this.dtgvDanhSachVacXin.TabIndex = 1;
+            this.dtgvDanhSachVacXin.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dtgvDanhSachVacXin.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvDanhSachVacXin.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgvDanhSachVacXin.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgvDanhSachVacXin.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgvDanhSachVacXin.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgvDanhSachVacXin.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvDanhSachVacXin.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgvDanhSachVacXin.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgvDanhSachVacXin.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvDanhSachVacXin.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dtgvDanhSachVacXin.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgvDanhSachVacXin.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgvDanhSachVacXin.ThemeStyle.HeaderStyle.Height = 28;
+            this.dtgvDanhSachVacXin.ThemeStyle.ReadOnly = false;
+            this.dtgvDanhSachVacXin.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgvDanhSachVacXin.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvDanhSachVacXin.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dtgvDanhSachVacXin.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgvDanhSachVacXin.ThemeStyle.RowsStyle.Height = 30;
+            this.dtgvDanhSachVacXin.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgvDanhSachVacXin.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgvDanhSachVacXin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachVacXin_CellClick_1);
+            // 
             // ThemMoiVacXin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -671,7 +724,6 @@
             this.Load += new System.EventHandler(this.ThemMoiVacXin_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachVacXin)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -698,6 +750,7 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachVacXin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -725,7 +778,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtNgaySanXuat;
         private Guna.UI2.WinForms.Guna2TextBox txtThongTinVacXin;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dtgvDanhSachVacXin;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.GroupBox groupBox3;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtNgayNhapKho;
@@ -736,5 +788,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.SplitContainer splitContainer5;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgvDanhSachVacXin;
     }
 }

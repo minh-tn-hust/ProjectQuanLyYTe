@@ -20,10 +20,6 @@ namespace QuanLyYTe
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'model2DataSet.PhongKham' table. You can move, or remove it, as needed.
-            this.phongKhamTableAdapter.Fill(this.model2DataSet.PhongKham);
-            LoadingTable lt = new LoadingTable();
-            guna2DataGridView1.DataSource = lt.vacxin();
 
         }
 

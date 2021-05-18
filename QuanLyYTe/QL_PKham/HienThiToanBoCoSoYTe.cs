@@ -88,38 +88,6 @@ namespace QuanLyYTe.QL_PKham
 
         private void dtgvHienThi_CellClick(object sender, DataGridViewCellEventArgs e)
         { 
-            ConNguoi conNguoi = new ConNguoi();
-            PhongKham phongKham = convertToObject.bangphongkham(dtgvHienThi,e);
-            if (phongKham == null)
-            {
-                phongKhamCanXoa = null;
-                return;
-            }
-
-            txtTenPhongKham.Text = phongKham.TenPhongKham;
-            using(var context= new YTeDbContext())
-            {
-                var nhanVienQuanLy=context.NhanVienYTes.Where(s => s.ID_NhanVien == phongKham.ID_NhanVienQuanLy).FirstOrDefault();
-                if (nhanVienQuanLy == null)
-                {
-                    cbTenBacSiQuanLy.SelectedIndex = 1;    
-                }
-                else
-                {
-                    conNguoi = context.ConNguois.Find(nhanVienQuanLy.ID_Nguoi);
-                    cbTenBacSiQuanLy.Text = conNguoi.HoTen;
-
-                }
-                           
-            }
-            txtSoDienThoai.Text = phongKham.SoDienThoaiLienHe;
-            txtDiaChi.Text = phongKham.DiaChi;
-            cbThuBatDau.SelectedIndex = (int)phongKham.NgayBatDauTrongTuan;
-            cbThuKetThuc.SelectedIndex = (int)phongKham.NgayKetThucTrongTuan;
-            dtGioMoCua.Text = phongKham.GioBatDau.ToString();
-            dtGioDongCua.Text = phongKham.GioketThuc.ToString();
-            txtThongTinKhac.Text = phongKham.ThongTinKhac;
-            phongKhamCanXoa = phongKham;
         }
 
         private void btnXoaCoSo_Click(object sender, EventArgs e)
@@ -153,6 +121,43 @@ namespace QuanLyYTe.QL_PKham
             dtGioDongCua.Value = Convert.ToDateTime("12:00:00");
             txtThongTinKhac.Text = "";
             cbTenBacSiQuanLy.SelectedIndex = -1;
+        }
+
+        private void dtgvHienThiToanBoC_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ConNguoi conNguoi = new ConNguoi();
+            PhongKham phongKham = convertToObject.bangphongkham(dtgvHienThi,e);
+            if (phongKham == null)
+            {
+                phongKhamCanXoa = null;
+                return;
+            }
+
+            txtTenPhongKham.Text = phongKham.TenPhongKham;
+            using(var context= new YTeDbContext())
+            {
+                var nhanVienQuanLy=context.NhanVienYTes.Where(s => s.ID_NhanVien == phongKham.ID_NhanVienQuanLy).FirstOrDefault();
+                if (nhanVienQuanLy == null)
+                {
+                    cbTenBacSiQuanLy.SelectedIndex = 1;    
+                }
+                else
+                {
+                    conNguoi = context.ConNguois.Find(nhanVienQuanLy.ID_Nguoi);
+                    cbTenBacSiQuanLy.Text = conNguoi.HoTen;
+
+                }
+                           
+            }
+            txtSoDienThoai.Text = phongKham.SoDienThoaiLienHe;
+            txtDiaChi.Text = phongKham.DiaChi;
+            cbThuBatDau.SelectedIndex = (int)phongKham.NgayBatDauTrongTuan;
+            cbThuKetThuc.SelectedIndex = (int)phongKham.NgayKetThucTrongTuan;
+            dtGioMoCua.Text = phongKham.GioBatDau.ToString();
+            dtGioDongCua.Text = phongKham.GioketThuc.ToString();
+            txtThongTinKhac.Text = phongKham.ThongTinKhac;
+            phongKhamCanXoa = phongKham;
+
         }
     }
 }

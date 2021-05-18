@@ -111,6 +111,22 @@ namespace QuanLyYTe
 
         private void dtgvThongTinCoSoYTe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+public void deleteAllText()
+        {
+            txtTenPhongKham.Text = "";
+            txtDiaChiPhongKham.Text = "";
+            txtSoDienThoaiLienHe.Text = "";
+            cbThuBatDau.SelectedIndex = 0;
+            cbThuKetThuc.SelectedIndex = 4;
+            dtGioMoCua.Value = Convert.ToDateTime("12:00:00");
+            dtGioDongCua.Value = Convert.ToDateTime("12:00:00");
+            txtThongTinKhac.Text = "";
+            cbTenBacSiQuanLy.SelectedIndex = -1;
+        }
+
+        private void dtgvThongTinCoSoYTe_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
              ConNguoi conNguoi = new ConNguoi();
             
             PhongKham phongKham = convertToObject.bangphongkham(dtgvThongTinCoSoYTe,e);
@@ -140,18 +156,7 @@ namespace QuanLyYTe
 
             txtThongTinKhac.Text = phongKham.ThongTinKhac;
  
+
         }
-public void deleteAllText()
-        {
-            txtTenPhongKham.Text = "";
-            txtDiaChiPhongKham.Text = "";
-            txtSoDienThoaiLienHe.Text = "";
-            cbThuBatDau.SelectedIndex = 0;
-            cbThuKetThuc.SelectedIndex = 4;
-            dtGioMoCua.Value = Convert.ToDateTime("12:00:00");
-            dtGioDongCua.Value = Convert.ToDateTime("12:00:00");
-            txtThongTinKhac.Text = "";
-            cbTenBacSiQuanLy.SelectedIndex = -1;
-        }
-           }
+    }
 }

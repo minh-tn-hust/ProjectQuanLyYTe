@@ -128,6 +128,31 @@ namespace QuanLyYTe
 
         private void dtgvDanhSachNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+
+        }
+        public void deleteAllText()
+        {
+            txtHovaTen.Text = "";
+            txtTenDangNhap.Text = "";
+            txtMatKhau.Text = "";
+            txtSoCMND.Text = "";
+            cbGioiTinh.SelectedIndex = -1;
+            dtNgaySinh.Value = DateTime.Today;
+            txtNgheNghiep.Text = "";
+            txtSoDienThoai.Text = "";
+            txtDiaChiThuongTru.Text = "";
+            txtEmailLienHe.Text = "";
+            cbTenCoSoYTe.SelectedIndex = -1;
+
+        }
+
+        private void dtgvDanhSachNhanVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             BangNhanVien nhanVien = convertToObject.nhanvien(dtgvDanhSachNhanVien, e);
             if (nhanVien == null) return;
             txtHovaTen.Text = nhanVien.connguoi.HoTen;
@@ -155,21 +180,6 @@ namespace QuanLyYTe
 
         
 
-
-        }
-        public void deleteAllText()
-        {
-            txtHovaTen.Text = "";
-            txtTenDangNhap.Text = "";
-            txtMatKhau.Text = "";
-            txtSoCMND.Text = "";
-            cbGioiTinh.SelectedIndex = -1;
-            dtNgaySinh.Value = DateTime.Today;
-            txtNgheNghiep.Text = "";
-            txtSoDienThoai.Text = "";
-            txtDiaChiThuongTru.Text = "";
-            txtEmailLienHe.Text = "";
-            cbTenCoSoYTe.SelectedIndex = -1;
 
         }
     }

@@ -39,26 +39,6 @@ namespace QuanLyYTe.QL_VacXin
 
         private void dtgvHienThiChiTiet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            if (index >= 0)
-            {
-                VacXin vacXin = convertToObject.bangvacxin(dtgvHienThiChiTiet, e);
-                if (vacXin != null)
-                {
-                    txtTenVacXin.Text = vacXin.TenVacXin;
-                    txtTenLoSanPham.Text = vacXin.SoLoVacXin;
-                    txtGiaThanh.Text = vacXin.GiaThanh;
-                    dtNgaySanXuat.Value = (DateTime)vacXin.NgaySanXuat;
-                    dtHanSuDung.Value = (DateTime)vacXin.HanSuDung;
-                    dtNgayNhapKho.Value = (DateTime)vacXin.NgayNhapKho;
-                    txtThoiGianTaiSuDung.Text = vacXin.ThoiGianSuDungLai.ToString();
-                    txtSoMuiCanTiem.Text = vacXin.SoMuiCanTiem.ToString();
-                    txtSoLuongConLai.Text = vacXin.SoLuongConLai.ToString();
-                    txtChongChiDinh.Text = vacXin.ChongChiDinh;
-                    txtThongTinKhac.Text = vacXin.ThongTinKhac;
-                    vacXinChonDeXoa = vacXin;
-                }
-            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -99,6 +79,31 @@ namespace QuanLyYTe.QL_VacXin
             txtSoLuongConLai.Text = "";
             txtChongChiDinh.Text = "";
             txtThongTinKhac.Text = "";
+
+        }
+
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            if (index >= 0)
+            {
+                VacXin vacXin = convertToObject.bangvacxin(dtgvHienThiChiTiet, e);
+                if (vacXin != null)
+                {
+                    txtTenVacXin.Text = vacXin.TenVacXin;
+                    txtTenLoSanPham.Text = vacXin.SoLoVacXin;
+                    txtGiaThanh.Text = vacXin.GiaThanh;
+                    dtNgaySanXuat.Value = (DateTime)vacXin.NgaySanXuat;
+                    dtHanSuDung.Value = (DateTime)vacXin.HanSuDung;
+                    dtNgayNhapKho.Value = (DateTime)vacXin.NgayNhapKho;
+                    txtThoiGianTaiSuDung.Text = vacXin.ThoiGianSuDungLai.ToString();
+                    txtSoMuiCanTiem.Text = vacXin.SoMuiCanTiem.ToString();
+                    txtSoLuongConLai.Text = vacXin.SoLuongConLai.ToString();
+                    txtChongChiDinh.Text = vacXin.ChongChiDinh;
+                    txtThongTinKhac.Text = vacXin.ThongTinKhac;
+                    vacXinChonDeXoa = vacXin;
+                }
+            }
 
         }
     }

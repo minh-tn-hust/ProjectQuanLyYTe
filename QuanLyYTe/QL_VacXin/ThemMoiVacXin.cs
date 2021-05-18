@@ -124,6 +124,25 @@ namespace QuanLyYTe
 
         private void dtgvDanhSachVacXin_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+        public void deleteAllText()
+        {
+            txtTenVacXin.Text = "";
+            txtTenLoVacXin.Text = "";
+            txtGiaThanhVacXin.Text = "";
+            dtNgaySanXuat.Value = Convert.ToDateTime("1/1/2001");
+            dtNgayNhapKho.Value = Convert.ToDateTime("1/1/2001");
+            dtHanSuDung.Value = Convert.ToDateTime("1/1/2001");
+            txtThoiGianTaiSuDung.Text = "";
+            txtSoMuiTiem.Text = "";
+            txtSoLuongVacXinMuaMoi.Text = "";
+            txtChongChiDinh.Text = "";
+            txtThongTinVacXin.Text = "";
+
+        }
+
+        private void dtgvDanhSachVacXin_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             
             VacXin vacXin = convertToObject.bangvacxin(dtgvDanhSachVacXin,e);
             if (vacXin == null) return;
@@ -139,20 +158,6 @@ namespace QuanLyYTe
             txtChongChiDinh.Text = vacXin.ChongChiDinh;
             txtThongTinVacXin.Text = vacXin.ThongTinKhac;
 
-        }
-        public void deleteAllText()
-        {
-            txtTenVacXin.Text = "";
-            txtTenLoVacXin.Text = "";
-            txtGiaThanhVacXin.Text = "";
-            dtNgaySanXuat.Value = Convert.ToDateTime("1/1/2001");
-            dtNgayNhapKho.Value = Convert.ToDateTime("1/1/2001");
-            dtHanSuDung.Value = Convert.ToDateTime("1/1/2001");
-            txtThoiGianTaiSuDung.Text = "";
-            txtSoMuiTiem.Text = "";
-            txtSoLuongVacXinMuaMoi.Text = "";
-            txtChongChiDinh.Text = "";
-            txtThongTinVacXin.Text = "";
 
         }
     }

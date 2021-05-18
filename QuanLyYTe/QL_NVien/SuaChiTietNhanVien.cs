@@ -91,6 +91,37 @@ namespace QuanLyYTe
 
         private void dtgvHienThiThongTin_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void SuaChiTietNhanVien_Load(object sender, EventArgs e)
+        {
+            using (var yteDbContext = new YTeDbContext())
+            {
+                List<PhongKham> phongKham = yteDbContext.PhongKhams.ToList();
+                cbPhongKhamDangLamViec.DataSource = phongKham;
+                cbPhongKhamDangLamViec.DisplayMember = "TenPhongKham";
+                cbPhongKhamDangLamViec.ValueMember = "ID_PhongKham";
+            }
+            dataTable = loadingTable.nhanvien();
+            btnHienThi.PerformClick();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+
+        {
+            //dataTable = loadingTable.nhanvien();
+            dtgvHienThiThongTin.DataSource = dataTable;
+            //btnHienThi.PerformClick();
+            dtgvHienThiThongTin.DataSource = filter.searchRow(dtgvHienThiThongTin, "Số CMND", txtTimKiem.Text);
+        }
+
+        private void dtgvHienThiThongTin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             BangNhanVien nhanVien = convertToObject.nhanvien(dtgvHienThiThongTin, e);
             if (nhanVien == null) return;
             txtHoVaTen.Text = nhanVien.connguoi.HoTen;
@@ -117,28 +148,7 @@ namespace QuanLyYTe
             }
             nhanVienSuaDoi = nhanVien.nhanvienyte;
 
-        }
 
-        private void SuaChiTietNhanVien_Load(object sender, EventArgs e)
-        {
-            using (var yteDbContext = new YTeDbContext())
-            {
-                List<PhongKham> phongKham = yteDbContext.PhongKhams.ToList();
-                cbPhongKhamDangLamViec.DataSource = phongKham;
-                cbPhongKhamDangLamViec.DisplayMember = "TenPhongKham";
-                cbPhongKhamDangLamViec.ValueMember = "ID_PhongKham";
-            }
-            dataTable = loadingTable.nhanvien();
-            btnHienThi.PerformClick();
-        }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
-
-        {
-            //dataTable = loadingTable.nhanvien();
-            dtgvHienThiThongTin.DataSource = dataTable;
-            //btnHienThi.PerformClick();
-            dtgvHienThiThongTin.DataSource = filter.searchRow(dtgvHienThiThongTin, "Số CMND", txtTimKiem.Text);
         }
     }
 }

@@ -30,36 +30,6 @@ namespace QuanLyYTe
 
         private void dtgvHienThiChiTiet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-    ConNguoi conNguoi = new ConNguoi();
-            PhongKham phongKham = convertToObject.bangphongkham(dtgvHienThiChiTiet,e);
-            if (phongKham == null) return;
-
-           txtTenCoSoYTe.Text = phongKham.TenPhongKham;
-            using(var context= new YTeDbContext())
-            {
-                var nhanVienQuanLy=context.NhanVienYTes.Where(s => s.ID_NhanVien == phongKham.ID_NhanVienQuanLy).FirstOrDefault();
-                if (nhanVienQuanLy == null)
-                {
-                  cbNguoiQuanLy.SelectedIndex = 1;    
-                }
-                else
-                {
-                    conNguoi = context.ConNguois.Find(nhanVienQuanLy.ID_Nguoi);
-                    cbNguoiQuanLy.Text = conNguoi.HoTen;
-
-
-
-                }
-                           
-            }
-            txtDiaChi.Text = phongKham.DiaChi;
-            txtSoDienThoai.Text = phongKham.SoDienThoaiLienHe;
-            cbThuBatDau.SelectedIndex = (int)phongKham.NgayBatDauTrongTuan;
-            cbThuKetThuc.SelectedIndex = (int)phongKham.NgayKetThucTrongTuan;
-            dtGioMoCua.Text = phongKham.GioBatDau.ToString();
-            dtGioDongCua.Text = phongKham.GioketThuc.ToString();
-            txtThongTinKhac.Text = phongKham.ThongTinKhac;
-            phongKhamChinhSua = phongKham;
         }
 
         private void ChinhSuaThongTinCoSoYTe_Load(object sender, EventArgs e)
@@ -132,6 +102,41 @@ dtgvHienThiChiTiet.DataSource = dataTable;
                 MessageBox.Show("Lưu thành công!");
                 btnHienThiToanBo.PerformClick();
             }
+        }
+
+        private void dtgvHienThiChiTiet_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            ConNguoi conNguoi = new ConNguoi();
+            PhongKham phongKham = convertToObject.bangphongkham(dtgvHienThiChiTiet,e);
+            if (phongKham == null) return;
+
+           txtTenCoSoYTe.Text = phongKham.TenPhongKham;
+            using(var context= new YTeDbContext())
+            {
+                var nhanVienQuanLy=context.NhanVienYTes.Where(s => s.ID_NhanVien == phongKham.ID_NhanVienQuanLy).FirstOrDefault();
+                if (nhanVienQuanLy == null)
+                {
+                  cbNguoiQuanLy.SelectedIndex = 1;    
+                }
+                else
+                {
+                    conNguoi = context.ConNguois.Find(nhanVienQuanLy.ID_Nguoi);
+                    cbNguoiQuanLy.Text = conNguoi.HoTen;
+
+
+
+                }
+                           
+            }
+            txtDiaChi.Text = phongKham.DiaChi;
+            txtSoDienThoai.Text = phongKham.SoDienThoaiLienHe;
+            cbThuBatDau.SelectedIndex = (int)phongKham.NgayBatDauTrongTuan;
+            cbThuKetThuc.SelectedIndex = (int)phongKham.NgayKetThucTrongTuan;
+            dtGioMoCua.Text = phongKham.GioBatDau.ToString();
+            dtGioDongCua.Text = phongKham.GioketThuc.ToString();
+            txtThongTinKhac.Text = phongKham.ThongTinKhac;
+            phongKhamChinhSua = phongKham;
+
         }
     }
 }

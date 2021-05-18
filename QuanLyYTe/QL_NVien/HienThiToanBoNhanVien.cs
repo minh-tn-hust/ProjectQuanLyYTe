@@ -63,35 +63,6 @@ namespace QuanLyYTe.QL_NVien
         }
         private void dtgvHienThiToanBo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            BangNhanVien nhanVien = convertToObject.nhanvien(dtgvHienThiToanBo, e);
-            if (nhanVien == null)
-            {
-                nhanVienDuocXoa = null;
-                return;
-            }
-            txtHoVaTen.Text = nhanVien.connguoi.HoTen;
-            txtMatKhau.Text = nhanVien.nhanvienyte.Password;
-            txtTenDangNhap.Text = nhanVien.nhanvienyte.UserName;
-            txtSoCMND.Text = nhanVien.connguoi.SoCMND;
-            cbGioiTinh.SelectedIndex = (int)nhanVien.connguoi.GioiTinh;
-            dtNgaySinh.Value = (DateTime)nhanVien.connguoi.NgaySinh;
-            txtNgheNghiep.Text = nhanVien.connguoi.NgheNghiep;
-            txtSoDienThoai.Text = nhanVien.connguoi.SoDienThoai;
-            txtDiaChi.Text = nhanVien.connguoi.DiaChi;
-            txtEmailLienHe.Text = nhanVien.connguoi.Email;
-            using (var context = new YTeDbContext())
-            {
-                var phongKham = context.PhongKhams.Find(nhanVien.nhanvienyte.ID_CoSoYTe);
-                if (phongKham == null)
-                {
-                    cbNoiDangLamViec.Text = "Chưa có thông tin";
-                }
-                else
-                {
-                    cbNoiDangLamViec.Text = phongKham.TenPhongKham;
-                }
-            }
-            nhanVienDuocXoa = nhanVien.nhanvienyte;
         }
 
         private void HienThiToanBoNhanVien_Load(object sender, EventArgs e)
@@ -151,6 +122,40 @@ namespace QuanLyYTe.QL_NVien
             txtDiaChi.Text = "";
             txtEmailLienHe.Text = "";
             cbNoiDangLamViec.SelectedIndex = -1;
+
+        }
+
+        private void dtgvHienThiToanBo_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+             BangNhanVien nhanVien = convertToObject.nhanvien(dtgvHienThiToanBo, e);
+            if (nhanVien == null)
+            {
+                nhanVienDuocXoa = null;
+                return;
+            }
+            txtHoVaTen.Text = nhanVien.connguoi.HoTen;
+            txtMatKhau.Text = nhanVien.nhanvienyte.Password;
+            txtTenDangNhap.Text = nhanVien.nhanvienyte.UserName;
+            txtSoCMND.Text = nhanVien.connguoi.SoCMND;
+            cbGioiTinh.SelectedIndex = (int)nhanVien.connguoi.GioiTinh;
+            dtNgaySinh.Value = (DateTime)nhanVien.connguoi.NgaySinh;
+            txtNgheNghiep.Text = nhanVien.connguoi.NgheNghiep;
+            txtSoDienThoai.Text = nhanVien.connguoi.SoDienThoai;
+            txtDiaChi.Text = nhanVien.connguoi.DiaChi;
+            txtEmailLienHe.Text = nhanVien.connguoi.Email;
+            using (var context = new YTeDbContext())
+            {
+                var phongKham = context.PhongKhams.Find(nhanVien.nhanvienyte.ID_CoSoYTe);
+                if (phongKham == null)
+                {
+                    cbNoiDangLamViec.Text = "Chưa có thông tin";
+                }
+                else
+                {
+                    cbNoiDangLamViec.Text = phongKham.TenPhongKham;
+                }
+            }
+            nhanVienDuocXoa = nhanVien.nhanvienyte;
 
         }
     }
