@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\QuanLyVaxin\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\QuanLyVaxin\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\QuanLyVacXin\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\QuanLyVacXin\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C3686C75-7DB7-45E2-A84B-018C47753D36}</ProjectGuid>
+    <ProjectGuid>{BE76B11E-10CA-46D8-A75F-DBE9F4321A7B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Hieu</RootNamespace>
@@ -35,10 +35,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\QuanLyVaxin\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\QuanLyVacXin\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\QuanLyVaxin\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\QuanLyVacXin\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -55,30 +55,30 @@
   <ItemGroup>
     <Compile Include="ComboBoxData.cs" />
     <Compile Include="GraphData.cs" />
-    <Compile Include="TruyVan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Controller\Controller.csproj">
-      <Project>{ce2c316a-5a19-4c2b-865f-8327f02c90b8}</Project>
-      <Name>Controller</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MyModel\MyModel.csproj">
-      <Project>{02fdced1-f7d2-49f9-8d38-88a308c4e1be}</Project>
-      <Name>MyModel</Name>
-    </ProjectReference>
+    <Compile Include="TruyVan.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{976fbc1a-dbb7-46e8-bd2c-de8edc20b29c}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LastModel\LastModel.csproj">
+      <Project>{70479e38-a3f9-480d-b3d3-0ae730162172}</Project>
+      <Name>LastModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\QuanLyVaxin\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\QuanLyVaxin\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\QuanLyVaxin\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\QuanLyVaxin\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\QuanLyVacXin\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\QuanLyVacXin\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\QuanLyVacXin\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\QuanLyVacXin\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\QuanLyVaxin\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\QuanLyVaxin\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\QuanLyVacXin\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\QuanLyVacXin\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

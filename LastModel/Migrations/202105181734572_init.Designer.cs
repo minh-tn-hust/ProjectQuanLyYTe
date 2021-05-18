@@ -13,7 +13,7 @@ namespace LastModel.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202105181619028_init"; }
+            get { return "202105181734572_init"; }
         }
         
         string IMigrationMetadata.Source
