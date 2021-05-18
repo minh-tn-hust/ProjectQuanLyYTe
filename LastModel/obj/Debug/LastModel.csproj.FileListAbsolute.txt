@@ -1,0 +1,14 @@
+D:\QuanLyVacXin\LastModel\bin\Debug\LastModel.dll.config
+D:\QuanLyVacXin\LastModel\bin\Debug\LastModel.dll
+D:\QuanLyVacXin\LastModel\bin\Debug\LastModel.pdb
+D:\QuanLyVacXin\LastModel\bin\Debug\EntityFramework.dll
+D:\QuanLyVacXin\LastModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\QuanLyVacXin\LastModel\bin\Debug\EntityFramework.xml
+D:\QuanLyVacXin\LastModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\QuanLyVacXin\LastModel\obj\Debug\LastModel.csprojAssemblyReference.cache
+D:\QuanLyVacXin\LastModel\obj\Debug\LastModel.csproj.CoreCompileInputs.cache
+D:\QuanLyVacXin\LastModel\obj\Debug\LastModel.csproj.CopyComplete
+D:\QuanLyVacXin\LastModel\obj\Debug\LastModel.dll
+D:\QuanLyVacXin\LastModel\obj\Debug\LastModel.pdb
+D:\QuanLyVacXin\LastModel\obj\Debug\LastModel.Migrations.init.resources
+D:\QuanLyVacXin\LastModel\obj\Debug\LastModel.csproj.GenerateResource.cache
