@@ -94,10 +94,6 @@
       <Project>{b680fd58-2e26-4dcb-ad13-e3bc7e5ef0ba}</Project>
       <Name>Controller</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Take3\Take3\HoSo.csproj">
-      <Project>{e4466c4f-bcee-4a1b-b78f-f9edf282ba97}</Project>
-      <Name>HoSo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyModel\Model.csproj">
       <Project>{e80bd45b-22fe-4142-a0f9-2315969d45da}</Project>
       <Name>Model</Name>
