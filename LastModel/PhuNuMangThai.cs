@@ -18,8 +18,7 @@
         [Index(IsUnique = true)]
         [MaxLength(15,ErrorMessage ="Bảo hiểm y tế có 15 kí tự!")]
         public string SoBHYTe { get; set; }
-        public int ChieuCao { get; set; }
-        public int CanNang { get; set; }
+       
         public string ThongTinNguoiCanBaoTin { get; set; }
 
     }
