@@ -71,6 +71,12 @@
     <Compile Include="Admin\LayLaiMatKhau.Designer.cs">
       <DependentUpon>LayLaiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="GD_Chung\CuaNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\LayLaiMatKhau.resx">
       <DependentUpon>LayLaiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GD_Chung\CuaNhanVien.resx">
+      <DependentUpon>CuaNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QL_NVien\HienThiToanBoNhanVien.resx">
       <DependentUpon>HienThiToanBoNhanVien.cs</DependentUpon>
