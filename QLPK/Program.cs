@@ -16,7 +16,7 @@ namespace QLPK
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDanhSachDatLich());
+            Application.Run(new Form1());
         }
     }
 }

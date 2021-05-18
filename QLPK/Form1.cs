@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using Controller.dataGridView;
+using Model;
 
 namespace QLPK
 {
@@ -18,9 +20,9 @@ namespace QLPK
         {
             InitializeComponent();
         }
-        
+        DTGFilter filter = new DTGFilter();
         //SqlConnection con
-
+        
         private void progressBar1_Click(object sender, EventArgs e)
         {
 
@@ -59,7 +61,39 @@ namespace QLPK
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+           using(var context= new YTeDbContext())
+            {
+                var conNguoi = context.ConNguois.Where(b => b.SoCMND == txtSoCMND.Text).FirstOrDefault();
+                if (conNguoi == null)
+                {
+                    MessageBox.Show("Chưa có dữ liệu đặt lịch khám của người này!");
+                    this.Hide();
+                    FormThongTinNguoiDatLich form = new FormThongTinNguoiDatLich();
+                    form.ShowDialog();
+                    this.Close();
+                }
+                else {
+                    var datLichKham = context.DatLichKhams.Where(b => b.ID_Nguoi == conNguoi.ID_Nguoi).FirstOrDefault();
+                    if (datLichKham == null)
+                    {
+                        MessageBox.Show("Chưa có dữ liệu đặt lịch khám của người này!");
+                        this.Hide();
+                        FormDatLichNeuDaCoThongTin form = new FormDatLichNeuDaCoThongTin();
+                        form.ID_Nguoi = conNguoi.ID_Nguoi;
 
+                        form.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        this.Hide();
+                        FormDanhSachDatLich form = new FormDanhSachDatLich();
+                        form.SoCMND = conNguoi.SoCMND;
+                        form.Show();
+                        this.Close();
+                    }
+                        }
+            }
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)

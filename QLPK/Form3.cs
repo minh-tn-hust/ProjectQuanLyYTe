@@ -16,6 +16,8 @@ namespace QLPK
 {
     public partial class FormDanhSachDatLich : Form
     {
+        public string SoCMND= null;
+        DTGFilter filter = new DTGFilter();
         public FormDanhSachDatLich()
         {
             InitializeComponent();
@@ -46,18 +48,27 @@ namespace QLPK
             this.Close();
         }
 
-        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
-        }
+        //private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    if (MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+        //    {
+        //        e.Cancel = true;
+        //    }
+        //}
 
         private void FormDanhSachDatLich_Load(object sender, EventArgs e)
         {
-            LoadingTable ld = new LoadingTable(); // tạo đối tượng loadingtable (file class trong Cotroller -> dataGridView -> LoadingTable.cs
-            dataGridView1.DataSource = ld.datlichkham();
+            if (SoCMND == null)
+            {
+                LoadingTable ld = new LoadingTable(); // tạo đối tượng loadingtable (file class trong Cotroller -> dataGridView -> LoadingTable.cs
+                dataGridView1.DataSource = ld.datlichkham();
+            }
+            else
+            {
+                LoadingTable ld = new LoadingTable(); // tạo đối tượng loadingtable (file class trong Cotroller -> dataGridView -> LoadingTable.cs
+                dataGridView1.DataSource = ld.datlichkham();
+                dataGridView1.DataSource = filter.searchRow(dataGridView1, "Số CMND", SoCMND);
+            }
 
         }
 
@@ -142,6 +153,14 @@ namespace QLPK
                 context.SaveChanges();
 
                 dataGridView1.DataSource = bangtruoc;
+            }
+        }
+
+        private void FormDanhSachDatLich_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
             }
         }
     }

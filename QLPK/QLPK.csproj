@@ -84,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="YTeModelDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,6 +121,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Model.DatLichKham.datasource" />
     <None Include="Properties\Settings.settings">
@@ -156,13 +165,13 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controller\Controller.csproj">
-      <Project>{885ce949-5e07-4fa9-8c71-0f599bf789d2}</Project>
+    <ProjectReference Include="Controller\Controller.csproj">
+      <Project>{b680fd58-2e26-4dcb-ad13-e3bc7e5ef0ba}</Project>
       <Name>Controller</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyModel\MyModel.csproj">
-      <Project>{fadd9ad9-c295-4404-bbf4-0ff191990573}</Project>
-      <Name>MyModel</Name>
+    <ProjectReference Include="LastModel\LastModel.csproj">
+      <Project>{1a61898a-ef30-47f1-a70c-1c51ba9899a0}</Project>
+      <Name>LastModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
