@@ -18,7 +18,8 @@ namespace Model
         [Column(Order = 1)]
         public DateTime ThoiGianKham { get; set; }
         public DateTime LanKhamTiepTheo { get; set; }
-
+        public int ChieuCaoMe { get; set; }
+        public int CanNangMe { get; set; }
         public DateTime? ThoiGianSinhDuKien { get; set; }
         public int ID_PhongKham { get; set; }
         public int ID_NhanVien { get; set; }
