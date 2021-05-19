@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Model;
 using System.Windows.Forms;
 using Controller.Object;
-
+using Model;
 
 namespace Controller.dataGridView
 {
@@ -28,17 +27,30 @@ namespace Controller.dataGridView
         #region Convert NhanVienYTe // Can 2 doi tuong la Nhan vien + Con nguoi
         public BangNhanVien nhanvien(DataGridView source, DataGridViewCellEventArgs e)
         {
-            //int i = 1;
-            NhanVienYTe des;
-            String SoCMND = source.Rows[e.RowIndex].Cells[1].Value.ToString();
+            if (e.RowIndex < 0)
+            {
+                return null;
+            }
+            NhanVienYTe des=null;
+            ConNguoi connguoi = null;
+            String SoCMND = source.Rows[e.RowIndex].Cells[2].Value.ToString();
             using (var context = new YTeDbContext())
             {
-                var connguoi = context.ConNguois
-                                .Where(b => b.SoCMND == SoCMND)
-                                .FirstOrDefault();
-                des = context.NhanVienYTes
-                        .Where(b => b.ID_Nguoi == connguoi.ID_Nguoi)
-                        .FirstOrDefault();
+                                  connguoi = context.ConNguois
+                                    .Where(b => b.SoCMND == SoCMND)
+                                    .FirstOrDefault();
+                if (connguoi == null) return null;
+              
+                try
+                {
+                    des = context.NhanVienYTes
+                            .Where(b => b.ID_Nguoi == connguoi.ID_Nguoi)
+                            .FirstOrDefault();
+                }
+                catch (NullReferenceException)
+                {
+                    return null;
+                }
                 return new BangNhanVien(connguoi, des);
             }
         }
@@ -71,19 +83,26 @@ namespace Controller.dataGridView
 
 
         #region Convert bang vacxin
-        //public VacXin bangvacxin(DataGridView source, DataGridViewCellEventArgs e)
-        //{
-        //    String tenvacxin = source.Rows[e.RowIndex].Cells[0].Value.ToString();
-        //    DateTime ngaysanxuat = DateTime.Parse(source.Rows[e.RowIndex].Cells[2].Value.ToString());
-        //    String solo = source.Rows[e.RowIndex].Cells[1].Value.ToString();
-        //    using (var context = new YTeDbContext())
-        //    {
-        //        var vacxin = context.VacXins
-        //                        .Where(b => b.TenVacXin == tenvacxin && b.NgaySanXuat == ngaysanxuat && b.TenLoVacXin == solo)
-        //                        .FirstOrDefault();
-        //        return vacxin;
-        //    }
-        //}
+        public VacXin bangvacxin(DataGridView source, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return null;
+            VacXin vacxin = null;
+            String solo = source.Rows[e.RowIndex].Cells[2].Value.ToString();
+            using (var context = new YTeDbContext())
+            {
+                try
+                {
+                     vacxin = context.VacXins
+                                    .Where(b => b.SoLoVacXin == solo)
+                                    .FirstOrDefault();
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+                return vacxin;
+            }
+        }
 
         #endregion
 
@@ -108,22 +127,38 @@ namespace Controller.dataGridView
 
         #endregion
 
-        #region
+        #region ConvertToPhongKham
 
         public PhongKham bangphongkham(DataGridView source, DataGridViewCellEventArgs e)
         {
-            String diachi = source.Rows[e.RowIndex].Cells[3].Value.ToString();
-            using (var context = new YTeDbContext())
+            if (e.RowIndex < 0)
             {
-                var phongkham = context.PhongKhams
-                                    .Where(b => b.DiaChi == diachi)
-                                    .FirstOrDefault();
-                return phongkham;
+              return null;
+            }
+            else
+            {
+                PhongKham phongkham = null;
+                String diachi = source.Rows[e.RowIndex].Cells[3].Value.ToString();
+                using (var context = new YTeDbContext())
+                {
+                    try
+                    {
+                        phongkham = context.PhongKhams
+                                            .Where(b => b.DiaChi == diachi)
+                                            .FirstOrDefault();
+
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Vui lòng lựa chọn đúng hàng để hiển thị!");
+                        return null;
+                    }
+                    return phongkham;
+                }
             }
         }
 
         #endregion
-
     }
 }
 
