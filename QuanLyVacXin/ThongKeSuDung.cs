@@ -31,6 +31,7 @@ namespace QuanLyVaxin
         {
             cbTenVacXin2.DataSource = comboBox.vacxin();
             cbTenVacXin3.DataSource = comboBox.thongke();
+            LoadChart();
         }
 
         private void btnLuuThongTin2_Click(object sender, EventArgs e)

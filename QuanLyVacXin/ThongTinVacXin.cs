@@ -30,5 +30,12 @@ namespace QuanLyVaxin
             dtgThongTinVacXin.DataSource = dataTable;
             dtgThongTinVacXin.DataSource = filter.searchRow(dtgThongTinVacXin, "Tên vắc-xin", txtTimKiemVacXin.Text);
         }
+
+        private void dtgThongTinVacXin_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            txtTimKiemVacXin.Text = dtgThongTinVacXin.Rows[numrow].Cells[1].Value.ToString();
+        }
     }
 }

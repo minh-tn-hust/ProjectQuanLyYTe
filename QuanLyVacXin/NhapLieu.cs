@@ -47,7 +47,8 @@ namespace QuanLyVaxin
         {
             SuDungVacXin suDungVacXin = new SuDungVacXin();
             {
-                if (txtMuiTiem.Text == "")
+                if (txtMuiTiem.Text == ""||
+                    txtTimKiemNguoi.Text == "")
                 {
                     MessageBox.Show("Vui lòng điền đủ thông tin!");
                     return;
@@ -82,6 +83,13 @@ namespace QuanLyVaxin
                 }
 
             }
+        }
+
+        private void dtgSuDungVacXin_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            txtTimKiemNguoi.Text = dtgSuDungVacXin.Rows[numrow].Cells[1].Value.ToString();
         }
     }
 }
