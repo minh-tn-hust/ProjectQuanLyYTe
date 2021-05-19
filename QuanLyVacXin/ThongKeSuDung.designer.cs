@@ -34,7 +34,6 @@ namespace QuanLyVaxin
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.pnlThongKe = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtSoLo = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbNgaySuDung = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnLuuThongTin2 = new Guna.UI2.WinForms.Guna2Button();
             this.cbTenVacXin2 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -52,6 +51,7 @@ namespace QuanLyVaxin
             this.cbTenVacXin3 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lbTuNgay = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbTenVacXin3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cbSoLo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pnlThongKe.SuspendLayout();
             this.pnlChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
@@ -59,7 +59,7 @@ namespace QuanLyVaxin
             // 
             // pnlThongKe
             // 
-            this.pnlThongKe.Controls.Add(this.txtSoLo);
+            this.pnlThongKe.Controls.Add(this.cbSoLo);
             this.pnlThongKe.Controls.Add(this.lbNgaySuDung);
             this.pnlThongKe.Controls.Add(this.btnLuuThongTin2);
             this.pnlThongKe.Controls.Add(this.cbTenVacXin2);
@@ -75,31 +75,6 @@ namespace QuanLyVaxin
             this.pnlThongKe.ShadowDecoration.Parent = this.pnlThongKe;
             this.pnlThongKe.Size = new System.Drawing.Size(320, 450);
             this.pnlThongKe.TabIndex = 1;
-            // 
-            // txtSoLo
-            // 
-            this.txtSoLo.BorderRadius = 8;
-            this.txtSoLo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSoLo.DefaultText = "";
-            this.txtSoLo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSoLo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSoLo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSoLo.DisabledState.Parent = this.txtSoLo;
-            this.txtSoLo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSoLo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoLo.FocusedState.Parent = this.txtSoLo;
-            this.txtSoLo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoLo.HoverState.Parent = this.txtSoLo;
-            this.txtSoLo.Location = new System.Drawing.Point(106, 186);
-            this.txtSoLo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSoLo.Name = "txtSoLo";
-            this.txtSoLo.PasswordChar = '\0';
-            this.txtSoLo.PlaceholderText = "";
-            this.txtSoLo.SelectedText = "";
-            this.txtSoLo.ShadowDecoration.Parent = this.txtSoLo;
-            this.txtSoLo.Size = new System.Drawing.Size(200, 36);
-            this.txtSoLo.TabIndex = 2;
             // 
             // lbNgaySuDung
             // 
@@ -151,6 +126,7 @@ namespace QuanLyVaxin
             this.cbTenVacXin2.ShadowDecoration.Parent = this.cbTenVacXin2;
             this.cbTenVacXin2.Size = new System.Drawing.Size(200, 36);
             this.cbTenVacXin2.TabIndex = 1;
+            this.cbTenVacXin2.SelectedIndexChanged += new System.EventHandler(this.cbTenVacXin2_SelectedIndexChanged);
             // 
             // txtSoLuong
             // 
@@ -213,7 +189,7 @@ namespace QuanLyVaxin
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(-1, 186);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(3, 186);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(100, 36);
             this.guna2HtmlLabel1.TabIndex = 2;
@@ -322,7 +298,7 @@ namespace QuanLyVaxin
             this.lbDenNgay.Size = new System.Drawing.Size(80, 36);
             this.lbDenNgay.TabIndex = 7;
             this.lbDenNgay.Text = "Đến ngày";
-            this.lbDenNgay.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbDenNgay.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtpTuNgay
             // 
@@ -376,7 +352,7 @@ namespace QuanLyVaxin
             this.lbTuNgay.Size = new System.Drawing.Size(80, 36);
             this.lbTuNgay.TabIndex = 6;
             this.lbTuNgay.Text = "Từ ngày";
-            this.lbTuNgay.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTuNgay.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbTenVacXin3
             // 
@@ -388,7 +364,30 @@ namespace QuanLyVaxin
             this.lbTenVacXin3.Size = new System.Drawing.Size(80, 36);
             this.lbTenVacXin3.TabIndex = 8;
             this.lbTenVacXin3.Text = "Tên vacxin";
-            this.lbTenVacXin3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTenVacXin3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cbSoLo
+            // 
+            this.cbSoLo.BackColor = System.Drawing.Color.Transparent;
+            this.cbSoLo.BorderRadius = 8;
+            this.cbSoLo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSoLo.DropDownHeight = 100;
+            this.cbSoLo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSoLo.DropDownWidth = 120;
+            this.cbSoLo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSoLo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSoLo.FocusedState.Parent = this.cbSoLo;
+            this.cbSoLo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSoLo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSoLo.HoverState.Parent = this.cbSoLo;
+            this.cbSoLo.IntegralHeight = false;
+            this.cbSoLo.ItemHeight = 30;
+            this.cbSoLo.ItemsAppearance.Parent = this.cbSoLo;
+            this.cbSoLo.Location = new System.Drawing.Point(106, 186);
+            this.cbSoLo.Name = "cbSoLo";
+            this.cbSoLo.ShadowDecoration.Parent = this.cbSoLo;
+            this.cbSoLo.Size = new System.Drawing.Size(200, 36);
+            this.cbSoLo.TabIndex = 2;
             // 
             // ThongKeSuDung
             // 
@@ -429,6 +428,6 @@ namespace QuanLyVaxin
         private Guna.UI2.WinForms.Guna2Button btnHienThi;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartThongKe;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbNgaySuDung;
-        private Guna.UI2.WinForms.Guna2TextBox txtSoLo;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSoLo;
     }
 }

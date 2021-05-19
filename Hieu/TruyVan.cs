@@ -16,24 +16,17 @@ namespace Hieu
             {
                 var connguoi = context.ConNguois.Where(s => s.HoTen == HoTen)
                                              .FirstOrDefault();
+                if (connguoi == null)
+                {
+                    return 0;
+                }
                 int ID = connguoi.ID_Nguoi;
                 return ID;
             }
         }
 
 
-        public int Tim_ID_Vacxin(String TenVacXin)
-        {
-            using (var context = new YTeDbContext())
-            {
-                var vacxin = context.VacXins.Where(s => s.TenVacXin == TenVacXin)
-                                            .FirstOrDefault();
-                int ID = vacxin.ID_VacXin;
-                return ID;
-            }
-        }
-
-        public int Tim_ID_Vacxin_SoLo(String SoLo)
+        public int Tim_ID_Vacxin(String SoLo)
         {
             using (var context = new YTeDbContext())
             {
@@ -45,7 +38,8 @@ namespace Hieu
                 }
                 else
                 {
-                    return 1;
+                    int ID = vacxin.ID_VacXin;
+                    return ID;
                 }
 
             }
@@ -83,11 +77,12 @@ namespace Hieu
             }
         }
 
-        public void ChinhSuaCSDL(ThongKeSuDungVacXin thongKeSuDungVacXin)
+        public void ChinhSuaCSDL(SuDungVacXin suDungVacXin)
         {
             using (var yteDBContext = new YTeDbContext())
             {
-                var vacxinSuaDoi = yteDBContext.VacXins.Find(thongKeSuDungVacXin.ID_VacXin);
+
+                var vacxinSuaDoi = yteDBContext.VacXins.Find(suDungVacXin.ID_VacXin);
                 {
                     vacxinSuaDoi.ID_VacXin = vacxinSuaDoi.ID_VacXin;
                     vacxinSuaDoi.TenVacXin = vacxinSuaDoi.TenVacXin ;
@@ -99,7 +94,16 @@ namespace Hieu
                     vacxinSuaDoi.ThoiGianSuDungLai = vacxinSuaDoi.ThoiGianSuDungLai;
                     vacxinSuaDoi.SoMuiCanTiem = vacxinSuaDoi.SoMuiCanTiem ;
                     vacxinSuaDoi.SoLuongNhapKho = vacxinSuaDoi.SoLuongNhapKho;
-                    vacxinSuaDoi.SoLuongConLai = vacxinSuaDoi.SoLuongConLai - thongKeSuDungVacXin.SoLuongSuDung;
+                    if (vacxinSuaDoi.SoLuongConLai >= 1)
+                    {
+                        vacxinSuaDoi.SoLuongConLai = vacxinSuaDoi.SoLuongConLai - 1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lô vacxin đã hết, chọn lô khác");
+                        return;
+                    }
+                   
                     vacxinSuaDoi.ChongChiDinh = vacxinSuaDoi.ChongChiDinh ;
                     vacxinSuaDoi.ThongTinKhac = vacxinSuaDoi.ThongTinKhac;
                 }

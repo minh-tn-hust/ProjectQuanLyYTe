@@ -73,7 +73,19 @@ namespace Hieu
                 return h.ToList();
             }
         }
-
+        public List<String> solo( String tenVacXin)
+        {
+            using (var context = new YTeDbContext())
+            {
+                var vacxin = context.VacXins.Where(b => b.TenVacXin == tenVacXin).ToList();
+                List<String> solo = new List<String>();
+                foreach (var record in vacxin)
+                {
+                    solo.Add(record.SoLoVacXin);
+                }
+                return solo.Distinct().ToList();
+            }
+        }
 
     }
 }

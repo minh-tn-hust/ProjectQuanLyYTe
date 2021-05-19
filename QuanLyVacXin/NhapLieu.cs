@@ -24,6 +24,7 @@ namespace QuanLyVaxin
 
         DataTable dataTable = null;
         DTGFilter filter = new DTGFilter();
+        DTGFilter1 filter1 = new DTGFilter1();
         ComboBoxData comboBoxData = new ComboBoxData();
         LoadingTable loadingTable = new LoadingTable();
         TruyVan truyVan = new TruyVan();
@@ -33,14 +34,54 @@ namespace QuanLyVaxin
         {
             cbTenVacXin1.DataSource = comboBoxData.vacxin();
             cbPhongKham.DataSource = comboBoxData.phongkham();
+            cbSoLo.DataSource = comboBoxData.solo(cbTenVacXin1.Text);
             dataTable= loadingTable.sudung();
             dtgSuDungVacXin.DataSource = dataTable;
         }
 
+
+        public class DTGFilter1
+        {
+            //Dùng để tìm kiếm thông tin trong csdl
+            public DataTable searchRow(DataGridView dgv, String nameColumn, String value)
+            {
+                DataTable dt = dgv.DataSource as DataTable;
+                DataTable res;
+                try
+                {
+                    res = (dt.AsEnumerable()
+                                .Where(row => row.Field<String>(nameColumn) == value)
+                                .OrderByDescending(row => row.Field<String>(nameColumn))
+                                .CopyToDataTable());
+                    return res;
+                }
+                catch (Exception)
+                {
+                    LoadingTable loadingTable = new LoadingTable();
+                    MessageBox.Show("Chưa có lịch sử tiêm chủng hoặc sai tên!");
+                    DialogResult result = MessageBox.Show("Tạo lịch sử tiêm chủng mới!","",MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        MessageBox.Show("Chọn thông tin ở bảng dưới!");
+                        DataTable dataTable = loadingTable.connguoi();
+                        dgv.DataSource = dataTable;
+                    }
+                    else
+                    {
+                        DataTable dataTable = loadingTable.sudung();
+                        dgv.DataSource = dataTable;
+                    }
+                    
+                }
+                 return dgv.DataSource as DataTable;
+            }
+        }
+
+
         private void btnTimKiemVacXin2_Click(object sender, EventArgs e)
         {
             dtgSuDungVacXin.DataSource = dataTable;
-            dtgSuDungVacXin.DataSource = filter.searchRow(dtgSuDungVacXin, "Họ tên", txtTimKiemNguoi.Text);
+            dtgSuDungVacXin.DataSource = filter1.searchRow(dtgSuDungVacXin, "Họ tên", txtTimKiemNguoi.Text);
         }
 
         private void btnLuuThongTin1_Click(object sender, EventArgs e)
@@ -55,8 +96,18 @@ namespace QuanLyVaxin
                 }
                 else
                 {
+                    int flag = truyVan.Tim_ID_Nguoi(txtTimKiemNguoi.Text);
+                    if (flag == 0)
+                    {
+                        MessageBox.Show("Chưa có dữ liệu bệnh nhân, kiểm tra lại!");
+                        return;
+                    }
+                    else
+                    {
+                        suDungVacXin.ID_Nguoi = flag;
+                    }
                     suDungVacXin.ID_Nguoi = truyVan.Tim_ID_Nguoi(txtTimKiemNguoi.Text);
-                    suDungVacXin.ID_VacXin = truyVan.Tim_ID_Vacxin(cbTenVacXin1.Text);
+                    suDungVacXin.ID_VacXin = truyVan.Tim_ID_Vacxin(cbSoLo.Text);
                     suDungVacXin.ThoiDiemTiem = dtpNgayTiem.Value;
                     suDungVacXin.ID_PhongKham = truyVan.Tim_ID_Phongkham(cbPhongKham.Text);
 
@@ -69,6 +120,7 @@ namespace QuanLyVaxin
                         MessageBox.Show("Mũi tiêm phải là số!");
                         return;
                     }
+                    sql.ChinhSuaCSDL(suDungVacXin);
                     try
                     {
                         sql.ThemMoiVaoCSDL(suDungVacXin);
@@ -90,6 +142,11 @@ namespace QuanLyVaxin
             int numrow;
             numrow = e.RowIndex;
             txtTimKiemNguoi.Text = dtgSuDungVacXin.Rows[numrow].Cells[1].Value.ToString();
+        }
+
+        private void cbTenVacXin1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbSoLo.DataSource = comboBoxData.solo(cbTenVacXin1.Text);
         }
     }
 }

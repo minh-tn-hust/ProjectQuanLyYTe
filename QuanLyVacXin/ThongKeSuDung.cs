@@ -31,21 +31,21 @@ namespace QuanLyVaxin
         {
             cbTenVacXin2.DataSource = comboBox.vacxin();
             cbTenVacXin3.DataSource = comboBox.thongke();
+            cbSoLo.DataSource = comboBox.solo(cbTenVacXin2.Text);
             LoadChart();
         }
 
         private void btnLuuThongTin2_Click(object sender, EventArgs e)
         {
             ThongKeSuDungVacXin thongKeSuDungVacXin = new ThongKeSuDungVacXin();
-            {   if(txtSoLo.Text==""||
-                   txtSoLuong.Text == "")
+            {   if(txtSoLuong.Text == "")
                 {
                     MessageBox.Show("Vui lòng điền đủ thông tin!");
                     return;
                 }
                 else
                 {
-                    int flag = truyVan.Tim_ID_Vacxin_SoLo(txtSoLo.Text);
+                    int flag = truyVan.Tim_ID_Vacxin(cbSoLo.Text);
                     if (flag == 0)
                     {
                         MessageBox.Show("Vui lòng nhập đúng số lô!");
@@ -53,34 +53,33 @@ namespace QuanLyVaxin
                     }
                     else
                     {
-                        thongKeSuDungVacXin.SoLoVacXin = txtSoLo.Text;
+                        thongKeSuDungVacXin.SoLoVacXin = cbSoLo.Text;
                     }
 
                     thongKeSuDungVacXin.NgaySuDung = dtpNgaySuDung.Value;
 
-                    thongKeSuDungVacXin.ID_VacXin = truyVan.Tim_ID_Vacxin(cbTenVacXin2.Text);
+                    thongKeSuDungVacXin.ID_VacXin = truyVan.Tim_ID_Vacxin(cbSoLo.Text);
 
-                    var vacxinSuaDoi = yteDBContext.VacXins.Find(thongKeSuDungVacXin.ID_VacXin);
-                    if (vacxinSuaDoi.SoLuongConLai >= Convert.ToInt32(txtSoLuong.Text))
+                    if (int.TryParse(txtSoLuong.Text, out int result2))
                     {
                         thongKeSuDungVacXin.SoLuongSuDung = Convert.ToInt32(txtSoLuong.Text);
                     }
                     else
                     {
-                        MessageBox.Show("Số lượng sử dụng vượt quá!");
+                        MessageBox.Show("Số lượng sử dụng phải là số!");
                         return;
                     }
                 }
 
-                try
-                {
-                    sql.ChinhSuaCSDL(thongKeSuDungVacXin);
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Lưu thất bại, vui lòng kiểm tra lại!");
-                    return;
-                }
+                //try
+                //{
+                //    sql.ChinhSuaCSDL(thongKeSuDungVacXin);
+                //}
+                //catch (Exception)
+                //{
+                //    MessageBox.Show("Lưu thất bại, vui lòng kiểm tra lại!");
+                //    return;
+                //}
                 try
                 {
                     sql.ThemMoiVaoCSDL(thongKeSuDungVacXin);
@@ -113,6 +112,11 @@ namespace QuanLyVaxin
                 chartThongKe.Series["Số lượng"].Points.AddXY(X[i], Y[i]);
             }
 
+        }
+
+        private void cbTenVacXin2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbSoLo.DataSource = comboBox.solo(cbTenVacXin2.Text);
         }
     }
 }
