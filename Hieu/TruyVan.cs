@@ -30,7 +30,7 @@ namespace Hieu
         {
             using (var context = new YTeDbContext())
             {
-                var vacxin = context.VacXins.Where(s => s.SoLoVacXin == SoLo)
+                var vacxin = context.VacXins.Where(s => s.SoLoVacXin == SoLo|| s.TenVacXin == SoLo)
                                             .FirstOrDefault();
                 if (vacxin == null)
                 {
