@@ -16,7 +16,7 @@ namespace Take3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HSTreSoSinh());
+            Application.Run(new HSPhuSan());
         }
     }
 }
