@@ -139,17 +139,6 @@ namespace QuanLyVaxin
                         MessageBox.Show("Kiểm tra lại dữ liệu nhập!");
                         return;
                     }
-                    var vacxinSuaDoi = yteDBContext.VacXins.Find(suDungVacXin.ID_VacXin);
-                    if (vacxinSuaDoi.SoLuongConLai >= 1)
-                    {
-                        vacxinSuaDoi.SoLuongConLai = vacxinSuaDoi.SoLuongConLai - 1;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Lô vacxin đã hết, chọn lô khác");
-                        return;
-                    }
-                   // sql.ChinhSuaCSDL(suDungVacXin);
 
                     MessageBox.Show("Lưu thành công!");
                 }
