@@ -29,17 +29,18 @@ namespace BieuDo
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.zed = new ZedGraph.ZedGraphControl();
             this.zed2 = new ZedGraph.ZedGraphControl();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse();
-            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.gunaPanel1.SuspendLayout();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // zed
@@ -100,24 +101,6 @@ namespace BieuDo
             this.label4.Size = new System.Drawing.Size(0, 24);
             this.label4.TabIndex = 6;
             // 
-            // gunaElipse1
-            // 
-            this.gunaElipse1.TargetControl = this;
-            // 
-            // gunaPanel1
-            // 
-            this.gunaPanel1.Controls.Add(this.guna2ControlBox2);
-            this.gunaPanel1.Controls.Add(this.guna2ControlBox1);
-            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1122, 40);
-            this.gunaPanel1.TabIndex = 7;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.gunaPanel1;
-            // 
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -125,7 +108,7 @@ namespace BieuDo
             this.guna2ControlBox2.FillColor = System.Drawing.Color.White;
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1040, 12);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1040, 11);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(32, 29);
@@ -143,12 +126,33 @@ namespace BieuDo
             this.guna2ControlBox1.Size = new System.Drawing.Size(32, 29);
             this.guna2ControlBox1.TabIndex = 4;
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 10;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.ContainerControl = this;
+            this.guna2DragControl1.TargetControl = this.guna2Panel1;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.guna2ControlBox2);
+            this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(1122, 40);
+            this.guna2Panel1.TabIndex = 7;
+            // 
             // BDNam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 596);
-            this.Controls.Add(this.gunaPanel1);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -159,7 +163,7 @@ namespace BieuDo
             this.Name = "BDNam";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.gunaPanel1.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,11 +176,11 @@ namespace BieuDo
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private Guna.UI.WinForms.GunaElipse gunaElipse1;
-        private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
 

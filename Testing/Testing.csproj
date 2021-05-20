@@ -94,10 +94,6 @@
       <Project>{b680fd58-2e26-4dcb-ad13-e3bc7e5ef0ba}</Project>
       <Name>Controller</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyModel\Model.csproj">
-      <Project>{e80bd45b-22fe-4142-a0f9-2315969d45da}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
