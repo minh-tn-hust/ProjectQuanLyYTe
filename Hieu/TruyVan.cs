@@ -94,16 +94,7 @@ namespace Hieu
                     vacxinSuaDoi.ThoiGianSuDungLai = vacxinSuaDoi.ThoiGianSuDungLai;
                     vacxinSuaDoi.SoMuiCanTiem = vacxinSuaDoi.SoMuiCanTiem ;
                     vacxinSuaDoi.SoLuongNhapKho = vacxinSuaDoi.SoLuongNhapKho;
-                    if (vacxinSuaDoi.SoLuongConLai >= 1)
-                    {
-                        vacxinSuaDoi.SoLuongConLai = vacxinSuaDoi.SoLuongConLai - 1;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Lô vacxin đã hết, chọn lô khác");
-                        return;
-                    }
-                   
+                    vacxinSuaDoi.SoLuongConLai = vacxinSuaDoi.SoLuongConLai - 1;
                     vacxinSuaDoi.ChongChiDinh = vacxinSuaDoi.ChongChiDinh ;
                     vacxinSuaDoi.ThongTinKhac = vacxinSuaDoi.ThongTinKhac;
                 }

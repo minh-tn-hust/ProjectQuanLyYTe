@@ -29,6 +29,7 @@ namespace QuanLyVaxin
         LoadingTable loadingTable = new LoadingTable();
         TruyVan truyVan = new TruyVan();
         sqlMethod sql = new sqlMethod();
+        YTeDbContext yteDBContext = new YTeDbContext();
 
         private void NhapLieu_Load(object sender, EventArgs e)
         {
@@ -120,16 +121,35 @@ namespace QuanLyVaxin
                         MessageBox.Show("Mũi tiêm phải là số!");
                         return;
                     }
-                    sql.ChinhSuaCSDL(suDungVacXin);
+                    
                     try
                     {
+                        //Kiem tra truoc khi luu
+                        var vacxin = yteDBContext.VacXins.Find(suDungVacXin.ID_VacXin);
+                        if (vacxin.SoLuongConLai <= 0)
+                        {
+                            MessageBox.Show("Lô vacxin đã hết, chọn lô khác");
+                            return;
+                        }
                         sql.ThemMoiVaoCSDL(suDungVacXin);
+                        sql.ChinhSuaCSDL(suDungVacXin);
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Lưu thất bại!", "Kiểm tra lại dữ liệu nhập");
+                        MessageBox.Show("Kiểm tra lại dữ liệu nhập!");
                         return;
                     }
+                    var vacxinSuaDoi = yteDBContext.VacXins.Find(suDungVacXin.ID_VacXin);
+                    if (vacxinSuaDoi.SoLuongConLai >= 1)
+                    {
+                        vacxinSuaDoi.SoLuongConLai = vacxinSuaDoi.SoLuongConLai - 1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lô vacxin đã hết, chọn lô khác");
+                        return;
+                    }
+                   // sql.ChinhSuaCSDL(suDungVacXin);
 
                     MessageBox.Show("Lưu thành công!");
                 }
