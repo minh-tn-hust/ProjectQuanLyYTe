@@ -8,7 +8,7 @@ INSERT INTO phongkham (TenPhongKham,ID_NhanVienQuanLy,DiaChi,NgayBatDauTrongTuan
 -- connguoi
 
 DELETE FROM ConNguoi
-DBCC CHECKIDENT('TreEm', RESEED, 0)
+DBCC CHECKIDENT('ConNguoi', RESEED, 0)
 INSERT INTO connguoi (HoTen,SoCMND,NgaySinh,GioiTinh,NgheNghiep,DiaChi,SoDienThoai,Email) VALUES ('Kippie Danbye','995885982',convert(date,'7/20/2020'),0,'Database Administrator I','94 Barnett Avenue','696 532 7559','kdanbye0@bing.com');
 INSERT INTO connguoi (HoTen,SoCMND,NgaySinh,GioiTinh,NgheNghiep,DiaChi,SoDienThoai,Email) VALUES ('Marketa Sidlow','537023306',convert(date,'10/16/2020'),1,'Programmer Analyst II','39 Everett Lane','512 476 6777','msidlow1@cdc.gov');
 INSERT INTO connguoi (HoTen,SoCMND,NgaySinh,GioiTinh,NgheNghiep,DiaChi,SoDienThoai,Email) VALUES ('Tate McLoney','600218561',convert(date,'2/5/2021'),0,'Executive Secretary','7 Donald Circle','139 832 8069','tmcloney2@furl.net');
