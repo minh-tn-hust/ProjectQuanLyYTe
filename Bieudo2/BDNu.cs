@@ -143,17 +143,17 @@ namespace Bieudo2
                 dem = Math.Round(BMI[i], 2);
                 if (dem > 18.5)
                 {
-                    BP[flagBP] = i;
+                    BP[flagBP] = Age[i];
                     flagBP++;
                 }
                 if (dem <= 18.5 && dem > 18)
                 {
-                    NCBP[flagNCBP] = i;
+                    NCBP[flagNCBP] = Age[i];
                     flagNCBP++;
                 }
                 if (dem < 13.5)
                 {
-                    TC[flagTC] = i;
+                    TC[flagTC] = Age[i];
                     flagTC++;
                 }
 
