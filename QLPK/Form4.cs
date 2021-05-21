@@ -11,13 +11,13 @@ using Controller.dataGridView;
 
 namespace QLPK
 {
-    public partial class FormDatLichNeuDaCoThongTin : Form
+    public partial class Form4 : Form
     {
-        public FormDatLichNeuDaCoThongTin()
+        public Form4()
         {
             InitializeComponent();
         }
-        public int ID_Nguoi;
+
         private void Form4_Load(object sender, EventArgs e)
         {
             LoadingTable ld = new LoadingTable();
