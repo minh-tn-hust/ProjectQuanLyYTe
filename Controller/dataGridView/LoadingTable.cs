@@ -10,7 +10,7 @@ using Model;
 
 namespace Controller.dataGridView
 {
-    public class LoadingTable 
+    public class LoadingTable
     {
         ColumnName Name = new ColumnName();
         public DataTable connguoi()
@@ -63,14 +63,14 @@ namespace Controller.dataGridView
                     dr[3] = record.NgaySinh.Value.ToShortDateString();
                     if (record.GioiTinh == 0)
                     {
-                        dr[4]="Nam";
+                        dr[4] = "Nam";
                     }
                     else
                     {
                         dr[4] = "Nữ";
                     }
 
-                        dr[5] = record.NgheNghiep;
+                    dr[5] = record.NgheNghiep;
                     dr[6] = record.DiaChi;
                     dr[7] = record.SoDienThoai;
                     dr[8] = record.Email;
@@ -133,6 +133,39 @@ namespace Controller.dataGridView
                         dr[12] = chiso.ChieuCao;
                         dr[13] = chiso.CanNang;
                     }
+
+                    dt.Rows.Add(dr);
+
+                }
+                return dt;
+            }
+        }
+        public DataTable onlytrecon()
+        {
+            using (var context = new YTeDbContext())
+            {
+                List<TreEm> listTreEm = context.TreEms.ToList();
+                DataTable dt = new DataTable();
+                foreach (var name in Name.onlytrecon())
+                    dt.Columns.Add(name);
+                int i = 0;
+                foreach (var treem in listTreEm)
+                {
+                    int id_TreEm = (int)treem.ID_TreEm;
+
+                    var link = context.TreEms.Find(id_TreEm); //Load thong tin tu bang tre em 
+                    var record = context.ConNguois.Find(link.ID_Nguoi);
+                    DataRow dr;
+                    dr = dt.NewRow();
+                    dr[0] = ++i;
+                    dr[1] = record.HoTen;
+                    dr[2] = record.SoCMND;
+                    dr[3] = record.NgaySinh.Value.ToShortDateString();
+                    dr[4] = record.GioiTinh;
+                    dr[5] = record.NgheNghiep;
+                    dr[6] = record.DiaChi;
+                    dr[7] = record.SoDienThoai;
+                    dr[8] = record.Email;
 
                     dt.Rows.Add(dr);
 
@@ -261,13 +294,13 @@ namespace Controller.dataGridView
                 var PhongKhams = context.PhongKhams.ToList();
                 foreach (var phongkham in PhongKhams)
                 {
-                     var nhanVienQuanLy = context.NhanVienYTes.Find(phongkham.ID_NhanVienQuanLy);
+                    var nhanVienQuanLy = context.NhanVienYTes.Find(phongkham.ID_NhanVienQuanLy);
                     if (nhanVienQuanLy != null)
                     {
-                      conNguoi = context.ConNguois.Find(nhanVienQuanLy.ID_Nguoi);
+                        conNguoi = context.ConNguois.Find(nhanVienQuanLy.ID_Nguoi);
                     }
                     DataRow dr = dt.NewRow();
-                    
+
                     dr[0] = ++i;
                     dr[1] = phongkham.TenPhongKham;
                     dr[2] = conNguoi.HoTen;
@@ -283,89 +316,88 @@ namespace Controller.dataGridView
                 return dt;
             }
         }
-    public DataTable datlichkham()
-    {
-        using (var context = new YTeDbContext()) // đây là gọi cơ sở dữ liệu của mình
+        public DataTable datlichkham()
         {
-            List<DatLichKham> LichKhams = context.DatLichKhams.ToList();  // đây là lấy cơ sở dữ liệu trong bảng dặt lịch khám
-            DataTable dt = new DataTable();
-            foreach (var name in Name.datlichkham())
+            using (var context = new YTeDbContext()) // đây là gọi cơ sở dữ liệu của mình
             {
-                dt.Columns.Add(name);
-             //   MessageBox.Show(name);
-            }
-            int i = 0;
-            //MessageBox.Show(LichKhams.Count.ToString());
-            foreach (var lichkham in LichKhams)
-            {
-                var record = context.ConNguois
-                                .Where(b => b.ID_Nguoi == lichkham.ID_Nguoi)
-                                .FirstOrDefault();
-                DataRow dr;
-                dr = dt.NewRow();
-                dr[0] = ++i;
-                dr[1] = record.HoTen;
-                dr[2] = record.SoCMND;
-                dr[3] = record.NgaySinh;
-                dr[4] = record.GioiTinh;
-                dr[5] = record.NgheNghiep;
-                dr[6] = record.DiaChi;
-                dr[7] = record.SoDienThoai;
-                dr[8] = record.Email;
-                dr[9] = lichkham.ThoiGianHenKham;
-                dr[10] = lichkham.LyDoKham;
-                dr[11] = lichkham.GhiChu;
-                dr[12] = 0;
-                dr[13] = 0;
-                // var phongkham = context.PhongKhams
-                //                     .Where(b => b.ID_PhongKham == lichkham.ID_PhongKham)
-                //                     .FirstOrDefault();
-                //// dr[12] = phongkham.TenPhongKham;
-                // var nhanvien = context.NhanVienYTes
-                //                     .Where(b => b.ID_NhanVien == lichkham.ID_NhanVien)
-                //                     .FirstOrDefault();
-                //// var connguoi1 = context.ConNguois
-                //                     .Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi)
-                //                     .FirstOrDefault();
-                // dr[13] = connguoi1.HoTen;
-                dt.Rows.Add(dr);
-            }
-            return dt;
-        }
-    }
- 
-    public DataTable sudung()
-    {
-        using (var context = new YTeDbContext())
-        {
-            DataTable dt = new DataTable();
-            foreach (var name in Name.sudung())
-                dt.Columns.Add(name);
-            var sudungs = context.SuDungVacXins.ToList();
-            int i = 0;
-            foreach (var record in sudungs)
-            {
-                DataRow dr = dt.NewRow();
-                var connguoi = context.ConNguois
-                                .Where(b => b.ID_Nguoi == record.ID_Nguoi)
-                                .FirstOrDefault();
-                var vacxin = context.VacXins
-                                .Where(b => b.ID_VacXin == record.ID_VacXin)
-                                .FirstOrDefault();
-                var phongkham = context.PhongKhams
-                                    .Where(b => b.ID_PhongKham == record.ID_PhongKham)
+                List<DatLichKham> LichKhams = context.DatLichKhams.ToList();  // đây là lấy cơ sở dữ liệu trong bảng dặt lịch khám
+                DataTable dt = new DataTable();
+                foreach (var name in Name.datlichkham())
+                {
+                    dt.Columns.Add(name);
+                    //   MessageBox.Show(name);
+                }
+                int i = 0;
+                //MessageBox.Show(LichKhams.Count.ToString());
+                foreach (var lichkham in LichKhams)
+                {
+                    var record = context.ConNguois
+                                    .Where(b => b.ID_Nguoi == lichkham.ID_Nguoi)
                                     .FirstOrDefault();
-                dr[0] = ++i;
-                dr[1] = connguoi.HoTen;
-                dr[2] = vacxin.TenVacXin;
-                dr[3] = record.ThoiDiemTiem;
-                dr[4] = record.SoMuiTiem;
-                dr[5] = phongkham.TenPhongKham;
-                dt.Rows.Add(dr);
+                    DataRow dr;
+                    dr = dt.NewRow();
+                    dr[0] = ++i;
+                    dr[1] = record.HoTen;
+                    dr[2] = record.SoCMND;
+                    dr[3] = record.NgaySinh;
+                    dr[4] = record.GioiTinh;
+                    dr[5] = record.NgheNghiep;
+                    dr[6] = record.DiaChi;
+                    dr[7] = record.SoDienThoai;
+                    dr[8] = record.Email;
+                    dr[9] = lichkham.ThoiGianHenKham;
+                    dr[10] = lichkham.LyDoKham;
+                    dr[11] = lichkham.GhiChu;
+                    dr[12] = 0;
+                    dr[13] = 0;
+                    // var phongkham = context.PhongKhams
+                    //                     .Where(b => b.ID_PhongKham == lichkham.ID_PhongKham)
+                    //                     .FirstOrDefault();
+                    //// dr[12] = phongkham.TenPhongKham;
+                    // var nhanvien = context.NhanVienYTes
+                    //                     .Where(b => b.ID_NhanVien == lichkham.ID_NhanVien)
+                    //                     .FirstOrDefault();
+                    //// var connguoi1 = context.ConNguois
+                    //                     .Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi)
+                    //                     .FirstOrDefault();
+                    // dr[13] = connguoi1.HoTen;
+                    dt.Rows.Add(dr);
+                }
+                return dt;
             }
-            return dt;
         }
-    }
 
+        public DataTable sudung()
+        {
+            using (var context = new YTeDbContext())
+            {
+                DataTable dt = new DataTable();
+                foreach (var name in Name.sudung())
+                    dt.Columns.Add(name);
+                var sudungs = context.SuDungVacXins.ToList();
+                int i = 0;
+                foreach (var record in sudungs)
+                {
+                    DataRow dr = dt.NewRow();
+                    var connguoi = context.ConNguois
+                                    .Where(b => b.ID_Nguoi == record.ID_Nguoi)
+                                    .FirstOrDefault();
+                    var vacxin = context.VacXins
+                                    .Where(b => b.ID_VacXin == record.ID_VacXin)
+                                    .FirstOrDefault();
+                    var phongkham = context.PhongKhams
+                                        .Where(b => b.ID_PhongKham == record.ID_PhongKham)
+                                        .FirstOrDefault();
+                    dr[0] = ++i;
+                    dr[1] = connguoi.HoTen;
+                    dr[2] = vacxin.TenVacXin;
+                    dr[3] = record.ThoiDiemTiem;
+                    dr[4] = record.SoMuiTiem;
+                    dr[5] = phongkham.TenPhongKham;
+                    dt.Rows.Add(dr);
+                }
+                return dt;
+            }
+        }
     }
 }       

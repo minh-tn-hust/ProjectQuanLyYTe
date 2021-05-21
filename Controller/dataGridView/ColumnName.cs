@@ -70,6 +70,22 @@ namespace Controller.dataGridView
             };
             return ls;
         }
+        public List<String> onlytrecon()
+        {
+            List<String> ls = new List<string>()
+            {
+                "STT", //0
+                "Họ và tên", //1
+                "Số CMND", //4
+                "Ngày sinh", //5
+                "Giới tính", //6
+                "Nghề nghiệp", //7
+                "Địa chỉ", //8
+                "Số điện thoại", //9
+                "Email", //10
+            };
+            return ls;
+        }
 
         public List<String> phunumangthai()
         {
@@ -85,7 +101,6 @@ namespace Controller.dataGridView
                 "Số điện thoại",
                 "Email",
                 "Thời gian thăm khám",
-                "Cân nặng",
                 "Thời gian sinh dự kiến"
             };
             return ls;

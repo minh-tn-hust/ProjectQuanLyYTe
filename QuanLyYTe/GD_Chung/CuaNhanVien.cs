@@ -45,6 +45,7 @@ namespace QuanLyYTe.GD_Chung
             loadingFormPanel.Height = this.Height - 85;
             label1.Text = "Panel = " + loadingFormPanel.Height.ToString();
             linkLabel1.Text = "Screen = " + this.Height.ToString();
+
             
            
         }
@@ -53,7 +54,6 @@ namespace QuanLyYTe.GD_Chung
         {
             vacxinButton.BackColor = Color.FromArgb(94, 148, 255);
             treemButton.BackColor = Color.Transparent;
-            phunuButton.BackColor = Color.Transparent;
             booklichButton.BackColor = Color.Transparent;
             openChildForm(qlvc);
 
@@ -94,7 +94,6 @@ namespace QuanLyYTe.GD_Chung
         {
             vacxinButton.BackColor = Color.Transparent;
             treemButton.BackColor = Color.FromArgb(94, 148, 255);
-            phunuButton.BackColor = Color.Transparent;
             booklichButton.BackColor = Color.Transparent;
             openChildForm(x2);
         }
@@ -103,7 +102,6 @@ namespace QuanLyYTe.GD_Chung
         {
             vacxinButton.BackColor = Color.Transparent;
             treemButton.BackColor = Color.Transparent;
-            phunuButton.BackColor = Color.FromArgb(94, 148, 255);
             booklichButton.BackColor = Color.Transparent;
             openChildForm(x3);
 
@@ -113,7 +111,6 @@ namespace QuanLyYTe.GD_Chung
         {
             vacxinButton.BackColor = Color.Transparent;
             treemButton.BackColor = Color.Transparent;
-            phunuButton.BackColor = Color.Transparent;
             booklichButton.BackColor = Color.FromArgb(94, 148, 255);
             openChildForm(x1);
 

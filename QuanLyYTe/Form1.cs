@@ -17,10 +17,12 @@ namespace QuanLyYTe
         {
             InitializeComponent();
         }
-
+        LoadingTable ld = new LoadingTable();
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            loading.DataSource = ld.onlytrecon();
+            btnTreem.FillColor = Color.FromArgb(94, 148, 255);
+            btnPhunu.FillColor = Color.FromArgb(192, 192, 192);
         }
 
         private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -31,6 +33,20 @@ namespace QuanLyYTe
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnTreem_Click(object sender, EventArgs e)
+        {
+            btnTreem.FillColor = Color.FromArgb(94, 148, 255);
+            btnPhunu.FillColor = Color.FromArgb(192, 192, 192);
+            loading.DataSource = ld.onlytrecon();
+        }
+
+        private void btnPhunu_Click(object sender, EventArgs e)
+        {
+            btnTreem.FillColor = Color.FromArgb(192, 192, 192);
+            btnPhunu.FillColor = Color.FromArgb(94, 148, 255);
+            loading.DataSource = ld.phunumangthai();
         }
     }
 }
