@@ -333,6 +333,39 @@ namespace Controller.dataGridView
             return dt;
         }
     }
+ 
+    public DataTable sudung()
+    {
+        using (var context = new YTeDbContext())
+        {
+            DataTable dt = new DataTable();
+            foreach (var name in Name.sudung())
+                dt.Columns.Add(name);
+            var sudungs = context.SuDungVacXins.ToList();
+            int i = 0;
+            foreach (var record in sudungs)
+            {
+                DataRow dr = dt.NewRow();
+                var connguoi = context.ConNguois
+                                .Where(b => b.ID_Nguoi == record.ID_Nguoi)
+                                .FirstOrDefault();
+                var vacxin = context.VacXins
+                                .Where(b => b.ID_VacXin == record.ID_VacXin)
+                                .FirstOrDefault();
+                var phongkham = context.PhongKhams
+                                    .Where(b => b.ID_PhongKham == record.ID_PhongKham)
+                                    .FirstOrDefault();
+                dr[0] = ++i;
+                dr[1] = connguoi.HoTen;
+                dr[2] = vacxin.TenVacXin;
+                dr[3] = record.ThoiDiemTiem;
+                dr[4] = record.SoMuiTiem;
+                dr[5] = phongkham.TenPhongKham;
+                dt.Rows.Add(dr);
+            }
+            return dt;
+        }
+    }
 
     }
 }       

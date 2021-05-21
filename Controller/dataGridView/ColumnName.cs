@@ -169,5 +169,19 @@ namespace Controller.dataGridView
                 };
                 return ls;
             }
+
+        public List<String> sudung()
+        {
+            List<String> ls = new List<String>()
+            {
+                "STT",
+                "Họ tên",
+                "Tên vắc xin",
+                "Thời điểm tiêm",
+                "Mũi tiêm",
+                "Phòng khám"
+            };
+            return ls;
         }
+    }
 }

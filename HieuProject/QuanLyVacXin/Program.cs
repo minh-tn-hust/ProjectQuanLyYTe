@@ -1,16 +1,10 @@
-﻿using QuanLyYTe.Admin;
-using QuanLyYTe.QL_NVien;
-using QuanLyYTe.QL_PKham;
-using QuanLyYTe.QL_VacXin;
-using QuanLyYTe.GD_Chung;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyVaxin;
 
-namespace QuanLyYTe
+namespace QuanLyVaxin
 {
     static class Program
     {
@@ -22,7 +16,7 @@ namespace QuanLyYTe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CuaNhanVien());
+            Application.Run(new Menu());
         }
     }
 }

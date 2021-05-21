@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model;
 using QuanLyYTe;
+using QuanLyVaxin;
 
 namespace QuanLyYTe.GD_Chung
 {
@@ -21,7 +22,7 @@ namespace QuanLyYTe.GD_Chung
         Form1 x1 = new Form1();
         Form1 x2 = new Form1();
         Form1 x3 = new Form1();
-        Form1 x4 = new Form1();
+        QuanLyVaxin.Menu qlvc = new QuanLyVaxin.Menu();
         private void openChildForm(Form childForm)
         {
             childForm.TopLevel = false;
@@ -54,7 +55,7 @@ namespace QuanLyYTe.GD_Chung
             treemButton.BackColor = Color.Transparent;
             phunuButton.BackColor = Color.Transparent;
             booklichButton.BackColor = Color.Transparent;
-            openChildForm(x1);
+            openChildForm(qlvc);
 
             
         }
@@ -114,7 +115,7 @@ namespace QuanLyYTe.GD_Chung
             treemButton.BackColor = Color.Transparent;
             phunuButton.BackColor = Color.Transparent;
             booklichButton.BackColor = Color.FromArgb(94, 148, 255);
-            openChildForm(x4);
+            openChildForm(x1);
 
         }
 
