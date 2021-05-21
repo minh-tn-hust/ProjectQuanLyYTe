@@ -2,6 +2,7 @@
 using QuanLyYTe.QL_NVien;
 using QuanLyYTe.QL_PKham;
 using QuanLyYTe.QL_VacXin;
+using QuanLyYTe.GD_Chung;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace QuanLyYTe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ThemMoiVacXin());
+            Application.Run(new CuaNhanVien());
         }
     }
 }
