@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,12 +58,11 @@ namespace Take3
 
         public void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (guna2ComboBox1.SelectedItem != null && guna2ComboBox1.SelectedItem != null && guna2TextBox7.Text.Length <=13 && guna2TextBox11.Text.Length <= 13)
+            if (guna2ComboBox1.SelectedItem != null  && guna2TextBox2.Text != "" && guna2TextBox7.Text.Length <=13 && guna2TextBox11.Text.Length <= 13 && guna2TextBox2.Text.Length <=15 )
             {
                 CDTreSoSinh CD1 = new CDTreSoSinh();
                 bool co = false;
                 string ktBHYT = guna2TextBox2.Text;
-
                 // Kiem tra xem tre co trong danh sach khong
                 using (var database = new YTeDbContext())
                 {
@@ -78,15 +77,14 @@ namespace Take3
                     } 
                 }
 
-
                 // Neu tre khong co trong danh sach
                 if (co == false)
                 {
                     //Them 1 con nguoi
-                    using (var db = new YTeDbContext())
+                    using (var yTeDbContext = new YTeDbContext())
                     {
                         ConNguoi connguoi = new ConNguoi();
-                        db.ConNguois.Add(connguoi);
+                        yTeDbContext.ConNguois.Add(connguoi);
                         connguoi.HoTen = guna2TextBox1.Text;
                         if (guna2ComboBox1.SelectedItem.ToString() == "Nam")
                         {
@@ -94,7 +92,16 @@ namespace Take3
                         }
                         else connguoi.GioiTinh = 1;
                         connguoi.NgaySinh = DateTime.Parse(guna2DateTimePicker1.Value.ToString());
-                        db.SaveChanges();
+                        try
+                        {
+                            yTeDbContext.SaveChanges();
+                        }
+                        
+                        catch
+                        {
+                            MessageBox.Show("Không thêm con người được");
+                            return;
+                        }
                     }
 
                     // Kiem tra xem da co bo me chua
@@ -133,16 +140,15 @@ namespace Take3
                             bo.SoCMND = guna2TextBox11.Text;
                             bo.DiaChi = guna2TextBox13.Text;
                             bo.GioiTinh = 0;
-                            try
-                            {
-                                yteDbContext.SaveChanges();
-                            }
-                            catch
-                            {
-                                MessageBox.Show("Thêm mới thất bại, kiểm tra lại dữ liệu đã nhập!");
-                                return;
-                            }
-                            //yteDbContext.SaveChanges();
+                        try
+                        {
+                            yteDbContext.SaveChanges();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Thêm mới thất bại, kiểm tra lại dữ liệu đã nhập!");
+                            return;
+                        }
                             IDcuabo = bo.ID_Nguoi;
                         }
                     }
