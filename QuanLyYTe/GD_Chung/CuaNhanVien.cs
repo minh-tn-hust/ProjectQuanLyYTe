@@ -41,6 +41,11 @@ namespace QuanLyYTe.GD_Chung
 
         private void CuaNhanVien_Load(object sender, EventArgs e)
         {
+            loadingFormPanel.Height = this.Height - 85;
+            label1.Text = "Panel = " + loadingFormPanel.Height.ToString();
+            linkLabel1.Text = "Screen = " + this.Height.ToString();
+            
+           
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -111,6 +116,31 @@ namespace QuanLyYTe.GD_Chung
             booklichButton.BackColor = Color.FromArgb(94, 148, 255);
             openChildForm(x4);
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide(); 
+            SignIn logout = new SignIn();
+            logout.ShowDialog();
+            this.Close();
+        }
+
+        private void CuaNhanVien_MaximizedBoundsChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.Height.ToString());
+        }
+
+        private void CuaNhanVien_Resize(object sender, EventArgs e)
+        {
+            loadingFormPanel.Height = this.Height - 47;
+            label1.Text = "Panel = " + loadingFormPanel.Height.ToString();
+            linkLabel1.Text = "Screen = " + this.Height.ToString();
+            
         }
     }
 }

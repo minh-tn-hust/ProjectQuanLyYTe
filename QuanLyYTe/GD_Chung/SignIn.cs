@@ -34,8 +34,6 @@ namespace QuanLyYTe
                         MenuUI menu = new MenuUI();
                         menu.ShowDialog();
                         this.Close();
-
-
                     }
                     else
                     {
