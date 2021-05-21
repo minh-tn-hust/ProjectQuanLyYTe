@@ -85,6 +85,8 @@ namespace Take3
                     {
                         ConNguoi connguoi = new ConNguoi();
                         yTeDbContext.ConNguois.Add(connguoi);
+                        var listConNguoi = yTeDbContext.ConNguois.ToList();
+                        connguoi.SoCMND = listConNguoi.Count.ToString();
                         connguoi.HoTen = guna2TextBox1.Text;
                         if (guna2ComboBox1.SelectedItem.ToString() == "Nam")
                         {
@@ -95,8 +97,10 @@ namespace Take3
                         try
                         {
                             yTeDbContext.SaveChanges();
+
+                        //bug của chị ở đây là cmnd không được trùng, ví dụ chị chèn một thằng không có cmnd rồi thì khôn ghtể chèn được thằng thứ 2 không có thử xem qua csdl nhé
                         }
-                        
+
                         catch
                         {
                             MessageBox.Show("Không thêm con người được");
