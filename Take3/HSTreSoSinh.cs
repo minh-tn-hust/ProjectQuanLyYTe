@@ -58,7 +58,7 @@ namespace Take3
 
         public void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (guna2ComboBox1.SelectedItem != null  && guna2TextBox2.Text != "" && guna2TextBox7.Text.Length <=13 && guna2TextBox11.Text.Length <= 13 && guna2TextBox2.Text.Length <=15 )
+            if (guna2TextBox7.Text.Length > 0 && guna2TextBox11.Text.Length > 0 && guna2ComboBox1.SelectedItem != null  && guna2TextBox2.Text != "" && guna2TextBox7.Text.Length <=13 && guna2TextBox11.Text.Length <= 13 && guna2TextBox2.Text.Length <=15 )
             {
                 CDTreSoSinh CD1 = new CDTreSoSinh();
                 bool co = false;
