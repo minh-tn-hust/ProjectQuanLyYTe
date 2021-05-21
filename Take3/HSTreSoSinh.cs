@@ -26,32 +26,9 @@ namespace Take3
         public HSTreSoSinh(TreEm treem, ChiSoTreCon chisotrecon, ConNguoi connguoi)
         {
             InitializeComponent();
-            guna2TextBox1.Text = connguoi.HoTen;
-            using (var context = new YTeDbContext())
-            {
-                var bo = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Bo).FirstOrDefault();
-                if (guna2TextBox8 != null) guna2TextBox8.Text = bo.HoTen;
-                if (guna2TextBox9 != null) guna2TextBox9.Text = bo.NgheNghiep;
-                if (guna2TextBox10 != null) guna2TextBox10.Text = bo.SoDienThoai;
-                if (guna2TextBox11 != null) guna2TextBox11.Text = bo.SoCMND;
-                if (guna2TextBox13 != null) guna2TextBox13.Text = bo.DiaChi;
-
-                var me = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Me).FirstOrDefault();
-                guna2TextBox3.Text = me.HoTen;
-                guna2TextBox4.Text = me.NgheNghiep;
-                guna2TextBox5.Text = me.SoDienThoai;
-                guna2TextBox7.Text = me.SoCMND;
-                guna2TextBox12.Text = me.DiaChi;
-
-                var BHYT = context.TreEms.FirstOrDefault();
-                guna2TextBox2.Text = BHYT.MaTheBHYTe;
-                var GT = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Nguoi).FirstOrDefault();
-                if (GT.GioiTinh == 0)
-                {
-                    guna2ComboBox1.SelectedItem = "Nam";
-                }
-                else guna2ComboBox1.SelectedItem = "Nữ";
-            }
+            this.connguoi = connguoi;
+            this.treem = treem;
+            this.chisotrecon = chisotrecon;
         }
 
 
@@ -63,6 +40,7 @@ namespace Take3
                 CDTreSoSinh CD1 = new CDTreSoSinh();
                 bool co = false;
                 string ktBHYT = guna2TextBox2.Text;
+                MessageBox.Show("Kiem tra xem tre co trong danh sach khong " + CD1.IDtreem);
                 // Kiem tra xem tre co trong danh sach khong
                 using (var database = new YTeDbContext())
                 {
@@ -76,7 +54,8 @@ namespace Take3
                         }
                     } 
                 }
-
+                MessageBox.Show("Kiem tra xem tre co trong danh sach khong " + CD1.IDtreem);
+                #region Kiem tra tre em co trong danh sach hay khong
                 // Neu tre khong co trong danh sach
                 if (co == false)
                 {
@@ -108,7 +87,7 @@ namespace Take3
                         }
                     }
 
-                    // Kiem tra xem da co bo me chua
+                    #region Kiem tra xem da co bo me chua
                     int IDcuame = 0, IDcuabo = 0;
                     int CMTme = 1, CMTbo = 1;
                     using (var yteDbContext = new YTeDbContext())
@@ -128,8 +107,9 @@ namespace Take3
                             }
                         }
                     }
+                    #endregion
 
-                    //Neu ma chua co bo, them bo
+                    #region Neu ma chua co bo, them bo
                     if (CMTbo == 1)
                     {
                         //MessageBox.Show("tao moi bo");
@@ -156,8 +136,9 @@ namespace Take3
                             IDcuabo = bo.ID_Nguoi;
                         }
                     }
+                    #endregion
 
-                    //Neu ma chua co me, them me
+                    #region Neu ma chua co me, them me
                     if (CMTme == 1)
                     {
                         //MessageBox.Show("Tao moi me");
@@ -184,6 +165,7 @@ namespace Take3
                             IDcuame = me.ID_Nguoi;
                         }
                     }
+                    #endregion
 
                     //Them 1 tre em
                     using (var db = new YTeDbContext())
@@ -199,13 +181,56 @@ namespace Take3
                         CD1.IDtreem = tre.ID_TreEm;
                     }
                 }
+                #endregion
                 co = true;
                 CD1.Gioitinh = guna2ComboBox1.SelectedItem.ToString();
                 CD1.born = DateTime.Parse(guna2DateTimePicker1.Value.ToString());
+                MessageBox.Show(CD1.IDtreem.ToString());
                 CD1.Show();
             }
             else MessageBox.Show("Vui kiểm tra lại thông tin!");
 
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void HSTreSoSinh_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(treem.ID_TreEm.ToString());
+            guna2TextBox1.Text = connguoi.HoTen;
+            using (var context = new YTeDbContext())
+            {
+                var bo = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Bo).FirstOrDefault();
+                if (guna2TextBox8 != null) guna2TextBox8.Text = bo.HoTen;
+                if (guna2TextBox9 != null) guna2TextBox9.Text = bo.NgheNghiep;
+                if (guna2TextBox10 != null) guna2TextBox10.Text = bo.SoDienThoai;
+                if (guna2TextBox11 != null) guna2TextBox11.Text = bo.SoCMND;
+                if (guna2TextBox13 != null) guna2TextBox13.Text = bo.DiaChi;
+
+                var me = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Me).FirstOrDefault();
+                guna2TextBox3.Text = me.HoTen;
+                guna2TextBox4.Text = me.NgheNghiep;
+                guna2TextBox5.Text = me.SoDienThoai;
+                guna2TextBox7.Text = me.SoCMND;
+                guna2TextBox12.Text = me.DiaChi;
+
+                var BHYT = context.TreEms.Where(b => b.ID_TreEm == treem.ID_TreEm).FirstOrDefault();
+                guna2TextBox2.Text = BHYT.MaTheBHYTe;
+                var GT = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Nguoi).FirstOrDefault();
+                if (GT.GioiTinh == 0)
+                {
+                    guna2ComboBox1.SelectedItem = "Nam";
+                }
+                else guna2ComboBox1.SelectedItem = "Nữ";
+            }
         }
     }
 }

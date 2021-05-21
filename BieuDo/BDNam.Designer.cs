@@ -56,6 +56,7 @@ namespace BieuDo
             this.zed.ScrollMinY2 = 0D;
             this.zed.Size = new System.Drawing.Size(484, 372);
             this.zed.TabIndex = 0;
+            this.zed.UseExtendedPrintDialog = true;
             // 
             // zed2
             // 
@@ -70,6 +71,7 @@ namespace BieuDo
             this.zed2.ScrollMinY2 = 0D;
             this.zed2.Size = new System.Drawing.Size(484, 372);
             this.zed2.TabIndex = 2;
+            this.zed2.UseExtendedPrintDialog = true;
             // 
             // label2
             // 
@@ -146,6 +148,7 @@ namespace BieuDo
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(1122, 40);
             this.guna2Panel1.TabIndex = 7;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // BDNam
             // 

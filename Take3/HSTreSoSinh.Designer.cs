@@ -543,6 +543,7 @@ namespace Take3
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(1072, 659);
             this.guna2Panel1.TabIndex = 37;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2HtmlLabel17
             // 
@@ -742,6 +743,7 @@ namespace Take3
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(1094, 40);
             this.guna2Panel2.TabIndex = 38;
+            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // guna2ControlBox2
             // 
@@ -783,6 +785,7 @@ namespace Take3
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HSTreSoSinh";
             this.Text = "Hồ sơ phụ sản";
+            this.Load += new System.EventHandler(this.HSTreSoSinh_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
