@@ -38,7 +38,7 @@ namespace Take3
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            if (guna2TextBox3 != null && guna2TextBox2 != null)
+            if (guna2TextBox3.Text != "" && guna2TextBox2.Text != "")
             {
                 using (var yteDbContext = new YTeDbContext())
                 {
