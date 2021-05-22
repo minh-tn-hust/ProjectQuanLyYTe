@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CuaNhanVien));
             this.mainMenuPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -56,7 +56,7 @@
             this.mainMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.ShadowDecoration.Parent = this.mainMenuPanel;
-            this.mainMenuPanel.Size = new System.Drawing.Size(984, 47);
+            this.mainMenuPanel.Size = new System.Drawing.Size(1037, 47);
             this.mainMenuPanel.TabIndex = 5;
             this.mainMenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
@@ -64,7 +64,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.guna2Transition1.SetDecoration(this.linkLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.linkLabel1.Location = new System.Drawing.Point(14, 26);
+            this.linkLabel1.Location = new System.Drawing.Point(11, 26);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(56, 13);
             this.linkLabel1.TabIndex = 10;
@@ -76,9 +76,10 @@
             // 
             this.label1.AutoSize = true;
             this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 13);
+            this.label1.Size = new System.Drawing.Size(182, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Xin chào Trần Nhật Minh";
             // 
@@ -94,7 +95,7 @@
             this.vacxinButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.vacxinButton.ForeColor = System.Drawing.Color.Black;
             this.vacxinButton.HoverState.Parent = this.vacxinButton;
-            this.vacxinButton.Location = new System.Drawing.Point(424, 2);
+            this.vacxinButton.Location = new System.Drawing.Point(477, 2);
             this.vacxinButton.Name = "vacxinButton";
             this.vacxinButton.ShadowDecoration.Parent = this.vacxinButton;
             this.vacxinButton.Size = new System.Drawing.Size(180, 45);
@@ -114,7 +115,7 @@
             this.booklichButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.booklichButton.ForeColor = System.Drawing.Color.Black;
             this.booklichButton.HoverState.Parent = this.booklichButton;
-            this.booklichButton.Location = new System.Drawing.Point(796, 1);
+            this.booklichButton.Location = new System.Drawing.Point(849, 1);
             this.booklichButton.Name = "booklichButton";
             this.booklichButton.ShadowDecoration.Parent = this.booklichButton;
             this.booklichButton.Size = new System.Drawing.Size(180, 45);
@@ -134,7 +135,7 @@
             this.treemButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.treemButton.ForeColor = System.Drawing.Color.Black;
             this.treemButton.HoverState.Parent = this.treemButton;
-            this.treemButton.Location = new System.Drawing.Point(610, 2);
+            this.treemButton.Location = new System.Drawing.Point(663, 2);
             this.treemButton.Name = "treemButton";
             this.treemButton.ShadowDecoration.Parent = this.treemButton;
             this.treemButton.Size = new System.Drawing.Size(180, 45);
@@ -150,22 +151,22 @@
             // guna2Transition1
             // 
             this.guna2Transition1.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation4;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
             this.guna2Transition1.MaxAnimationTime = 500;
             this.guna2Transition1.TimeStep = 0.1F;
             // 
@@ -174,17 +175,17 @@
             this.loadingFormPanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Transition1.SetDecoration(this.loadingFormPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.loadingFormPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.loadingFormPanel.Location = new System.Drawing.Point(0, -43);
+            this.loadingFormPanel.Location = new System.Drawing.Point(0, 45);
             this.loadingFormPanel.Name = "loadingFormPanel";
             this.loadingFormPanel.ShadowDecoration.Parent = this.loadingFormPanel;
-            this.loadingFormPanel.Size = new System.Drawing.Size(984, 504);
+            this.loadingFormPanel.Size = new System.Drawing.Size(1037, 504);
             this.loadingFormPanel.TabIndex = 6;
             // 
             // CuaNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.ClientSize = new System.Drawing.Size(1037, 549);
             this.Controls.Add(this.loadingFormPanel);
             this.Controls.Add(this.mainMenuPanel);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);

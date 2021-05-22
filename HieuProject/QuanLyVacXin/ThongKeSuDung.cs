@@ -118,5 +118,10 @@ namespace QuanLyVaxin
         {
             cbSoLo.DataSource = comboBox.solo(cbTenVacXin2.Text);
         }
+
+        private void chartThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

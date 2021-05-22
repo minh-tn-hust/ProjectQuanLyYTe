@@ -50,9 +50,8 @@ namespace QuanLyYTe
                     if (nhanVien != null)
                     {
                         this.Hide();
-                        CuaNhanVien cuaNhanVien = new CuaNhanVien();
-                        this.Close();
-                        cuaNhanVien.ShowDialog();
+                        CuaNhanVien cuaNhanVien = new CuaNhanVien(nhanVien);
+                        cuaNhanVien.Show();
                         
 
                     }

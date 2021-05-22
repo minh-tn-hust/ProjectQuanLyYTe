@@ -33,12 +33,13 @@ namespace QuanLyYTe
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnPhunu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTreem = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.searchTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.loading = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTreem = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPhunu = new Guna.UI2.WinForms.Guna2Button();
+            this.searchField = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loading)).BeginInit();
@@ -46,10 +47,11 @@ namespace QuanLyYTe
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.searchField);
             this.guna2Panel1.Controls.Add(this.btnPhunu);
             this.guna2Panel1.Controls.Add(this.btnTreem);
             this.guna2Panel1.Controls.Add(this.btnSearch);
-            this.guna2Panel1.Controls.Add(this.guna2TextBox1);
+            this.guna2Panel1.Controls.Add(this.searchTextBox);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -57,30 +59,88 @@ namespace QuanLyYTe
             this.guna2Panel1.Size = new System.Drawing.Size(1070, 70);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2TextBox1
+            // btnPhunu
             // 
-            this.guna2TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox1.BorderRadius = 20;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(567, 13);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(401, 45);
-            this.guna2TextBox1.TabIndex = 1;
+            this.btnPhunu.AutoRoundedCorners = true;
+            this.btnPhunu.BackColor = System.Drawing.Color.Transparent;
+            this.btnPhunu.BorderRadius = 21;
+            this.btnPhunu.CheckedState.Parent = this.btnPhunu;
+            this.btnPhunu.CustomImages.Parent = this.btnPhunu;
+            this.btnPhunu.FillColor = System.Drawing.Color.Silver;
+            this.btnPhunu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPhunu.ForeColor = System.Drawing.Color.White;
+            this.btnPhunu.HoverState.Parent = this.btnPhunu;
+            this.btnPhunu.Location = new System.Drawing.Point(199, 12);
+            this.btnPhunu.Name = "btnPhunu";
+            this.btnPhunu.ShadowDecoration.Parent = this.btnPhunu;
+            this.btnPhunu.Size = new System.Drawing.Size(180, 45);
+            this.btnPhunu.TabIndex = 4;
+            this.btnPhunu.Text = "Danh sách phụ nữ mang thai";
+            this.btnPhunu.UseTransparentBackground = true;
+            this.btnPhunu.Click += new System.EventHandler(this.btnPhunu_Click);
+            // 
+            // btnTreem
+            // 
+            this.btnTreem.AutoRoundedCorners = true;
+            this.btnTreem.BackColor = System.Drawing.Color.Transparent;
+            this.btnTreem.BorderRadius = 21;
+            this.btnTreem.CheckedState.Parent = this.btnTreem;
+            this.btnTreem.CustomImages.Parent = this.btnTreem;
+            this.btnTreem.FillColor = System.Drawing.Color.Silver;
+            this.btnTreem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTreem.ForeColor = System.Drawing.Color.White;
+            this.btnTreem.HoverState.Parent = this.btnTreem;
+            this.btnTreem.Location = new System.Drawing.Point(13, 12);
+            this.btnTreem.Name = "btnTreem";
+            this.btnTreem.ShadowDecoration.Parent = this.btnTreem;
+            this.btnTreem.Size = new System.Drawing.Size(180, 45);
+            this.btnTreem.TabIndex = 3;
+            this.btnTreem.Text = "Danh sách trẻ em";
+            this.btnTreem.UseTransparentBackground = true;
+            this.btnTreem.Click += new System.EventHandler(this.btnTreem_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Animated = true;
+            this.btnSearch.BorderRadius = 20;
+            this.btnSearch.CheckedState.Parent = this.btnSearch;
+            this.btnSearch.CustomImages.Parent = this.btnSearch;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.HoverState.Parent = this.btnSearch;
+            this.btnSearch.Location = new System.Drawing.Point(974, 13);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
+            this.btnSearch.Size = new System.Drawing.Size(86, 45);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchTextBox.BorderRadius = 20;
+            this.searchTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchTextBox.DefaultText = "";
+            this.searchTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.searchTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.searchTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchTextBox.DisabledState.Parent = this.searchTextBox;
+            this.searchTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchTextBox.FocusedState.Parent = this.searchTextBox;
+            this.searchTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchTextBox.HoverState.Parent = this.searchTextBox;
+            this.searchTextBox.Location = new System.Drawing.Point(567, 13);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.PasswordChar = '\0';
+            this.searchTextBox.PlaceholderText = "";
+            this.searchTextBox.SelectedText = "";
+            this.searchTextBox.ShadowDecoration.Parent = this.searchTextBox;
+            this.searchTextBox.Size = new System.Drawing.Size(401, 45);
+            this.searchTextBox.TabIndex = 1;
             // 
             // guna2Panel2
             // 
@@ -97,13 +157,13 @@ namespace QuanLyYTe
             // loading
             // 
             this.loading.AllowUserToDeleteRows = false;
-            this.loading.AllowUserToResizeRows = false;
+            this.loading.AllowUserToResizeColumns = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.loading.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.loading.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.loading.BackgroundColor = System.Drawing.Color.White;
+            this.loading.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.loading.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.loading.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.loading.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.loading.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -139,7 +199,7 @@ namespace QuanLyYTe
             this.loading.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.loading.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.loading.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.loading.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.loading.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.loading.ThemeStyle.GridColor = System.Drawing.Color.White;
             this.loading.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.loading.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -155,63 +215,34 @@ namespace QuanLyYTe
             this.loading.ThemeStyle.RowsStyle.Height = 30;
             this.loading.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
             this.loading.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.loading.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loading_CellClick);
+            this.loading.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loading_CellContentClick);
             // 
-            // btnSearch
+            // searchField
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Animated = true;
-            this.btnSearch.BorderRadius = 20;
-            this.btnSearch.CheckedState.Parent = this.btnSearch;
-            this.btnSearch.CustomImages.Parent = this.btnSearch;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Location = new System.Drawing.Point(974, 13);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(86, 45);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "Tìm kiếm";
-            // 
-            // btnTreem
-            // 
-            this.btnTreem.AutoRoundedCorners = true;
-            this.btnTreem.BackColor = System.Drawing.Color.Transparent;
-            this.btnTreem.BorderRadius = 21;
-            this.btnTreem.CheckedState.Parent = this.btnTreem;
-            this.btnTreem.CustomImages.Parent = this.btnTreem;
-            this.btnTreem.FillColor = System.Drawing.Color.Silver;
-            this.btnTreem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnTreem.ForeColor = System.Drawing.Color.White;
-            this.btnTreem.HoverState.Parent = this.btnTreem;
-            this.btnTreem.Location = new System.Drawing.Point(13, 12);
-            this.btnTreem.Name = "btnTreem";
-            this.btnTreem.ShadowDecoration.Parent = this.btnTreem;
-            this.btnTreem.Size = new System.Drawing.Size(180, 45);
-            this.btnTreem.TabIndex = 3;
-            this.btnTreem.Text = "Danh sách trẻ em";
-            this.btnTreem.UseTransparentBackground = true;
-            this.btnTreem.Click += new System.EventHandler(this.btnTreem_Click);
-            // 
-            // btnPhunu
-            // 
-            this.btnPhunu.AutoRoundedCorners = true;
-            this.btnPhunu.BackColor = System.Drawing.Color.Transparent;
-            this.btnPhunu.BorderRadius = 21;
-            this.btnPhunu.CheckedState.Parent = this.btnPhunu;
-            this.btnPhunu.CustomImages.Parent = this.btnPhunu;
-            this.btnPhunu.FillColor = System.Drawing.Color.Silver;
-            this.btnPhunu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPhunu.ForeColor = System.Drawing.Color.White;
-            this.btnPhunu.HoverState.Parent = this.btnPhunu;
-            this.btnPhunu.Location = new System.Drawing.Point(200, 13);
-            this.btnPhunu.Name = "btnPhunu";
-            this.btnPhunu.ShadowDecoration.Parent = this.btnPhunu;
-            this.btnPhunu.Size = new System.Drawing.Size(180, 45);
-            this.btnPhunu.TabIndex = 4;
-            this.btnPhunu.Text = "Danh sách phụ nữ mang thai";
-            this.btnPhunu.UseTransparentBackground = true;
-            this.btnPhunu.Click += new System.EventHandler(this.btnPhunu_Click);
+            this.searchField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchField.BackColor = System.Drawing.Color.Transparent;
+            this.searchField.BorderRadius = 15;
+            this.searchField.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.searchField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchField.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchField.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchField.FocusedState.Parent = this.searchField;
+            this.searchField.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.searchField.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.searchField.HoverState.Parent = this.searchField;
+            this.searchField.ItemHeight = 30;
+            this.searchField.Items.AddRange(new object[] {
+            "Số CMND",
+            "Họ và tên",
+            "Số điện thoại"});
+            this.searchField.ItemsAppearance.Parent = this.searchField;
+            this.searchField.Location = new System.Drawing.Point(424, 17);
+            this.searchField.Name = "searchField";
+            this.searchField.ShadowDecoration.Parent = this.searchField;
+            this.searchField.Size = new System.Drawing.Size(140, 36);
+            this.searchField.TabIndex = 0;
+            this.searchField.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -233,11 +264,12 @@ namespace QuanLyYTe
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox searchTextBox;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2DataGridView loading;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Guna.UI2.WinForms.Guna2Button btnPhunu;
         private Guna.UI2.WinForms.Guna2Button btnTreem;
+        private Guna.UI2.WinForms.Guna2ComboBox searchField;
     }
 }

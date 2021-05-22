@@ -29,11 +29,12 @@ namespace QuanLyVaxin
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.pnlThongKe = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbSoLo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lbNgaySuDung = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnLuuThongTin2 = new Guna.UI2.WinForms.Guna2Button();
             this.cbTenVacXin2 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -51,7 +52,6 @@ namespace QuanLyVaxin
             this.cbTenVacXin3 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lbTuNgay = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbTenVacXin3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cbSoLo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pnlThongKe.SuspendLayout();
             this.pnlChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
@@ -75,6 +75,29 @@ namespace QuanLyVaxin
             this.pnlThongKe.ShadowDecoration.Parent = this.pnlThongKe;
             this.pnlThongKe.Size = new System.Drawing.Size(320, 450);
             this.pnlThongKe.TabIndex = 1;
+            // 
+            // cbSoLo
+            // 
+            this.cbSoLo.BackColor = System.Drawing.Color.Transparent;
+            this.cbSoLo.BorderRadius = 8;
+            this.cbSoLo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSoLo.DropDownHeight = 100;
+            this.cbSoLo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSoLo.DropDownWidth = 120;
+            this.cbSoLo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSoLo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSoLo.FocusedState.Parent = this.cbSoLo;
+            this.cbSoLo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSoLo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSoLo.HoverState.Parent = this.cbSoLo;
+            this.cbSoLo.IntegralHeight = false;
+            this.cbSoLo.ItemHeight = 30;
+            this.cbSoLo.ItemsAppearance.Parent = this.cbSoLo;
+            this.cbSoLo.Location = new System.Drawing.Point(106, 186);
+            this.cbSoLo.Name = "cbSoLo";
+            this.cbSoLo.ShadowDecoration.Parent = this.cbSoLo;
+            this.cbSoLo.Size = new System.Drawing.Size(200, 36);
+            this.cbSoLo.TabIndex = 2;
             // 
             // lbNgaySuDung
             // 
@@ -231,27 +254,28 @@ namespace QuanLyVaxin
             this.chartThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chartThongKe.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartThongKe.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chartThongKe.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartThongKe.Legends.Add(legend1);
             this.chartThongKe.Location = new System.Drawing.Point(16, 127);
             this.chartThongKe.Name = "chartThongKe";
-            series3.ChartArea = "ChartArea1";
-            series3.LabelBorderWidth = 8;
-            series3.Legend = "Legend1";
-            series3.MarkerSize = 20;
-            series3.Name = "Số lượng";
-            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chartThongKe.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.LabelBorderWidth = 8;
+            series1.Legend = "Legend1";
+            series1.MarkerSize = 20;
+            series1.Name = "Số lượng";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chartThongKe.Series.Add(series1);
             this.chartThongKe.Size = new System.Drawing.Size(448, 311);
             this.chartThongKe.TabIndex = 10;
             this.chartThongKe.Text = "chart1";
-            title3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Title1";
-            title3.Text = "Thống kê số lượng sử dụng";
-            this.chartThongKe.Titles.Add(title3);
+            title1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Thống kê số lượng sử dụng";
+            this.chartThongKe.Titles.Add(title1);
+            this.chartThongKe.Click += new System.EventHandler(this.chartThongKe_Click);
             // 
             // btnHienThi
             // 
@@ -365,29 +389,6 @@ namespace QuanLyVaxin
             this.lbTenVacXin3.TabIndex = 8;
             this.lbTenVacXin3.Text = "Tên vacxin";
             this.lbTenVacXin3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbSoLo
-            // 
-            this.cbSoLo.BackColor = System.Drawing.Color.Transparent;
-            this.cbSoLo.BorderRadius = 8;
-            this.cbSoLo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbSoLo.DropDownHeight = 100;
-            this.cbSoLo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSoLo.DropDownWidth = 120;
-            this.cbSoLo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSoLo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSoLo.FocusedState.Parent = this.cbSoLo;
-            this.cbSoLo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSoLo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbSoLo.HoverState.Parent = this.cbSoLo;
-            this.cbSoLo.IntegralHeight = false;
-            this.cbSoLo.ItemHeight = 30;
-            this.cbSoLo.ItemsAppearance.Parent = this.cbSoLo;
-            this.cbSoLo.Location = new System.Drawing.Point(106, 186);
-            this.cbSoLo.Name = "cbSoLo";
-            this.cbSoLo.ShadowDecoration.Parent = this.cbSoLo;
-            this.cbSoLo.Size = new System.Drawing.Size(200, 36);
-            this.cbSoLo.TabIndex = 2;
             // 
             // ThongKeSuDung
             // 

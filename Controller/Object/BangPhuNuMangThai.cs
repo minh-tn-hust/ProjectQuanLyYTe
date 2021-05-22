@@ -10,12 +10,10 @@ namespace Controller.Object
     public class BangPhuNuMangThai
     {
         public ConNguoi connguoi;
-        public ThongTinThaiKi thongtinthaiki;
         public PhuNuMangThai phunumangthai;
-        public BangPhuNuMangThai(ConNguoi a, ThongTinThaiKi b, PhuNuMangThai c)
+        public BangPhuNuMangThai(ConNguoi a,  PhuNuMangThai c)
         {
             this.connguoi = a;
-            this.thongtinthaiki = b;
             this.phunumangthai = c;
         }
     }

@@ -77,6 +77,24 @@ namespace Controller.dataGridView
                 return new BangTreEm(treem, chiso, connguoi);
             }
         }
+        public BangOnlyTreEm onlybangtreem(DataGridView source, DataGridViewCellEventArgs e)
+        {
+            String name = source.Rows[e.RowIndex].Cells[1].Value.ToString();
+            DateTime birth = DateTime.Parse(source.Rows[e.RowIndex].Cells[3].Value.ToString());
+            MessageBox.Show(name);
+            using (var context = new YTeDbContext())
+            {
+                var connguoi = context.ConNguois
+                                .Where(b => b.HoTen == name && b.NgaySinh == birth)
+                                .FirstOrDefault();
+                var treem = context.TreEms
+                                .Where(b => b.ID_Nguoi == connguoi.ID_Nguoi)
+                                .FirstOrDefault();
+                BangOnlyTreEm ans = new BangOnlyTreEm(connguoi, treem);
+                return ans;
+
+            }
+        }
 
 
         #endregion
@@ -118,10 +136,7 @@ namespace Controller.dataGridView
                 var phunumangthai = context.PhuNuMangThais
                                 .Where(b => b.ID_Nguoi == connguoi.ID_Nguoi)
                                 .FirstOrDefault();
-                var thongtinthaiki = context.ThongTinThaiKis
-                                .Where(b => b.ID_NguoiMangThai == phunumangthai.ID_NguoiMangThai)
-                                .FirstOrDefault();
-                return new BangPhuNuMangThai(connguoi, thongtinthaiki, phunumangthai);
+                return new BangPhuNuMangThai(connguoi, phunumangthai);
             }
         }
 

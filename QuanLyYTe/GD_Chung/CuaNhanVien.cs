@@ -15,9 +15,16 @@ namespace QuanLyYTe.GD_Chung
 {
     public partial class CuaNhanVien : Form
     {
+        NhanVienYTe nhanvien;
         public CuaNhanVien()
         {
             InitializeComponent();
+        }
+        public CuaNhanVien(NhanVienYTe nhanvien)
+        {
+            InitializeComponent();
+            this.nhanvien = nhanvien;
+
         }
         Form1 x1 = new Form1();
         Form1 x2 = new Form1();
@@ -43,11 +50,12 @@ namespace QuanLyYTe.GD_Chung
         private void CuaNhanVien_Load(object sender, EventArgs e)
         {
             loadingFormPanel.Height = this.Height - 85;
-            label1.Text = "Panel = " + loadingFormPanel.Height.ToString();
-            linkLabel1.Text = "Screen = " + this.Height.ToString();
-
-            
-           
+            linkLabel1.Text = "Logout";
+            using (var context = new YTeDbContext())
+            {
+                var connguoi = context.ConNguois.Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi).FirstOrDefault();
+                label1.Text = "Xin chào "+connguoi.HoTen;
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -136,9 +144,6 @@ namespace QuanLyYTe.GD_Chung
         private void CuaNhanVien_Resize(object sender, EventArgs e)
         {
             loadingFormPanel.Height = this.Height - 47;
-            label1.Text = "Panel = " + loadingFormPanel.Height.ToString();
-            linkLabel1.Text = "Screen = " + this.Height.ToString();
-            
         }
     }
 }
