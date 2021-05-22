@@ -28,6 +28,7 @@ namespace Take3
                 yteDbContext.ThongTinThaiKis.Add(thongtin);
                 thongtin.ThoiGianKham = DateTime.Parse(guna2DateTimePicker1.Value.ToString());
                 thongtin.ID_NguoiMangThai = IDnguoimangthai;
+                thongtin.ID_PhongKham = Int32.Parse(guna2ComboBox1.SelectedItem.ToString().Substring(0, 1));
                 thongtin.LanKhamTiepTheo = DateTime.Parse(guna2DateTimePicker2.Value.ToString());
                 thongtin.ChieuCaoMe = int.Parse(guna2TextBox2.Text);
                 thongtin.CanNangMe = int.Parse(guna2TextBox4.Text);
@@ -40,6 +41,7 @@ namespace Take3
                 catch
                 {
                     MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
+                    return;
                 }
                 
             }
@@ -47,6 +49,14 @@ namespace Take3
 
         private void CDPhuSan_Load(object sender, EventArgs e)
         {
+            using (var yteDbcontext = new YTeDbContext())
+            {
+                List<PhongKham> listPhongKham = yteDbcontext.PhongKhams.ToList();
+                foreach (var record in listPhongKham)
+                {
+                    guna2ComboBox1.Items.Add(record.ID_PhongKham + " - " + record.TenPhongKham);
+                }
+            }
             this.IDnguoimangthai = 1;
             chartCanNang.Series[0].LegendText = "Cân nặng của mẹ";
             chartCanNang.Series[0].ChartType = SeriesChartType.Line;
