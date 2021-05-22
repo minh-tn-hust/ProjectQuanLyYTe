@@ -42,6 +42,17 @@ namespace Take3
                         }
                     }
                 }
+                using (var yteDbcontext = new YTeDbContext())
+                {
+                    List<PhuNuMangThai> listphunu = yteDbcontext.PhuNuMangThais.ToList();
+                    foreach (var record in listphunu)
+                    {
+                        if (record.SoBHYTe == guna2TextBox7.Text)
+                        {
+                            flag = true;
+                        }
+                    }
+                }
                 
                 //neu chua co nguoi nay
                 if (flag == false)
