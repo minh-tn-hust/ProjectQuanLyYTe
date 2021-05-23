@@ -181,47 +181,6 @@ namespace QLPK
             guna2Button10.Text = "17:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t17.ToString();
         }
 
-        private void guna2Button2_Click_1(object sender, EventArgs e)
-        {
-            if (txtBHYT.Text != "" && txtCMND.Text == "")
-            {
-                using (var context = new YTeDbContext())
-                {
-                    var people = context.TreEms.Where(s => s.MaTheBHYTe == txtBHYT.Text).FirstOrDefault();
-                    if (people == null)
-                    {
-                        MessageBox.Show("Sai thông tin!", "Thông báo!");
-                    }
-                    else
-                    {
-                        this.Hide();
-                        FormDanhSachDatLich f = new FormDanhSachDatLich();
-                        f.BHYT = people.MaTheBHYTe;
-                        f.Show();
-                        this.Close();
-                    }
-                }
-            }
-            if (txtCMND.Text != "" && txtBHYT.Text == "")
-            {
-                using (var context = new YTeDbContext())
-                {
-                    var people = context.ConNguois.Where(s => s.SoCMND == txtCMND.Text).FirstOrDefault();
-                    if (people == null)
-                    {
-                        MessageBox.Show("Sai thông tin!", "Thông báo!");
-                    }
-                    else
-                    {
-                        this.Hide();
-                        FormDanhSachDatLich f = new FormDanhSachDatLich();
-                        f.SoCMND = people.SoCMND;
-                        f.Show();
-                    }
-                }
-            }
-        }
-
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             FormDanhSachDatLich f = new FormDanhSachDatLich();
@@ -430,9 +389,45 @@ namespace QLPK
 
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void butTimKiem_Click(object sender, EventArgs e)
         {
-
+            if (txtBHYT.Text != "" && txtCMND.Text == "")
+            {
+                using (var context = new YTeDbContext())
+                {
+                    var people = context.TreEms.Where(s => s.MaTheBHYTe == txtBHYT.Text).FirstOrDefault();
+                    if (people == null)
+                    {
+                        MessageBox.Show("Sai thông tin!", "Thông báo!");
+                    }
+                    else
+                    {
+                        this.Hide();
+                        FormDanhSachDatLich f = new FormDanhSachDatLich();
+                        f.BHYT = people.MaTheBHYTe;
+                        f.Show();
+                        this.Close();
+                    }
+                }
+            }
+            if (txtCMND.Text != "" && txtBHYT.Text == "")
+            {
+                using (var context = new YTeDbContext())
+                {
+                    var people = context.ConNguois.Where(s => s.SoCMND == txtCMND.Text).FirstOrDefault();
+                    if (people == null)
+                    {
+                        MessageBox.Show("Sai thông tin!", "Thông báo!");
+                    }
+                    else
+                    {
+                        this.Hide();
+                        FormDanhSachDatLich f = new FormDanhSachDatLich();
+                        f.SoCMND = people.SoCMND;
+                        f.Show();
+                    }
+                }
+            }
         }
     }
 }
