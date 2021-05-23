@@ -328,7 +328,8 @@ namespace QLPK
             // 
             // cbGioiTinh
             // 
-            this.cbGioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbGioiTinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbGioiTinh.BackColor = System.Drawing.Color.Transparent;
             this.cbGioiTinh.BorderRadius = 8;
             this.cbGioiTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -344,10 +345,10 @@ namespace QLPK
             "Nam",
             "Nữ"});
             this.cbGioiTinh.ItemsAppearance.Parent = this.cbGioiTinh;
-            this.cbGioiTinh.Location = new System.Drawing.Point(168, 12);
+            this.cbGioiTinh.Location = new System.Drawing.Point(104, 12);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.ShadowDecoration.Parent = this.cbGioiTinh;
-            this.cbGioiTinh.Size = new System.Drawing.Size(260, 36);
+            this.cbGioiTinh.Size = new System.Drawing.Size(324, 36);
             this.cbGioiTinh.TabIndex = 41;
             // 
             // txtBHYT
@@ -608,8 +609,11 @@ namespace QLPK
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
+            this.MaximumSize = new System.Drawing.Size(913, 463);
+            this.MinimumSize = new System.Drawing.Size(913, 463);
             this.Name = "FormThongTinNguoiDatLich";
             this.Text = "Thông tin người đặt lịch";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.FormThongTinNguoiDatLich_Load_1);
             this.guna2Panel1.ResumeLayout(false);

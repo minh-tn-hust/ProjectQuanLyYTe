@@ -209,7 +209,7 @@
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.MinimumSize = new System.Drawing.Size(1000, 500);
             this.Name = "CuaNhanVien";
-            this.Text = "CuaNhanVien";
+            this.Text = "Dành cho nhân viên y tế";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MaximizedBoundsChanged += new System.EventHandler(this.CuaNhanVien_MaximizedBoundsChanged);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CuaNhanVien_FormClosed);
