@@ -54,7 +54,6 @@ namespace QuanLyYTe.GD_Chung
         private void CuaNhanVien_Load(object sender, EventArgs e)
         {
             loadingFormPanel.Height = this.Height - 85;
-            linkLabel1.Text = "Logout";
             using (var context = new YTeDbContext())
             {
                 var connguoi = context.ConNguois.Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi).FirstOrDefault();
@@ -64,7 +63,7 @@ namespace QuanLyYTe.GD_Chung
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            vacxinButton.BackColor = Color.FromArgb(94, 148, 255);
+            vacxinButton.BackColor = Color.FromArgb(150, 200, 255);
             treemButton.BackColor = Color.Transparent;
             booklichButton.BackColor = Color.Transparent;
             openChildForm(qlvc);
@@ -105,7 +104,7 @@ namespace QuanLyYTe.GD_Chung
         private void treemButton_Click(object sender, EventArgs e)
         {
             vacxinButton.BackColor = Color.Transparent;
-            treemButton.BackColor = Color.FromArgb(94, 148, 255);
+            treemButton.BackColor = Color.FromArgb(150, 200, 255);
             booklichButton.BackColor = Color.Transparent;
             openChildForm(pnte);
         }
@@ -118,7 +117,7 @@ namespace QuanLyYTe.GD_Chung
         {
             vacxinButton.BackColor = Color.Transparent;
             treemButton.BackColor = Color.Transparent;
-            booklichButton.BackColor = Color.FromArgb(94, 148, 255);
+            booklichButton.BackColor = Color.FromArgb(150, 200, 255);
             openChildForm(datlich);
 
         }
@@ -150,6 +149,14 @@ namespace QuanLyYTe.GD_Chung
             SignIn si = new SignIn();
             si.Show();
             this.Hide();
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            SignIn si = new SignIn();
+            si.Show();
+            this.Hide();
+
         }
     }
 }
