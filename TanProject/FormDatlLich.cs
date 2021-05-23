@@ -391,7 +391,7 @@ namespace QLPK
 
         private void butTimKiem_Click(object sender, EventArgs e)
         {
-            if (txtBHYT.Text != "" && txtCMND.Text == "")
+            if (txtBHYT.Text != "")
             {
                 using (var context = new YTeDbContext())
                 {
@@ -410,7 +410,7 @@ namespace QLPK
                     }
                 }
             }
-            if (txtCMND.Text != "" && txtBHYT.Text == "")
+            if (txtCMND.Text != "")
             {
                 using (var context = new YTeDbContext())
                 {
