@@ -33,8 +33,7 @@ namespace QuanLyYTe
                         this.Hide();
                         MenuUI menu = new MenuUI();
                         menu.ShowDialog();
-                        this.Close();
-                    }
+                          }
                     else
                     {
                         MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại!");
@@ -52,6 +51,7 @@ namespace QuanLyYTe
                         this.Hide();
                         CuaNhanVien cuaNhanVien = new CuaNhanVien(nhanVien);
                         cuaNhanVien.Show();
+
                         
 
                     }
@@ -83,9 +83,5 @@ namespace QuanLyYTe
             var context = new YTeDbContext();
         }
 
-        //private void lblQuenMatKhau_Click(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }
