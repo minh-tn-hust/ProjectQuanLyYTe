@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CuaNhanVien));
             this.mainMenuPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -140,7 +140,7 @@
             this.treemButton.ShadowDecoration.Parent = this.treemButton;
             this.treemButton.Size = new System.Drawing.Size(180, 45);
             this.treemButton.TabIndex = 5;
-            this.treemButton.Text = "Trẻ em";
+            this.treemButton.Text = "Trẻ em và Phụ nữ";
             this.treemButton.Click += new System.EventHandler(this.treemButton_Click);
             // 
             // MouseDetect
@@ -151,22 +151,22 @@
             // guna2Transition1
             // 
             this.guna2Transition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
             this.guna2Transition1.MaxAnimationTime = 500;
             this.guna2Transition1.TimeStep = 0.1F;
             // 
@@ -194,6 +194,7 @@
             this.Text = "CuaNhanVien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MaximizedBoundsChanged += new System.EventHandler(this.CuaNhanVien_MaximizedBoundsChanged);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CuaNhanVien_FormClosed);
             this.Load += new System.EventHandler(this.CuaNhanVien_Load);
             this.Resize += new System.EventHandler(this.CuaNhanVien_Resize);
             this.mainMenuPanel.ResumeLayout(false);

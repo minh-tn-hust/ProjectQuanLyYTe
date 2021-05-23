@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Model;
 using QuanLyYTe;
 using QuanLyVaxin;
+using QLPK;
+
 
 namespace QuanLyYTe.GD_Chung
 {
@@ -26,10 +28,12 @@ namespace QuanLyYTe.GD_Chung
             this.nhanvien = nhanvien;
 
         }
-        Form1 x1 = new Form1();
-        Form1 x2 = new Form1();
-        Form1 x3 = new Form1();
+
         QuanLyVaxin.Menu qlvc = new QuanLyVaxin.Menu();
+        PhuNuTreEm pnte = new PhuNuTreEm();
+        FormDatlLich datlich = new FormDatlLich();
+
+        
         private void openChildForm(Form childForm)
         {
             childForm.TopLevel = false;
@@ -103,16 +107,11 @@ namespace QuanLyYTe.GD_Chung
             vacxinButton.BackColor = Color.Transparent;
             treemButton.BackColor = Color.FromArgb(94, 148, 255);
             booklichButton.BackColor = Color.Transparent;
-            openChildForm(x2);
+            openChildForm(pnte);
         }
 
         private void phunuButton_Click(object sender, EventArgs e)
         {
-            vacxinButton.BackColor = Color.Transparent;
-            treemButton.BackColor = Color.Transparent;
-            booklichButton.BackColor = Color.Transparent;
-            openChildForm(x3);
-
         }
 
         private void booklichButton_Click(object sender, EventArgs e)
@@ -120,7 +119,7 @@ namespace QuanLyYTe.GD_Chung
             vacxinButton.BackColor = Color.Transparent;
             treemButton.BackColor = Color.Transparent;
             booklichButton.BackColor = Color.FromArgb(94, 148, 255);
-            openChildForm(x1);
+            openChildForm(datlich);
 
         }
 
@@ -144,6 +143,13 @@ namespace QuanLyYTe.GD_Chung
         private void CuaNhanVien_Resize(object sender, EventArgs e)
         {
             loadingFormPanel.Height = this.Height - 47;
+        }
+
+        private void CuaNhanVien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            SignIn si = new SignIn();
+            si.Show();
+            this.Hide();
         }
     }
 }
