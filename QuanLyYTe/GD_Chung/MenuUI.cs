@@ -190,14 +190,12 @@ namespace QuanLyYTe
             {
                 splitContainer2.SplitterDistance = 0;
                 PnSideMenu.Visible = false;
-                panel4.Width = 60;
-            }
+                            }
             else
             {
                 splitContainer2.SplitterDistance = 200;
                 PnSideMenu.Visible = true;
-                panel4.Width = splitContainer2.Panel1.Width;
-            }
+                           }
 
             
         }
@@ -243,9 +241,26 @@ namespace QuanLyYTe
 
         private void MenuUI_Load(object sender, EventArgs e)
         {
-            panel4.Width = splitContainer2.Panel1.Width;
-            //panel1.Width = 60;
-            //panel2.Width = 60;
-                   }
+                              }
+        int flag = 0;
+
+        private void btnAnHienMenu_Click(object sender, EventArgs e)
+        {
+            if (PnSideMenu.Visible == true)
+            {
+                splitContainer2.SplitterDistance = 0;
+                PnSideMenu.Visible = false;
+            }
+            else
+            {
+                splitContainer2.SplitterDistance = 200;
+                PnSideMenu.Visible = true;
+            }
+        }
+
+        private void MenuUI_FormClosed_1(object sender, FormClosedEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

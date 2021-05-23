@@ -97,8 +97,16 @@ namespace QuanLyYTe
         {
             using (var yteDbContext = new YTeDbContext())
             {
-                List<PhongKham> phongKham = yteDbContext.PhongKhams.ToList();
-                cbPhongKhamDangLamViec.DataSource = phongKham;
+                PhongKham unknownPhongKham = new PhongKham()
+                {
+                    ID_PhongKham = 0,
+                    TenPhongKham = ""
+                };
+                List<PhongKham> listPhongKham = new List<PhongKham>();
+                listPhongKham.Add(unknownPhongKham);
+               listPhongKham.AddRange(yteDbContext.PhongKhams.ToList());
+
+                cbPhongKhamDangLamViec.DataSource = listPhongKham;
                 cbPhongKhamDangLamViec.DisplayMember = "TenPhongKham";
                 cbPhongKhamDangLamViec.ValueMember = "ID_PhongKham";
             }
