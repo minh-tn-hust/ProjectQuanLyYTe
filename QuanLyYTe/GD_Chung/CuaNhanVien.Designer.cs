@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation5 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CuaNhanVien));
             this.mainMenuPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.vacxinButton = new Guna.UI2.WinForms.Guna2Button();
             this.booklichButton = new Guna.UI2.WinForms.Guna2Button();
@@ -40,15 +41,14 @@
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.loadingFormPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.mainMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenuPanel
             // 
             this.mainMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.mainMenuPanel.Controls.Add(this.guna2ImageButton1);
             this.mainMenuPanel.Controls.Add(this.label1);
+            this.mainMenuPanel.Controls.Add(this.guna2ImageButton1);
             this.mainMenuPanel.Controls.Add(this.vacxinButton);
             this.mainMenuPanel.Controls.Add(this.booklichButton);
             this.mainMenuPanel.Controls.Add(this.treemButton);
@@ -61,13 +61,35 @@
             this.mainMenuPanel.TabIndex = 5;
             this.mainMenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
+            this.guna2Transition1.SetDecoration(this.guna2ImageButton1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton1.IndicateFocus = true;
+            this.guna2ImageButton1.Location = new System.Drawing.Point(986, 0);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Size = new System.Drawing.Size(44, 44);
+            this.guna2ImageButton1.TabIndex = 10;
+            this.guna2ImageButton1.UseTransparentBackground = true;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 25);
             this.label1.TabIndex = 9;
@@ -85,7 +107,7 @@
             this.vacxinButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vacxinButton.ForeColor = System.Drawing.Color.White;
             this.vacxinButton.HoverState.Parent = this.vacxinButton;
-            this.vacxinButton.Location = new System.Drawing.Point(477, 2);
+            this.vacxinButton.Location = new System.Drawing.Point(415, 1);
             this.vacxinButton.Name = "vacxinButton";
             this.vacxinButton.ShadowDecoration.Parent = this.vacxinButton;
             this.vacxinButton.Size = new System.Drawing.Size(180, 45);
@@ -105,7 +127,7 @@
             this.booklichButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.booklichButton.ForeColor = System.Drawing.Color.White;
             this.booklichButton.HoverState.Parent = this.booklichButton;
-            this.booklichButton.Location = new System.Drawing.Point(849, 1);
+            this.booklichButton.Location = new System.Drawing.Point(803, 0);
             this.booklichButton.Name = "booklichButton";
             this.booklichButton.ShadowDecoration.Parent = this.booklichButton;
             this.booklichButton.Size = new System.Drawing.Size(180, 45);
@@ -125,7 +147,7 @@
             this.treemButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treemButton.ForeColor = System.Drawing.Color.White;
             this.treemButton.HoverState.Parent = this.treemButton;
-            this.treemButton.Location = new System.Drawing.Point(663, 2);
+            this.treemButton.Location = new System.Drawing.Point(609, 0);
             this.treemButton.Name = "treemButton";
             this.treemButton.ShadowDecoration.Parent = this.treemButton;
             this.treemButton.Size = new System.Drawing.Size(180, 45);
@@ -141,22 +163,22 @@
             // guna2Transition1
             // 
             this.guna2Transition1.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation4;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation5;
             this.guna2Transition1.MaxAnimationTime = 500;
             this.guna2Transition1.TimeStep = 0.1F;
             // 
@@ -178,26 +200,6 @@
             this.entityCommand1.Connection = null;
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2Transition1.SetDecoration(this.guna2ImageButton1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(236, 1);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(44, 44);
-            this.guna2ImageButton1.TabIndex = 10;
-            this.guna2ImageButton1.UseTransparentBackground = true;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // CuaNhanVien
             // 
