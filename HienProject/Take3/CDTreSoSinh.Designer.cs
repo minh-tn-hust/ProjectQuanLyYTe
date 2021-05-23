@@ -234,7 +234,7 @@ namespace Take3
             this.guna2Panel2.Controls.Add(this.guna2DateTimePicker1);
             this.guna2Panel2.Controls.Add(this.guna2ComboBox1);
             this.guna2Panel2.Controls.Add(this.guna2TextBox2);
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 38);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 42);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(727, 380);
@@ -351,6 +351,7 @@ namespace Take3
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CDTreSoSinh";
             this.Text = "CDTreSoSinh";
+            this.Load += new System.EventHandler(this.CDTreSoSinh_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();

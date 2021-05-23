@@ -50,6 +50,10 @@ namespace Take3
                     trecon.ID_TreEm = IDtreem;
                     trecon.ChieuCao = int.Parse(guna2TextBox2.Text);
                     trecon.CanNang = int.Parse(guna2TextBox3.Text);
+                    if (guna2ComboBox1.SelectedItem != null)
+                    {
+                        trecon.ID_PhongKham = Int32.Parse(guna2ComboBox1.SelectedItem.ToString().Substring(0, 1));
+                    }
                     try
                     {
                         yteDbContext.SaveChanges();
@@ -64,6 +68,18 @@ namespace Take3
                 
             }
             else MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+        }
+
+        private void CDTreSoSinh_Load(object sender, EventArgs e)
+        {
+            using (var yteDbcontext = new YTeDbContext())
+            {
+                List<PhongKham> listPhongKham = yteDbcontext.PhongKhams.ToList();
+                foreach (var record in listPhongKham)
+                {
+                    guna2ComboBox1.Items.Add(record.ID_PhongKham + " - " + record.TenPhongKham);
+                }
+            }
         }
     }
 }

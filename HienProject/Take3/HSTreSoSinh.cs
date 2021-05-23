@@ -38,7 +38,7 @@ namespace Take3
                 CDTreSoSinh CD1 = new CDTreSoSinh();
                 bool co = false;
                 string ktBHYT = guna2TextBox2.Text;
-                MessageBox.Show("Kiem tra xem tre co trong danh sach khong " + CD1.IDtreem);
+                //MessageBox.Show("Kiem tra xem tre co trong danh sach khong " + CD1.IDtreem);
                 // Kiem tra xem tre co trong danh sach khong
                 using (var database = new YTeDbContext())
                 {
@@ -52,7 +52,7 @@ namespace Take3
                         }
                     } 
                 }
-                MessageBox.Show("Kiem tra xem tre co trong danh sach khong " + CD1.IDtreem);
+                //MessageBox.Show("Kiem tra xem tre co trong danh sach khong " + CD1.IDtreem);
                 #region Kiem tra tre em co trong danh sach hay khong
                 // Neu tre khong co trong danh sach
                 if (co == false)
@@ -183,7 +183,7 @@ namespace Take3
                 co = true;
                 CD1.Gioitinh = guna2ComboBox1.SelectedItem.ToString();
                 CD1.born = DateTime.Parse(guna2DateTimePicker1.Value.ToString());
-                MessageBox.Show(CD1.IDtreem.ToString());
+                //MessageBox.Show(CD1.IDtreem.ToString());
                 CD1.Show();
             }
             else MessageBox.Show("Vui kiểm tra lại thông tin!");
@@ -202,16 +202,18 @@ namespace Take3
 
         private void HSTreSoSinh_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(treem.ID_TreEm.ToString());
+            //MessageBox.Show(treem.ID_TreEm.ToString());
             guna2TextBox1.Text = connguoi.HoTen;
             using (var context = new YTeDbContext())
             {
                 var bo = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Bo).FirstOrDefault();
-                if (guna2TextBox8 != null) guna2TextBox8.Text = bo.HoTen;
-                if (guna2TextBox9 != null) guna2TextBox9.Text = bo.NgheNghiep;
-                if (guna2TextBox10 != null) guna2TextBox10.Text = bo.SoDienThoai;
-                if (guna2TextBox11 != null) guna2TextBox11.Text = bo.SoCMND;
-                if (guna2TextBox13 != null) guna2TextBox13.Text = bo.DiaChi;
+                guna2TextBox8.Text = bo.HoTen;
+                guna2TextBox9.Text = bo.NgheNghiep;
+                guna2TextBox10.Text = bo.SoDienThoai;
+                guna2TextBox11.Text = bo.SoCMND;
+                guna2TextBox13.Text = bo.DiaChi;
+                guna2DateTimePicker3.Value = DateTime.Parse(bo.NgaySinh.ToString());
+
 
                 var me = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Me).FirstOrDefault();
                 guna2TextBox3.Text = me.HoTen;
@@ -219,15 +221,18 @@ namespace Take3
                 guna2TextBox5.Text = me.SoDienThoai;
                 guna2TextBox7.Text = me.SoCMND;
                 guna2TextBox12.Text = me.DiaChi;
+                guna2DateTimePicker2.Value = DateTime.Parse(me.NgaySinh.ToString());
 
                 var BHYT = context.TreEms.Where(b => b.ID_TreEm == treem.ID_TreEm).FirstOrDefault();
                 guna2TextBox2.Text = BHYT.MaTheBHYTe;
+                guna2TextBox14.Text = BHYT.ThongTinNguoiBaoTin;
                 var GT = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Nguoi).FirstOrDefault();
                 if (GT.GioiTinh == 0)
                 {
                     guna2ComboBox1.SelectedItem = "Nam";
                 }
                 else guna2ComboBox1.SelectedItem = "Nữ";
+                guna2DateTimePicker1.Value = DateTime.Parse(GT.NgaySinh.ToString());
             }
         }
     }
