@@ -48,7 +48,6 @@ namespace BieuDo
                 {
                     if (record.ID_TreEm == IDtreem)
                     {
-                        MessageBox.Show(IDtreem.ToString());
                         Height[p] = record.ChieuCao;
                         Weight[p] = record.CanNang;
                         Age[p] = Convert.ToInt32(record.Tuoi);
