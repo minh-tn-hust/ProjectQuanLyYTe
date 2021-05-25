@@ -141,16 +141,28 @@ namespace QuanLyVaxin
                     }
 
                     MessageBox.Show("Lưu thành công!");
+                    
                 }
 
             }
+            dataTable = loadingTable.sudung();
+            dtgSuDungVacXin.DataSource = dataTable;
+            dtgSuDungVacXin.Update();
+            dtgSuDungVacXin.DataSource = filter1.searchRow(dtgSuDungVacXin, "Họ tên", txtTimKiemNguoi.Text);
         }
 
         private void dtgSuDungVacXin_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
-            numrow = e.RowIndex;
-            txtTimKiemNguoi.Text = dtgSuDungVacXin.Rows[numrow].Cells[1].Value.ToString();
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            else
+            {
+                numrow = e.RowIndex;
+                txtTimKiemNguoi.Text = dtgSuDungVacXin.Rows[numrow].Cells[1].Value.ToString();
+            }
         }
 
         private void cbTenVacXin1_SelectedIndexChanged(object sender, EventArgs e)

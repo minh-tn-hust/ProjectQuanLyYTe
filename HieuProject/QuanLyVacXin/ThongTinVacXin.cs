@@ -34,8 +34,16 @@ namespace QuanLyVaxin
         private void dtgThongTinVacXin_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
-            numrow = e.RowIndex;
-            txtTimKiemVacXin.Text = dtgThongTinVacXin.Rows[numrow].Cells[1].Value.ToString();
+            if(e.RowIndex < 0)
+            {
+                return;
+            }
+            else
+            {
+                numrow = e.RowIndex;
+                txtTimKiemVacXin.Text = dtgThongTinVacXin.Rows[numrow].Cells[1].Value.ToString();
+            }
+            
         }
     }
 }
