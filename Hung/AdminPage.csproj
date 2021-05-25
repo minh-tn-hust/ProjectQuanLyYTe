@@ -35,7 +35,25 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+<<<<<<< HEAD:QuanLyYTe/AdminPage.csproj
  
+=======
+
+    <ManifestCertificateThumbprint>7D945F1A573B8A938E86E58923D01D58255BDBD4</ManifestCertificateThumbprint>
+<<<<<<< HEAD:QuanLyYTe/AdminPage.csproj
+=======
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AdminPage_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+>>>>>>> a9963a21deb97b0f3f0afc41dfc9b8fa7f3d598f:Hung/AdminPage.csproj
+>>>>>>> 183632a7825da4bd321f8bd6ee1703d63bc2e27f:Hung/AdminPage.csproj
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -290,7 +308,23 @@
       <Name>QLPK</Name>
     </ProjectReference>
   </ItemGroup>
+<<<<<<< HEAD:QuanLyYTe/AdminPage.csproj
 
+=======
+<PropertyGroup>
+  <ManifestCertificateThumbprint>xxxxx xxxxxx</ManifestCertificateThumbprint>
+  <ManifestKeyFile>xxxxxxxx.pfx</ManifestKeyFile>
+<GenerateManifests>true</GenerateManifests>
+<SignManifests>false</SignManifests>
+</PropertyGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+>>>>>>> 183632a7825da4bd321f8bd6ee1703d63bc2e27f:Hung/AdminPage.csproj
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

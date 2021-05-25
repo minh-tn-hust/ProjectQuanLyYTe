@@ -27,7 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLPK", "TanProject\QLPK.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TanProject", "TanProject", "{0CC24BEE-B281-4ECA-9388-5899EAFBC190}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPage", "QuanLyYTe\AdminPage.csproj", "{13886203-DC29-469C-BF09-FDC4C0961555}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPage", "Hung\AdminPage.csproj", "{13886203-DC29-469C-BF09-FDC4C0961555}"
+>>>>>>> 183632a7825da4bd321f8bd6ee1703d63bc2e27f
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
