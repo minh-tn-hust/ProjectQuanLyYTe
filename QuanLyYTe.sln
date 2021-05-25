@@ -3,15 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPage", "QuanLyYTe\AdminPage.csproj", "{13886203-DC29-469C-BF09-FDC4C0961555}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LastModel", "LastModel\LastModel.csproj", "{1A61898A-EF30-47F1-A70C-1C51BA9899A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{B680FD58-2E26-4DCB-AD13-E3BC7E5EF0BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSDL", "CSDL", "{DBD17908-FFA6-41DE-BE7E-EB363BCB05C5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hung", "Hung", "{2B906E5F-3C77-43BE-9C71-7143796A96D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hieu", "HieuProject\Hieu\Hieu.csproj", "{BE76B11E-10CA-46D8-A75F-DBE9F4321A7B}"
 EndProject
@@ -31,16 +27,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLPK", "TanProject\QLPK.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TanProject", "TanProject", "{0CC24BEE-B281-4ECA-9388-5899EAFBC190}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPage", "QuanLyYTe\AdminPage.csproj", "{13886203-DC29-469C-BF09-FDC4C0961555}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{13886203-DC29-469C-BF09-FDC4C0961555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13886203-DC29-469C-BF09-FDC4C0961555}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13886203-DC29-469C-BF09-FDC4C0961555}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13886203-DC29-469C-BF09-FDC4C0961555}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A61898A-EF30-47F1-A70C-1C51BA9899A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1A61898A-EF30-47F1-A70C-1C51BA9899A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A61898A-EF30-47F1-A70C-1C51BA9899A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -73,12 +67,15 @@ Global
 		{B9606C25-C18B-48FE-8AF0-C458A19CF1F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9606C25-C18B-48FE-8AF0-C458A19CF1F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9606C25-C18B-48FE-8AF0-C458A19CF1F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13886203-DC29-469C-BF09-FDC4C0961555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13886203-DC29-469C-BF09-FDC4C0961555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13886203-DC29-469C-BF09-FDC4C0961555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13886203-DC29-469C-BF09-FDC4C0961555}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{13886203-DC29-469C-BF09-FDC4C0961555} = {2B906E5F-3C77-43BE-9C71-7143796A96D6}
 		{1A61898A-EF30-47F1-A70C-1C51BA9899A0} = {DBD17908-FFA6-41DE-BE7E-EB363BCB05C5}
 		{B680FD58-2E26-4DCB-AD13-E3BC7E5EF0BA} = {DBD17908-FFA6-41DE-BE7E-EB363BCB05C5}
 		{BE76B11E-10CA-46D8-A75F-DBE9F4321A7B} = {DBD17908-FFA6-41DE-BE7E-EB363BCB05C5}

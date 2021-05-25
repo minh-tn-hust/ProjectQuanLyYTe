@@ -74,10 +74,10 @@ namespace QLPK
             this.guna2Panel1.Controls.Add(this.buttonLuu);
             this.guna2Panel1.Controls.Add(this.buttonThoat);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 691);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 358);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1165, 58);
+            this.guna2Panel1.Size = new System.Drawing.Size(843, 58);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2Button1
@@ -89,7 +89,7 @@ namespace QLPK
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(805, 13);
+            this.guna2Button1.Location = new System.Drawing.Point(483, 13);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(100, 33);
@@ -106,7 +106,7 @@ namespace QLPK
             this.buttonLuu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonLuu.ForeColor = System.Drawing.Color.White;
             this.buttonLuu.HoverState.Parent = this.buttonLuu;
-            this.buttonLuu.Location = new System.Drawing.Point(933, 13);
+            this.buttonLuu.Location = new System.Drawing.Point(611, 13);
             this.buttonLuu.Name = "buttonLuu";
             this.buttonLuu.ShadowDecoration.Parent = this.buttonLuu;
             this.buttonLuu.Size = new System.Drawing.Size(100, 33);
@@ -123,7 +123,7 @@ namespace QLPK
             this.buttonThoat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonThoat.ForeColor = System.Drawing.Color.White;
             this.buttonThoat.HoverState.Parent = this.buttonThoat;
-            this.buttonThoat.Location = new System.Drawing.Point(1053, 13);
+            this.buttonThoat.Location = new System.Drawing.Point(731, 13);
             this.buttonThoat.Name = "buttonThoat";
             this.buttonThoat.ShadowDecoration.Parent = this.buttonThoat;
             this.buttonThoat.Size = new System.Drawing.Size(100, 33);
@@ -138,15 +138,16 @@ namespace QLPK
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel4);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 547);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 214);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(1165, 144);
+            this.guna2Panel2.Size = new System.Drawing.Size(843, 144);
             this.guna2Panel2.TabIndex = 1;
             // 
             // textboxLyDoKham
             // 
             this.textboxLyDoKham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textboxLyDoKham.AutoScroll = true;
             this.textboxLyDoKham.BorderRadius = 8;
             this.textboxLyDoKham.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textboxLyDoKham.DefaultText = "";
@@ -166,7 +167,7 @@ namespace QLPK
             this.textboxLyDoKham.PlaceholderText = "";
             this.textboxLyDoKham.SelectedText = "";
             this.textboxLyDoKham.ShadowDecoration.Parent = this.textboxLyDoKham;
-            this.textboxLyDoKham.Size = new System.Drawing.Size(1063, 94);
+            this.textboxLyDoKham.Size = new System.Drawing.Size(741, 94);
             this.textboxLyDoKham.TabIndex = 53;
             this.textboxLyDoKham.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -192,7 +193,7 @@ namespace QLPK
             this.textboxDiaChi.PlaceholderText = "";
             this.textboxDiaChi.SelectedText = "";
             this.textboxDiaChi.ShadowDecoration.Parent = this.textboxDiaChi;
-            this.textboxDiaChi.Size = new System.Drawing.Size(1063, 33);
+            this.textboxDiaChi.Size = new System.Drawing.Size(741, 33);
             this.textboxDiaChi.TabIndex = 52;
             // 
             // guna2HtmlLabel5
@@ -221,10 +222,10 @@ namespace QLPK
             // 
             this.guna2Panel3.Controls.Add(this.splitContainer1);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 403);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 70);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(1165, 144);
+            this.guna2Panel3.Size = new System.Drawing.Size(843, 144);
             this.guna2Panel3.TabIndex = 2;
             // 
             // splitContainer1
@@ -250,8 +251,8 @@ namespace QLPK
             this.splitContainer1.Panel2.Controls.Add(this.guna2DateTimePicker1);
             this.splitContainer1.Panel2.Controls.Add(this.guna2HtmlLabel8);
             this.splitContainer1.Panel2.Controls.Add(this.comboboxGioiTinh);
-            this.splitContainer1.Size = new System.Drawing.Size(1165, 144);
-            this.splitContainer1.SplitterDistance = 582;
+            this.splitContainer1.Size = new System.Drawing.Size(843, 144);
+            this.splitContainer1.SplitterDistance = 421;
             this.splitContainer1.TabIndex = 0;
             // 
             // textboxCMND
@@ -276,7 +277,7 @@ namespace QLPK
             this.textboxCMND.PlaceholderText = "";
             this.textboxCMND.SelectedText = "";
             this.textboxCMND.ShadowDecoration.Parent = this.textboxCMND;
-            this.textboxCMND.Size = new System.Drawing.Size(487, 36);
+            this.textboxCMND.Size = new System.Drawing.Size(326, 36);
             this.textboxCMND.TabIndex = 65;
             // 
             // textboxSDT
@@ -301,7 +302,7 @@ namespace QLPK
             this.textboxSDT.PlaceholderText = "";
             this.textboxSDT.SelectedText = "";
             this.textboxSDT.ShadowDecoration.Parent = this.textboxSDT;
-            this.textboxSDT.Size = new System.Drawing.Size(487, 36);
+            this.textboxSDT.Size = new System.Drawing.Size(326, 36);
             this.textboxSDT.TabIndex = 64;
             // 
             // textboxHoTen
@@ -326,7 +327,7 @@ namespace QLPK
             this.textboxHoTen.PlaceholderText = "";
             this.textboxHoTen.SelectedText = "";
             this.textboxHoTen.ShadowDecoration.Parent = this.textboxHoTen;
-            this.textboxHoTen.Size = new System.Drawing.Size(487, 36);
+            this.textboxHoTen.Size = new System.Drawing.Size(326, 36);
             this.textboxHoTen.TabIndex = 63;
             // 
             // guna2HtmlLabel3
@@ -406,7 +407,7 @@ namespace QLPK
             this.textboxEmail.PlaceholderText = "";
             this.textboxEmail.SelectedText = "";
             this.textboxEmail.ShadowDecoration.Parent = this.textboxEmail;
-            this.textboxEmail.Size = new System.Drawing.Size(451, 36);
+            this.textboxEmail.Size = new System.Drawing.Size(290, 36);
             this.textboxEmail.TabIndex = 66;
             // 
             // guna2DateTimePicker1
@@ -423,7 +424,7 @@ namespace QLPK
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(451, 36);
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(290, 36);
             this.guna2DateTimePicker1.TabIndex = 65;
             this.guna2DateTimePicker1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 19, 13, 1, 42, 457);
@@ -459,7 +460,7 @@ namespace QLPK
             this.comboboxGioiTinh.Location = new System.Drawing.Point(116, 16);
             this.comboboxGioiTinh.Name = "comboboxGioiTinh";
             this.comboboxGioiTinh.ShadowDecoration.Parent = this.comboboxGioiTinh;
-            this.comboboxGioiTinh.Size = new System.Drawing.Size(451, 36);
+            this.comboboxGioiTinh.Size = new System.Drawing.Size(290, 36);
             this.comboboxGioiTinh.TabIndex = 63;
             // 
             // guna2Panel4
@@ -469,7 +470,7 @@ namespace QLPK
             this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
-            this.guna2Panel4.Size = new System.Drawing.Size(1165, 403);
+            this.guna2Panel4.Size = new System.Drawing.Size(843, 70);
             this.guna2Panel4.TabIndex = 3;
             // 
             // dataGridView1
@@ -489,7 +490,7 @@ namespace QLPK
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeight = 4;
+            this.dataGridView1.ColumnHeadersHeight = 40;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -505,7 +506,7 @@ namespace QLPK
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1165, 403);
+            this.dataGridView1.Size = new System.Drawing.Size(843, 70);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -520,7 +521,7 @@ namespace QLPK
             this.dataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            this.dataGridView1.ThemeStyle.HeaderStyle.Height = 40;
             this.dataGridView1.ThemeStyle.ReadOnly = false;
             this.dataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -529,14 +530,14 @@ namespace QLPK
             this.dataGridView1.ThemeStyle.RowsStyle.Height = 22;
             this.dataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
             // FormDanhSachDatLich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1165, 749);
+            this.ClientSize = new System.Drawing.Size(843, 416);
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
@@ -571,7 +572,6 @@ namespace QLPK
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2DataGridView dataGridView1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private Guna.UI2.WinForms.Guna2TextBox textboxCMND;
         private Guna.UI2.WinForms.Guna2TextBox textboxSDT;
@@ -585,5 +585,6 @@ namespace QLPK
         private Guna.UI2.WinForms.Guna2ComboBox comboboxGioiTinh;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridView1;
     }
 }

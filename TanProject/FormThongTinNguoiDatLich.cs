@@ -37,46 +37,57 @@ namespace QLPK
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn thoát Phiếu mà chưa lưu không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }
         }
 
-        public DateTime date = DateTime.Now;
-        public String phongkham = "";
+        public DateTime date;
+        public String phongkham;
         private void FormThongTinNguoiDatLich_Load_1(object sender, EventArgs e)
         {
-            guna2DateTimePicker1.Value = date;
+            guna2DateTimePicker1.Value = DateTime.Now;
+            
             //MessageBox.Show(date.ToString());
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            using (var context = new YTeDbContext())
+            if (txtHoTen.Text == "" && txtSDT.Text == "" && txtLyDoKham.Text == "")
             {
-                var phongKham = context.PhongKhams.Where(s => s.TenPhongKham == phongkham).FirstOrDefault();
-                var People = context.DatLichKhams.Where(s => s.ID_PhongKham == phongKham.ID_PhongKham).FirstOrDefault();
-                var people = new ConNguoi();
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo!");
+                    this.Close();
+            }
+            else
+            {
+                using (var context = new YTeDbContext())
                 {
-                    people.HoTen = txtHoTen.Text;
-                    people.SoCMND = txtCMND.Text;
-                    people.SoDienThoai = txtSDT.Text;
-                    people.Email = txtEmail.Text;
-                    people.DiaChi = txtDiaChi.Text;
-                    //  people.GioiTinh = cbGioiTinh.Text;
-                }
-                context.ConNguois.Add(people);
-                context.SaveChanges();
+                    var phongKham = context.PhongKhams.Where(s => s.TenPhongKham == phongkham).FirstOrDefault();
+                    var People = context.DatLichKhams.Where(s => s.ID_PhongKham == phongKham.ID_PhongKham).FirstOrDefault();
+                    var people = new ConNguoi();
+                    {
+                        people.HoTen = txtHoTen.Text;
+                        people.SoCMND = txtCMND.Text;
+                        people.SoDienThoai = txtSDT.Text;
+                        people.Email = txtEmail.Text;
+                        people.DiaChi = txtDiaChi.Text;
+                        if (cbGioiTinh.Text == "Nữ") people.GioiTinh = 1;
+                        else people.GioiTinh = 0;
+                    }
+                    context.ConNguois.Add(people);
+                    context.SaveChanges();
 
-                var connguoi = new DatLichKham();
-                {
-                    connguoi.GhiChu = txtGhiChu.Text;
-                    connguoi.LyDoKham = txtLyDoKham.Text;
-                    connguoi.ID_PhongKham = People.ID_PhongKham;
+                    var connguoi = new DatLichKham();
+                    {
+                        connguoi.GhiChu = txtGhiChu.Text;
+                        connguoi.LyDoKham = txtLyDoKham.Text;
+                        connguoi.ID_PhongKham = People.ID_PhongKham;
+                        //connguoi.ID_NhanVien =  txtNguoiTaoDon.Text;
+                    }
+                    context.DatLichKhams.Add(connguoi);
+                    context.SaveChanges();
                 }
-                context.DatLichKhams.Add(connguoi);
-                context.SaveChanges();
             }
         }
     }

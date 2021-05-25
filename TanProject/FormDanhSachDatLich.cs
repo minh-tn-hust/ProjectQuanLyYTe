@@ -29,24 +29,38 @@ namespace QLPK
             }
         }
         public string SoCMND = null;
-        public string BHYT = null;
+        public string soBHYT = null;
+        public int ID_Nguoi = 0;
+        public string SDT = null;
         DTGFilter filter = new DTGFilter();
-
-        DTGFilter dtg = new DTGFilter();
         private void FormDanhSachDatLich_Load(object sender, EventArgs e)
         {
-            if (SoCMND == null)
+            if (SoCMND == null && SDT == null && ID_Nguoi == 0)
             {
                 LoadingTable ld = new LoadingTable(); // tạo đối tượng loadingtable (file class trong Cotroller -> dataGridView -> LoadingTable.cs
                 dataGridView1.DataSource = ld.datlichkham();
             }
-            else
+            
+            if(SoCMND != null)
             {
                 LoadingTable ld = new LoadingTable(); // tạo đối tượng loadingtable (file class trong Cotroller -> dataGridView -> LoadingTable.cs
                 dataGridView1.DataSource = ld.datlichkham();
-                dataGridView1.DataSource = filter.searchRow(dataGridView1, "Số CMND", SoCMND);
+                //dataGridView1.DataSource = filter.searchRow(dataGridView1, "Số CMND", SoCMND);
             }
 
+            if(SDT != null)
+            {
+                LoadingTable ld = new LoadingTable();
+                dataGridView1.DataSource = ld.datlichkham();
+                //dataGridView1.DataSource = filter.searchRow(dataGridView1, "SĐT", SDT);
+            }
+            
+            if (soBHYT != null)
+            {
+                LoadingTable ld = new LoadingTable();
+                dataGridView1.DataSource = ld.datlichkham();
+                //dataGridView1.DataSource = filter.searchRow(dataGridView1, "BHYT", soBHYT);
+            }
         }
         
 
@@ -86,19 +100,19 @@ namespace QLPK
                 var oldpeople = context.DatLichKhams.Where(s => s.ID_Nguoi == oldconnguoi.ID_Nguoi).FirstOrDefault();
                 {
                     oldpeople.LyDoKham = textboxLyDoKham.Text;
-                    // oldpeople.ThoiGianHenKham = guna2DateTimePicker1.Value.ToString();
+                    oldpeople.ThoiGianHenKham = guna2DateTimePicker1.Value;
                     oldconnguoi.HoTen = textboxHoTen.Text;
                     oldconnguoi.SoCMND = textboxCMND.Text;
                     oldconnguoi.SoDienThoai = textboxSDT.Text;
                     oldconnguoi.DiaChi = textboxDiaChi.Text;
                     oldconnguoi.Email = textboxEmail.Text;
+                    if (comboboxGioiTinh.Text == "Nam") oldconnguoi.GioiTinh = 1;
+                    else oldconnguoi.GioiTinh = 0;
                 }
                 context.SaveChanges();
                 LoadingTable ld = new LoadingTable();
                 dataGridView1.DataSource = ld.datlichkham();
-                MessageBox.Show(oldconnguoi.DiaChi);
-                MessageBox.Show(oldpeople.LyDoKham);
-                MessageBox.Show(oldpeople.ID_Nguoi + "  " + oldconnguoi.ID_Nguoi);
+                MessageBox.Show("Đã lưu bệnh nhân có ID: " + oldconnguoi.ID_Nguoi, "Thông báo!");
             }
         }
 
@@ -107,7 +121,8 @@ namespace QLPK
             this.Close();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             c = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
             textboxHoTen.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -116,8 +131,9 @@ namespace QLPK
             textboxSDT.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
             textboxEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             textboxLyDoKham.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            string i = dataGridView1.Rows[e.RowIndex].Cells[4].ToString();
-            if (i == "0") comboboxGioiTinh.Text = "Nữ";
+            string i = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            MessageBox.Show(i);
+            if (i == "1") comboboxGioiTinh.Text = "Nữ";
             else comboboxGioiTinh.Text = "Nam";
             guna2DateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
         }
