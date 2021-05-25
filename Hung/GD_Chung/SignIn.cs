@@ -33,7 +33,8 @@ namespace QuanLyYTe
                         this.Hide();
                         MenuUI menu = new MenuUI();
                         menu.ShowDialog();
-                          }
+                       
+                    }
                     else
                     {
                         MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại!");

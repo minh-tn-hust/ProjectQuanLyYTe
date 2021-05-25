@@ -29,11 +29,10 @@ namespace QLPK
             }
         }
         public string SoCMND = null;
+        public string soBHYT = null;
         public int ID_Nguoi = 0;
         public string SDT = null;
         DTGFilter filter = new DTGFilter();
-
-        DTGFilter dtg = new DTGFilter();
         private void FormDanhSachDatLich_Load(object sender, EventArgs e)
         {
             if (SoCMND == null && SDT == null && ID_Nguoi == 0)
@@ -46,14 +45,21 @@ namespace QLPK
             {
                 LoadingTable ld = new LoadingTable(); // tạo đối tượng loadingtable (file class trong Cotroller -> dataGridView -> LoadingTable.cs
                 dataGridView1.DataSource = ld.datlichkham();
-                dataGridView1.DataSource = filter.searchRow(dataGridView1, "Số CMND", SoCMND);
+                //dataGridView1.DataSource = filter.searchRow(dataGridView1, "Số CMND", SoCMND);
             }
 
             if(SDT != null)
             {
                 LoadingTable ld = new LoadingTable();
                 dataGridView1.DataSource = ld.datlichkham();
-                dataGridView1.DataSource = filter.searchRow(dataGridView1, "SĐT", SDT);
+                //dataGridView1.DataSource = filter.searchRow(dataGridView1, "SĐT", SDT);
+            }
+            
+            if (soBHYT != null)
+            {
+                LoadingTable ld = new LoadingTable();
+                dataGridView1.DataSource = ld.datlichkham();
+                //dataGridView1.DataSource = filter.searchRow(dataGridView1, "BHYT", soBHYT);
             }
         }
         

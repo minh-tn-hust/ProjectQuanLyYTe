@@ -48,6 +48,8 @@ namespace QuanLyYTe.Admin
             SignIn signIn = new SignIn();
             this.Close();
             signIn.ShowDialog();
+
+            // check lỗi ko hiện github
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)

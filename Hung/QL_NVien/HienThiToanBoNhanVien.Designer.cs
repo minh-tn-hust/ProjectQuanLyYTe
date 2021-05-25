@@ -104,7 +104,7 @@
             this.dtgvHienThiToanBo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dtgvHienThiToanBo.BackgroundColor = System.Drawing.Color.White;
             this.dtgvHienThiToanBo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvHienThiToanBo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dtgvHienThiToanBo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvHienThiToanBo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -126,12 +126,12 @@
             this.dtgvHienThiToanBo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvHienThiToanBo.EnableHeadersVisualStyles = false;
             this.dtgvHienThiToanBo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvHienThiToanBo.Location = new System.Drawing.Point(0, 55);
+            this.dtgvHienThiToanBo.Location = new System.Drawing.Point(0, 49);
             this.dtgvHienThiToanBo.Name = "dtgvHienThiToanBo";
             this.dtgvHienThiToanBo.RowHeadersVisible = false;
             this.dtgvHienThiToanBo.RowTemplate.Height = 31;
             this.dtgvHienThiToanBo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvHienThiToanBo.Size = new System.Drawing.Size(462, 432);
+            this.dtgvHienThiToanBo.Size = new System.Drawing.Size(462, 438);
             this.dtgvHienThiToanBo.TabIndex = 1;
             this.dtgvHienThiToanBo.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgvHienThiToanBo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -163,18 +163,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(462, 55);
+            this.panel1.Size = new System.Drawing.Size(462, 49);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.Controls.Add(this.txtTimKiem);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 55);
+            this.groupBox1.Size = new System.Drawing.Size(462, 49);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
@@ -188,7 +189,7 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.HoverState.Parent = this.btnTimKiem;
-            this.btnTimKiem.Location = new System.Drawing.Point(360, 16);
+            this.btnTimKiem.Location = new System.Drawing.Point(362, 12);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.ShadowDecoration.Parent = this.btnTimKiem;
             this.btnTimKiem.Size = new System.Drawing.Size(84, 31);
@@ -213,7 +214,7 @@
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
-            this.txtTimKiem.Location = new System.Drawing.Point(144, 16);
+            this.txtTimKiem.Location = new System.Drawing.Point(144, 12);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderText = "";
@@ -239,6 +240,7 @@
             // 
             // splitContainer4.Panel1
             // 
+            this.splitContainer4.Panel1.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer4.Panel1.Controls.Add(this.label12);
             this.splitContainer4.Panel1.Controls.Add(this.label25);
             this.splitContainer4.Panel1.Controls.Add(this.label10);
@@ -254,6 +256,7 @@
             // 
             // splitContainer4.Panel2
             // 
+            this.splitContainer4.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer4.Panel2.Controls.Add(this.cbNoiDangLamViec);
             this.splitContainer4.Panel2.Controls.Add(this.btnHienThi);
             this.splitContainer4.Panel2.Controls.Add(this.label13);
@@ -403,7 +406,7 @@
             this.cbNoiDangLamViec.Location = new System.Drawing.Point(4, 407);
             this.cbNoiDangLamViec.Name = "cbNoiDangLamViec";
             this.cbNoiDangLamViec.ShadowDecoration.Parent = this.cbNoiDangLamViec;
-            this.cbNoiDangLamViec.Size = new System.Drawing.Size(248, 23);
+            this.cbNoiDangLamViec.Size = new System.Drawing.Size(222, 23);
             this.cbNoiDangLamViec.TabIndex = 22;
             this.cbNoiDangLamViec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cbNoiDangLamViec.Click += new System.EventHandler(this.btnPhongKhamDangLamViec_Click);
@@ -417,10 +420,10 @@
             this.btnHienThi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnHienThi.ForeColor = System.Drawing.Color.White;
             this.btnHienThi.HoverState.Parent = this.btnHienThi;
-            this.btnHienThi.Location = new System.Drawing.Point(141, 436);
+            this.btnHienThi.Location = new System.Drawing.Point(126, 441);
             this.btnHienThi.Name = "btnHienThi";
             this.btnHienThi.ShadowDecoration.Parent = this.btnHienThi;
-            this.btnHienThi.Size = new System.Drawing.Size(104, 34);
+            this.btnHienThi.Size = new System.Drawing.Size(99, 34);
             this.btnHienThi.TabIndex = 21;
             this.btnHienThi.Text = "Hiển thị toàn bộ";
             this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
@@ -444,10 +447,10 @@
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.HoverState.Parent = this.btnXoa;
-            this.btnXoa.Location = new System.Drawing.Point(24, 436);
+            this.btnXoa.Location = new System.Drawing.Point(4, 441);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
-            this.btnXoa.Size = new System.Drawing.Size(104, 34);
+            this.btnXoa.Size = new System.Drawing.Size(99, 34);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xóa nhân viên";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -474,7 +477,7 @@
             this.cbGioiTinh.Location = new System.Drawing.Point(4, 248);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.ShadowDecoration.Parent = this.cbGioiTinh;
-            this.cbGioiTinh.Size = new System.Drawing.Size(248, 23);
+            this.cbGioiTinh.Size = new System.Drawing.Size(222, 23);
             this.cbGioiTinh.TabIndex = 6;
             this.cbGioiTinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -496,7 +499,7 @@
             this.dtNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.ShadowDecoration.Parent = this.dtNgaySinh;
-            this.dtNgaySinh.Size = new System.Drawing.Size(248, 24);
+            this.dtNgaySinh.Size = new System.Drawing.Size(222, 24);
             this.dtNgaySinh.TabIndex = 5;
             this.dtNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtNgaySinh.Value = new System.DateTime(2021, 5, 10, 12, 0, 0, 0);
@@ -525,7 +528,7 @@
             this.txtEmailLienHe.ReadOnly = true;
             this.txtEmailLienHe.SelectedText = "";
             this.txtEmailLienHe.ShadowDecoration.Parent = this.txtEmailLienHe;
-            this.txtEmailLienHe.Size = new System.Drawing.Size(248, 24);
+            this.txtEmailLienHe.Size = new System.Drawing.Size(222, 24);
             this.txtEmailLienHe.TabIndex = 9;
             // 
             // txtSoDienThoai
@@ -552,7 +555,7 @@
             this.txtSoDienThoai.ReadOnly = true;
             this.txtSoDienThoai.SelectedText = "";
             this.txtSoDienThoai.ShadowDecoration.Parent = this.txtSoDienThoai;
-            this.txtSoDienThoai.Size = new System.Drawing.Size(248, 24);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(222, 24);
             this.txtSoDienThoai.TabIndex = 8;
             // 
             // txtNgheNghiep
@@ -579,7 +582,7 @@
             this.txtNgheNghiep.ReadOnly = true;
             this.txtNgheNghiep.SelectedText = "";
             this.txtNgheNghiep.ShadowDecoration.Parent = this.txtNgheNghiep;
-            this.txtNgheNghiep.Size = new System.Drawing.Size(248, 24);
+            this.txtNgheNghiep.Size = new System.Drawing.Size(222, 24);
             this.txtNgheNghiep.TabIndex = 7;
             // 
             // txtDiaChi
@@ -606,7 +609,7 @@
             this.txtDiaChi.ReadOnly = true;
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.ShadowDecoration.Parent = this.txtDiaChi;
-            this.txtDiaChi.Size = new System.Drawing.Size(248, 24);
+            this.txtDiaChi.Size = new System.Drawing.Size(222, 24);
             this.txtDiaChi.TabIndex = 4;
             // 
             // txtSoCMND
@@ -633,7 +636,7 @@
             this.txtSoCMND.ReadOnly = true;
             this.txtSoCMND.SelectedText = "";
             this.txtSoCMND.ShadowDecoration.Parent = this.txtSoCMND;
-            this.txtSoCMND.Size = new System.Drawing.Size(248, 24);
+            this.txtSoCMND.Size = new System.Drawing.Size(222, 24);
             this.txtSoCMND.TabIndex = 3;
             // 
             // txtHoVaTen
@@ -660,7 +663,7 @@
             this.txtHoVaTen.ReadOnly = true;
             this.txtHoVaTen.SelectedText = "";
             this.txtHoVaTen.ShadowDecoration.Parent = this.txtHoVaTen;
-            this.txtHoVaTen.Size = new System.Drawing.Size(248, 24);
+            this.txtHoVaTen.Size = new System.Drawing.Size(222, 24);
             this.txtHoVaTen.TabIndex = 2;
             // 
             // txtMatKhau
@@ -687,7 +690,7 @@
             this.txtMatKhau.ReadOnly = true;
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.ShadowDecoration.Parent = this.txtMatKhau;
-            this.txtMatKhau.Size = new System.Drawing.Size(248, 24);
+            this.txtMatKhau.Size = new System.Drawing.Size(222, 24);
             this.txtMatKhau.TabIndex = 1;
             // 
             // txtTenDangNhap
@@ -714,7 +717,7 @@
             this.txtTenDangNhap.ReadOnly = true;
             this.txtTenDangNhap.SelectedText = "";
             this.txtTenDangNhap.ShadowDecoration.Parent = this.txtTenDangNhap;
-            this.txtTenDangNhap.Size = new System.Drawing.Size(248, 24);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(222, 24);
             this.txtTenDangNhap.TabIndex = 0;
             // 
             // HienThiToanBoNhanVien

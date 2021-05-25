@@ -32,6 +32,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtMatKhauXacNhan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMatKhauMoi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMatKhauHienTai = new Guna.UI2.WinForms.Guna2TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label5 = new System.Windows.Forms.Label();
             this.btnLuuThayDoi = new Guna.UI2.WinForms.Guna2Button();
@@ -42,9 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMatKhauXacNhan = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMatKhauMoi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMatKhauHienTai = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -89,145 +89,18 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 23);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(409, 165);
+            this.panel4.Size = new System.Drawing.Size(409, 177);
             this.panel4.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label3.Location = new System.Drawing.Point(0, 163);
+            this.label3.Location = new System.Drawing.Point(0, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(409, 2);
             this.label3.TabIndex = 10;
             this.label3.Text = "Chỉnh sửa thông tin nhân viên";
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 23);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel1.Controls.Add(this.label5);
-            this.splitContainer1.Panel1.Controls.Add(this.btnLuuThayDoi);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel2.Controls.Add(this.label6);
-            this.splitContainer1.Panel2.Controls.Add(this.btnHuyBo);
-            this.splitContainer1.Size = new System.Drawing.Size(409, 240);
-            this.splitContainer1.SplitterDistance = 193;
-            this.splitContainer1.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label5.Location = new System.Drawing.Point(0, 238);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 2);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Chỉnh sửa thông tin nhân viên";
-            // 
-            // btnLuuThayDoi
-            // 
-            this.btnLuuThayDoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLuuThayDoi.BorderRadius = 6;
-            this.btnLuuThayDoi.CheckedState.Parent = this.btnLuuThayDoi;
-            this.btnLuuThayDoi.CustomImages.Parent = this.btnLuuThayDoi;
-            this.btnLuuThayDoi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLuuThayDoi.ForeColor = System.Drawing.Color.White;
-            this.btnLuuThayDoi.HoverState.Parent = this.btnLuuThayDoi;
-            this.btnLuuThayDoi.Location = new System.Drawing.Point(41, 171);
-            this.btnLuuThayDoi.Name = "btnLuuThayDoi";
-            this.btnLuuThayDoi.ShadowDecoration.Parent = this.btnLuuThayDoi;
-            this.btnLuuThayDoi.Size = new System.Drawing.Size(112, 38);
-            this.btnLuuThayDoi.TabIndex = 6;
-            this.btnLuuThayDoi.Text = "Lưu thay đổi";
-            this.btnLuuThayDoi.Click += new System.EventHandler(this.btnLuuThayDoi_Click);
-            // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label6.Location = new System.Drawing.Point(0, 238);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(212, 2);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Chỉnh sửa thông tin nhân viên";
-            // 
-            // btnHuyBo
-            // 
-            this.btnHuyBo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnHuyBo.BorderRadius = 6;
-            this.btnHuyBo.CheckedState.Parent = this.btnHuyBo;
-            this.btnHuyBo.CustomImages.Parent = this.btnHuyBo;
-            this.btnHuyBo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnHuyBo.ForeColor = System.Drawing.Color.White;
-            this.btnHuyBo.HoverState.Parent = this.btnHuyBo;
-            this.btnHuyBo.Location = new System.Drawing.Point(56, 171);
-            this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.ShadowDecoration.Parent = this.btnHuyBo;
-            this.btnHuyBo.Size = new System.Drawing.Size(114, 38);
-            this.btnHuyBo.TabIndex = 8;
-            this.btnHuyBo.Text = "Hủy bỏ";
-            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(409, 23);
-            this.panel5.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Location = new System.Drawing.Point(0, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(409, 2);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Chỉnh sửa thông tin nhân viên";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(409, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hãy chắc chắn rằng bạn nhớ mật khẩu";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 106);
-            this.panel2.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Location = new System.Drawing.Point(0, 104);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(409, 2);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Chỉnh sửa thông tin nhân viên";
             // 
             // txtMatKhauXacNhan
             // 
@@ -312,6 +185,133 @@
             this.txtMatKhauHienTai.ShadowDecoration.Parent = this.txtMatKhauHienTai;
             this.txtMatKhauHienTai.Size = new System.Drawing.Size(333, 36);
             this.txtMatKhauHienTai.TabIndex = 7;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 23);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
+            this.splitContainer1.Panel1.Controls.Add(this.btnLuuThayDoi);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel2.Controls.Add(this.label6);
+            this.splitContainer1.Panel2.Controls.Add(this.btnHuyBo);
+            this.splitContainer1.Size = new System.Drawing.Size(409, 240);
+            this.splitContainer1.SplitterDistance = 193;
+            this.splitContainer1.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label5.Location = new System.Drawing.Point(0, 238);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(193, 2);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Chỉnh sửa thông tin nhân viên";
+            // 
+            // btnLuuThayDoi
+            // 
+            this.btnLuuThayDoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLuuThayDoi.BorderRadius = 6;
+            this.btnLuuThayDoi.CheckedState.Parent = this.btnLuuThayDoi;
+            this.btnLuuThayDoi.CustomImages.Parent = this.btnLuuThayDoi;
+            this.btnLuuThayDoi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLuuThayDoi.ForeColor = System.Drawing.Color.White;
+            this.btnLuuThayDoi.HoverState.Parent = this.btnLuuThayDoi;
+            this.btnLuuThayDoi.Location = new System.Drawing.Point(36, 183);
+            this.btnLuuThayDoi.Name = "btnLuuThayDoi";
+            this.btnLuuThayDoi.ShadowDecoration.Parent = this.btnLuuThayDoi;
+            this.btnLuuThayDoi.Size = new System.Drawing.Size(112, 38);
+            this.btnLuuThayDoi.TabIndex = 6;
+            this.btnLuuThayDoi.Text = "Lưu thay đổi";
+            this.btnLuuThayDoi.Click += new System.EventHandler(this.btnLuuThayDoi_Click);
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label6.Location = new System.Drawing.Point(0, 238);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(212, 2);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Chỉnh sửa thông tin nhân viên";
+            // 
+            // btnHuyBo
+            // 
+            this.btnHuyBo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnHuyBo.BorderRadius = 6;
+            this.btnHuyBo.CheckedState.Parent = this.btnHuyBo;
+            this.btnHuyBo.CustomImages.Parent = this.btnHuyBo;
+            this.btnHuyBo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHuyBo.ForeColor = System.Drawing.Color.White;
+            this.btnHuyBo.HoverState.Parent = this.btnHuyBo;
+            this.btnHuyBo.Location = new System.Drawing.Point(58, 183);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.ShadowDecoration.Parent = this.btnHuyBo;
+            this.btnHuyBo.Size = new System.Drawing.Size(114, 38);
+            this.btnHuyBo.TabIndex = 8;
+            this.btnHuyBo.Text = "Hủy bỏ";
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(409, 23);
+            this.panel5.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label2.Location = new System.Drawing.Point(0, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(409, 2);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Chỉnh sửa thông tin nhân viên";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(409, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hãy chắc chắn rằng bạn nhớ mật khẩu";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(409, 106);
+            this.panel2.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label4.Location = new System.Drawing.Point(0, 104);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(409, 2);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Chỉnh sửa thông tin nhân viên";
             // 
             // pictureBox1
             // 

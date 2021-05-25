@@ -110,7 +110,7 @@ namespace QuanLyVaxin
             this.btnThongtinvacxin.CheckedState.Parent = this.btnThongtinvacxin;
             this.btnThongtinvacxin.CustomImages.Parent = this.btnThongtinvacxin;
             this.btnThongtinvacxin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnThongtinvacxin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongtinvacxin.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.btnThongtinvacxin.ForeColor = System.Drawing.Color.White;
             this.btnThongtinvacxin.HoverState.Parent = this.btnThongtinvacxin;
             this.btnThongtinvacxin.Image = ((System.Drawing.Image)(resources.GetObject("btnThongtinvacxin.Image")));
