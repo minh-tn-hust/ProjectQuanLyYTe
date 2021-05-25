@@ -260,7 +260,8 @@ namespace QuanLyYTe
 
         private void MenuUI_FormClosed_1(object sender, FormClosedEventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            //System.Windows.Forms.Application.Exit();
+            this.Close();
         }
     }
 }

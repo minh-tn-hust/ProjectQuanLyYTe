@@ -161,7 +161,11 @@ namespace Controller.dataGridView
                     dr[1] = record.HoTen;
                     dr[2] = record.SoCMND;
                     dr[3] = record.NgaySinh.Value.ToShortDateString();
-                    dr[4] = record.GioiTinh;
+                    if (record.GioiTinh == 0 )
+                    {
+                        dr[4] = "Nam";
+                    }
+                    else dr[4] = "Nữ";
                     dr[5] = record.NgheNghiep;
                     dr[6] = record.DiaChi;
                     dr[7] = record.SoDienThoai;
@@ -320,7 +324,7 @@ namespace Controller.dataGridView
         {
             using (var context = new YTeDbContext()) // đây là gọi cơ sở dữ liệu của mình
             {
-                List<DatLichKham> LichKhams = context.DatLichKhams.ToList();  // đây là lấy cơ sở dữ liệu trong bảng dặt lịch khám
+                List<DatLichKham> LichKhams = context.DatLichKhams.ToList(); // đây là lấy cơ sở dữ liệu trong bảng dặt lịch khám
                 DataTable dt = new DataTable();
                 foreach (var name in Name.datlichkham())
                 {
@@ -348,8 +352,8 @@ namespace Controller.dataGridView
                     dr[9] = lichkham.ThoiGianHenKham;
                     dr[10] = lichkham.LyDoKham;
                     dr[11] = lichkham.GhiChu;
-                    dr[12] = 0;
-                    dr[13] = 0;
+                    dr[12] = lichkham.ID_PhongKham;
+                    dr[13] = lichkham.ID_NhanVien;
                     // var phongkham = context.PhongKhams
                     //                     .Where(b => b.ID_PhongKham == lichkham.ID_PhongKham)
                     //                     .FirstOrDefault();

@@ -48,7 +48,6 @@ namespace BieuDo
                 {
                     if (record.ID_TreEm == IDtreem)
                     {
-                        MessageBox.Show(IDtreem.ToString());
                         Height[p] = record.ChieuCao;
                         Weight[p] = record.CanNang;
                         Age[p] = Convert.ToInt32(record.Tuoi);
@@ -141,7 +140,6 @@ namespace BieuDo
                 x = Convert.ToDouble(Age[i]);
                 y1 = Convert.ToDouble(Weight[i]);
                 y2 = Convert.ToDouble(Height[i]);
-                MessageBox.Show(x.ToString() + " " + y1.ToString() + " " + y2.ToString());
                 DuongThuc.Add(Age[i], y2);
                 DDuongThuc.Add(Age[i], y1);
                 BMI[i] = y1 / (y2 * y2 / 10000);

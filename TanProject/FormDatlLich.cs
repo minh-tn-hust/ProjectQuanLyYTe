@@ -72,115 +72,6 @@ namespace QLPK
 
         }
 
-
-        private void guna2DateTimePicker2_ValueChanged_1(object sender, EventArgs e)
-        {
-            var pk = cbPhongKham.Text;
-
-            DateTime dt8 = guna2DateTimePicker2.Value;
-            dt8 = new DateTime(dt8.Year, dt8.Month, dt8.Day, 8, 0, 0);
-            int t8 = timchotrong(dt8, pk);
-            if (t8 >= 2) guna2Button3.Enabled = false;
-
-            DateTime dt9 = guna2DateTimePicker2.Value;
-            dt9 = new DateTime(dt9.Year, dt9.Month, dt9.Day, 9, 0, 0);
-            int t9 = timchotrong(dt9, pk);
-            if (t9 > 3) guna2Button4.Enabled = false;
-
-            DateTime dt10 = guna2DateTimePicker2.Value;
-            dt10 = new DateTime(dt10.Year, dt10.Month, dt10.Day, 10, 0, 0);
-            int t10 = timchotrong(dt10, pk);
-            if (t10 > 3) guna2Button5.Enabled = false;
-
-            DateTime dt11 = guna2DateTimePicker2.Value;
-            dt11 = new DateTime(dt11.Year, dt11.Month, dt11.Day, 11, 0, 0);
-            int t11 = timchotrong(dt11, pk);
-            if (t11 > 3) guna2Button6.Enabled = false;
-
-            DateTime dt14 = guna2DateTimePicker2.Value;
-            dt14 = new DateTime(dt14.Year, dt14.Month, dt14.Day, 14, 0, 0);
-            int t14 = timchotrong(dt14, pk);
-            if (t14 > 3) guna2Button7.Enabled = false;
-
-            DateTime dt15 = guna2DateTimePicker2.Value;
-            dt15 = new DateTime(dt15.Year, dt15.Month, dt15.Day, 15, 0, 0);
-            int t15 = timchotrong(dt15, pk);
-            if (t15 > 3) guna2Button8.Enabled = false;
-
-            DateTime dt16 = guna2DateTimePicker2.Value;
-            dt16 = new DateTime(dt16.Year, dt16.Month, dt16.Day, 16, 0, 0);
-            int t16 = timchotrong(dt16, pk);
-            if (t16 > 3) guna2Button9.Enabled = false;
-
-            DateTime dt17 = guna2DateTimePicker2.Value;
-            dt17 = new DateTime(dt17.Year, dt17.Month, dt17.Day, 17, 0, 0);
-            int t17 = timchotrong(dt17, pk);
-            if (t17 > 3) guna2Button10.Enabled = false;
-
-            guna2Button3.Text = "08:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t8.ToString();
-            guna2Button4.Text = "09:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t9.ToString();
-            guna2Button5.Text = "10:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t10.ToString();
-            guna2Button6.Text = "11:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t11.ToString();
-            guna2Button7.Text = "14:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t14.ToString();
-            guna2Button8.Text = "15:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t15.ToString();
-            guna2Button9.Text = "16:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t16.ToString();
-            guna2Button10.Text = "17:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t17.ToString();
-        }
-
-        private void cbPhongKham_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var pk = cbPhongKham.Text;
-
-            DateTime dt8 = guna2DateTimePicker2.Value;
-            dt8 = new DateTime(dt8.Year, dt8.Month, dt8.Day, 8, 0, 0);
-            int t8 = timchotrong(dt8, pk);
-            if (t8 > 3) guna2Button3.Enabled = false;
-
-            DateTime dt9 = guna2DateTimePicker2.Value;
-            dt9 = new DateTime(dt9.Year, dt9.Month, dt9.Day, 9, 0, 0);
-            int t9 = timchotrong(dt9, pk);
-            if (t9 > 3) guna2Button4.Enabled = false;
-
-            DateTime dt10 = guna2DateTimePicker2.Value;
-            dt10 = new DateTime(dt10.Year, dt10.Month, dt10.Day, 10, 0, 0);
-            int t10 = timchotrong(dt10, pk);
-            if (t10 > 3) guna2Button5.Enabled = false;
-
-            DateTime dt11 = guna2DateTimePicker2.Value;
-            dt11 = new DateTime(dt11.Year, dt11.Month, dt11.Day, 11, 0, 0);
-            int t11 = timchotrong(dt11, pk);
-            if (t11 > 3) guna2Button6.Enabled = false;
-
-            DateTime dt14 = guna2DateTimePicker2.Value;
-            dt14 = new DateTime(dt14.Year, dt14.Month, dt14.Day, 14, 0, 0);
-            int t14 = timchotrong(dt14, pk);
-            if (t14 > 3) guna2Button7.Enabled = false;
-
-            DateTime dt15 = guna2DateTimePicker2.Value;
-            dt15 = new DateTime(dt15.Year, dt15.Month, dt15.Day, 15, 0, 0);
-            int t15 = timchotrong(dt15, pk);
-            if (t15 > 3) guna2Button8.Enabled = false;
-
-            DateTime dt16 = guna2DateTimePicker2.Value;
-            dt16 = new DateTime(dt16.Year, dt16.Month, dt16.Day, 16, 0, 0);
-            int t16 = timchotrong(dt16, pk);
-            if (t16 > 3) guna2Button9.Enabled = false;
-
-            DateTime dt17 = guna2DateTimePicker2.Value;
-            dt17 = new DateTime(dt17.Year, dt17.Month, dt17.Day, 17, 0, 0);
-            int t17 = timchotrong(dt17, pk);
-            if (t17 > 3) guna2Button10.Enabled = false;
-
-            guna2Button3.Text = "08:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t8.ToString();
-            guna2Button4.Text = "09:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t9.ToString();
-            guna2Button5.Text = "10:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t10.ToString();
-            guna2Button6.Text = "11:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t11.ToString();
-            guna2Button7.Text = "14:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t14.ToString();
-            guna2Button8.Text = "15:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t15.ToString();
-            guna2Button9.Text = "16:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t16.ToString();
-            guna2Button10.Text = "17:00" + "\n" + "Số bệnh nhân đã đăng kí: " + t17.ToString();
-        }
-
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             FormDanhSachDatLich f = new FormDanhSachDatLich();
@@ -194,6 +85,7 @@ namespace QLPK
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 8, 0, 0);
             FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
             f.date = Date;
+            f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
             this.Show();
         }
@@ -204,6 +96,7 @@ namespace QLPK
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 9, 0, 0);
             FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
             f.date = Date;
+            f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
             this.Show();
         }
@@ -214,6 +107,7 @@ namespace QLPK
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 10, 0, 0);
             FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
             f.date = Date;
+            f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
             this.Show();
         }
@@ -223,6 +117,8 @@ namespace QLPK
             DateTime Date = guna2DateTimePicker2.Value;
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 11, 0, 0);
             FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+            f.date = Date;
+            f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
             this.Show();
         }
@@ -233,6 +129,7 @@ namespace QLPK
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 14, 0, 0);
             FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
             f.date = Date;
+            f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
             this.Show();
         }
@@ -243,6 +140,7 @@ namespace QLPK
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 15, 0, 0);
             FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
             f.date = Date;
+            f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
             this.Show();
         }
@@ -253,6 +151,7 @@ namespace QLPK
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 16, 0, 0);
             FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
             f.date = Date;
+            f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
             this.Show();
         }
@@ -262,6 +161,8 @@ namespace QLPK
             DateTime Date = guna2DateTimePicker2.Value;
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 17, 0, 0);
             FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+            f.date = Date;
+            f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
             this.Show();
         }
@@ -384,6 +285,7 @@ namespace QLPK
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             FormDanhSachDatLich f = new FormDanhSachDatLich();
+            this.Hide();
             f.ShowDialog();
             this.Show();
 
@@ -396,20 +298,24 @@ namespace QLPK
                 using (var context = new YTeDbContext())
                 {
                     var people = context.TreEms.Where(s => s.MaTheBHYTe == txtBHYT.Text).FirstOrDefault();
+                    var treconn = context.ConNguois.Where(s => s.ID_Nguoi == people.ID_Nguoi).FirstOrDefault();
                     if (people == null)
                     {
-                        MessageBox.Show("Sai thông tin!", "Thông báo!");
+                        MessageBox.Show("Không có thông tin dặt lịch!" + "\n" + "Sai thông tin BHYT!", "Thông báo!");
+                        this.Hide();
+                        FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+                        f.ShowDialog();
                     }
                     else
-                    {
+                    {                       
                         this.Hide();
                         FormDanhSachDatLich f = new FormDanhSachDatLich();
-                        f.BHYT = people.MaTheBHYTe;
+                        f.ID_Nguoi = treconn.ID_Nguoi;
                         f.Show();
-                        this.Close();
                     }
                 }
             }
+
             if (txtCMND.Text != "")
             {
                 using (var context = new YTeDbContext())
@@ -417,17 +323,61 @@ namespace QLPK
                     var people = context.ConNguois.Where(s => s.SoCMND == txtCMND.Text).FirstOrDefault();
                     if (people == null)
                     {
-                        MessageBox.Show("Sai thông tin!", "Thông báo!");
+                        MessageBox.Show("Sai thông tin CMND!", "Thông báo!");
+                        //this.Hide();
+                        //FormThongTinNguoiDatLich form = new FormThongTinNguoiDatLich();
+                        //form.ShowDialog();
+                        //this.Close();
                     }
                     else
                     {
-                        this.Hide();
-                        FormDanhSachDatLich f = new FormDanhSachDatLich();
-                        f.SoCMND = people.SoCMND;
-                        f.Show();
+                        var connguoiDLK = context.DatLichKhams.Where(s => s.ID_Nguoi == people.ID_Nguoi).FirstOrDefault();
+                        if(connguoiDLK == null)
+                        {
+                            MessageBox.Show("Không có thông tin đặt lịch!", "Thông báo!");
+                        }
+                        else
+                        {
+                            FormDanhSachDatLich f = new FormDanhSachDatLich();
+                            f.SoCMND = people.SoCMND;
+                            f.ShowDialog();
+                            this.Hide();
+                        }
                     }
                 }
             }
+
+            if (txtSDT.Text != "")
+            {
+                using (var context = new YTeDbContext())
+                {
+                    var people = context.ConNguois.Where(s => s.SoDienThoai == txtSDT.Text).FirstOrDefault();
+                    if (people == null)
+                    {
+                        MessageBox.Show("Sai thông tin SDT!", "Thông báo!");
+                        //this.Hide();
+                        //FormThongTinNguoiDatLich form = new FormThongTinNguoiDatLich();
+                        //form.ShowDialog();
+                        //this.Close();
+                    }
+                    else
+                    {
+                        var connguoiDLK = context.DatLichKhams.Where(s => s.ID_Nguoi == people.ID_Nguoi).FirstOrDefault();
+                        if (connguoiDLK == null)
+                        {
+                            MessageBox.Show("Không có thông tin đặt lịch!", "Thông báo!");
+                        }
+                        else
+                        {
+                            FormDanhSachDatLich f = new FormDanhSachDatLich();
+                            f.SDT = people.SoDienThoai;
+                            f.ShowDialog();
+                            this.Hide();
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

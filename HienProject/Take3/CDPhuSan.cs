@@ -20,32 +20,40 @@ namespace Take3
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+         private void guna2Button1_Click(object sender, EventArgs e)
         {
             ThongTinThaiKi thongtin = new ThongTinThaiKi();
-            using (var yteDbContext = new YTeDbContext())
+            if (guna2TextBox2.Text != "" && guna2TextBox4.Text != "" && guna2ComboBox1.SelectedItem != null)
             {
-                yteDbContext.ThongTinThaiKis.Add(thongtin);
-                thongtin.ThoiGianKham = DateTime.Parse(guna2DateTimePicker1.Value.ToString());
-                thongtin.ID_NguoiMangThai = IDnguoimangthai;
-                thongtin.ID_PhongKham = Int32.Parse(guna2ComboBox1.SelectedItem.ToString().Substring(0, 1));
-                thongtin.LanKhamTiepTheo = DateTime.Parse(guna2DateTimePicker2.Value.ToString());
-                thongtin.ChieuCaoMe = int.Parse(guna2TextBox2.Text);
-                thongtin.CanNangMe = int.Parse(guna2TextBox4.Text);
-                thongtin.ThoiGianSinhDuKien = DateTime.Parse(guna2DateTimePicker3.Value.ToString());
-                try
+
+
+                using (var yteDbContext = new YTeDbContext())
                 {
-                    yteDbContext.SaveChanges();
-                    MessageBox.Show("Lưu thành công!");
+                    yteDbContext.ThongTinThaiKis.Add(thongtin);
+                    thongtin.ThoiGianKham = DateTime.Parse(guna2DateTimePicker1.Value.ToString());
+                    thongtin.LanKhamTiepTheo = DateTime.Parse(guna2DateTimePicker2.Value.ToString());
+                    thongtin.ID_PhongKham = Int32.Parse(guna2ComboBox1.SelectedItem.ToString().Substring(0, 1));
+                    thongtin.ChieuCaoMe = int.Parse(guna2TextBox2.Text);
+                    thongtin.CanNangMe = int.Parse(guna2TextBox4.Text);
+                    DateTime? dateTime = guna2DateTimePicker3.Value;
+                    thongtin.ThoiGianSinhDuKien = dateTime;
+                    thongtin.ID_NguoiMangThai = IDnguoimangthai;
+                    try
+                    {
+                        yteDbContext.SaveChanges();
+                        MessageBox.Show("Lưu thành công!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
+                        return;
+                    }
+
                 }
-                catch
-                {
-                    MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
-                    return;
-                }
-                
             }
+            else MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
         }
+
 
         private void CDPhuSan_Load(object sender, EventArgs e)
         {
