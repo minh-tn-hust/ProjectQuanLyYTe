@@ -301,17 +301,26 @@ namespace QLPK
                     var treconn = context.ConNguois.Where(s => s.ID_Nguoi == people.ID_Nguoi).FirstOrDefault();
                     if (people == null)
                     {
-                        MessageBox.Show("Không có thông tin dặt lịch!" + "\n" + "Sai thông tin BHYT!", "Thông báo!");
-                        this.Hide();
-                        FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
-                        f.ShowDialog();
+                        MessageBox.Show("Sai thông tin BHYT!", "Thông báo!");
                     }
                     else
-                    {                       
-                        this.Hide();
-                        FormDanhSachDatLich f = new FormDanhSachDatLich();
-                        f.ID_Nguoi = treconn.ID_Nguoi;
-                        f.Show();
+                    {
+                        var connguoiDLK = context.DatLichKhams.Where(s => s.ID_Nguoi == treconn.ID_Nguoi).FirstOrDefault();
+                        if (connguoiDLK == null)
+                        {
+                            MessageBox.Show("Không có thông tin đặt lịch!", "Thông báo!");
+                            FormDanhSachDatLich f = new FormDanhSachDatLich();
+                            f.SDT = treconn.SoDienThoai;
+                            f.ShowDialog();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            FormDanhSachDatLich f = new FormDanhSachDatLich();
+                            f.SDT = treconn.SoDienThoai;
+                            f.ShowDialog();
+                            this.Hide();
+                        }
                     }
                 }
             }
@@ -324,17 +333,17 @@ namespace QLPK
                     if (people == null)
                     {
                         MessageBox.Show("Sai thông tin CMND!", "Thông báo!");
-                        //this.Hide();
-                        //FormThongTinNguoiDatLich form = new FormThongTinNguoiDatLich();
-                        //form.ShowDialog();
-                        //this.Close();
                     }
                     else
                     {
                         var connguoiDLK = context.DatLichKhams.Where(s => s.ID_Nguoi == people.ID_Nguoi).FirstOrDefault();
-                        if(connguoiDLK == null)
+                        if (connguoiDLK == null)
                         {
                             MessageBox.Show("Không có thông tin đặt lịch!", "Thông báo!");
+                            FormDanhSachDatLich f = new FormDanhSachDatLich();
+                            f.SDT = people.SoDienThoai;
+                            f.ShowDialog();
+                            this.Hide();
                         }
                         else
                         {
@@ -349,16 +358,13 @@ namespace QLPK
 
             if (txtSDT.Text != "")
             {
+
                 using (var context = new YTeDbContext())
                 {
                     var people = context.ConNguois.Where(s => s.SoDienThoai == txtSDT.Text).FirstOrDefault();
                     if (people == null)
                     {
                         MessageBox.Show("Sai thông tin SDT!", "Thông báo!");
-                        //this.Hide();
-                        //FormThongTinNguoiDatLich form = new FormThongTinNguoiDatLich();
-                        //form.ShowDialog();
-                        //this.Close();
                     }
                     else
                     {
@@ -366,6 +372,10 @@ namespace QLPK
                         if (connguoiDLK == null)
                         {
                             MessageBox.Show("Không có thông tin đặt lịch!", "Thông báo!");
+                            FormDanhSachDatLich f = new FormDanhSachDatLich();
+                            f.SDT = people.SoDienThoai;
+                            f.ShowDialog();
+                            this.Hide();
                         }
                         else
                         {

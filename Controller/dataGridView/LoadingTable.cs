@@ -354,17 +354,17 @@ namespace Controller.dataGridView
                     dr[11] = lichkham.GhiChu;
                     dr[12] = lichkham.ID_PhongKham;
                     dr[13] = lichkham.ID_NhanVien;
-                    // var phongkham = context.PhongKhams
-                    //                     .Where(b => b.ID_PhongKham == lichkham.ID_PhongKham)
-                    //                     .FirstOrDefault();
-                    //// dr[12] = phongkham.TenPhongKham;
-                    // var nhanvien = context.NhanVienYTes
-                    //                     .Where(b => b.ID_NhanVien == lichkham.ID_NhanVien)
-                    //                     .FirstOrDefault();
-                    //// var connguoi1 = context.ConNguois
-                    //                     .Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi)
-                    //                     .FirstOrDefault();
-                    // dr[13] = connguoi1.HoTen;
+                    var phongkham = context.PhongKhams
+                                        .Where(b => b.ID_PhongKham == lichkham.ID_PhongKham)
+                                        .FirstOrDefault();
+                    dr[12] = phongkham.TenPhongKham;
+                    var nhanvien = context.NhanVienYTes
+                                        .Where(b => b.ID_NhanVien == lichkham.ID_NhanVien)
+                                        .FirstOrDefault();
+                    var connguoi1 = context.ConNguois
+                                         .Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi)
+                                         .FirstOrDefault();
+                    dr[13] = connguoi1.HoTen;
                     dt.Rows.Add(dr);
                 }
                 return dt;

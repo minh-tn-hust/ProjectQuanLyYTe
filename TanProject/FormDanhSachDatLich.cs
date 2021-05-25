@@ -30,36 +30,28 @@ namespace QLPK
         }
         public string SoCMND = null;
         public string soBHYT = null;
-        public int ID_Nguoi = 0;
         public string SDT = null;
+        public int ID_Nguoi = 0;
         DTGFilter filter = new DTGFilter();
         private void FormDanhSachDatLich_Load(object sender, EventArgs e)
         {
-            if (SoCMND == null && SDT == null && ID_Nguoi == 0)
+            if (SoCMND != null)
             {
                 LoadingTable ld = new LoadingTable(); // tạo đối tượng loadingtable (file class trong Cotroller -> dataGridView -> LoadingTable.cs
                 dataGridView1.DataSource = ld.datlichkham();
-            }
-            
-            if(SoCMND != null)
-            {
-                LoadingTable ld = new LoadingTable(); // tạo đối tượng loadingtable (file class trong Cotroller -> dataGridView -> LoadingTable.cs
-                dataGridView1.DataSource = ld.datlichkham();
-                //dataGridView1.DataSource = filter.searchRow(dataGridView1, "Số CMND", SoCMND);
+                dataGridView1.DataSource = filter.searchRow(dataGridView1, "Số CMND", SoCMND);
             }
 
-            if(SDT != null)
+            if (SDT != null)
             {
                 LoadingTable ld = new LoadingTable();
                 dataGridView1.DataSource = ld.datlichkham();
-                //dataGridView1.DataSource = filter.searchRow(dataGridView1, "SĐT", SDT);
+                dataGridView1.DataSource = filter.searchRow(dataGridView1, "Số điện thoại", SDT);
             }
-            
-            if (soBHYT != null)
+            if (SoCMND == null && SDT == null)
             {
                 LoadingTable ld = new LoadingTable();
                 dataGridView1.DataSource = ld.datlichkham();
-                //dataGridView1.DataSource = filter.searchRow(dataGridView1, "BHYT", soBHYT);
             }
         }
         
@@ -132,7 +124,6 @@ namespace QLPK
             textboxEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             textboxLyDoKham.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
             string i = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            MessageBox.Show(i);
             if (i == "1") comboboxGioiTinh.Text = "Nữ";
             else comboboxGioiTinh.Text = "Nam";
             guna2DateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
