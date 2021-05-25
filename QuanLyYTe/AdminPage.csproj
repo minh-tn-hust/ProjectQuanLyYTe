@@ -52,18 +52,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
+
     <ManifestCertificateThumbprint>7D945F1A573B8A938E86E58923D01D58255BDBD4</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>AdminPage_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -318,6 +308,12 @@
       <Name>QLPK</Name>
     </ProjectReference>
   </ItemGroup>
+<PropertyGroup>
+  <ManifestCertificateThumbprint>xxxxx xxxxxx</ManifestCertificateThumbprint>
+  <ManifestKeyFile>xxxxxxxx.pfx</ManifestKeyFile>
+<GenerateManifests>true</GenerateManifests>
+<SignManifests>false</SignManifests>
+</PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
