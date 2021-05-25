@@ -324,7 +324,7 @@ namespace Controller.dataGridView
         {
             using (var context = new YTeDbContext()) // đây là gọi cơ sở dữ liệu của mình
             {
-                List<DatLichKham> LichKhams = context.DatLichKhams.ToList();  // đây là lấy cơ sở dữ liệu trong bảng dặt lịch khám
+                List<DatLichKham> LichKhams = context.DatLichKhams.ToList(); // đây là lấy cơ sở dữ liệu trong bảng dặt lịch khám
                 DataTable dt = new DataTable();
                 foreach (var name in Name.datlichkham())
                 {
@@ -352,19 +352,19 @@ namespace Controller.dataGridView
                     dr[9] = lichkham.ThoiGianHenKham;
                     dr[10] = lichkham.LyDoKham;
                     dr[11] = lichkham.GhiChu;
-                    dr[12] = 0;
-                    dr[13] = 0;
-                    // var phongkham = context.PhongKhams
-                    //                     .Where(b => b.ID_PhongKham == lichkham.ID_PhongKham)
-                    //                     .FirstOrDefault();
-                    //// dr[12] = phongkham.TenPhongKham;
-                    // var nhanvien = context.NhanVienYTes
-                    //                     .Where(b => b.ID_NhanVien == lichkham.ID_NhanVien)
-                    //                     .FirstOrDefault();
-                    //// var connguoi1 = context.ConNguois
-                    //                     .Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi)
-                    //                     .FirstOrDefault();
-                    // dr[13] = connguoi1.HoTen;
+                    dr[12] = lichkham.ID_PhongKham;
+                    dr[13] = lichkham.ID_NhanVien;
+                    var phongkham = context.PhongKhams
+                                        .Where(b => b.ID_PhongKham == lichkham.ID_PhongKham)
+                                        .FirstOrDefault();
+                    dr[12] = phongkham.TenPhongKham;
+                    var nhanvien = context.NhanVienYTes
+                                        .Where(b => b.ID_NhanVien == lichkham.ID_NhanVien)
+                                        .FirstOrDefault();
+                    var connguoi1 = context.ConNguois
+                                         .Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi)
+                                         .FirstOrDefault();
+                    dr[13] = connguoi1.HoTen;
                     dt.Rows.Add(dr);
                 }
                 return dt;

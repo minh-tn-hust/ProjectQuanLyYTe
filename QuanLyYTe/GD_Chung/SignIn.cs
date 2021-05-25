@@ -33,7 +33,7 @@ namespace QuanLyYTe
                         this.Hide();
                         MenuUI menu = new MenuUI();
                         menu.ShowDialog();
-                        this.Close();
+                       
                     }
                     else
                     {
@@ -52,6 +52,7 @@ namespace QuanLyYTe
                         this.Hide();
                         CuaNhanVien cuaNhanVien = new CuaNhanVien(nhanVien);
                         cuaNhanVien.Show();
+
                         
 
                     }
@@ -83,9 +84,5 @@ namespace QuanLyYTe
             var context = new YTeDbContext();
         }
 
-        //private void lblQuenMatKhau_Click(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }

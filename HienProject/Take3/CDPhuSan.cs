@@ -20,7 +20,7 @@ namespace Take3
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+         private void guna2Button1_Click(object sender, EventArgs e)
         {
             ThongTinThaiKi thongtin = new ThongTinThaiKi();
             if (guna2TextBox2.Text != "" && guna2TextBox4.Text != "" && guna2ComboBox1.SelectedItem != null)
@@ -53,6 +53,7 @@ namespace Take3
             }
             else MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
         }
+
 
         private void CDPhuSan_Load(object sender, EventArgs e)
         {
