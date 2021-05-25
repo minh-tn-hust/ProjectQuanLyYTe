@@ -22,7 +22,7 @@ namespace QuanLyYTe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PhuNuTreEm());
+            Application.Run(new SignIn());
         }
     }
 }
