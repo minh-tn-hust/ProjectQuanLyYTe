@@ -82,7 +82,15 @@ namespace QuanLyVaxin
         private void btnTimKiemVacXin2_Click(object sender, EventArgs e)
         {
             dtgSuDungVacXin.DataSource = dataTable;
-            dtgSuDungVacXin.DataSource = filter1.searchRow(dtgSuDungVacXin, "Họ tên", txtTimKiemNguoi.Text);
+            if (txtTimKiemNguoi.Text == "")
+            {
+                dtgSuDungVacXin.DataSource = dataTable;
+            }
+            else
+            {
+                dtgSuDungVacXin.DataSource = filter1.searchRow(dtgSuDungVacXin, "Họ tên", txtTimKiemNguoi.Text);
+            }
+            //dtgSuDungVacXin.DataSource = filter1.searchRow(dtgSuDungVacXin, "Họ tên", txtTimKiemNguoi.Text);
         }
 
         private void btnLuuThongTin1_Click(object sender, EventArgs e)
