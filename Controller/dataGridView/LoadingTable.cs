@@ -30,7 +30,11 @@ namespace Controller.dataGridView
                     dr[1] = record.HoTen;
                     dr[2] = record.SoCMND;
                     dr[3] = record.NgaySinh;
-                    dr[4] = record.GioiTinh;
+                    if (record.GioiTinh == 0)
+                    {
+                        dr[4] = "Nam";
+                    }
+                    else dr[4] = "Nữ";
                     dr[5] = record.NgheNghiep;
                     dr[6] = record.DiaChi;
                     dr[7] = record.SoDienThoai;
@@ -69,7 +73,6 @@ namespace Controller.dataGridView
                     {
                         dr[4] = "Nữ";
                     }
-
                     dr[5] = record.NgheNghiep;
                     dr[6] = record.DiaChi;
                     dr[7] = record.SoDienThoai;

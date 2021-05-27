@@ -16,11 +16,13 @@ namespace Take3
     {
         ConNguoi connguoi;
         PhuNuMangThai phunumangthai;
-        public HSPhuSan(ConNguoi connguoi, PhuNuMangThai phunumangthai)
+        int classify;
+        public HSPhuSan(ConNguoi connguoi, PhuNuMangThai phunumangthai, int classify)
         {
             InitializeComponent();
             this.connguoi = connguoi;
             this.phunumangthai = phunumangthai;
+            this.classify = classify;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -38,7 +40,6 @@ namespace Take3
                         if (record.SoCMND == guna2TextBox8.Text)
                         {
                             flag = true;
-                            CD.IDnguoimangthai = record.ID_Nguoi;
                         }
                     }
                 }
@@ -50,6 +51,7 @@ namespace Take3
                         if (record.SoBHYTe == guna2TextBox7.Text)
                         {
                             flag = true;
+                            CD.IDnguoimangthai = record.ID_NguoiMangThai;
                         }
                     }
                 }
@@ -99,14 +101,17 @@ namespace Take3
 
         private void HSPhuSan_Load(object sender, EventArgs e)
         {
-            guna2TextBox1.Text = connguoi.HoTen;
-            guna2TextBox8.Text = connguoi.SoCMND;
-            guna2TextBox7.Text = phunumangthai.SoBHYTe;
-            guna2DateTimePicker1.Value = connguoi.NgaySinh.Value;
-            guna2TextBox3.Text = connguoi.NgheNghiep;
-            guna2TextBox5.Text = connguoi.SoDienThoai;
-            guna2TextBox12.Text = connguoi.DiaChi;
-            guna2TextBox6.Text = connguoi.Email;
+            if (classify == 1)
+            {
+                guna2TextBox1.Text = connguoi.HoTen;
+                guna2TextBox8.Text = connguoi.SoCMND;
+                guna2TextBox7.Text = phunumangthai.SoBHYTe;
+                guna2DateTimePicker1.Value = connguoi.NgaySinh.Value;
+                guna2TextBox3.Text = connguoi.NgheNghiep;
+                guna2TextBox5.Text = connguoi.SoDienThoai;
+                guna2TextBox12.Text = connguoi.DiaChi;
+                guna2TextBox6.Text = connguoi.Email;
+            }
         }
 
         private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
