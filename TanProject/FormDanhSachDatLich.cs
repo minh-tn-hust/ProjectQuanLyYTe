@@ -101,10 +101,18 @@ namespace QLPK
                     if (comboboxGioiTinh.Text == "Nam") oldconnguoi.GioiTinh = 1;
                     else oldconnguoi.GioiTinh = 0;
                 }
-                context.SaveChanges();
-                LoadingTable ld = new LoadingTable();
-                dataGridView1.DataSource = ld.datlichkham();
-                MessageBox.Show("Đã lưu bệnh nhân có ID: " + oldconnguoi.ID_Nguoi, "Thông báo!");
+                try
+                {
+                    context.SaveChanges();
+                    LoadingTable ld = new LoadingTable();
+                    dataGridView1.DataSource = ld.datlichkham();
+                    MessageBox.Show("Đã lưu bệnh nhân có ID: " + oldconnguoi.ID_Nguoi, "Thông báo!");
+                }
+                catch
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
+                    return;
+                }
             }
         }
 

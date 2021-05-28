@@ -72,13 +72,6 @@ namespace QLPK
 
         }
 
-        private void guna2Button1_Click_1(object sender, EventArgs e)
-        {
-            FormDanhSachDatLich f = new FormDanhSachDatLich();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             DateTime Date = guna2DateTimePicker2.Value;
@@ -291,13 +284,22 @@ namespace QLPK
 
         }
 
-        private void butTimKiem_Click(object sender, EventArgs e)
+
+        private void butDanhSach_Click(object sender, EventArgs e)
         {
-            if (txtBHYT.Text != "")
+            FormDanhSachDatLich f = new FormDanhSachDatLich();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void butTimKiem_Click_1(object sender, EventArgs e)
+        {
+            if (guna2ComboBoxKieuTimKiem.Text == guna2ComboBoxKieuTimKiem.Items[1].ToString())
             {
                 using (var context = new YTeDbContext())
                 {
-                    var people = context.TreEms.Where(s => s.MaTheBHYTe == txtBHYT.Text).FirstOrDefault();
+                    var people = context.TreEms.Where(s => s.MaTheBHYTe == txtTimKiem.Text).FirstOrDefault();
                     var treconn = context.ConNguois.Where(s => s.ID_Nguoi == people.ID_Nguoi).FirstOrDefault();
                     if (people == null)
                     {
@@ -325,11 +327,11 @@ namespace QLPK
                 }
             }
 
-            if (txtCMND.Text != "")
+            if (guna2ComboBoxKieuTimKiem.Text == guna2ComboBoxKieuTimKiem.Items[0].ToString())
             {
                 using (var context = new YTeDbContext())
                 {
-                    var people = context.ConNguois.Where(s => s.SoCMND == txtCMND.Text).FirstOrDefault();
+                    var people = context.ConNguois.Where(s => s.SoCMND == txtTimKiem.Text).FirstOrDefault();
                     if (people == null)
                     {
                         MessageBox.Show("Sai thông tin CMND!", "Thông báo!");
@@ -356,12 +358,12 @@ namespace QLPK
                 }
             }
 
-            if (txtSDT.Text != "")
+            if (guna2ComboBoxKieuTimKiem.Text == guna2ComboBoxKieuTimKiem.Items[2].ToString())
             {
 
                 using (var context = new YTeDbContext())
                 {
-                    var people = context.ConNguois.Where(s => s.SoDienThoai == txtSDT.Text).FirstOrDefault();
+                    var people = context.ConNguois.Where(s => s.SoDienThoai == txtTimKiem.Text).FirstOrDefault();
                     if (people == null)
                     {
                         MessageBox.Show("Sai thông tin SDT!", "Thông báo!");
@@ -387,7 +389,6 @@ namespace QLPK
                     }
                 }
             }
-
         }
     }
 }

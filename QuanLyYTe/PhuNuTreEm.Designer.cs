@@ -167,6 +167,7 @@ namespace QuanLyYTe
             this.searchTextBox.ShadowDecoration.Parent = this.searchTextBox;
             this.searchTextBox.Size = new System.Drawing.Size(401, 45);
             this.searchTextBox.TabIndex = 1;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
             // guna2Panel2
             // 
@@ -244,14 +245,14 @@ namespace QuanLyYTe
             this.loading.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loading_CellClick);
             this.loading.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loading_CellContentClick);
             // 
-            // Form1
+            // PhuNuTreEm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1070, 590);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
-            this.Name = "Form1";
+            this.Name = "PhuNuTreEm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.CausesValidationChanged += new System.EventHandler(this.Form1_CausesValidationChanged);

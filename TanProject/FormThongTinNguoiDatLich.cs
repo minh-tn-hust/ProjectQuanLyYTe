@@ -76,7 +76,16 @@ namespace QLPK
                         else people.GioiTinh = 0;
                     }
                     context.ConNguois.Add(people);
-                    context.SaveChanges();
+                    try
+                    {
+                        context.SaveChanges();
+                        MessageBox.Show("Bạn đã lưu thành công!", "Thông báo!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
+                        return;
+                    }
 
                     var connguoi = new DatLichKham();
                     {
@@ -86,7 +95,16 @@ namespace QLPK
                         //connguoi.ID_NhanVien =  txtNguoiTaoDon.Text;
                     }
                     context.DatLichKhams.Add(connguoi);
-                    context.SaveChanges();
+                    try
+                    {
+                        context.SaveChanges();
+                        MessageBox.Show("Bạn đã lưu thành công!", "Thông báo!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
+                        return;
+                    }
                 }
             }
         }

@@ -93,5 +93,10 @@ namespace QuanLyYTe
         {
 
         }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
