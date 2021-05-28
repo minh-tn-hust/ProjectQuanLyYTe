@@ -34,14 +34,7 @@ namespace Controller.dataGridView
                     {
                         dr[4] = "Nam";
                     }
-<<<<<<< HEAD
                     else dr[4] = "Nữ";
-=======
-                    else
-                    {
-                        dr[4] = "Nữ";
-                    }
->>>>>>> f119ebb6673a218e11fb8151b87944b90db958af
                     dr[5] = record.NgheNghiep;
                     dr[6] = record.DiaChi;
                     dr[7] = record.SoDienThoai;
