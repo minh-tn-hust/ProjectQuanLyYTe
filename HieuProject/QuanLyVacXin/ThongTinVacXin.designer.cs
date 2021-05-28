@@ -89,7 +89,7 @@ namespace QuanLyVaxin
             this.dtgThongTinVacXin.ColumnHeadersHeight = 40;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -159,14 +159,14 @@ namespace QuanLyVaxin
             this.txtTimKiemVacXin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTimKiemVacXin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiemVacXin.FocusedState.Parent = this.txtTimKiemVacXin;
-            this.txtTimKiemVacXin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiemVacXin.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTimKiemVacXin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiemVacXin.HoverState.Parent = this.txtTimKiemVacXin;
             this.txtTimKiemVacXin.Location = new System.Drawing.Point(14, 9);
             this.txtTimKiemVacXin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTimKiemVacXin.Name = "txtTimKiemVacXin";
             this.txtTimKiemVacXin.PasswordChar = '\0';
-            this.txtTimKiemVacXin.PlaceholderText = "Tìm kiếm vacxin";
+            this.txtTimKiemVacXin.PlaceholderText = "Tìm kiếm tên vacxin";
             this.txtTimKiemVacXin.SelectedText = "";
             this.txtTimKiemVacXin.ShadowDecoration.Parent = this.txtTimKiemVacXin;
             this.txtTimKiemVacXin.Size = new System.Drawing.Size(300, 40);

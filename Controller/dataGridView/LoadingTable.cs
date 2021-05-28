@@ -30,7 +30,11 @@ namespace Controller.dataGridView
                     dr[1] = record.HoTen;
                     dr[2] = record.SoCMND;
                     dr[3] = record.NgaySinh;
-                    dr[4] = record.GioiTinh;
+                    if (record.GioiTinh == 0)
+                    {
+                        dr[4] = "Nam";
+                    }
+                    else dr[4] = "Nữ";
                     dr[5] = record.NgheNghiep;
                     dr[6] = record.DiaChi;
                     dr[7] = record.SoDienThoai;
@@ -69,7 +73,6 @@ namespace Controller.dataGridView
                     {
                         dr[4] = "Nữ";
                     }
-
                     dr[5] = record.NgheNghiep;
                     dr[6] = record.DiaChi;
                     dr[7] = record.SoDienThoai;
@@ -109,7 +112,7 @@ namespace Controller.dataGridView
                     dr = dt.NewRow();
                     dr[0] = ++i;
                     dr[1] = record.HoTen;
-                    dr[4] = record.SoCMND;
+                   // dr[4] = record.SoCMND;
                     dr[5] = record.NgaySinh.Value.ToShortDateString();
                     dr[6] = record.GioiTinh;
                     dr[7] = record.NgheNghiep;
@@ -159,17 +162,17 @@ namespace Controller.dataGridView
                     dr = dt.NewRow();
                     dr[0] = ++i;
                     dr[1] = record.HoTen;
-                    dr[2] = record.SoCMND;
+                    dr[2] = link.MaTheBHYTe;
                     dr[3] = record.NgaySinh.Value.ToShortDateString();
                     if (record.GioiTinh == 0 )
                     {
                         dr[4] = "Nam";
                     }
                     else dr[4] = "Nữ";
-                    dr[5] = record.NgheNghiep;
-                    dr[6] = record.DiaChi;
-                    dr[7] = record.SoDienThoai;
-                    dr[8] = record.Email;
+                   // dr[4] = record.NgheNghiep;
+                    dr[5] = record.DiaChi;
+               //     dr[6] = record.SoDienThoai;
+               //     dr[7] = record.Email;
 
                     dt.Rows.Add(dr);
 
@@ -198,16 +201,16 @@ namespace Controller.dataGridView
                     dr[1] = record.HoTen;
                     dr[2] = record.SoCMND;
                     dr[3] = record.NgaySinh.Value.ToShortDateString();
-                    dr[4] = record.GioiTinh;
-                    dr[5] = record.NgheNghiep;
-                    dr[6] = record.DiaChi;
-                    dr[7] = record.SoDienThoai;
-                    dr[8] = record.Email;
+                    //dr[4] = record.GioiTinh;
+                    dr[4] = record.NgheNghiep;
+                    dr[5] = record.DiaChi;
+                    dr[6] = record.SoDienThoai;
+                    dr[7] = record.Email;
                     var thongtin = context.ThongTinThaiKis.Where(b => b.ID_NguoiMangThai == phunu.ID_NguoiMangThai).FirstOrDefault();
                     if (thongtin != null)
                     {
-                        dr[9] = thongtin.ThoiGianKham.ToShortDateString();
-                        dr[10] = thongtin.ThoiGianSinhDuKien.GetValueOrDefault().ToShortDateString();
+                        dr[8] = thongtin.ThoiGianKham.ToShortDateString();
+                        dr[9] = thongtin.ThoiGianSinhDuKien.GetValueOrDefault().ToShortDateString();
                     }
 
                     dt.Rows.Add(dr);

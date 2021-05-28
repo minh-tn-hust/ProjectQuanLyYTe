@@ -59,7 +59,7 @@ namespace QuanLyYTe
             {
                 ConvertToObject converter = new ConvertToObject();
                 BangOnlyTreEm da = converter.onlybangtreem(loading, e);
-                HSTreSoSinh hosotre = new HSTreSoSinh(da.treem, da.connguoi);
+                HSTreSoSinh hosotre = new HSTreSoSinh(da.treem, da.connguoi, 1);
                 hosotre.Show();
 
             }
@@ -67,7 +67,7 @@ namespace QuanLyYTe
             {
                 ConvertToObject converter = new ConvertToObject();
                 BangPhuNuMangThai ad = converter.bangphunumangthai(loading, e);
-                HSPhuSan hoso = new HSPhuSan(ad.connguoi, ad.phunumangthai);
+                HSPhuSan hoso = new HSPhuSan(ad.connguoi, ad.phunumangthai,1);
                 hoso.Show();
             }
             
@@ -94,9 +94,26 @@ namespace QuanLyYTe
 
         }
 
+<<<<<<< HEAD
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
 
+=======
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            TreEm treem = new TreEm();
+            ConNguoi connguoi = new ConNguoi();
+            HSTreSoSinh hs = new HSTreSoSinh(treem,connguoi,0);
+            hs.ShowDialog();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            ConNguoi connguoi = new ConNguoi();
+            PhuNuMangThai phunu = new PhuNuMangThai();
+            HSPhuSan hoso = new HSPhuSan(connguoi,phunu,0);
+            hoso.Show();
+>>>>>>> b6ce35cfc5578cf7be454882291b38f14fdebfe9
         }
     }
 }

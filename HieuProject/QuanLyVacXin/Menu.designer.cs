@@ -35,9 +35,6 @@ namespace QuanLyVaxin
             this.btnThongkevacxin = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongtinvacxin = new Guna.UI2.WinForms.Guna2Button();
             this.panelDinh = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ControlBox3Menu = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox2Menu = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1Menu = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnSlide = new Guna.UI2.WinForms.Guna2Button();
             this.panelHienthi = new Guna.UI2.WinForms.Guna2Panel();
             this.panelMenu.SuspendLayout();
@@ -128,9 +125,6 @@ namespace QuanLyVaxin
             // panelDinh
             // 
             this.panelDinh.BackColor = System.Drawing.Color.Linen;
-            this.panelDinh.Controls.Add(this.guna2ControlBox3Menu);
-            this.panelDinh.Controls.Add(this.guna2ControlBox2Menu);
-            this.panelDinh.Controls.Add(this.guna2ControlBox1Menu);
             this.panelDinh.Controls.Add(this.btnSlide);
             this.panelDinh.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
@@ -139,47 +133,6 @@ namespace QuanLyVaxin
             this.panelDinh.ShadowDecoration.Parent = this.panelDinh;
             this.panelDinh.Size = new System.Drawing.Size(800, 50);
             this.panelDinh.TabIndex = 1;
-            // 
-            // guna2ControlBox3Menu
-            // 
-            this.guna2ControlBox3Menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox3Menu.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox3Menu.CustomIconSize = 20F;
-            this.guna2ControlBox3Menu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.guna2ControlBox3Menu.HoverState.Parent = this.guna2ControlBox3Menu;
-            this.guna2ControlBox3Menu.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3Menu.Location = new System.Drawing.Point(707, 9);
-            this.guna2ControlBox3Menu.Name = "guna2ControlBox3Menu";
-            this.guna2ControlBox3Menu.ShadowDecoration.Parent = this.guna2ControlBox3Menu;
-            this.guna2ControlBox3Menu.Size = new System.Drawing.Size(30, 30);
-            this.guna2ControlBox3Menu.TabIndex = 6;
-            // 
-            // guna2ControlBox2Menu
-            // 
-            this.guna2ControlBox2Menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2Menu.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox2Menu.CustomIconSize = 20F;
-            this.guna2ControlBox2Menu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.guna2ControlBox2Menu.HoverState.Parent = this.guna2ControlBox2Menu;
-            this.guna2ControlBox2Menu.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2Menu.Location = new System.Drawing.Point(733, 9);
-            this.guna2ControlBox2Menu.Name = "guna2ControlBox2Menu";
-            this.guna2ControlBox2Menu.ShadowDecoration.Parent = this.guna2ControlBox2Menu;
-            this.guna2ControlBox2Menu.Size = new System.Drawing.Size(30, 30);
-            this.guna2ControlBox2Menu.TabIndex = 5;
-            // 
-            // guna2ControlBox1Menu
-            // 
-            this.guna2ControlBox1Menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1Menu.CustomIconSize = 20F;
-            this.guna2ControlBox1Menu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.guna2ControlBox1Menu.HoverState.Parent = this.guna2ControlBox1Menu;
-            this.guna2ControlBox1Menu.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1Menu.Location = new System.Drawing.Point(758, 9);
-            this.guna2ControlBox1Menu.Name = "guna2ControlBox1Menu";
-            this.guna2ControlBox1Menu.ShadowDecoration.Parent = this.guna2ControlBox1Menu;
-            this.guna2ControlBox1Menu.Size = new System.Drawing.Size(30, 30);
-            this.guna2ControlBox1Menu.TabIndex = 4;
             // 
             // btnSlide
             // 
@@ -239,9 +192,6 @@ namespace QuanLyVaxin
         private Guna.UI2.WinForms.Guna2Button btnNhaplieu;
         private Guna.UI2.WinForms.Guna2Button btnThongkevacxin;
         private Guna.UI2.WinForms.Guna2Button btnThongtinvacxin;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1Menu;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3Menu;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2Menu;
     }
 }
 

@@ -76,13 +76,13 @@ namespace Controller.dataGridView
             {
                 "STT", //0
                 "Họ và tên", //1
-                "Số CMND", //4
+                "Số thẻ BHYT", //4
                 "Ngày sinh", //5
                 "Giới tính", //6
-                "Nghề nghiệp", //7
+               // "Nghề nghiệp", //7
                 "Địa chỉ", //8
-                "Số điện thoại", //9
-                "Email", //10
+               // "Số điện thoại", //9
+             //   "Email", //10
             };
             return ls;
         }
@@ -95,7 +95,7 @@ namespace Controller.dataGridView
                 "Họ và tên",
                 "Số CMND",
                 "Ngày sinh",
-                "Giới tính",
+              //  "Giới tính",
                 "Nghề nghiệp",
                 "Địa chỉ",
                 "Số điện thoại",

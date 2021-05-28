@@ -57,6 +57,7 @@ namespace Take3
 
         private void CDPhuSan_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(IDnguoimangthai.ToString());
             using (var yteDbcontext = new YTeDbContext())
             {
                 List<PhongKham> listPhongKham = yteDbcontext.PhongKhams.ToList();
@@ -65,7 +66,6 @@ namespace Take3
                     guna2ComboBox1.Items.Add(record.ID_PhongKham + " - " + record.TenPhongKham);
                 }
             }
-            this.IDnguoimangthai = 1;
             chartCanNang.Series[0].LegendText = "Cân nặng của mẹ";
             chartCanNang.Series[0].ChartType = SeriesChartType.Line;
             List<DateTime> date = new List<DateTime>();

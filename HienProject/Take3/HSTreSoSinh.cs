@@ -22,11 +22,13 @@ namespace Take3
         // Cai phan nay khong can quan tam
         TreEm treem;
         ConNguoi connguoi;
-        public HSTreSoSinh(TreEm treem,  ConNguoi connguoi)
+        int classify;
+        public HSTreSoSinh(TreEm treem,  ConNguoi connguoi, int classify)
         {
             InitializeComponent();
             this.connguoi = connguoi;
             this.treem = treem;
+            this.classify = classify;
         }
 
 
@@ -74,10 +76,10 @@ namespace Take3
                         try
                         {
                             yTeDbContext.SaveChanges();
+                            MessageBox.Show("Tạo mới thông tin thành công!");
+                            CD1.IDtreem = connguoi.ID_Nguoi;
 
-                        //bug của chị ở đây là cmnd không được trùng, ví dụ chị chèn một thằng không có cmnd rồi thì khôn ghtể chèn được thằng thứ 2 không có thử xem qua csdl nhé
                         }
-
                         catch
                         {
                             MessageBox.Show("Không thêm con người được");
@@ -202,37 +204,40 @@ namespace Take3
 
         private void HSTreSoSinh_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show(treem.ID_TreEm.ToString());
-            guna2TextBox1.Text = connguoi.HoTen;
-            using (var context = new YTeDbContext())
+            if (classify == 1)
             {
-                var bo = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Bo).FirstOrDefault();
-                guna2TextBox8.Text = bo.HoTen;
-                guna2TextBox9.Text = bo.NgheNghiep;
-                guna2TextBox10.Text = bo.SoDienThoai;
-                guna2TextBox11.Text = bo.SoCMND;
-                guna2TextBox13.Text = bo.DiaChi;
-                guna2DateTimePicker3.Value = DateTime.Parse(bo.NgaySinh.ToString());
-
-
-                var me = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Me).FirstOrDefault();
-                guna2TextBox3.Text = me.HoTen;
-                guna2TextBox4.Text = me.NgheNghiep;
-                guna2TextBox5.Text = me.SoDienThoai;
-                guna2TextBox7.Text = me.SoCMND;
-                guna2TextBox12.Text = me.DiaChi;
-                guna2DateTimePicker2.Value = DateTime.Parse(me.NgaySinh.ToString());
-
-                var BHYT = context.TreEms.Where(b => b.ID_TreEm == treem.ID_TreEm).FirstOrDefault();
-                guna2TextBox2.Text = BHYT.MaTheBHYTe;
-                guna2TextBox14.Text = BHYT.ThongTinNguoiBaoTin;
-                var GT = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Nguoi).FirstOrDefault();
-                if (GT.GioiTinh == 0)
+                //MessageBox.Show(treem.ID_TreEm.ToString());
+                guna2TextBox1.Text = connguoi.HoTen;
+                using (var context = new YTeDbContext())
                 {
-                    guna2ComboBox1.SelectedItem = "Nam";
+                    var bo = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Bo).FirstOrDefault();
+                    guna2TextBox8.Text = bo.HoTen;
+                    guna2TextBox9.Text = bo.NgheNghiep;
+                    guna2TextBox10.Text = bo.SoDienThoai;
+                    guna2TextBox11.Text = bo.SoCMND;
+                    guna2TextBox13.Text = bo.DiaChi;
+                    guna2DateTimePicker3.Value = DateTime.Parse(bo.NgaySinh.ToString());
+
+
+                    var me = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Me).FirstOrDefault();
+                    guna2TextBox3.Text = me.HoTen;
+                    guna2TextBox4.Text = me.NgheNghiep;
+                    guna2TextBox5.Text = me.SoDienThoai;
+                    guna2TextBox7.Text = me.SoCMND;
+                    guna2TextBox12.Text = me.DiaChi;
+                    guna2DateTimePicker2.Value = DateTime.Parse(me.NgaySinh.ToString());
+
+                    var BHYT = context.TreEms.Where(b => b.ID_TreEm == treem.ID_TreEm).FirstOrDefault();
+                    guna2TextBox2.Text = BHYT.MaTheBHYTe;
+                    guna2TextBox14.Text = BHYT.ThongTinNguoiBaoTin;
+                    var GT = context.ConNguois.Where(b => b.ID_Nguoi == treem.ID_Nguoi).FirstOrDefault();
+                    if (GT.GioiTinh == 0)
+                    {
+                        guna2ComboBox1.SelectedItem = "Nam";
+                    }
+                    else guna2ComboBox1.SelectedItem = "Nữ";
+                    guna2DateTimePicker1.Value = DateTime.Parse(GT.NgaySinh.ToString());
                 }
-                else guna2ComboBox1.SelectedItem = "Nữ";
-                guna2DateTimePicker1.Value = DateTime.Parse(GT.NgaySinh.ToString());
             }
         }
     }
