@@ -141,7 +141,7 @@ namespace QuanLyYTe.GD_Chung
 
         private void CuaNhanVien_Resize(object sender, EventArgs e)
         {
-            loadingFormPanel.Height = this.Height - 47;
+            loadingFormPanel.Height = this.Height - 85;
         }
 
         private void CuaNhanVien_FormClosed(object sender, FormClosedEventArgs e)

@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation5 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CuaNhanVien));
             this.mainMenuPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.vacxinButton = new Guna.UI2.WinForms.Guna2Button();
             this.booklichButton = new Guna.UI2.WinForms.Guna2Button();
             this.treemButton = new Guna.UI2.WinForms.Guna2Button();
-            this.MouseDetect = new System.Windows.Forms.Timer(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.loadingFormPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainMenuPanel.SuspendLayout();
+            this.loadingFormPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuPanel
@@ -60,6 +61,18 @@
             this.mainMenuPanel.Size = new System.Drawing.Size(1037, 47);
             this.mainMenuPanel.TabIndex = 5;
             this.mainMenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Xin chào Trần Nhật Minh";
             // 
             // guna2ImageButton1
             // 
@@ -82,18 +95,6 @@
             this.guna2ImageButton1.TabIndex = 10;
             this.guna2ImageButton1.UseTransparentBackground = true;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Xin chào Trần Nhật Minh";
             // 
             // vacxinButton
             // 
@@ -155,36 +156,32 @@
             this.treemButton.Text = "Trẻ em và Phụ nữ";
             this.treemButton.Click += new System.EventHandler(this.treemButton_Click);
             // 
-            // MouseDetect
-            // 
-            this.MouseDetect.Enabled = true;
-            this.MouseDetect.Tick += new System.EventHandler(this.MouseDetect_Tick);
-            // 
             // guna2Transition1
             // 
             this.guna2Transition1.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation5;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
             this.guna2Transition1.MaxAnimationTime = 500;
             this.guna2Transition1.TimeStep = 0.1F;
             // 
             // loadingFormPanel
             // 
             this.loadingFormPanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.loadingFormPanel.Controls.Add(this.pictureBox1);
             this.guna2Transition1.SetDecoration(this.loadingFormPanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.loadingFormPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.loadingFormPanel.Location = new System.Drawing.Point(0, 45);
@@ -200,6 +197,18 @@
             this.entityCommand1.Connection = null;
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
+            // 
+            // pictureBox1
+            // 
+            this.guna2Transition1.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::QuanLyYTe.Properties.Resources._4433982;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1037, 504);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // CuaNhanVien
             // 
@@ -219,13 +228,14 @@
             this.Resize += new System.EventHandler(this.CuaNhanVien_Resize);
             this.mainMenuPanel.ResumeLayout(false);
             this.mainMenuPanel.PerformLayout();
+            this.loadingFormPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2Panel mainMenuPanel;
-        private System.Windows.Forms.Timer MouseDetect;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel loadingFormPanel;
@@ -234,5 +244,6 @@
         private Guna.UI2.WinForms.Guna2Button treemButton;
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

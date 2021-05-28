@@ -31,7 +31,7 @@ namespace QuanLyYTe
 
         private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
- 
+
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -55,28 +55,31 @@ namespace QuanLyYTe
 
         private void loading_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (btnTreem.FillColor == Color.FromArgb(94, 148, 255)) 
+            if (e.RowIndex != -1)
             {
-                ConvertToObject converter = new ConvertToObject();
-                BangOnlyTreEm da = converter.onlybangtreem(loading, e);
-                HSTreSoSinh hosotre = new HSTreSoSinh(da.treem, da.connguoi, 1);
-                hosotre.Show();
+                if (btnTreem.FillColor == Color.FromArgb(94, 148, 255))
+                {
+                    ConvertToObject converter = new ConvertToObject();
+                    BangOnlyTreEm da = converter.onlybangtreem(loading, e);
+                    HSTreSoSinh hosotre = new HSTreSoSinh(da.treem, da.connguoi, 1);
+                    hosotre.Show();
 
+                }
+                else
+                {
+                    ConvertToObject converter = new ConvertToObject();
+                    BangPhuNuMangThai ad = converter.bangphunumangthai(loading, e);
+                    HSPhuSan hoso = new HSPhuSan(ad.connguoi, ad.phunumangthai, 1);
+                    hoso.Show();
+                }
             }
-            else
-            {
-                ConvertToObject converter = new ConvertToObject();
-                BangPhuNuMangThai ad = converter.bangphunumangthai(loading, e);
-                HSPhuSan hoso = new HSPhuSan(ad.connguoi, ad.phunumangthai,1);
-                hoso.Show();
-            }
-            
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-                DTGFilter dtg = new DTGFilter();
-                loading.DataSource = dtg.searchRow(loading, searchField.Text, searchTextBox.Text);
+            DTGFilter dtg = new DTGFilter();
+            loading.DataSource = dtg.searchRow(loading, searchField.Text, searchTextBox.Text);
         }
 
         private void loading_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -93,17 +96,11 @@ namespace QuanLyYTe
         {
 
         }
-
-<<<<<<< HEAD
-        private void searchTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-=======
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             TreEm treem = new TreEm();
             ConNguoi connguoi = new ConNguoi();
-            HSTreSoSinh hs = new HSTreSoSinh(treem,connguoi,0);
+            HSTreSoSinh hs = new HSTreSoSinh(treem, connguoi, 0);
             hs.ShowDialog();
         }
 
@@ -111,9 +108,30 @@ namespace QuanLyYTe
         {
             ConNguoi connguoi = new ConNguoi();
             PhuNuMangThai phunu = new PhuNuMangThai();
-            HSPhuSan hoso = new HSPhuSan(connguoi,phunu,0);
+            HSPhuSan hoso = new HSPhuSan(connguoi, phunu, 0);
             hoso.Show();
->>>>>>> b6ce35cfc5578cf7be454882291b38f14fdebfe9
+        }
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            if (btnTreem.FillColor == Color.FromArgb(94, 148, 255))
+            {
+                TreEm treem = new TreEm();
+                ConNguoi connguoi = new ConNguoi();
+                HSTreSoSinh hs = new HSTreSoSinh(treem, connguoi, 0);
+                hs.ShowDialog();
+            }
+            else 
+            {
+                ConNguoi connguoi = new ConNguoi();
+                PhuNuMangThai phunu = new PhuNuMangThai();
+                HSPhuSan hoso = new HSPhuSan(connguoi, phunu, 0);
+                hoso.Show();
+            }
         }
     }
 }

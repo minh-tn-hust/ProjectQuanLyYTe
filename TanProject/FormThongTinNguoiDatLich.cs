@@ -99,6 +99,7 @@ namespace QLPK
                     {
                         context.SaveChanges();
                         MessageBox.Show("Bạn đã lưu thành công!", "Thông báo!");
+                        //SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, guna2DateTimePicker1.Value.ToString());
                     }
                     catch
                     {

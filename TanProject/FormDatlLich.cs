@@ -278,7 +278,7 @@ namespace QLPK
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             FormDanhSachDatLich f = new FormDanhSachDatLich();
-            this.Hide();
+            //this.Hide();
             f.ShowDialog();
             this.Show();
 
@@ -288,7 +288,7 @@ namespace QLPK
         private void butDanhSach_Click(object sender, EventArgs e)
         {
             FormDanhSachDatLich f = new FormDanhSachDatLich();
-            this.Hide();
+            //this.Hide();
             f.ShowDialog();
             this.Show();
         }
@@ -314,14 +314,14 @@ namespace QLPK
                             FormDanhSachDatLich f = new FormDanhSachDatLich();
                             f.SDT = treconn.SoDienThoai;
                             f.ShowDialog();
-                            this.Hide();
+                            //this.Hide();
                         }
                         else
                         {
                             FormDanhSachDatLich f = new FormDanhSachDatLich();
                             f.SDT = treconn.SoDienThoai;
                             f.ShowDialog();
-                            this.Hide();
+                            //this.Hide();
                         }
                     }
                 }
@@ -345,14 +345,14 @@ namespace QLPK
                             FormDanhSachDatLich f = new FormDanhSachDatLich();
                             f.SDT = people.SoDienThoai;
                             f.ShowDialog();
-                            this.Hide();
+                            //this.Hide();
                         }
                         else
                         {
                             FormDanhSachDatLich f = new FormDanhSachDatLich();
                             f.SoCMND = people.SoCMND;
                             f.ShowDialog();
-                            this.Hide();
+                            //this.Hide();
                         }
                     }
                 }
@@ -377,14 +377,14 @@ namespace QLPK
                             FormDanhSachDatLich f = new FormDanhSachDatLich();
                             f.SDT = people.SoDienThoai;
                             f.ShowDialog();
-                            this.Hide();
+                            //this.Hide();
                         }
                         else
                         {
                             FormDanhSachDatLich f = new FormDanhSachDatLich();
                             f.SDT = people.SoDienThoai;
                             f.ShowDialog();
-                            this.Hide();
+                            //this.Hide();
                         }
                     }
                 }

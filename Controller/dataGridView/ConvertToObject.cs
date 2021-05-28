@@ -79,9 +79,10 @@ namespace Controller.dataGridView
         }
         public BangOnlyTreEm onlybangtreem(DataGridView source, DataGridViewCellEventArgs e)
         {
+
             String name = source.Rows[e.RowIndex].Cells[1].Value.ToString();
             DateTime birth = DateTime.Parse(source.Rows[e.RowIndex].Cells[3].Value.ToString());
-           // MessageBox.Show(name);
+            // MessageBox.Show(name);
             using (var context = new YTeDbContext())
             {
                 var connguoi = context.ConNguois
@@ -92,7 +93,6 @@ namespace Controller.dataGridView
                                 .FirstOrDefault();
                 BangOnlyTreEm ans = new BangOnlyTreEm(connguoi, treem);
                 return ans;
-
             }
         }
 

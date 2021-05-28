@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="guimail.cs" />
     <Compile Include="FormDatlLich.cs">
       <SubType>Form</SubType>
     </Compile>
