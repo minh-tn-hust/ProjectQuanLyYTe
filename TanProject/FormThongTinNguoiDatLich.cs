@@ -50,7 +50,7 @@ namespace QLPK
         private void FormThongTinNguoiDatLich_Load_1(object sender, EventArgs e)
         {
             guna2DateTimePicker1.Value = date;
-            txtNguoiTaoDon.Text = nhanvien.HoTen;
+            //txtNguoiTaoDon.Text = nhanvien.HoTen;
             //MessageBox.Show(date.ToString());
         }
 
@@ -79,6 +79,12 @@ namespace QLPK
                     }
                     context.ConNguois.Add(people);
                     context.SaveChanges();
+                    var trecon = context.TreEms.Where(s => s.ID_Nguoi == people.ID_Nguoi).FirstOrDefault();
+                    if (txtBHYT.Text != "")
+                    {
+                        trecon.MaTheBHYTe = txtBHYT.Text;
+                        context.TreEms.Add(trecon);
+                    }
 
                     var connguoi = new DatLichKham();
                     {
