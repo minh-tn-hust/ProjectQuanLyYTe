@@ -35,13 +35,13 @@ namespace QLPK
             this.Close();
         }
 
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát Phiếu mà chưa lưu không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
-        }
+        //private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    if (MessageBox.Show("Bạn có muốn thoát phiếu mà chưa lưu không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+        //    {
+        //        e.Cancel = true;
+        //    }
+        //}
 
         public DateTime date;
         public String phongkham;
@@ -54,10 +54,10 @@ namespace QLPK
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            if (txtHoTen.Text == "" && txtSDT.Text == "" && txtLyDoKham.Text == "")
+            if (txtHoTen.Text == "" && txtSDT.Text == "")
             {
                     MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo!");
-                    this.Close();
+                    //this.Close();
             }
             else
             {
@@ -76,22 +76,15 @@ namespace QLPK
                         else people.GioiTinh = 0;
                     }
                     context.ConNguois.Add(people);
-                    try
-                    {
-                        context.SaveChanges();
-                        MessageBox.Show("Bạn đã lưu thành công!", "Thông báo!");
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
-                        return;
-                    }
+                    context.SaveChanges();
 
                     var connguoi = new DatLichKham();
                     {
+                        connguoi.ID_Nguoi = people.ID_Nguoi;
                         connguoi.GhiChu = txtGhiChu.Text;
                         connguoi.LyDoKham = txtLyDoKham.Text;
                         connguoi.ID_PhongKham = People.ID_PhongKham;
+                        connguoi.ThoiGianHenKham = guna2DateTimePicker1.Value;
                         //connguoi.ID_NhanVien =  txtNguoiTaoDon.Text;
                     }
                     context.DatLichKhams.Add(connguoi);
@@ -99,11 +92,13 @@ namespace QLPK
                     {
                         context.SaveChanges();
                         MessageBox.Show("Bạn đã lưu thành công!", "Thông báo!");
-                        //SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, guna2DateTimePicker1.Value.ToString());
+                        FormDatlLich f = new FormDatlLich();
+                        f.ShowDialog();
+                        this.Close();                      
                     }
                     catch
                     {
-                        MessageBox.Show("Vui lòng kiểm tra lại thông tin!");
+                        MessageBox.Show("Vui lòng kiểm tra lại thông tin!", "Thông báo!");
                         return;
                     }
                 }
