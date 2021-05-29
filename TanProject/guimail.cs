@@ -37,7 +37,7 @@ namespace QLPK
 
 
 
-            string subject = "Welcome to CSharpCorner.Com";
+            string subject = "Trung Tâm Y Tế Xã - Thư Xác Nhận";
 
 
             MailMessage _mailmsg = new MailMessage();
