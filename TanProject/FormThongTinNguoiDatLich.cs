@@ -15,11 +15,13 @@ namespace QLPK
 {
     public partial class FormThongTinNguoiDatLich : Form
     {
-        public FormThongTinNguoiDatLich()
+        ConNguoi nhanvien;
+        public FormThongTinNguoiDatLich(ConNguoi nhanvien)
         {
             InitializeComponent();
+            this.nhanvien = nhanvien;
         }
-
+        DateTime ngaykham;
         private void guna2HtmlLabel10_Click(object sender, EventArgs e)
         {
 
@@ -47,8 +49,8 @@ namespace QLPK
         public String phongkham;
         private void FormThongTinNguoiDatLich_Load_1(object sender, EventArgs e)
         {
-            guna2DateTimePicker1.Value = DateTime.Now;
-            
+            guna2DateTimePicker1.Value = date;
+            txtNguoiTaoDon.Text = nhanvien.HoTen;
             //MessageBox.Show(date.ToString());
         }
 
@@ -92,9 +94,10 @@ namespace QLPK
                     {
                         context.SaveChanges();
                         MessageBox.Show("Bạn đã lưu thành công!", "Thông báo!");
-                        FormDatlLich f = new FormDatlLich();
-                        f.ShowDialog();
-                        this.Close();                      
+                        this.Close();
+                        MessageBox.Show(phongKham.DiaChi);
+                        SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
+                        sendingMail.send();
                     }
                     catch
                     {

@@ -31,7 +31,7 @@ namespace QuanLyYTe.GD_Chung
 
         QuanLyVaxin.Menu qlvc = new QuanLyVaxin.Menu();
         PhuNuTreEm pnte = new PhuNuTreEm();
-        FormDatlLich datlich = new FormDatlLich();
+        FormDatlLich datlich;
 
         
         private void openChildForm(Form childForm)
@@ -58,6 +58,7 @@ namespace QuanLyYTe.GD_Chung
             {
                 var connguoi = context.ConNguois.Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi).FirstOrDefault();
                 label1.Text = "Xin chào "+connguoi.HoTen;
+                this.datlich = new FormDatlLich(connguoi);
             }
         }
 

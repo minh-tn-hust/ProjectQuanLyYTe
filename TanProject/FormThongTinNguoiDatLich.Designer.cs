@@ -615,7 +615,7 @@ namespace QLPK
             this.Name = "FormThongTinNguoiDatLich";
             this.Text = "Thông tin người đặt lịch";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.FormThongTinNguoiDatLich_Load_1);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);

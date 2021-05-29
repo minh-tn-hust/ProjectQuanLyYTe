@@ -14,11 +14,13 @@ namespace QLPK
         String tennguoikham;
         String diachikham;
         String thoigianhenkham;
-        public SendingMail(String tennguoikham, String diachikham, String thoigianhenkham)
+        String toMail;
+        public SendingMail(String tennguoikham, String diachikham, String thoigianhenkham, String mail)
         {
             this.thoigianhenkham = thoigianhenkham;
             this.diachikham = diachikham;
             this.tennguoikham = tennguoikham;
+            this.toMail = mail;
         }
         public void send()
         {
@@ -29,7 +31,7 @@ namespace QLPK
 
             MailText = MailText.Replace("[thoigiangui]", DateTime.Now.ToString().Trim());
             MailText = MailText.Replace("[tennguoikham]", tennguoikham.Trim());
-            MailText = MailText.Replace("[diahchikham]", diachikham.Trim());
+            MailText = MailText.Replace("[diachikham]", diachikham.Trim());
             MailText = MailText.Replace("[thoigianhenkham]", thoigianhenkham.Trim());
 
 
@@ -46,7 +48,7 @@ namespace QLPK
 
             _mailmsg.From = new MailAddress("trungtamytedemo@gmail.com");
 
-            _mailmsg.To.Add("minh.tn.hust@gmail.com");
+            _mailmsg.To.Add(toMail);
 
             _mailmsg.Subject = subject;
 

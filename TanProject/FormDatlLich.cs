@@ -20,9 +20,13 @@ namespace QLPK
         {
             InitializeComponent();
         }
+        public FormDatlLich(ConNguoi nhanvien)
+        {
+            InitializeComponent();
+            this.nhanvienyte = nhanvien;
+        }
 
-        //SqlConnection con
-
+        ConNguoi nhanvienyte;
         public string SoCMND = null;
         DTGFilter filter = new DTGFilter();
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -76,7 +80,7 @@ namespace QLPK
         {
             DateTime Date = guna2DateTimePicker2.Value;
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 8, 0, 0);
-            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich(nhanvienyte);
             f.date = Date;
             f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
@@ -87,7 +91,7 @@ namespace QLPK
         {
             DateTime Date = guna2DateTimePicker2.Value;
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 9, 0, 0);
-            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich(nhanvienyte);
             f.date = Date;
             f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
@@ -98,7 +102,7 @@ namespace QLPK
         {
             DateTime Date = guna2DateTimePicker2.Value;
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 10, 0, 0);
-            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich(nhanvienyte);
             f.date = Date;
             f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
@@ -109,7 +113,7 @@ namespace QLPK
         {
             DateTime Date = guna2DateTimePicker2.Value;
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 11, 0, 0);
-            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich(nhanvienyte);
             f.date = Date;
             f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
@@ -120,7 +124,7 @@ namespace QLPK
         {
             DateTime Date = guna2DateTimePicker2.Value;
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 14, 0, 0);
-            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich(nhanvienyte);
             f.date = Date;
             f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
@@ -131,7 +135,7 @@ namespace QLPK
         {
             DateTime Date = guna2DateTimePicker2.Value;
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 15, 0, 0);
-            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich(nhanvienyte);
             f.date = Date;
             f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
@@ -142,7 +146,7 @@ namespace QLPK
         {
             DateTime Date = guna2DateTimePicker2.Value;
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 16, 0, 0);
-            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich(nhanvienyte);
             f.date = Date;
             f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
@@ -153,7 +157,7 @@ namespace QLPK
         {
             DateTime Date = guna2DateTimePicker2.Value;
             Date = new DateTime(Date.Year, Date.Month, Date.Day, 17, 0, 0);
-            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich();
+            FormThongTinNguoiDatLich f = new FormThongTinNguoiDatLich(nhanvienyte);
             f.date = Date;
             f.phongkham = cbPhongKham.Text;
             f.ShowDialog();
