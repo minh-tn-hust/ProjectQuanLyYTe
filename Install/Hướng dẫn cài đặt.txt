@@ -1,0 +1,17 @@
+Hướng dẫn cài đặt
+-- vào thư mục LastModel
+-- vào bin
+-- vào Debbug
+-- chuột phải vào LastModel.dll
+-- chọn Properties
+-- chọn Unlock
+-- chọn Ok
+-- Quay trở lại thư mục Install và chạy file Autorun
+
+sau khi cài đặt xong, để có thể trải nghiệm sử dụng với csdl mẫu:
+- Copy code trong file DataScript
+- Vào SQL Server, chọn server (localdb)\MSSQLLocalDB
+- Vào Database
+- CHuột phải chọn Model2, chọn NewQuery
+- Paste code đã copy vào rồi chạy
+- Quay lại và trải nghiệm phần mềm

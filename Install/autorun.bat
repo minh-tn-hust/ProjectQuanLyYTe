@@ -5,7 +5,7 @@ set assemblyPath="%CD%\LastModel\bin\Debug\LastModel.dll"
 set projectPath="%CD%\LastModel\\"
 set configPath="%CD%\LastModel\App.config"
 set ef6Exe=%CD%\packages\EntityFramework.6.4.4\tools\net45\any
-set databaseCommnad=ef6.exe database update --verbose --no-color --prefix-output --assembly %assemblyPath% --project-dir %projectPath% --language C# --root-namespace UpdateDatabase --config %configPath%
+set databaseCommnad=ef6.exe database update --verbose --no-color --prefix-output --assembly %assemblyPath% --project-dir %projectPath% --language C# --root-namespace LastModel --config %configPath%
 cd %ef6Exe%
 %databaseCommnad%
 cd %local%
