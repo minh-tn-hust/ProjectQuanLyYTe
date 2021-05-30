@@ -5,15 +5,13 @@ namespace Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
     using System.Data.Entity.Migrations;
-    using System.Collections.Generic;
-    using LastModel;
 
     public partial class YTeDbContext : DbContext
     {
         public YTeDbContext()
             : base("Model2")
         {
-            Database.SetInitializer(new YTeDBInitializer());
+            Database.SetInitializer<YTeDbContext>(new CreateDatabaseIfNotExists<YTeDbContext>());
         }
 
         
@@ -35,6 +33,4 @@ namespace Model
         {
         }
     }
-
-
 }

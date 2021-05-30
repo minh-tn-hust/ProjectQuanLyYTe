@@ -1,9 +1,10 @@
-﻿namespace UpdateDatabase.Migrations
+﻿namespace LastModel.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using Model;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Model.YTeDbContext>
     {
@@ -14,10 +15,14 @@
 
         protected override void Seed(Model.YTeDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
+            NguoiQuanLy nql = new NguoiQuanLy()
+            {
+                UserName = "admin",
+                Password = "admin",
+                MaXacNhan = "12345"
+            };
+            context.NguoiQuanLies.Add(nql);
+            base.Seed(context);
         }
     }
 }

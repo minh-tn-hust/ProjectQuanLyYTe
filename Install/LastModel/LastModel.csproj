@@ -5,12 +5,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99F52A2E-662A-4576-9CD9-2C5B581F8325}</ProjectGuid>
+    <ProjectGuid>{1A61898A-EF30-47F1-A70C-1C51BA9899A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UpdateDatabase</RootNamespace>
-    <AssemblyName>UpdateDatabase</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>LastModel</RootNamespace>
+    <AssemblyName>LastModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -40,6 +41,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -53,13 +57,16 @@
   <ItemGroup>
     <Compile Include="ChiSoTreCon.cs" />
     <Compile Include="ChiSoTrungBinh.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="ConNguoi.cs" />
     <Compile Include="DatLichKham.cs" />
     <Compile Include="HoGiaDinh.cs" />
-    <Compile Include="Migrations\202105300220540_init.cs" />
-    <Compile Include="Migrations\202105300220540_init.designer.cs">
-      <DependentUpon>202105300220540_init.cs</DependentUpon>
+    <Compile Include="Migrations\202105171749056_init.cs" />
+    <Compile Include="Migrations\202105171749056_init.designer.cs">
+      <DependentUpon>202105171749056_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105180124062_SuaLoiThongTinThaiKi.cs" />
+    <Compile Include="Migrations\202105180124062_SuaLoiThongTinThaiKi.designer.cs">
+      <DependentUpon>202105180124062_SuaLoiThongTinThaiKi.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NguoiQuanLy.cs" />
@@ -79,8 +86,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105300220540_init.resx">
-      <DependentUpon>202105300220540_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105171749056_init.resx">
+      <DependentUpon>202105171749056_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105180124062_SuaLoiThongTinThaiKi.resx">
+      <DependentUpon>202105180124062_SuaLoiThongTinThaiKi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
