@@ -53,6 +53,20 @@ namespace QLPK
             //txtNguoiTaoDon.Text = nhanvien.HoTen;
             //MessageBox.Show(date.ToString());
         }
+        public List<String> listconnguoi()
+        {
+            using (var context = new YTeDbContext())
+            {
+                var connguoi = context.ConNguois.ToList();
+                List<String> connguois = new List<string>();
+                foreach (var i in connguoi)
+                {
+                    connguois.Add(i.HoTen);
+                }
+                var p = new HashSet<String>(connguois);
+                return p.ToList();
+            }
+        }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
@@ -75,7 +89,17 @@ namespace QLPK
                         var people = new ConNguoi();
                         {
                             people.HoTen = txtHoTen.Text;
-                            people.SoCMND = txtCMND.Text;
+                            if(txtCMND.Text == "")
+                            {
+                                var listconnguoi = context.ConNguois.ToList();
+                                int i = listconnguoi.Count;
+                                people.SoCMND = (i+1).ToString();
+
+                            }
+                            else
+                            {
+                                people.SoCMND = txtCMND.Text;
+                            }
                             people.SoDienThoai = txtSDT.Text;
                             people.Email = txtEmail.Text;
                             people.DiaChi = txtDiaChi.Text;
@@ -84,15 +108,14 @@ namespace QLPK
                         }
                         context.ConNguois.Add(people); // add nó vào bảng connguoi
                         context.SaveChanges();
+                        
                         var trecon = new TreEm();
                         if (txtBHYT.Text != "")
                         {
                             trecon.ID_Nguoi = people.ID_Nguoi;
-
-
-
                             trecon.MaTheBHYTe = txtBHYT.Text;
                             context.TreEms.Add(trecon);
+                            context.SaveChanges();
                         }
 
                         var connguoi = new DatLichKham();
@@ -105,20 +128,13 @@ namespace QLPK
                             //connguoi.ID_NhanVien =  txtNguoiTaoDon.Text;
                         }
                         context.DatLichKhams.Add(connguoi);
-                        try
-                        {
-                            context.SaveChanges();
-                            MessageBox.Show("Bạn đã tạo phiếu thành công!", "Thông báo!");
-                            this.Close();
+                        context.SaveChanges();
+                        MessageBox.Show("Bạn đã tạo phiếu thành công!", "Thông báo!");
+                        this.Close();
                             MessageBox.Show(phongKham.DiaChi);
                             SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
                             sendingMail.send();
-                        }
-                        catch
-                        {
-                            MessageBox.Show("Vui lòng kiểm tra lại thông tin!", "Thông báo!");
-                            return;
-                        }
+                        
                     }
                 }
             }

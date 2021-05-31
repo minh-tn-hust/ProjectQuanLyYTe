@@ -394,5 +394,10 @@ namespace QLPK
                 }
             }
         }
+
+        private void guna2ComboBoxKieuTimKiem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

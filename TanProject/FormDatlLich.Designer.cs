@@ -52,14 +52,14 @@ namespace QLPK
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.butDanhSach = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ComboBoxKieuTimKiem = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.butDanhSach = new Guna.UI2.WinForms.Guna2Button();
             this.butTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,9 +70,9 @@ namespace QLPK
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.guna2Panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -432,6 +432,33 @@ namespace QLPK
             this.guna2Panel1.Size = new System.Drawing.Size(694, 62);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.Controls.Add(this.butDanhSach);
+            this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
+            this.guna2Panel5.Size = new System.Drawing.Size(134, 62);
+            this.guna2Panel5.TabIndex = 2;
+            // 
+            // butDanhSach
+            // 
+            this.butDanhSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.butDanhSach.BorderRadius = 8;
+            this.butDanhSach.CheckedState.Parent = this.butDanhSach;
+            this.butDanhSach.CustomImages.Parent = this.butDanhSach;
+            this.butDanhSach.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.butDanhSach.ForeColor = System.Drawing.Color.White;
+            this.butDanhSach.HoverState.Parent = this.butDanhSach;
+            this.butDanhSach.Location = new System.Drawing.Point(12, 12);
+            this.butDanhSach.Name = "butDanhSach";
+            this.butDanhSach.ShadowDecoration.Parent = this.butDanhSach;
+            this.butDanhSach.Size = new System.Drawing.Size(100, 36);
+            this.butDanhSach.TabIndex = 61;
+            this.butDanhSach.Text = "Danh sách đặt lịch";
+            this.butDanhSach.Click += new System.EventHandler(this.butDanhSach_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtTimKiem);
@@ -491,6 +518,7 @@ namespace QLPK
             this.guna2ComboBoxKieuTimKiem.ShadowDecoration.Parent = this.guna2ComboBoxKieuTimKiem;
             this.guna2ComboBoxKieuTimKiem.Size = new System.Drawing.Size(131, 36);
             this.guna2ComboBoxKieuTimKiem.TabIndex = 0;
+            this.guna2ComboBoxKieuTimKiem.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxKieuTimKiem_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -500,23 +528,6 @@ namespace QLPK
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(114, 62);
             this.panel1.TabIndex = 0;
-            // 
-            // butDanhSach
-            // 
-            this.butDanhSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.butDanhSach.BorderRadius = 8;
-            this.butDanhSach.CheckedState.Parent = this.butDanhSach;
-            this.butDanhSach.CustomImages.Parent = this.butDanhSach;
-            this.butDanhSach.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.butDanhSach.ForeColor = System.Drawing.Color.White;
-            this.butDanhSach.HoverState.Parent = this.butDanhSach;
-            this.butDanhSach.Location = new System.Drawing.Point(12, 12);
-            this.butDanhSach.Name = "butDanhSach";
-            this.butDanhSach.ShadowDecoration.Parent = this.butDanhSach;
-            this.butDanhSach.Size = new System.Drawing.Size(100, 36);
-            this.butDanhSach.TabIndex = 61;
-            this.butDanhSach.Text = "Danh sách đặt lịch";
-            this.butDanhSach.Click += new System.EventHandler(this.butDanhSach_Click);
             // 
             // butTimKiem
             // 
@@ -548,16 +559,6 @@ namespace QLPK
             this.guna2HtmlLabel1.Text = "Sáng";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2Panel5
-            // 
-            this.guna2Panel5.Controls.Add(this.butDanhSach);
-            this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
-            this.guna2Panel5.Size = new System.Drawing.Size(134, 62);
-            this.guna2Panel5.TabIndex = 2;
-            // 
             // FormDatlLich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,9 +583,9 @@ namespace QLPK
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.guna2Panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
