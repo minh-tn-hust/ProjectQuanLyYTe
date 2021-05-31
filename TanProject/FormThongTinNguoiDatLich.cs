@@ -66,49 +66,59 @@ namespace QLPK
                 using (var context = new YTeDbContext())
                 {
                     var phongKham = context.PhongKhams.Where(s => s.TenPhongKham == phongkham).FirstOrDefault();
-                    var People = context.DatLichKhams.Where(s => s.ID_PhongKham == phongKham.ID_PhongKham).FirstOrDefault();
-                    var people = new ConNguoi();
+                    if (phongKham == null)
                     {
-                        people.HoTen = txtHoTen.Text;
-                        people.SoCMND = txtCMND.Text;
-                        people.SoDienThoai = txtSDT.Text;
-                        people.Email = txtEmail.Text;
-                        people.DiaChi = txtDiaChi.Text;
-                        if (cbGioiTinh.Text == "Nữ") people.GioiTinh = 1;
-                        else people.GioiTinh = 0;
+                        MessageBox.Show("Chưa có phòng khám nào hoạt động!", "Thông báo!");
                     }
-                    context.ConNguois.Add(people);
-                    context.SaveChanges();
-                    var trecon = context.TreEms.Where(s => s.ID_Nguoi == people.ID_Nguoi).FirstOrDefault();
-                    if (txtBHYT.Text != "")
+                    else
                     {
-                        trecon.MaTheBHYTe = txtBHYT.Text;
-                        context.TreEms.Add(trecon);
-                    }
-
-                    var connguoi = new DatLichKham();
-                    {
-                        connguoi.ID_Nguoi = people.ID_Nguoi;
-                        connguoi.GhiChu = txtGhiChu.Text;
-                        connguoi.LyDoKham = txtLyDoKham.Text;
-                        connguoi.ID_PhongKham = People.ID_PhongKham;
-                        connguoi.ThoiGianHenKham = guna2DateTimePicker1.Value;
-                        //connguoi.ID_NhanVien =  txtNguoiTaoDon.Text;
-                    }
-                    context.DatLichKhams.Add(connguoi);
-                    try
-                    {
+                        var people = new ConNguoi();
+                        {
+                            people.HoTen = txtHoTen.Text;
+                            people.SoCMND = txtCMND.Text;
+                            people.SoDienThoai = txtSDT.Text;
+                            people.Email = txtEmail.Text;
+                            people.DiaChi = txtDiaChi.Text;
+                            if (cbGioiTinh.Text == "Nữ") people.GioiTinh = 1;
+                            else people.GioiTinh = 0;
+                        }
+                        context.ConNguois.Add(people); // add nó vào bảng connguoi
                         context.SaveChanges();
-                        MessageBox.Show("Bạn đã lưu thành công!", "Thông báo!");
-                        this.Close();
-                        MessageBox.Show(phongKham.DiaChi);
-                        SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
-                        sendingMail.send();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Vui lòng kiểm tra lại thông tin!", "Thông báo!");
-                        return;
+                        var trecon = new TreEm();
+                        if (txtBHYT.Text != "")
+                        {
+                            trecon.ID_Nguoi = people.ID_Nguoi;
+
+
+
+                            trecon.MaTheBHYTe = txtBHYT.Text;
+                            context.TreEms.Add(trecon);
+                        }
+
+                        var connguoi = new DatLichKham();
+                        {
+                            connguoi.ID_Nguoi = people.ID_Nguoi;
+                            connguoi.GhiChu = txtGhiChu.Text;
+                            connguoi.LyDoKham = txtLyDoKham.Text;
+                            connguoi.ID_PhongKham = phongKham.ID_PhongKham;
+                            connguoi.ThoiGianHenKham = guna2DateTimePicker1.Value;
+                            //connguoi.ID_NhanVien =  txtNguoiTaoDon.Text;
+                        }
+                        context.DatLichKhams.Add(connguoi);
+                        try
+                        {
+                            context.SaveChanges();
+                            MessageBox.Show("Bạn đã tạo phiếu thành công!", "Thông báo!");
+                            this.Close();
+                            MessageBox.Show(phongKham.DiaChi);
+                            SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
+                            sendingMail.send();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Vui lòng kiểm tra lại thông tin!", "Thông báo!");
+                            return;
+                        }
                     }
                 }
             }
