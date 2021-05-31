@@ -130,11 +130,12 @@ namespace QLPK
                         context.DatLichKhams.Add(connguoi);
                         context.SaveChanges();
                         MessageBox.Show("Bạn đã tạo phiếu thành công!", "Thông báo!");
+                        MessageBox.Show(phongKham.DiaChi);
+                        MessageBox.Show(people.HoTen + '\n' + phongKham.DiaChi + '\n' + connguoi.ThoiGianHenKham.ToString() + '\n' + people.Email);
+                        SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
+                        sendingMail.send();
                         this.Close();
-                            MessageBox.Show(phongKham.DiaChi);
-                            SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
-                            sendingMail.send();
-                        
+
                     }
                 }
             }

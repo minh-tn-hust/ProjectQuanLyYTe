@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
 using System.IO;
+using System.Windows.Forms;
 
 namespace QLPK
 {
@@ -24,7 +25,7 @@ namespace QLPK
         }
         public void send()
         {
-            string FilePath = "x.html";
+            string FilePath = "Confirm.html";
             StreamReader str = new StreamReader(FilePath);
             string MailText = str.ReadToEnd();
             str.Close();
@@ -66,6 +67,8 @@ namespace QLPK
             _smtp.Credentials = _network;
 
             _smtp.Send(_mailmsg);
+            MessageBox.Show("Thành Công");
+
         }
     }
 }
