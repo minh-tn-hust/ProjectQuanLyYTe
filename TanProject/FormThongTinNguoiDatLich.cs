@@ -50,7 +50,8 @@ namespace QLPK
         private void FormThongTinNguoiDatLich_Load_1(object sender, EventArgs e)
         {
             guna2DateTimePicker1.Value = date;
-            //txtNguoiTaoDon.Text = nhanvien.HoTen;
+            txtNguoiTaoDon.Text = nhanvien.HoTen;
+            guna2DateTimePicker1.Value = date;
             //MessageBox.Show(date.ToString());
         }
         public List<String> listconnguoi()
