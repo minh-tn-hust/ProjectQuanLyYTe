@@ -204,6 +204,7 @@ namespace QLPK
             this.splitContainer1.Panel2.Controls.Add(this.txtEmail);
             this.splitContainer1.Panel2.Controls.Add(this.guna2HtmlLabel7);
             this.splitContainer1.Panel2.Controls.Add(this.guna2HtmlLabel6);
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(897, 142);
             this.splitContainer1.SplitterDistance = 449;
             this.splitContainer1.TabIndex = 0;

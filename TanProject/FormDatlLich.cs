@@ -176,7 +176,7 @@ namespace QLPK
             DateTime dt8 = guna2DateTimePicker2.Value;
             dt8 = new DateTime(dt8.Year, dt8.Month, dt8.Day, 8, 0, 0);
             int t8 = timchotrong(dt8, pk);
-            if (t8 >= 2) guna2Button3.Enabled = false;
+            if (t8 > 3) guna2Button3.Enabled = false;
 
             DateTime dt9 = guna2DateTimePicker2.Value;
             dt9 = new DateTime(dt9.Year, dt9.Month, dt9.Day, 9, 0, 0);
@@ -232,7 +232,7 @@ namespace QLPK
             DateTime dt8 = guna2DateTimePicker2.Value;
             dt8 = new DateTime(dt8.Year, dt8.Month, dt8.Day, 8, 0, 0);
             int t8 = timchotrong(dt8, pk);
-            if (t8 >= 2) guna2Button3.Enabled = false;
+            if (t8 > 3) guna2Button3.Enabled = false;
 
             DateTime dt9 = guna2DateTimePicker2.Value;
             dt9 = new DateTime(dt9.Year, dt9.Month, dt9.Day, 9, 0, 0);
@@ -304,13 +304,13 @@ namespace QLPK
                 using (var context = new YTeDbContext())
                 {
                     var people = context.TreEms.Where(s => s.MaTheBHYTe == txtTimKiem.Text).FirstOrDefault();
-                    var treconn = context.ConNguois.Where(s => s.ID_Nguoi == people.ID_Nguoi).FirstOrDefault();
                     if (people == null)
                     {
                         MessageBox.Show("Sai thông tin BHYT!", "Thông báo!");
                     }
                     else
                     {
+                        var treconn = context.ConNguois.Where(s => s.ID_Nguoi == people.ID_Nguoi).FirstOrDefault();
                         var connguoiDLK = context.DatLichKhams.Where(s => s.ID_Nguoi == treconn.ID_Nguoi).FirstOrDefault();
                         if (connguoiDLK == null)
                         {
