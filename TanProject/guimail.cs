@@ -25,7 +25,7 @@ namespace QLPK
         }
         public void send()
         {
-            string FilePath = "Confirm.html";
+            string FilePath = "../../Confirm.html";
             StreamReader str = new StreamReader(FilePath);
             string MailText = str.ReadToEnd();
             str.Close();
