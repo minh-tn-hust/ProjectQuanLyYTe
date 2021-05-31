@@ -41,9 +41,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -60,13 +57,9 @@
     <Compile Include="ConNguoi.cs" />
     <Compile Include="DatLichKham.cs" />
     <Compile Include="HoGiaDinh.cs" />
-    <Compile Include="Migrations\202105171749056_init.cs" />
-    <Compile Include="Migrations\202105171749056_init.designer.cs">
-      <DependentUpon>202105171749056_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105180124062_SuaLoiThongTinThaiKi.cs" />
-    <Compile Include="Migrations\202105180124062_SuaLoiThongTinThaiKi.designer.cs">
-      <DependentUpon>202105180124062_SuaLoiThongTinThaiKi.cs</DependentUpon>
+    <Compile Include="Migrations\202105301108562_init.cs" />
+    <Compile Include="Migrations\202105301108562_init.designer.cs">
+      <DependentUpon>202105301108562_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NguoiQuanLy.cs" />
@@ -86,11 +79,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105171749056_init.resx">
-      <DependentUpon>202105171749056_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105180124062_SuaLoiThongTinThaiKi.resx">
-      <DependentUpon>202105180124062_SuaLoiThongTinThaiKi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105301108562_init.resx">
+      <DependentUpon>202105301108562_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

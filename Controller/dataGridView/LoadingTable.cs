@@ -49,9 +49,11 @@ namespace Controller.dataGridView
             using (var context = new YTeDbContext())
             {
                 List<NhanVienYTe> NhanViens = context.NhanVienYTes.ToList();
+                if (NhanViens.Count == 0) return null;
                 DataTable dt = new DataTable();
                 foreach (var name in Name.nhanvien())
                     dt.Columns.Add(name);
+                if (NhanViens.Count == 0) return dt;
                 int i = 0;
                 foreach (var nhanvien in NhanViens)
                 {
@@ -101,6 +103,7 @@ namespace Controller.dataGridView
                 DataTable dt = new DataTable();
                 foreach (var name in Name.trecon())
                     dt.Columns.Add(name);
+                if (chisotrecon.Count == 0) return dt;
                 int i = 0;
                 foreach (var chiso in chisotrecon)
                 {
@@ -151,6 +154,7 @@ namespace Controller.dataGridView
                 DataTable dt = new DataTable();
                 foreach (var name in Name.onlytrecon())
                     dt.Columns.Add(name);
+                if (listTreEm.Count == 0) return dt;
                 int i = 0;
                 foreach (var treem in listTreEm)
                 {
@@ -190,6 +194,7 @@ namespace Controller.dataGridView
                 DataTable dt = new DataTable();
                 foreach (var name in Name.phunumangthai())
                     dt.Columns.Add(name);
+                if (Phunus.Count == 0) return dt;
                 int i = 0;
                 foreach (var phunu in Phunus)
                 {
@@ -228,6 +233,7 @@ namespace Controller.dataGridView
                 DataTable dt = new DataTable();
                 foreach (var name in Name.vacxinThemMoi())
                     dt.Columns.Add(name);
+                if (Vacxins.Count == 0) return dt;
                 int i = 0;
                 foreach (var vacxin in Vacxins)
                 {
@@ -260,6 +266,7 @@ namespace Controller.dataGridView
                 DataTable dt = new DataTable();
                 foreach (var name in Name.vacxin())
                     dt.Columns.Add(name);
+                if (Vacxins.Count == 0) return dt;
                 int i = 0;
                 foreach (var vacxin in Vacxins)
                 {
@@ -299,6 +306,8 @@ namespace Controller.dataGridView
                     dt.Columns.Add(name);
                 }
                 var PhongKhams = context.PhongKhams.ToList();
+                if (PhongKhams.Count == 0) return dt;
+
                 foreach (var phongkham in PhongKhams)
                 {
                     var nhanVienQuanLy = context.NhanVienYTes.Find(phongkham.ID_NhanVienQuanLy);
@@ -334,6 +343,7 @@ namespace Controller.dataGridView
                     dt.Columns.Add(name);
                     //   MessageBox.Show(name);
                 }
+                if (LichKhams.Count == 0) return dt;
                 int i = 0;
                 //MessageBox.Show(LichKhams.Count.ToString());
                 foreach (var lichkham in LichKhams)
@@ -382,6 +392,7 @@ namespace Controller.dataGridView
                 foreach (var name in Name.sudung())
                     dt.Columns.Add(name);
                 var sudungs = context.SuDungVacXins.ToList();
+                if (sudungs.Count == 0) return dt;
                 int i = 0;
                 foreach (var record in sudungs)
                 {
