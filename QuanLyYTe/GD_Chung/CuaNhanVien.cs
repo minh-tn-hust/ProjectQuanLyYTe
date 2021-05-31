@@ -57,7 +57,7 @@ namespace QuanLyYTe.GD_Chung
             using (var context = new YTeDbContext())
             {
                 var connguoi = context.ConNguois.Where(b => b.ID_Nguoi == nhanvien.ID_Nguoi).FirstOrDefault();
-                //label1.Text = "Xin chào "+connguoi.HoTen;
+                label1.Text = "Xin chào " + connguoi.HoTen;
                 this.datlich = new FormDatlLich(connguoi);
             }
         }
