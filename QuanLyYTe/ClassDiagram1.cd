@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QuanLyYTe.Admin.DoiMatKhau" Collapsed="true">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADAAABAAAAKAAQACAEAAAQAAEAAAAQBACAA=</HashCode>
+      <FileName>Admin\DoiMatKhau.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.Admin.LayLaiMatKhau" Collapsed="true">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAAABAAAACAAACKAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Admin\LayLaiMatKhau.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.GD_Chung.CuaNhanVien" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIAAgIBkgCIJIBAAAACIEICCAAQhAAEAIAAEAgBAAAY=</HashCode>
+      <FileName>GD_Chung\CuaNhanVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.MenuUI" Collapsed="true">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>zaAAAJAQBCAIAFAABoKgAgACEIAAIQCBzXAfASRKACI=</HashCode>
+      <FileName>GD_Chung\MenuUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.SignIn" Collapsed="true">
+    <Position X="1" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAAIAAACAAACAAQACAAACCIAACCAAAAAAAAAAEAAE=</HashCode>
+      <FileName>GD_Chung\SignIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.Model2DataSet" Collapsed="true">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAwAAAAJABAAASAAAAAgCQBgAIAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.PhuNuTreEm" Collapsed="true">
+    <Position X="3.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAwIAAoTCAABEAAACAQAASAACDAAAgOAQAAIBAAAI=</HashCode>
+      <FileName>PhuNuTreEm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.Program">
+    <Position X="7.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.SuaChiTietNhanVien" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/yACAAATFTAgEBAAQAmSUEEGIAACIQkAAipGE0AFADE=</HashCode>
+      <FileName>QL_NVien\SuaChiTietNhanVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.ThemMoiNhanVien" Collapsed="true">
+    <Position X="8.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>fwQEABADFDAgFBAAcACCgEACAAgAAQkASiAAEUAFADA=</HashCode>
+      <FileName>QL_NVien\ThemMoiNhanVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.ChinhSuaThongTinCoSoYTe" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/wCxAAACBTAIEBAAAAiSUEAmIIQCIQEgIOoUAQADADE=</HashCode>
+      <FileName>QL_PKham\ChinhSuaThongTinCSYTe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.ThemMoiCoSoYTe" Collapsed="true">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/gCAAAAABDAIBBAAMQCCAEMigAQAAQEAICEICQAEADQ=</HashCode>
+      <FileName>QL_PKham\ThemMoiCoSoYTe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.ChinhSuaThongTinVacXin" Collapsed="true">
+    <Position X="2" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/wAgACBCBTAIAJAAICiSEEAGIAECIUEAIC4UGwIBADU=</HashCode>
+      <FileName>QL_VacXin\ChinhSuaThongTinVacXin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.ThemMoiVacXin" Collapsed="true">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FgAAAAAABDMABBAAIHCCgEACAAIEAUEAECAAOQIAAAQ=</HashCode>
+      <FileName>QL_VacXin\ThemMoiVacXin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.Model2DataSetTableAdapters.PhongKhamTableAdapter" Collapsed="true">
+    <Position X="1" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.Model2DataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMgAgBAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.Properties.Resources" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAICAAIAIAAggAAoNEwAAIQAgEQAADkAAAACIAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.Properties.Settings" Collapsed="true">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.QL_NVien.HienThiToanBoNhanVien" Collapsed="true">
+    <Position X="1" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8gAAAAABFCYgFDAgQACS0EAGIAAABQkAACAAEUQFAAY=</HashCode>
+      <FileName>QL_NVien\HienThiToanBoNhanVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.QL_PKham.HienThiToanBoCoSoYTe" Collapsed="true">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>5gCAAAACBCAIFBCAAACTUEImICAAAQEAICEAEQKQABA=</HashCode>
+      <FileName>QL_PKham\HienThiToanBoCoSoYTe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyYTe.QL_VacXin.HienThiToanBoVacXin" Collapsed="true">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8gAhAAAABCAABBIAIaCSEEAGIAIAIUEAMiEAmQAAAAQ=</HashCode>
+      <FileName>QL_VacXin\HienThiToanBoVacXin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Windows.Forms.Form" Collapsed="true">
+    <Position X="13.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Configuration.ApplicationSettingsBase" Collapsed="true">
+    <Position X="11.75" Y="4" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.ComponentModel.Component" Collapsed="true">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

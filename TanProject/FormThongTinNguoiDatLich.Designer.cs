@@ -52,7 +52,6 @@ namespace QLPK
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtNguoiTaoDon = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtGhiChu = new Guna.UI2.WinForms.Guna2TextBox();
@@ -60,6 +59,7 @@ namespace QLPK
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -466,26 +466,6 @@ namespace QLPK
             this.guna2HtmlLabel10.Text = "Ngày hẹn khám:";
             this.guna2HtmlLabel10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2DateTimePicker1.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2DateTimePicker1.BorderRadius = 8;
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.CustomFormat = "HH:00 dd/MM/yy";
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(103, 47);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(332, 36);
-            this.guna2DateTimePicker1.TabIndex = 22;
-            this.guna2DateTimePicker1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 20, 23, 30, 7, 580);
-            // 
             // txtNguoiTaoDon
             // 
             this.txtNguoiTaoDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -602,6 +582,26 @@ namespace QLPK
             this.guna2Button11.TabIndex = 10;
             this.guna2Button11.Text = "Thoát";
             this.guna2Button11.Click += new System.EventHandler(this.guna2Button11_Click);
+            // 
+            // guna2DateTimePicker1
+            // 
+            this.guna2DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2DateTimePicker1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2DateTimePicker1.BorderRadius = 8;
+            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.CustomFormat = "HH:00 dd/MM/yy";
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(103, 47);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(332, 36);
+            this.guna2DateTimePicker1.TabIndex = 22;
+            this.guna2DateTimePicker1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 20, 23, 30, 7, 580);
             // 
             // FormThongTinNguoiDatLich
             // 

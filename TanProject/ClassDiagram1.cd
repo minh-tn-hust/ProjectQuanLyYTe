@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QLPK.FormDanhSachDatLich" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAICiAjAgCAAAAACgUASiACxCAQCIAAEQCAAYggE=</HashCode>
+      <FileName>FormDanhSachDatLich.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.FormDatlLich" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAKMASAjAIABEAA4CQEADCQAQCAQAAAAiIATAAMDE=</HashCode>
+      <FileName>FormDatlLich.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.FormThongTinNguoiDatLich" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQYgIACgDAgCAAAQQCAQACCACVCAYAAAAhBA4ABIAE=</HashCode>
+      <FileName>FormThongTinNguoiDatLich.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.SendingMail">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAkAIAAAQAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>guimail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.Program" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.YTeModelDataSet" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAwgAAAJABAAAQAAAAAgCQBgAAAAAAAEAFBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.YTeModelDataSet1" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAwgAAAJABAAAQAAAAAgCQBgAAAAAAAEAFBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.Properties.Resources" Collapsed="true">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.Properties.Settings">
+    <Position X="10.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.YTeModelDataSetTableAdapters.DatLichKhamsTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.YTeModelDataSetTableAdapters.TableAdapterManager">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="QLPK.YTeModelDataSetTableAdapters.TableAdapterManager.UpdateOrderOption" Collapsed="true">
+        <TypeIdentifier />
+      </Enum>
+      <Class Name="QLPK.YTeModelDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer" Collapsed="true">
+        <TypeIdentifier />
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEhAAAAMAAgAAACgAAAAAQIAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.YTeModelDataSet1TableAdapters.DatLichKhamsTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLPK.YTeModelDataSet1TableAdapters.TableAdapterManager">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="QLPK.YTeModelDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption" Collapsed="true">
+        <TypeIdentifier />
+      </Enum>
+      <Class Name="QLPK.YTeModelDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer" Collapsed="true">
+        <TypeIdentifier />
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEhAAAAMAAgAAACgAAAAAQIAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.ComponentModel.Component" Collapsed="true">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Configuration.ApplicationSettingsBase" Collapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Data.DataSet" Collapsed="true">
+    <Position X="11.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -167,7 +167,7 @@ namespace Controller.dataGridView
                     dr[0] = ++i;
                     dr[1] = record.HoTen;
                     dr[2] = link.MaTheBHYTe;
-                    dr[3] = record.NgaySinh.Value.ToShortDateString();
+                    dr[3] = (record.NgaySinh==null)?"":record.NgaySinh.Value.ToShortDateString();
                     if (record.GioiTinh == 0 )
                     {
                         dr[4] = "Nam";

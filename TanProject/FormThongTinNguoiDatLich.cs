@@ -50,7 +50,8 @@ namespace QLPK
         private void FormThongTinNguoiDatLich_Load_1(object sender, EventArgs e)
         {
             guna2DateTimePicker1.Value = date;
-            //txtNguoiTaoDon.Text = nhanvien.HoTen;
+            txtNguoiTaoDon.Text = nhanvien.HoTen;
+            guna2DateTimePicker1.Value = date;
             //MessageBox.Show(date.ToString());
         }
         public List<String> listconnguoi()
@@ -130,11 +131,12 @@ namespace QLPK
                         context.DatLichKhams.Add(connguoi);
                         context.SaveChanges();
                         MessageBox.Show("Bạn đã tạo phiếu thành công!", "Thông báo!");
+                        MessageBox.Show(phongKham.DiaChi);
+                        MessageBox.Show(people.HoTen + '\n' + phongKham.DiaChi + '\n' + connguoi.ThoiGianHenKham.ToString() + '\n' + people.Email);
+                        SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
+                        sendingMail.send();
                         this.Close();
-                            MessageBox.Show(phongKham.DiaChi);
-                            SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
-                            sendingMail.send();
-                        
+
                     }
                 }
             }
