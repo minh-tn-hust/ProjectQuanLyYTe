@@ -357,7 +357,16 @@ namespace Controller.dataGridView
                     dr[1] = record.HoTen;
                     dr[2] = record.SoCMND;
                     dr[3] = record.NgaySinh;
-                    dr[4] = record.GioiTinh;
+                    if(record.GioiTinh == 1)
+                    {
+                        dr[4] = "Nữ";
+                    }
+                    else
+                    {
+                        dr[4] = "Nam";
+                    } 
+                        
+                    //dr[4] = record.GioiTinh;
                     dr[5] = record.NgheNghiep;
                     dr[6] = record.DiaChi;
                     dr[7] = record.SoDienThoai;

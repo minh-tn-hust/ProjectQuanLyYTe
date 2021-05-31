@@ -49,7 +49,6 @@ namespace QLPK
         public String phongkham;
         private void FormThongTinNguoiDatLich_Load_1(object sender, EventArgs e)
         {
-            guna2DateTimePicker1.Value = date;
             txtNguoiTaoDon.Text = nhanvien.HoTen;
             guna2DateTimePicker1.Value = date;
             //MessageBox.Show(date.ToString());
@@ -126,15 +125,21 @@ namespace QLPK
                             connguoi.LyDoKham = txtLyDoKham.Text;
                             connguoi.ID_PhongKham = phongKham.ID_PhongKham;
                             connguoi.ThoiGianHenKham = guna2DateTimePicker1.Value;
-                            //connguoi.ID_NhanVien =  txtNguoiTaoDon.Text;
+                            var NhanVien = context.NhanVienYTes.Where(s => s.ID_Nguoi == nhanvien.ID_Nguoi).FirstOrDefault();
+                            connguoi.ID_NhanVien =  NhanVien.ID_NhanVien;
                         }
                         context.DatLichKhams.Add(connguoi);
                         context.SaveChanges();
                         MessageBox.Show("Bạn đã tạo phiếu thành công!", "Thông báo!");
-                        MessageBox.Show(phongKham.DiaChi);
-                        MessageBox.Show(people.HoTen + '\n' + phongKham.DiaChi + '\n' + connguoi.ThoiGianHenKham.ToString() + '\n' + people.Email);
-                        SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
-                        sendingMail.send();
+                        //MessageBox.Show(phongKham.DiaChi);
+                        //MessageBox.Show(people.HoTen + '\n' + phongKham.DiaChi + '\n' + connguoi.ThoiGianHenKham.ToString() + '\n' + people.Email);
+                        if(txtEmail.Text != "")
+                        {
+                            SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
+                            sendingMail.send();
+                        }
+                        //SendingMail sendingMail = new SendingMail(people.HoTen, phongKham.DiaChi, connguoi.ThoiGianHenKham.ToString(), people.Email);
+                        //sendingMail.send();
                         this.Close();
 
                     }
