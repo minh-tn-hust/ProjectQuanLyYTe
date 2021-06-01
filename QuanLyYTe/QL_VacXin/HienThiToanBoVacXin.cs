@@ -106,5 +106,10 @@ namespace QuanLyYTe.QL_VacXin
             }
 
         }
+
+        private void dtgvHienThiChiTiet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

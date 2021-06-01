@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using Controller.dataGridView; // thư viên dùng để load data cho csdl của mình
 using Model;
+using Controller.Object;
 
 namespace QLPK
 {
@@ -122,20 +123,21 @@ namespace QLPK
             this.Close();
         }
 
-
-        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            c = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            textboxHoTen.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            textboxCMND.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            textboxDiaChi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            textboxSDT.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            textboxEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            textboxLyDoKham.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            string i = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            if (i == "1") comboboxGioiTinh.Text = "Nữ";
-            else comboboxGioiTinh.Text = "Nam";
-            guna2DateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            if (e.RowIndex >= 0)
+            {
+                textboxHoTen.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                textboxCMND.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                textboxDiaChi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                textboxSDT.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                textboxEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                textboxLyDoKham.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+                string i = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                if (i == "1") comboboxGioiTinh.Text = "Nữ";
+                else comboboxGioiTinh.Text = "Nam";
+                guna2DateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            }
         }
     }
 }
